@@ -42,7 +42,7 @@ EFI启动是现在最流行的一种电脑启动方式，除了部分台式机�
 ![ESP分区结构](http://upload-images.jianshu.io/upload_images/2779067-a466e82f6e1deab0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ***
-### <a href = /#2>2.U盘安装原版 OS X 步骤</a>
+### <h2 id="2">2.U盘安装原版 OS X 步骤</h2>
 
 #### <span id="2.1">< 1 >.安装U盘的制作</span>
 >##### 准备：
