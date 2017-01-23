@@ -1,7 +1,6 @@
 ##本文目录：
 ### [1. Hackintosh 简介与心得](#1.hackintosh-简介与心得)
 ### [2. U盘安装原版 OS X 步骤](#2)
-
 - [安装U盘的制作](#2.1)
 
 - [Clover 引导安装](#2.2)
@@ -43,7 +42,8 @@ EFI启动是现在最流行的一种电脑启动方式，除了部分台式机�
 ![ESP分区结构](http://upload-images.jianshu.io/upload_images/2779067-a466e82f6e1deab0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ***
-###  <span id="2">2.U盘安装原版 OS X 步骤</span>
+### <a href = /#2>2.U盘安装原版 OS X 步骤</a>
+
 #### <span id="2.1">< 1 >.安装U盘的制作</span>
 >##### 准备：
 >1.一个8GB以上的U盘，建议采用USB2.0，以免出现兼容性问题。
