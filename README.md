@@ -26,7 +26,7 @@ This is a comment Tutorial for Hackintosh Installation with Clover Bootloader an
 - [Delete superfluous boot entry](#6.1)
 - [Change themes of your clover](#6.2)
 
-***
+
 ## What's Hackintosh
 
 
