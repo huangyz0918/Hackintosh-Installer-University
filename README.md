@@ -6,7 +6,7 @@ This is a comment Tutorial for Hackintosh Installation with Clover Bootloader an
 
 ## Index of this Tutorial
 
-### [1. What's Hackintosh ?](#1. What's Hackintosh ?)
+### [1. What's Hackintosh ?](#1.-what's-hackintosh-?)
 ### [2. The installation of OS X with a bootable USB device ](#2)
 
 - [Create a bootable USB device](#2.1)
@@ -28,5 +28,5 @@ This is a comment Tutorial for Hackintosh Installation with Clover Bootloader an
 
 ***
 ### 1. What's Hackintosh ?
-------
+
 
