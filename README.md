@@ -3,6 +3,7 @@
 
 # Hackintosh-Installer-University
 This is a comment Tutorial for Hackintosh Installation with Clover Bootloader and GPT Partition
+[中文版本](README-CN.md)
 
 ## Index of this Tutorial
 
