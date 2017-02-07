@@ -71,8 +71,7 @@ EFI启动是现在最流行的一种电脑启动方式，除了部分台式机�
 
 >3.Clover 引导文件[（下载）](https://sourceforge.net/projects/cloverefiboot/files/ ) 
 
-***
->##### 安装clover引导：
+##### 安装clover引导：
 1.启动分区工具DiskGenius ，选中硬盘最前方蓝色ESP分区，点击分区"浏览文件"。
 如果一切正常，浏览文件到的是一个EFI文件夹。
 2.解压clover 文件，得到一个CLOVER文件夹，将解压后的clover文件夹拷入ESP分区中的EFI文件夹内
