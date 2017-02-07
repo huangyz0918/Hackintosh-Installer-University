@@ -27,6 +27,6 @@ This is a comment Tutorial for Hackintosh Installation with Clover Bootloader an
 - [Change themes of your clover](#6.2)
 
 ***
-### What's Hackintosh
+## What's Hackintosh
 
 
