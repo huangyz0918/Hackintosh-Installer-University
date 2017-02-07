@@ -1,5 +1,5 @@
-##本文目录：
-### [1. Hackintosh 简介与心得](#1.hackintosh-简介与心得)
+## 本文目录：
+### [1. Hackintosh 简介与心得](#1)
 ### [2. U盘安装原版 OS X 步骤](#2)
 - [安装U盘的制作](#2.1)
 
@@ -23,8 +23,7 @@
 
 - [修改引导主题](#6.2)
 
-***
-### 1.Hackintosh 简介与心得
+## <h2 id="1">1.Hackintosh 简介与心得</h2>
 
   黑苹果(Hackintosh)，这个诞生于苹果公司和intel公司合作开始那一刻的产物，一直是被国内外极客所追捧的一个很有难度的技术。因为单从外表看来，在普通PC上面运行Mac OS 系统是一件非常酷的事情，不仅仅可以享受世界上最先进的电脑操作系统，享受OS X 甚至是现在MacOS里面精美的应用软件，还可以打破苹果公司对硬件的封锁，在更高配置的PC机上面运行。更重要的是，享受完成黑苹果之后那种愉悦的感觉....
 
@@ -41,8 +40,8 @@ EFI启动是现在最流行的一种电脑启动方式，除了部分台式机�
 
 ![ESP分区结构](http://upload-images.jianshu.io/upload_images/2779067-a466e82f6e1deab0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-***
-### <h2 id="2">2.U盘安装原版 OS X 步骤</h2>
+
+## <h2 id="2">2.U盘安装原版 OS X 步骤</h2>
 
 #### <h2 id="2.1">< 1 >.安装U盘的制作</h2>
 >##### 准备：
@@ -57,7 +56,7 @@ EFI启动是现在最流行的一种电脑启动方式，除了部分台式机�
 
 这时，安装盘就算制作完成了，但是选择U盘启动却找不到启动项，这个是因为U盘并没有引导的功能哦，所以下一步就是直接在系统的ESP分区里面安装能够引导黑苹果的四叶草(CLOVER)引导。
 
-***
+
 
 #### <h2 id="2.2">< 2 >.Clover 引导安装</h2>
 
@@ -90,7 +89,7 @@ EFI启动是现在最流行的一种电脑启动方式，除了部分台式机�
 接下来，你就可以插上U盘重启电脑啦，选择U盘启动，一路安装下去吧！
 ***
 
-### <h2 id="3">< 2 >3.OS X 的安装：</h2>
+## <h2 id="3">< 2 >3.OS X 的安装：</h2>
 
 >##### 安装：
 1.格式化分区：安装进入OS X 界面时，选择顶栏的磁盘工具，选择待安装的硬盘分区，选择“抹掉”，并且格式化为HFS+ 
@@ -115,7 +114,7 @@ ESP分区大小不足200M（上面有讲），如果实在想扩大ESP分区而�
 而且有一个原版黑苹果才会有的Recovery还原分区！
 
 ***
-### <h2 id="4">4.驱动安装</h2>
+## <h2 id="4">4.驱动安装</h2>
 
 >##### 准备：
 
@@ -279,8 +278,8 @@ System\Library\Extensions\IONetworkingFamily.kext
 
 [上述所有工具及驱动下载（科学上网）](https://drive.google.com/drive/folders/0B5QkUfARnVu0Wi1KQmZoMkVMVFU) 
 
-### <h2 id="5">5.解决APP Store 无法验证问题</h2>
-***
+## <h2 id="5">5.解决APP Store 无法验证问题</h2>
+
 打开Finder 
 在顶部菜单栏里面选择 “前往” --->  "前往文件夹..."
 
@@ -295,15 +294,14 @@ System\Library\Extensions\IONetworkingFamily.kext
 
 重新启动即可
 
-### <h2 id="6">6.定制引导</h2>
-***
+## <h2 id="6">6.定制引导</h2>
+
 ![个性化引导](http://upload-images.jianshu.io/upload_images/2779067-1104501f58e1e3b6.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 > ##### 准备：
 1.Clover Configurator [（下载）](http://mackie100projects.altervista.org/clover-configurator/) 
 
 #### <h2 id="6.1">< 1 >. 删除多余引导项</h2>
-***
 
 打开Clover Configurator ，首先你要挂载EFI分区才可以对config.plist配置文件进行修改，进入Clover Configurator以后，左边的选项里面，点击Mount EFI
 
@@ -324,7 +322,7 @@ System\Library\Extensions\IONetworkingFamily.kext
 箭头所示就是关于启动选择的选项，将Legacy 去掉就行。如果有linux的盆友记得勾选linux，保存退出，在重启看看，你的引导是不是很简洁了呢？
 
 #### <h2 id="6.2">< 2 >. 修改引导主题</h2>
-***
+
 1.打开Clover Configurator 点击左侧菜单栏Theme 选项
 
 2.点击右下角 Load Themes
