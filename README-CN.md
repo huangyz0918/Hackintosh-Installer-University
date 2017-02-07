@@ -44,7 +44,7 @@ EFI启动是现在最流行的一种电脑启动方式，除了部分台式机�
 ***
 ### <h2 id="2">2.U盘安装原版 OS X 步骤</h2>
 
-#### <span id="2.1">< 1 >.安装U盘的制作</span>
+#### <h2 id="2.1">< 1 >.安装U盘的制作</h2>
 >##### 准备：
 >1.一个8GB以上的U盘，建议采用USB2.0，以免出现兼容性问题。
 
@@ -59,7 +59,7 @@ EFI启动是现在最流行的一种电脑启动方式，除了部分台式机�
 
 ***
 
-#### <span id="2.2">< 2 >.Clover 引导安装</span>
+#### <h2 id="2.2">< 2 >.Clover 引导安装</h2>
 
 很多人苦于使用U盘安装完成黑苹果以后却没办法把clover从U盘里面迁移到自己的电脑硬盘中，不得以只能每次都使用U盘来启动。
 所以这次我们简化了U盘的制作过程，只是把原版安装镜像文件烧写到U盘里面而已，然后直接在本机上面安装好引导再进入安装。
@@ -90,7 +90,7 @@ EFI启动是现在最流行的一种电脑启动方式，除了部分台式机�
 接下来，你就可以插上U盘重启电脑啦，选择U盘启动，一路安装下去吧！
 ***
 
-### <span id="3">3.OS X 的安装：</span>
+### <h2 id="3">< 2 >3.OS X 的安装：</h2>
 
 >##### 安装：
 1.格式化分区：安装进入OS X 界面时，选择顶栏的磁盘工具，选择待安装的硬盘分区，选择“抹掉”，并且格式化为HFS+ 
@@ -115,7 +115,7 @@ ESP分区大小不足200M（上面有讲），如果实在想扩大ESP分区而�
 而且有一个原版黑苹果才会有的Recovery还原分区！
 
 ***
-### <span id="4">4.驱动安装</span>
+### <h2 id="4">4.驱动安装</h2>
 
 >##### 准备：
 
@@ -147,7 +147,7 @@ ESP分区大小不足200M（上面有讲），如果实在想扩大ESP分区而�
 黑苹果驱动主要分为三大卡：图形卡，声卡，网卡
 其中苹果无线网卡无解，只有依靠换内置无线网卡或者使用USB无线网卡的解决方法。其他网卡以及DSDT、硬盘驱动、声卡都可以在第一次进入安装好了的苹果电脑系统里面直接使用MultiBeast解决，但是正是因为这个软件过于傻瓜式，许多人被坑了，MultiBeast在安装时会重写驱动文件，导致有的驱动无法起到应有的作用(比如鼠标键盘失灵等)，而MultiBeast又不能单独安装某个驱动，一定要整套安装，所以第一次进入先使用它为好，后面有了什么问题再另外修改。
 
-#### <span id="4.1">< 1 >.使用MultiBeast</span>
+#### <h2 id="4.1">< 1 >.使用MultiBeast</h2>
 ***
 ![MultiBeast](http://upload-images.jianshu.io/upload_images/2779067-c67bcfad4b8505ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -163,7 +163,7 @@ ESP分区大小不足200M（上面有讲），如果实在想扩大ESP分区而�
 
 ![完成安装](http://upload-images.jianshu.io/upload_images/2779067-c7ed3bc960f7c2e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#### <span id="4.2">< 2 >.处理/System/Library/Extensions/解决声卡内核崩溃问题</span>
+#### <h2 id="4.2">< 2 >.处理/System/Library/Extensions/解决声卡内核崩溃问题</h2>
 ***
 
 这个时候你就可以重启看看驱动了没有哦～
@@ -182,7 +182,7 @@ ESP分区大小不足200M（上面有讲），如果实在想扩大ESP分区而�
 ](http://upload-images.jianshu.io/upload_images/2779067-3eb02afc4fc0c87e.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-#### <span id="4.3">< 3 >.Kext Utility添加驱动与重建缓存</span>
+#### <h2 id="4.3">< 3 >.Kext Utility添加驱动与重建缓存</h2>
 ***
 
 >Kext Utility 也是一个傻瓜式驱动添加与缓存修复软件，但是它没有 MultiBeast 的危险性
@@ -195,7 +195,7 @@ ESP分区大小不足200M（上面有讲），如果实在想扩大ESP分区而�
 
 但是有些驱动不是就这样马上可以解决的，它需要配合Clover引导文件和配置的代码驱动原生，例如intel系列的集成显卡，当然，如果你的集显第一次进入就完美驱动，那自然没有问题啦hhh
 
-#### <span id="4.4">< 4 >.Config.plist 配置驱动intel集成显卡  (以HD4400～HD4600为例)</span>
+#### <h2 id="4.4">< 4 >.Config.plist 配置驱动intel集成显卡  (以HD4400～HD4600为例)</h2>
 ***
 > 方法1: 直接使用已经完成的Config.plist 驱动原生
 
@@ -279,7 +279,7 @@ System\Library\Extensions\IONetworkingFamily.kext
 
 [上述所有工具及驱动下载（科学上网）](https://drive.google.com/drive/folders/0B5QkUfARnVu0Wi1KQmZoMkVMVFU) 
 
-### <span id="5">5.解决APP Store 无法验证问题</span>
+### <h2 id="5">5.解决APP Store 无法验证问题</h2>
 ***
 打开Finder 
 在顶部菜单栏里面选择 “前往” --->  "前往文件夹..."
@@ -295,14 +295,14 @@ System\Library\Extensions\IONetworkingFamily.kext
 
 重新启动即可
 
-### <span id="6">6.定制引导</span>
+### <h2 id="6">6.定制引导</h2>
 ***
 ![个性化引导](http://upload-images.jianshu.io/upload_images/2779067-1104501f58e1e3b6.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 > ##### 准备：
 1.Clover Configurator [（下载）](http://mackie100projects.altervista.org/clover-configurator/) 
 
-#### <span id="6.1">< 1 >. 删除多余引导项</span>
+#### <h2 id="6.1">< 1 >. 删除多余引导项</h2>
 ***
 
 打开Clover Configurator ，首先你要挂载EFI分区才可以对config.plist配置文件进行修改，进入Clover Configurator以后，左边的选项里面，点击Mount EFI
@@ -323,7 +323,7 @@ System\Library\Extensions\IONetworkingFamily.kext
 
 箭头所示就是关于启动选择的选项，将Legacy 去掉就行。如果有linux的盆友记得勾选linux，保存退出，在重启看看，你的引导是不是很简洁了呢？
 
-#### <span id="6.2">< 2 >. 修改引导主题</span>
+#### <h2 id="6.2">< 2 >. 修改引导主题</h2>
 ***
 1.打开Clover Configurator 点击左侧菜单栏Theme 选项
 
