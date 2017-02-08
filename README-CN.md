@@ -1,4 +1,4 @@
-##这是一篇黑苹果（OS X）在支持 EFI + GPT 分区电脑上安装的通用教程，各类机型部分安装细节视硬件决定。[English Page](README.md)
+这是一篇黑苹果（OS X）在支持 EFI + GPT 分区电脑上安装的通用教程，各类机型部分安装细节视硬件决定。[English Page](README.md)
 
 ## 本文目录：
 ### [1. Hackintosh 简介与心得](#1)
