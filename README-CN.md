@@ -73,7 +73,7 @@ EFI启动是现在最流行的一种电脑启动方式，除了部分台式机�
 
 #### 安装clover引导：
 
-1.启动分区工具DiskGenius ，选中硬盘最前方蓝色ESP分区，点击分区"浏览文件"。
+1.启动分区工具DiskGenius，选中硬盘最前方蓝色ESP分区，点击分区"浏览文件"。
 如果一切正常，浏览文件到的是一个EFI文件夹。
 
 2.解压clover 文件，得到一个CLOVER文件夹，将解压后的clover文件夹拷入ESP分区中的EFI文件夹内
@@ -113,7 +113,6 @@ ESP分区大小不足200M（上面有讲），如果实在想扩大ESP分区而�
 
 而且有一个原版黑苹果才会有的Recovery还原分区！
 
-***
 ## <h2 id="4">4.驱动安装</h2>
 
 >##### 准备：
@@ -147,7 +146,6 @@ ESP分区大小不足200M（上面有讲），如果实在想扩大ESP分区而�
 其中苹果无线网卡无解，只有依靠换内置无线网卡或者使用USB无线网卡的解决方法。其他网卡以及DSDT、硬盘驱动、声卡都可以在第一次进入安装好了的苹果电脑系统里面直接使用MultiBeast解决，但是正是因为这个软件过于傻瓜式，许多人被坑了，MultiBeast在安装时会重写驱动文件，导致有的驱动无法起到应有的作用(比如鼠标键盘失灵等)，而MultiBeast又不能单独安装某个驱动，一定要整套安装，所以第一次进入先使用它为好，后面有了什么问题再另外修改。
 
 #### <h2 id="4.1">< 1 >.使用MultiBeast</h2>
-***
 ![MultiBeast](http://upload-images.jianshu.io/upload_images/2779067-c67bcfad4b8505ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 这是MultiBeast安装界面，要先选择一个Quick Start 不然无法单独安装驱动文件。
@@ -163,7 +161,6 @@ ESP分区大小不足200M（上面有讲），如果实在想扩大ESP分区而�
 ![完成安装](http://upload-images.jianshu.io/upload_images/2779067-c7ed3bc960f7c2e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### <h2 id="4.2">< 2 >.处理/System/Library/Extensions/解决声卡内核崩溃问题</h2>
-***
 
 这个时候你就可以重启看看驱动了没有哦～
 但是，你可能会觉得安装了声卡驱动，但是声卡并没有被驱动，甚至有的时候驱动有的时候不驱动。。很诡异。或者是连鼠标键盘都没法驱动了。这个就是MultiBeast的缘故了，因为覆盖安装了大量第三方驱动导致原版OS里面的驱动重合，内核崩溃。比如安装了VooDooHDA.kext但是却无法驱动，得先确保你原来的AppleHDA.kext已经删除。那么，要怎样删除多余驱动文件呢？
@@ -172,7 +169,7 @@ ESP分区大小不足200M（上面有讲），如果实在想扩大ESP分区而�
 
 ![Terminal](http://upload-images.jianshu.io/upload_images/2779067-cef9dfa9bf010b08.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-列出所有驱动文件，将多余的AppleHDA.kext等相关文件删除就可以了，这个操作需要管理员密码，等到删除完成重启以后，你就会发现你的驱动相当稳定了。
+列出所有驱动文件，将多余的` AppleHDA.kext `等相关文件删除就可以了，这个操作需要管理员密码，等到删除完成重启以后，你就会发现你的驱动相当稳定了。
 
 ![删除多余驱动](http://upload-images.jianshu.io/upload_images/2779067-97d66a9aaab32f94.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -182,7 +179,6 @@ ESP分区大小不足200M（上面有讲），如果实在想扩大ESP分区而�
 
 
 #### <h2 id="4.3">< 3 >.Kext Utility添加驱动与重建缓存</h2>
-***
 
 >Kext Utility 也是一个傻瓜式驱动添加与缓存修复软件，但是它没有 MultiBeast 的危险性
 
@@ -195,34 +191,34 @@ ESP分区大小不足200M（上面有讲），如果实在想扩大ESP分区而�
 但是有些驱动不是就这样马上可以解决的，它需要配合Clover引导文件和配置的代码驱动原生，例如intel系列的集成显卡，当然，如果你的集显第一次进入就完美驱动，那自然没有问题啦hhh
 
 #### <h2 id="4.4">< 4 >.Config.plist 配置驱动intel集成显卡  (以HD4400～HD4600为例)</h2>
-***
-> 方法1: 直接使用已经完成的Config.plist 驱动原生
 
-直接下载好对应的的Config.plist文件（文章末尾会给出Tech的Config.plist下载链接），选择适当的intel集成显卡驱动，先用Kext Utility加载驱动，并且将驱动释放到对应的clover里面（安装驱动部分详见方法二的第六步：释放驱动），若重启了还是没有办法驱动原生显卡，说明配置文件，也就是Config.plist文件不对。这时候，找到对应你安装的驱动，和配合的config.plist，替换ESP分区CLOVER文件夹下面的config.plist文件，重启。
+> 方法1: 直接使用已经完成的` Config.plist ` 驱动原生
+
+直接下载好对应的的` Config.plist `文件（文章末尾会给出Tech的` Config.plist `下载链接），选择适当的intel集成显卡驱动，先用Kext Utility加载驱动，并且将驱动释放到对应的clover里面（安装驱动部分详见方法二的第六步：释放驱动），若重启了还是没有办法驱动原生显卡，说明配置文件，也就是` Config.plist `文件不对。这时候，找到对应你安装的驱动，和配合的` config.plist `，替换ESP分区CLOVER文件夹下面的` config.plist `文件，重启。
 
 这里有一个大坑，就是配置文件要稍微比真实显卡型号大一点，比如我是HD4400的集成显卡，我就要使用config.plist是HD5000的，至于为什么，也只能说是实践的经验吧，不然是无法驱动的。
 
-> 方法2: 手动修改Config.plist 驱动原生
+> 方法2: 手动修改` Config.plist ` 驱动原生
 
 第一步：
 安装Clover Configurator ,打开，点击左侧菜单栏Boot选项，勾选：
 
-1.ux_defter_usb2 
+1.` ux_defter_usb2 `
 
-2.nv_disable
+2.` nv_disable `
 
-3.dart=0
+3.` dart=0 `
 
-4.kest-dev-mode=1
+4.` kest-dev-mode=1 `
 
 
 ![勾选](http://upload-images.jianshu.io/upload_images/2779067-8713b744a0474943.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 第二步：点击左侧Devices选项
 
-1.找到对应的IntelGXF 输入框，输入：0x04128086
+1.找到对应的IntelGXF 输入框，输入：` 0x04128086 `
 
-2.勾选：inject、Add ClockID、FixOwnership
+2.勾选：` inject `、` Add ClockID `、` FixOwnership `
 
 ![Devices选项](http://upload-images.jianshu.io/upload_images/2779067-c996655477ad326b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
