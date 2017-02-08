@@ -7,7 +7,7 @@ This is a comment Tutorial for Hackintosh Installation with Clover Bootloader an
 
 ## Index of this Tutorial
 
-### [1. What's Hackintosh ?](#what's-hackintosh)
+### [1. What's Hackintosh ?](#1)
 ### [2. The installation of OS X with a bootable USB device ](#2)
 
 - [Create a bootable USB device](#2.1)
@@ -28,6 +28,9 @@ This is a comment Tutorial for Hackintosh Installation with Clover Bootloader an
 - [Change themes of your clover](#6.2)
 
 
-## What's Hackintosh
+## What's Hackintosh ?
+
+Hackintosh borned at the moment when Apple became the partner of Intel.
+
 
 
