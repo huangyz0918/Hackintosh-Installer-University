@@ -260,7 +260,7 @@ Comment :` Fix Boot Glitch `
 
 1.打开Clover Configurator ,进入Clover Configurator以后，左边的选项里面，点击Mount EFI
 
-2.打开EFI分区，进入：EFI/CLOVER/kexts/10.11/
+2.打开EFI分区，进入：` EFI/CLOVER/kexts/10.11/ `
 
 ![添加驱动到这里](http://upload-images.jianshu.io/upload_images/2779067-a2a8372f35be01ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
