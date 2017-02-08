@@ -36,7 +36,7 @@
 其实完成黑苹果并不是一个很难的事情，万事开头难。在这篇文章里面，我们只介绍原版苹果操作系统在EFI+GPT分区笔记本电脑的安装。
 
 > #### EFI 启动：
-EFI启动是现在最流行的一种电脑启动方式，除了部分台式机和老机器不支持EFI启动以外，现在绝大多数的电脑都是采用EFI启动，在电脑的硬盘内有一个ESP系统分区，这个分区就是用来存放各种EFI启动文件的。具体EFI文件目录主要是这样的：ESP→EFI→Microsoft、BOOT→各种.efi引导文件。如果你的电脑支持EFI启动但是并没有ESP分区，说明你可能是采用传统模式启动电脑，采用MBR加逻辑分区表的，这样的话，如果你想继续按照下文安装黑苹果，请先全盘格式化后重新分区为EFI+GPT。
+EFI启动是现在最流行的一种电脑启动方式，除了部分台式机和老机器不支持EFI启动以外，现在绝大多数的电脑都是采用EFI启动，在电脑的硬盘内有一个ESP系统分区，这个分区就是用来存放各种EFI启动文件的。具体EFI文件目录主要是这样的：` ESP→EFI→Microsoft、BOOT→各种.efi引导文件 `。如果你的电脑支持EFI启动但是并没有ESP分区，说明你可能是采用传统模式启动电脑，采用MBR加逻辑分区表的，这样的话，如果你想继续按照下文安装黑苹果，请先全盘格式化后重新分区为EFI+GPT。
 
 ![ESP分区结构](http://upload-images.jianshu.io/upload_images/2779067-a466e82f6e1deab0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -160,12 +160,12 @@ ESP分区大小不足200M（上面有讲），如果实在想扩大ESP分区而�
 
 ![完成安装](http://upload-images.jianshu.io/upload_images/2779067-c7ed3bc960f7c2e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#### <h2 id="4.2">< 2 >.处理/System/Library/Extensions/解决声卡内核崩溃问题</h2>
+#### <h2 id="4.2">< 2 >.处理` /System/Library/Extensions/ `解决声卡内核崩溃问题</h2>
 
 这个时候你就可以重启看看驱动了没有哦～
-但是，你可能会觉得安装了声卡驱动，但是声卡并没有被驱动，甚至有的时候驱动有的时候不驱动。。很诡异。或者是连鼠标键盘都没法驱动了。这个就是MultiBeast的缘故了，因为覆盖安装了大量第三方驱动导致原版OS里面的驱动重合，内核崩溃。比如安装了VooDooHDA.kext但是却无法驱动，得先确保你原来的AppleHDA.kext已经删除。那么，要怎样删除多余驱动文件呢？
+但是，你可能会觉得安装了声卡驱动，但是声卡并没有被驱动，甚至有的时候驱动有的时候不驱动。。很诡异。或者是连鼠标键盘都没法驱动了。这个就是MultiBeast的缘故了，因为覆盖安装了大量第三方驱动导致原版OS里面的驱动重合，内核崩溃。比如安装了` VooDooHDA.kext `但是却无法驱动，得先确保你原来的` AppleHDA.kext `已经删除。那么，要怎样删除多余驱动文件呢？
 
-首先，打开终端，进入驱动文件放置的地方，就是/System/Library/Extensions/
+首先，打开终端，进入驱动文件放置的地方，就是` /System/Library/Extensions/ `
 
 ![Terminal](http://upload-images.jianshu.io/upload_images/2779067-cef9dfa9bf010b08.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -190,13 +190,13 @@ ESP分区大小不足200M（上面有讲），如果实在想扩大ESP分区而�
 
 但是有些驱动不是就这样马上可以解决的，它需要配合Clover引导文件和配置的代码驱动原生，例如intel系列的集成显卡，当然，如果你的集显第一次进入就完美驱动，那自然没有问题啦hhh
 
-#### <h2 id="4.4">< 4 >.Config.plist 配置驱动intel集成显卡  (以HD4400～HD4600为例)</h2>
+#### <h2 id="4.4">< 4 >.` Config.plist ` 配置驱动intel集成显卡  (以HD4400～HD4600为例)</h2>
 
 > 方法1: 直接使用已经完成的` Config.plist ` 驱动原生
 
 直接下载好对应的的` Config.plist `文件（文章末尾会给出Tech的` Config.plist `下载链接），选择适当的intel集成显卡驱动，先用Kext Utility加载驱动，并且将驱动释放到对应的clover里面（安装驱动部分详见方法二的第六步：释放驱动），若重启了还是没有办法驱动原生显卡，说明配置文件，也就是` Config.plist `文件不对。这时候，找到对应你安装的驱动，和配合的` config.plist `，替换ESP分区CLOVER文件夹下面的` config.plist `文件，重启。
 
-这里有一个大坑，就是配置文件要稍微比真实显卡型号大一点，比如我是HD4400的集成显卡，我就要使用config.plist是HD5000的，至于为什么，也只能说是实践的经验吧，不然是无法驱动的。
+这里有一个大坑，就是配置文件要稍微比真实显卡型号大一点，比如我是HD4400的集成显卡，我就要使用` config.plist `是HD5000的，至于为什么，也只能说是实践的经验吧，不然是无法驱动的。
 
 > 方法2: 手动修改` Config.plist ` 驱动原生
 
@@ -214,7 +214,7 @@ ESP分区大小不足200M（上面有讲），如果实在想扩大ESP分区而�
 
 ![勾选](http://upload-images.jianshu.io/upload_images/2779067-8713b744a0474943.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-第二步：点击左侧Devices选项
+第二步：点击左侧 ` Devices `选项
 
 1.找到对应的IntelGXF 输入框，输入：` 0x04128086 `
 
@@ -224,29 +224,29 @@ ESP分区大小不足200M（上面有讲），如果实在想扩大ESP分区而�
 
 第三步：点击左侧Graphics选项
 
-1.注入ig-platform-id：0x0a260006
+1.注入` ig-platform-id `：` 0x0a260006 `
 
-2.勾选：Inject Intel
+2.勾选：` Inject Intel `
 
 ![Graphics选项](http://upload-images.jianshu.io/upload_images/2779067-a451c32a63411639.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-第四步：点击左侧Kernel and Kext Patches选项
+第四步：点击左侧` Kernel and Kext Patches `选项
 
-1.勾选：Apple RTC、Kernel LAPIC、Asus AICPUPM、KernelPM
+1.勾选：` Apple RTC `、` Kernel LAPIC `、` Asus AICPUPM `、` KernelPM `
 
-2.添加KextToPatch：
+2.添加` KextToPatch `：
 
-Name：IOGraphicsFamily      
+Name：` IOGraphicsFamily `     
 
-Find: 0100007517      
+Find:` 0100007517 `     
 
-Replace: 010000EB17 
+Replace:` 010000EB17 `
 
-Comment : Fix Boot Glitch
+Comment :` Fix Boot Glitch `
 
-3.添加ForceKextsToLad：
+3.添加` ForceKextsToLad `：
 
-System\Library\Extensions\IONetworkingFamily.kext
+` System\Library\Extensions\IONetworkingFamily.kext `
 
 （上述2、3点如果config.plist里面已经有了就不用重复添加了）
 
@@ -264,7 +264,7 @@ System\Library\Extensions\IONetworkingFamily.kext
 
 ![添加驱动到这里](http://upload-images.jianshu.io/upload_images/2779067-a2a8372f35be01ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-3.将FakePCIID_HD.kext、FakePCIID_Intel_HD_Graphics.kext、FakePCIID.kext、FakeSMC.kext放到这个文件夹下面
+3.将` FakePCIID_HD.kext `、` FakePCIID_Intel_HD_Graphics.kext `、` FakePCIID.kext `、` FakeSMC.kext `放到这个文件夹下面
 
 4.打开Kext Utility 或者Kext Wizard 安装上述四个驱动文件
 
@@ -281,12 +281,12 @@ System\Library\Extensions\IONetworkingFamily.kext
 
 ![前往文件夹...](http://upload-images.jianshu.io/upload_images/2779067-ac7254fe4b4f8a72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-在里面输入：/资源库/Preferences/SystemConfiguration/
-找到：NetworkInterfaces.plist  先做一个备份以防万一
+在里面输入：` /资源库/Preferences/SystemConfiguration/ `
+找到：` NetworkInterfaces.plist `  先做一个备份以防万一
 
 ![删除 NetworkInterfaces.plist ](http://upload-images.jianshu.io/upload_images/2779067-deba875866bfaa84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-删除 NetworkInterfaces.plist 
+删除 ` NetworkInterfaces.plist `
 
 重新启动即可
 
@@ -315,7 +315,7 @@ System\Library\Extensions\IONetworkingFamily.kext
 
 ![GUI](http://upload-images.jianshu.io/upload_images/2779067-149d1cadfc6af11f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-箭头所示就是关于启动选择的选项，将Legacy 去掉就行。如果有linux的盆友记得勾选linux，保存退出，在重启看看，你的引导是不是很简洁了呢？
+箭头所示就是关于启动选择的选项，将` Legacy `去掉就行。如果有linux的盆友记得勾选` linux `，保存退出，在重启看看，你的引导是不是很简洁了呢？
 
 #### <h2 id="6.2">< 2 >. 修改引导主题</h2>
 
