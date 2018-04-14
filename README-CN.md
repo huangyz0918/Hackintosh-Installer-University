@@ -34,6 +34,16 @@
 - [PCbeta](http://mac.pcbeta.com/)
 - [iMacHK](https://imac.hk/)
 
+### Github 上一些贡献者的配置
+
+- [Lenove Thinkpad T450](https://github.com/shmilee/T450-Hackintosh)
+- [Acer V5-573G](https://github.com/Kaijun/Acer-V5-573G-Hackintosh)
+- [Gigabyte GA-Z77-DS3H](https://github.com/tkrotoff/Gigabyte-GA-Z77-DS3H-rev1.1-Hackintosh)
+- [Lenovo Y470](https://github.com/Dwarven/Hackintosh/tree/master/Lenovo%20Y470)
+- [Acer Aspire E1-471G](https://github.com/matthew728960/Clover-ACER-E1-471G)
+- [HUANAN X79](https://github.com/cheneyveron/clover-x79-e5-2670-gtx650)
+- [Gigabyte X99P-SLI](https://github.com/koush/EFI-X99)
+
 ### 现有设备配置
 
 - [Lenove B50-70](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Res/%20Lenove-B50-intelHD4600-success)
@@ -82,9 +92,20 @@
 ```bash
 
 Res/
-└── Lenove-B50-intelHD4600-success
+└── Lenove-B50-intelHD4600-10.12.6
     ├── config.plist
+    ├── info.md
     └── kexts/
+
+```
+
+一个不错的 `info.md` 例子：
+
+```markdown
+- Device name: GA-Z170-Gaming 7
+- CPU: i7-6700K
+- Graphics: Nvidia GeForce GT 640
+- Graphics: Intel HD4600
 
 ```
 我们期待你的贡献！ :+1:
