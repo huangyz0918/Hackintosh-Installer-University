@@ -44,7 +44,7 @@
 - [HUANAN X79](https://github.com/cheneyveron/clover-x79-e5-2670-gtx650)
 - [Gigabyte X99P-SLI](https://github.com/koush/EFI-X99)
 
-### 现有设备配置
+### 本Repo现有设备配置
 
 - [Lenove B50-70](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Res/%20Lenove-B50-intelHD4600-success)
 
