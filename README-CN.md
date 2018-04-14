@@ -23,6 +23,21 @@
 
 :bell: 如果你对黑苹果背后的原理和一些细节，只想快速完成黑苹果的安装，请走这扇门 ---> [:door:](quick/quick-cn.md)
 
+### 一些关于黑苹果和macOS的参考网站
+- [Wikipedia](https://en.wikipedia.org/wiki/Hackintosh)
+- [OSx86 Project](https://www.osx86project.org/)
+- [Tonymacx86](https://www.tonymacx86.com/)
+- [hackintosh.com](https://hackintosh.com/)
+- [9to5mac](https://9to5mac.com/)
+- [Rehabman Github](https://github.com/RehabMan)
+- [Rehabman Bitbucket](https://bitbucket.org/RehabMan/)
+- [PCbeta](http://mac.pcbeta.com/)
+- [iMacHK](https://imac.hk/)
+
+### 现有设备配置
+
+- [Lenove B50-70](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Res/%20Lenove-B50-intelHD4600-success)
+
 
 ## 我要怎样才能为这个 Repo 做出贡献?
 
