@@ -85,6 +85,7 @@ We will improve the workspace tree day by day, and don't forget to give your pre
 We encourage you to upload your hackintosh configs and kexts if you don't mind. This repo has a workspace named `Res` and you can make your own workspace there ,and share your successful configs and kexts with others if you want. It's a good place to make a self backup and do sharing, but don't forget to attach your computer information like this:
 
 - Build your device folder under `Res` folder, named your device like this: `Computer brand-model-Graphics Cards-macOS  version`
+- Put your device information into a markdown file: `info.md`.
 - Put your config in the root and create a `kexts` folder to hold your kexts.
 - For `kexts` folder, you can create different subfolder for different kinds of kernerls, such as `Wifi`, `Graphics Cards` and so on.
 - Please give a link rather than upload many large files.
@@ -97,9 +98,21 @@ A good example may look like this:
 Res/
 └── Lenove-B50-intelHD4600-10.12.6
     ├── config.plist
+    ├── info.md
     └── kexts/
 
 ```
+A good `info.md` file looks like:
+
+```markdown
+- Device name: GA-Z170-Gaming 7
+- CPU: i7-6700K
+- Graphics: Nvidia GeForce GT 640
+- Graphics: Intel HD4600
+- 
+
+```
+
 We are all looking forward to your resources! :+1:
 
 ## License
