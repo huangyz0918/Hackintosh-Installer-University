@@ -48,7 +48,7 @@ The core part of this repo is tutorials, we distribute all the tutorials into th
 
 - **Post Installation Guide**
 
-  This part is intended for post installation, you can get a knowledge about basic drivers and kernels of your system and macOS. If you want to contribute to this part, please put your article into `Post` folder.
+  This part is intended for post installation, you can get a knowledge about basic drivers and kexts of your system and macOS. If you want to contribute to this part, please put your article into `Post` folder.
  
 - **Troubleshooting**
 
@@ -57,13 +57,13 @@ The core part of this repo is tutorials, we distribute all the tutorials into th
 We will improve the workspace tree day by day, and don't forget to give your precious suggestions !
  
 ### **Contribute to resource**
-We encourage you to upload your hackintosh configs and kernels if you don't mind. This repo has a workspace named `Res` and you can make your own workspace there ,and share your successful configs and kernels with others if you want. It's a good place to make a self backup and do sharing, but don't forget to attach your computer information like this:
+We encourage you to upload your hackintosh configs and kexts if you don't mind. This repo has a workspace named `Res` and you can make your own workspace there ,and share your successful configs and kexts with others if you want. It's a good place to make a self backup and do sharing, but don't forget to attach your computer information like this:
 
 - Build your device folder under `Res` folder, named your device like this: `Computer brand-model-Graphics Cards-Install Result`
-- Put your config in the root and create a `kernels` folder to hold your kernels.
-- For `kernels` folder, you can create different subfolder for different kinds of kernerls, such as `Wifi`, `Graphics Cards` and so on.
+- Put your config in the root and create a `kexts` folder to hold your kexts.
+- For `kexts` folder, you can create different subfolder for different kinds of kernerls, such as `Wifi`, `Graphics Cards` and so on.
 - Please give a link rather than upload many large files.
-- If you are a lazy person who get tired with creating so many folders, it's good for you to put the whole `EFI` along with your system kernels in your workspace.
+- If you are a lazy person who get tired with creating so many folders, it's good for you to put the whole `EFI` along with your system kexts in your workspace.
 
 A good example may look like this:
 
@@ -72,7 +72,7 @@ A good example may look like this:
 Res/
 └── Lenove-B50-intelHD4600-success
     ├── config.plist
-    └── kernels/
+    └── kexts/
 
 ```
 We are all looking forward to your resources! :+1:
