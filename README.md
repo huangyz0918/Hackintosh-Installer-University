@@ -61,6 +61,9 @@ We encourage you to upload your hackintosh configs and kernels if you don't mind
 
 - Build your device folder under `Res` folder, named your device like this: `Computer brand-model-Graphics Cards-Install Result`
 - Put your config in the root and create a `kernels` folder to hold your kernels.
+- For `kernels` folder, you can create different subfolder for different kinds of kernerls, such as `Wifi`, `Graphics Cards` and so on.
+- Please give a link rather than upload many large files.
+- If you are a lazy person who get tired with creating so many folders, it's good for you to put the whole `EFI` along with your system kernels in your workspace.
 
 A good example may look like this:
 
