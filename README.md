@@ -109,7 +109,6 @@ A good `info.md` file looks like:
 - CPU: i7-6700K
 - Graphics: Nvidia GeForce GT 640
 - Graphics: Intel HD4600
-- 
 
 ```
 
