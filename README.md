@@ -40,6 +40,16 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 
 - [Lenove B50-70](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Res/%20Lenove-B50-intelHD4600-success)
 
+### Devices avaliable in Github
+
+- [Lenove Thinkpad T450](https://github.com/shmilee/T450-Hackintosh)
+- [Acer V5-573G](https://github.com/Kaijun/Acer-V5-573G-Hackintosh)
+- [Gigabyte GA-Z77-DS3H](https://github.com/tkrotoff/Gigabyte-GA-Z77-DS3H-rev1.1-Hackintosh)
+- [Lenovo Y470](https://github.com/Dwarven/Hackintosh/tree/master/Lenovo%20Y470)
+- [Acer Aspire E1-471G](https://github.com/matthew728960/Clover-ACER-E1-471G)
+- [HUANAN X79](https://github.com/cheneyveron/clover-x79-e5-2670-gtx650)
+- [Gigabyte X99P-SLI](https://github.com/koush/EFI-X99)
+
 
 ## How to contribute to this repository?
 
@@ -74,7 +84,7 @@ We will improve the workspace tree day by day, and don't forget to give your pre
 ### **Contribute to resource**
 We encourage you to upload your hackintosh configs and kexts if you don't mind. This repo has a workspace named `Res` and you can make your own workspace there ,and share your successful configs and kexts with others if you want. It's a good place to make a self backup and do sharing, but don't forget to attach your computer information like this:
 
-- Build your device folder under `Res` folder, named your device like this: `Computer brand-model-Graphics Cards-Install Result`
+- Build your device folder under `Res` folder, named your device like this: `Computer brand-model-Graphics Cards-macOS  version`
 - Put your config in the root and create a `kexts` folder to hold your kexts.
 - For `kexts` folder, you can create different subfolder for different kinds of kernerls, such as `Wifi`, `Graphics Cards` and so on.
 - Please give a link rather than upload many large files.
@@ -85,7 +95,7 @@ A good example may look like this:
 ```bash
 
 Res/
-└── Lenove-B50-intelHD4600-success
+└── Lenove-B50-intelHD4600-10.12.6
     ├── config.plist
     └── kexts/
 
