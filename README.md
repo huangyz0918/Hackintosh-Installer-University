@@ -21,9 +21,9 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 
 ## How to learn Hackintosh ?
 
-:bell:You need to learn a lot if you want to figure what are the secrects behind the Hackintosh, So please go this door:[:door:]()
+:bell:You need to learn a lot if you want to figure what are the secrects behind the Hackintosh, So please go this door:[:door:](slow.md)
 
-:bell:If you are not intested in those theories, just want a quick installation, please go through this door:[:door:]()
+:bell:If you are not intested in those theories, just want a quick installation, please go through this door:[:door:](quick.md)
 
 
 ## How to contribute to this repository?
