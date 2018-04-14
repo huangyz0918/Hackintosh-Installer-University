@@ -5,9 +5,9 @@
 [![Platform](https://img.shields.io/badge/Platform-Markdown-bule.svg)](https://shields.io/)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-:loudspeaker: This is a comment Tutorial for Hackintosh Installation and it does not charge readers any fee. 
+:loudspeaker: This is a open source tutorial for Hackintosh installation and it does not charge readers any fee. 
 
-:loudspeaker: As we know, Hackintosh is potentially illegal because doing this is in violation of the end-user license agreement [(EULA)](http://images.apple.com/legal/sla/docs/macosx107.pdf) from Apple for macOS. So we just focus on the technologies related to Hackintosh and do not allow using this for commercial activities. If you do want to start, please read this license in detail and remember you are a geek, not a criminal.
+:loudspeaker: As we know, Hackintosh is potentially illegal because doing this is in violation of the end-user license agreement [(EULA)](http://images.apple.com/legal/sla/docs/macosx107.pdf) from Apple for macOS. So we just focus on the technologies related to Hackintosh and do not allow using this for commercial activities. If you want to start, please read this license in detail first and remember you are a geek, not a criminal.
 
 Here are some other language versions:
 - [中文版本](README-CN.md)
@@ -23,9 +23,9 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 
 :bell:There are a lot to learn if you want to figure out what are the secrects behind Hackintosh, please go this door ---> [:door:](slow/slow.md)
 
-:bell:If you are not intested in those theories, just want a quick installation, please go through this door ---> [:door:](quick/quick.md)
+:bell:If you get no intests in those theories, just want a quick installation, please go through this door ---> [:door:](quick/quick.md)
 
-### Famous website for hackintosh and macOS
+### Famous websites for hackintosh and macOS
 - [Wikipedia](https://en.wikipedia.org/wiki/Hackintosh)
 - [OSx86 Project](https://www.osx86project.org/)
 - [Tonymacx86](https://www.tonymacx86.com/)
@@ -53,15 +53,15 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 
 ## How to contribute to this repository?
 
-You need to `fork` this repository, just click the `fork` button.
+You need to `fork` this repository, just click the `fork` button at the top of this page.
 After a fork, you can use git to clone this repository in your local device and make changes in your branches. We encourage you to do contributions in this repo.
 
 ### **Contribute to tutorials**
-The core part of this repo is tutorials, we distribute all the tutorials into those parts:
+The core part of this repo are tutorials, we distribute all the tutorials into those parts:
 
 - **Buyer's guide**
 
-  In this part, you can get a quick start of Hackintosh and get to know which hardware are suitable for installing a Hackintosh. You can learn much about the computer hardwares like CPU, Hard Drives and Graphics Cards in this chapter. We use a standalone folder `Hardwares` to put them all.
+  In this part, you can get a quick start of Hackintosh and get to know what hardwares are suitable for installing a Hackintosh. You can learn much about the computer hardwares like CPU, Hard Drives and graphics cards in this chapter. We use a standalone folder `Hardwares` to put them all.
 
 - **Bootloader Installation Guide**
 
@@ -79,24 +79,24 @@ The core part of this repo is tutorials, we distribute all the tutorials into th
 
   We have a specific part for addressing issues, if you have any questions you can open an issue and ask for help from others, also, if you want to share your experience about fixing some issue during hackintosh installation, you can contribute to this part. Don't forget to attach your device informations and put your experience into `troubleshooting` workspace.
   
-We will improve the workspace tree day by day, and don't forget to give your precious suggestions !
+We will improve the workspace tree day by day, so don't forget to give us your precious suggestions !
 
 ### **Contribute to resource**
-We encourage you to upload your hackintosh configs and kexts if you don't mind. This repo has a workspace named `Res` and you can make your own workspace there ,and share your successful configs and kexts with others if you want. It's a good place to make a self backup and do sharing, but don't forget to attach your computer information like this:
+We encourage you to upload your hackintosh configs and kexts if you don't mind. This repo has a workspace named `Res` and you can make your own workspace there ,and share your successful configs and kexts with others if you want. It's a good place to make a self backup and do sharing, but you'd better follow thses rules:
 
-- Build your device folder under `Res` folder, named your device like this: `Computer brand-model-Graphics Cards-macOS  version`
+- Build your device folder under `Res` folder, named your device like this: `Computer brand-model-macOS  version`
 - Put your device information into a markdown file: `info.md`.
-- Put your config in the root and create a `kexts` folder to hold your kexts.
-- For `kexts` folder, you can create different subfolder for different kinds of kernerls, such as `Wifi`, `Graphics Cards` and so on.
-- Please give a link rather than upload many large files.
-- If you are a lazy person who get tired with creating so many folders, it's good for you to put the whole `EFI` along with your system kexts in your workspace.
+- Put your config in the root of workspace and create a `kexts` folder to hold all your kexts.
+- For `kexts` folder, you can create different subfolders for different kinds of kexts, such as `Wifi`, `Graphics Cards` and so on.
+- Please give links rather than uploading many large files.
+- If you are a lazy person who get tired with creating so many folders, it's good for you to put the whole `EFI` along with your system kexts & information in your workspace.
 
 A good example may look like this:
 
 ```bash
 
 Res/
-└── Lenove-B50-intelHD4600-10.12.6
+└── Lenove-B50-10.12.6
     ├── config.plist
     ├── info.md
     └── kexts/
