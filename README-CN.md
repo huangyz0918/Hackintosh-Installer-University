@@ -1,7 +1,7 @@
 
 
 
-# 黑苹果安装者学院
+# 黑苹果安装学院
 [![Platform](https://img.shields.io/badge/Platform-Markdown-bule.svg)](https://shields.io/)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
@@ -82,9 +82,9 @@
 ### **为资源做贡献**
 我们鼓励贡献者上传自己成功的配置文件和驱动到这个仓库，但是在贡献之前，请查看上传的贡献规则：
 
-- 在 `Res` 文件夹下面创建属于自己机器的黑苹果文件夹，命名规则: `厂家-型号-显卡型号-安装结果`
+- 在 `Res` 文件夹下面创建属于自己机器的黑苹果文件夹，命名规则: `厂家-型号-系统版本`。
 - 如果有引导的配置文件，请在根目录下放置。 并且 创建一个子文件夹：`kexts` 用来放置你的驱动文件。
-- 大小大于 100M 的文件请使用链接的形式给出
+- 此Repo不适合上传巨大的文件（如：安装镜像），体积较大的文件请使用链接的形式给出。
 - `kexts` 文件夹下面可以根据不同的驱动种类创建不同的文件夹，如果你想直接把整个EFI文件夹，也是好的。
 
 这里有一个例子：
@@ -92,7 +92,7 @@
 ```bash
 
 Res/
-└── Lenove-B50-intelHD4600-10.12.6
+└── Lenove-B50-10.12.6
     ├── config.plist
     ├── info.md
     └── kexts/
