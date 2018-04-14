@@ -4,7 +4,7 @@
 # Hackintosh-Installer-University
 [![Platform](https://img.shields.io/badge/Platform-Markdown-bule.svg)](https://shields.io/)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![fork this repo](http://githubbadges.com/fork.svg?user=ddavison&repo=github-badges&style=flat&color=fff&background=007ec6)](https://github.com/huangyz0918/Hackintosh-Installer-University/fork)
+[![fork this repo](http://githubbadges.com/fork.svg?user=ddavison&repo=github-badges&style=flat&color=fff&background=007ec6)](https://github.com/ddavison/github-badges/fork)
 
 :loudspeaker: This is a comment Tutorial for Hackintosh Installation and it does not charge readers any fee. 
 
