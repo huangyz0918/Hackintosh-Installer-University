@@ -7,7 +7,7 @@
 
 :loudspeaker: This is a open source tutorial for Hackintosh installation and it does not charge readers any fee. 
 
-:loudspeaker: As we know, Hackintosh is potentially illegal because doing this is in violation of the end-user license agreement [(EULA)](http://images.apple.com/legal/sla/docs/macosx107.pdf) from Apple for macOS. So we just focus on the technologies related to Hackintosh and do not allow using this for commercial activities. If you want to start, please read this license in detail first and remember you are a geek, not a criminal.
+:loudspeaker: As we known, Hackintosh is potentially illegal because doing this is in violation of the end-user license agreement [(EULA)](http://images.apple.com/legal/sla/docs/macosx107.pdf) from Apple for macOS. So we just focus on the technologies related to Hackintosh and do not allow using this for commercial activities. If you want to start, please read this license in detail first and remember you are a geek, not a criminal.
 
 Here are some other language versions:
 - [中文版本](README-CN.md)
@@ -54,10 +54,10 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 ## How to contribute to this repository?
 
 You need to `fork` this repository, just click the `fork` button at the top of this page.
-After a fork, you can use git to clone this repository in your local device and make changes in your branches. We encourage you to do contributions in this repo.
+After a fork, you can use git to clone this repository in your local device and make changes in your branches. We encourage you to do contributions in this repo by submitting a pull request.
 
 ### **Contribute to tutorials**
-The core part of this repo are tutorials, we distribute all the tutorials into those parts:
+The core part of this repo are tutorials, we distribute all of them into those parts:
 
 - **Buyer's guide**
 
@@ -65,7 +65,7 @@ The core part of this repo are tutorials, we distribute all the tutorials into t
 
 - **Bootloader Installation Guide**
 
-  In this part, we will focus on the bootloaders of Hackintosh, you can gain the knowledge about how a computer(PC) start and how a operation system launched. Besides, we can share the experience about Clover Bootloader and Chameleon Bootloader. We use folder `Bootloader` to keep this tutorials.
+  In this part, we will focus on the bootloaders of Hackintosh, you can gain a knowledge about how a computer(PC) boots and how a operation system launches. Besides, we can share the experience about Clover Bootloader and Chameleon Bootloader here. We use folder `Bootloader` to keep these tutorials.
 
 - **System Installation Guide**
   
@@ -73,20 +73,20 @@ The core part of this repo are tutorials, we distribute all the tutorials into t
 
 - **Post Installation Guide**
 
-  This part is intended for post installation, you can get a knowledge about basic drivers and kexts of your system and macOS. If you want to contribute to this part, please put your article into `Post` folder.
+  This part is intended for post installation, you can get a knowledge about basic drivers and kexts of your system and macOS. If you want to contribute to this part, please put your articles into `Post` folder.
 
 - **Troubleshooting**
 
-  We have a specific part for addressing issues, if you have any questions you can open an issue and ask for help from others, also, if you want to share your experience about fixing some issue during hackintosh installation, you can contribute to this part. Don't forget to attach your device informations and put your experience into `troubleshooting` workspace.
+  We have a specific part for addressing issues, if you have any questions you can open an issue and ask for help from others, also, if you want to share your experience about fixing some issues during hackintosh installation, you can contribute to this part. Don't forget to attach your device informations and put your experience into `troubleshooting` workspace.
   
 We will improve the workspace tree day by day, so don't forget to give us your precious suggestions !
 
 ### **Contribute to resource**
-We encourage you to upload your hackintosh configs and kexts if you don't mind. This repo has a workspace named `Res` and you can make your own workspace there ,and share your successful configs and kexts with others if you want. It's a good place to make a self backup and do sharing, but you'd better follow thses rules:
+We encourage you to upload your hackintosh configs and kexts if you don't mind. This repo has a workspace named `Res` and you can make your own workspace there ,and share your successful configs and kexts with others if you want. It's a good place to make a self backup and do a share, but you'd better follow thses rules:
 
 - Build your device folder under `Res` folder, named your device like this: `Computer brand-model-macOS  version`
 - Put your device information into a markdown file: `info.md`.
-- Put your config in the root of workspace and create a `kexts` folder to hold all your kexts.
+- Put your configs in the root of workspace and create a `kexts` folder to hold all your kexts.
 - For `kexts` folder, you can create different subfolders for different kinds of kexts, such as `Wifi`, `Graphics Cards` and so on.
 - Please give links rather than uploading many large files.
 - If you are a lazy person who get tired with creating so many folders, it's good for you to put the whole `EFI` along with your system kexts & information in your workspace.
