@@ -21,9 +21,9 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 
 ## How to learn Hackintosh ?
 
-:bell:You need to learn a lot if you want to figure what are the secrects behind the Hackintosh, So please go this door:[:door:](slow.md)
+:bell:You need to learn a lot if you want to figure what are the secrects behind the Hackintosh, So please go this door:[:door:](slow/slow.md)
 
-:bell:If you are not intested in those theories, just want a quick installation, please go through this door:[:door:](quick.md)
+:bell:If you are not intested in those theories, just want a quick installation, please go through this door:[:door:](quick/quick.md)
 
 
 ## How to contribute to this repository?
@@ -49,13 +49,13 @@ The core part of this repo is tutorials, we distribute all the tutorials into th
 - **Post Installation Guide**
 
   This part is intended for post installation, you can get a knowledge about basic drivers and kexts of your system and macOS. If you want to contribute to this part, please put your article into `Post` folder.
- 
+
 - **Troubleshooting**
 
   We have a specific part for addressing issues, if you have any questions you can open an issue and ask for help from others, also, if you want to share your experience about fixing some issue during hackintosh installation, you can contribute to this part. Don't forget to attach your device informations and put your experience into `troubleshooting` workspace.
   
 We will improve the workspace tree day by day, and don't forget to give your precious suggestions !
- 
+
 ### **Contribute to resource**
 We encourage you to upload your hackintosh configs and kexts if you don't mind. This repo has a workspace named `Res` and you can make your own workspace there ,and share your successful configs and kexts with others if you want. It's a good place to make a self backup and do sharing, but don't forget to attach your computer information like this:
 
