@@ -25,6 +25,21 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 
 :bell:If you are not intested in those theories, just want a quick installation, please go through this door ---> [:door:](quick/quick.md)
 
+### Famous website for hackintosh and macOS
+- [Wikipedia](https://en.wikipedia.org/wiki/Hackintosh)
+- [OSx86 Project](https://www.osx86project.org/)
+- [Tonymacx86](https://www.tonymacx86.com/)
+- [hackintosh.com](https://hackintosh.com/)
+- [9to5mac](https://9to5mac.com/)
+- [Rehabman Github](https://github.com/RehabMan)
+- [Rehabman Bitbucket](https://bitbucket.org/RehabMan/)
+- [PCbeta](http://mac.pcbeta.com/)
+- [iMacHK](https://imac.hk/)
+
+### Devices available in Res
+
+- [Lenove B50-70](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Res/%20Lenove-B50-intelHD4600-success)
+
 
 ## How to contribute to this repository?
 
