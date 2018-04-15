@@ -61,23 +61,23 @@ The core part of this repo are tutorials, we distribute all of them into those p
 
 - **Buyer's guide**
 
-  In this part, you can get a quick start of Hackintosh and get to know what hardwares are suitable for installing a Hackintosh. You can learn much about the computer hardwares like CPU, Hard Drives and graphics cards in this chapter. We use a standalone folder `Hardwares` to put them all.
+    In this part, you can get a quick start of Hackintosh and get to know what hardwares are suitable for installing a Hackintosh. You can learn much about the computer hardwares like CPU, Hard Drives and graphics cards in this chapter. We use a standalone folder `Hardwares` to put them all.
 
 - **Bootloader Installation Guide**
 
-  In this part, we will focus on the bootloaders of Hackintosh, you can gain a knowledge about how a computer(PC) boots and how a operation system launches. Besides, we can share the experience about Clover Bootloader and Chameleon Bootloader here. We use folder `Bootloader` to keep these tutorials.
+    In this part, we will focus on the bootloaders of Hackintosh, you can gain a knowledge about how a computer(PC) boots and how a operation system launches. Besides, we can share the experience about Clover Bootloader and Chameleon Bootloader here. We use folder `Bootloader` to keep these tutorials.
 
 - **System Installation Guide**
   
-  This is a introduction about macOS system installation. We use `System` floder to keep these articles.
+    This is a introduction about macOS system installation. We use `System` floder to keep these articles.
 
 - **Post Installation Guide**
 
-  This part is intended for post installation, you can get a knowledge about basic drivers and kexts of your system and macOS. If you want to contribute to this part, please put your articles into `Post` folder.
+    This part is intended for post installation, you can get a knowledge about basic drivers and kexts of your system and macOS. If you want to contribute to this part, please put your articles into `Post` folder.
 
 - **Troubleshooting**
 
-  We have a specific part for addressing issues, if you have any questions you can open an issue and ask for help from others, also, if you want to share your experience about fixing some issues during hackintosh installation, you can contribute to this part. Don't forget to attach your device informations and put your experience into `troubleshooting` workspace.
+    We have a specific part for addressing issues, if you have any questions you can open an issue and ask for help from others, also, if you want to share your experience about fixing some issues during hackintosh installation, you can contribute to this part. Don't forget to attach your device informations and put your experience into `troubleshooting` workspace.
   
 We will improve the workspace tree day by day, so don't forget to give us your precious suggestions !
 
