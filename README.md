@@ -5,9 +5,9 @@
 [![Platform](https://img.shields.io/badge/Platform-Markdown-bule.svg)](https://shields.io/)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-:loudspeaker: This is a open source tutorial for Hackintosh installation and it does not charge readers any fee. 
+:loudspeaker: This is a open source tutorial for Hackintosh installations that does not charge readers any fee. 
 
-:loudspeaker: As we known, Hackintosh is potentially illegal because doing this is in violation of the end-user license agreement [(EULA)](http://images.apple.com/legal/sla/docs/macosx107.pdf) from Apple for macOS. So we just focus on the technologies related to Hackintosh and do not allow using this for commercial activities. If you want to start, please read this license in detail first and remember you are a geek, not a criminal.
+:loudspeaker: As we know, Hackintosh is potentially illegal because doing this is in violation of the end-user license agreement [(EULA)](http://images.apple.com/legal/sla/docs/macosx107.pdf) from Apple for macOS. Therefore, we just focus on the technologies related to Hackintosh and do not use it commercially. If you want to get started, please first read this license in detail and remember that you are a geek, not a criminal.
 
 Here are some other language versions:
 - [中文版本](README-CN.md)
@@ -15,15 +15,15 @@ Here are some other language versions:
 
 ## What's Hackintosh ?
 
-When Apple announced their switch away from the PowerPC architecture to Intel's processors and chipsets, many were looking forward to having the ability to run Windows software on Apple hardware and Apple's operating systems on their non-Apple hardware. Apple was able to eventually build their Boot Camp feature in Mac OS X 10.5 and later allowing Windows to run on Apple hardware. Those hoping to easily run Mac OS X on a standard PC do not have it so easy.
+When Apple announced their switch away from the PowerPC architecture to Intel's processors and chipsets, many were looking forward to having the ability to run Windows software on Apple hardware and Apple's operating systems on their non-Apple hardware. Apple was able to eventually build their Boot Camp feature in Mac OS X 10.5, later allowing Windows to run on Apple hardware. Those hoping to easily run Mac OS X on a standard PC didn't have it so easy.
 
-Even though running Mac OS X on a generic PC is not supported by Apple, it is possible to accomplish given the right hardware and determination by users. Any system that is made to run the Apple operating system is referred to as Hackintosh. This term comes from the fact that the software needs to be hacked in order to properly run on the hardware. Of course some of the hardware needs to be tweaked in a few cases as well.
+Even though running Mac OS X on a generic PC is not supported by Apple, it is possible to accomplish given the right hardware and determination by users. Any system that is not made to run the Apple operating system is referred to as Hackintosh. This term comes from the fact that the software needs to be hacked in order to properly run on Non-Apple hardware. Of course some of the hardware needs to be tweaked in a few cases as well.
 
 ## How to learn Hackintosh ?
 
-:bell:There are a lot to learn if you want to figure out what are the secrects behind Hackintosh, please go this door ---> [:door:](slow/slow.md)
+:bell:There's a lot to learn if you want to figure out the secrects behind Hackintosh, please go this door ---> [:door:](slow/slow.md)
 
-:bell:If you get no intests in those theories, just want a quick installation, please go through this door ---> [:door:](quick/quick.md)
+:bell:If you have no interest in those theories, and just want a quick installation, please go through this door ---> [:door:](quick/quick.md)
 
 ### Famous websites for hackintosh and macOS
 - [Wikipedia](https://en.wikipedia.org/wiki/Hackintosh)
@@ -54,35 +54,35 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 ## How to contribute to this repository?
 
 You need to `fork` this repository, just click the `fork` button at the top of this page.
-After a fork, you can use git to clone this repository in your local device and make changes in your branches. We encourage you to do contributions in this repo by submitting a pull request.
+After a fork, you can use git to clone this repository to your local device and make changes in your branches. We encourage you to  contribute to this repo by submitting a pull request.
 
 ### **Contribute to tutorials**
-The core part of this repo are tutorials, we distribute all of them into those parts:
+The core part of this repo are tutorials, we distribute all of them into these parts:
 
 - **Buyer's guide**
 
-    In this part, you can get a quick start of Hackintosh and get to know what hardwares are suitable for installing a Hackintosh. You can learn much about the computer hardwares like CPU, Hard Drives and graphics cards in this chapter. We use a standalone folder `Hardwares` to put them all.
+    In this part, you can get a quick idea of Hackintosh and get to know what hardware is suitable for installing Mackintosh on PC hardware. You can learn a lot about computer hardware like CPU, Hard Drives and graphics cards in this chapter. We keep these in the standalone folder `Hardwares`.
 
 - **Bootloader Installation Guide**
 
-    In this part, we will focus on the bootloaders of Hackintosh, you can gain a knowledge about how a computer(PC) boots and how a operation system launches. Besides, we can share the experience about Clover Bootloader and Chameleon Bootloader here. We use folder `Bootloader` to keep these tutorials.
+    In this part, we will focus on the bootloaders of Hackintosh, you can gain knowledge about how a computer(PC) boots and how a operation system launches. We also cover information about the Clover Bootloader and Chameleon Bootloader here. We keep these in the `Bootloader` folder.
 
 - **System Installation Guide**
   
-    This is a introduction about macOS system installation. We use `System` floder to keep these articles.
+    This is a introduction about macOS system installation. We keep these articles in the  `System` floder.
 
 - **Post Installation Guide**
 
-    This part is intended for post installation, you can get a knowledge about basic drivers and kexts of your system and macOS. If you want to contribute to this part, please put your articles into `Post` folder.
+    This part is intended for post installation. Here, you can learn about basic drivers and kexts of your system and macOS. If you want to contribute to this part, please put your articles into `Post` folder.
 
 - **Troubleshooting**
 
-    We have a specific part for addressing issues, if you have any questions you can open an issue and ask for help from others, also, if you want to share your experience about fixing some issues during hackintosh installation, you can contribute to this part. Don't forget to attach your device informations and put your experience into `troubleshooting` workspace.
+    We have a specific part for addressing issues, if you have any questions you can open an issue and ask for help from others. Also, if you want to share your experience about fixing some issues during hackintosh installation, you can contribute to this part. Don't forget to attach your hardware information and put your experience into `troubleshooting` workspace.
   
 We will improve the workspace tree day by day, so don't forget to give us your precious suggestions !
 
 ### **Contribute to resource**
-We encourage you to upload your hackintosh configs and kexts if you don't mind. This repo has a workspace named `Res` and you can make your own workspace there ,and share your successful configs and kexts with others if you want. It's a good place to make a self backup and do a share, but you'd better follow thses rules:
+We encourage you to upload your hackintosh configs and kexts if you don't mind. This repo has a workspace named `Res` and you can make your own workspace there, and share your successful configs and kexts with others if you want. It's a good place to make a backup and share. Be sure to follow thses rules:
 
 - Build your device folder under `Res` folder, named your device like this: `Computer brand-model-macOS  version`
 - Put your device information into a markdown file: `info.md`.
