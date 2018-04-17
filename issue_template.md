@@ -5,6 +5,8 @@ If you want to ask for specific troubles during the installations, please name t
 
 If you want to ask for a tutorial, please name this like " Document: ask for xxxxxx tutorial "
 
+If you want to fix typo, please name this issue like "Typo: xxxxx"
+
 You can delete the default templete if you don't need to fill with that. good luck ;)
 -->
 
