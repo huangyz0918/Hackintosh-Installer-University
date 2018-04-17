@@ -69,6 +69,12 @@
 - [Lenovo Ideapad 310-14IKB](https://github.com/29satnam/LenovoHackintoshEFI)
 - [Lenovo-XiaoXin700-15ISK](https://github.com/athlonreg/Lenovo-XiaoXin700-15ISK)
 - [HUANAN X79](https://github.com/cheneyveron/clover-x79-e5-2670-gtx650)
+- [HP Elitebook 8470p](https://github.com/minhphuc429/hackintosh-hp-elitebook-8470p)
+- [HP Elitebook 8470p](https://github.com/dreadkopp/8470p_10.13.x)
+- [HP Elitebook 840 G1/G2](https://github.com/loicpirez/HackintoshConfig)
+- [HP Elitebook Folio 9480m](https://github.com/obviouslyerratic/clover_9480m)
+- [HP EliteDesk 800 G2 TWR](https://github.com/sakoula/hackintosh.hp.800.g2)
+- [HP Z420 Workstation](https://github.com/NTT123/Hackintosh-HP-Z420-MacOS-High-Sierra-10.13)
 
 ### 本Repo现有设备配置
 
