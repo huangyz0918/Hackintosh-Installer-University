@@ -7,6 +7,8 @@
 
 :loudspeaker: This is a open source tutorial for Hackintosh installations that does not charge readers any fee. 
 
+:loudspeaker: We don't want to build a universal installation tutorial and, it's also impossible since every devices are different. We are here because we want to gather information and experiences, we want to build an index for most successful builds in github and make them be discovered more easily. When I was just a newbie, I didn't know how to get start building a hackintosh since I didn't know what's a bootloader and an EFI partition. It took me a really long time to find a helpful build in Github due to the deep location of that repo. So this is what we want to create this repo.
+ 
 :loudspeaker: As we know, Hackintosh is potentially illegal because doing this is in violation of the end-user license agreement [(EULA)](http://images.apple.com/legal/sla/docs/macosx107.pdf) from Apple for macOS. Therefore, we just focus on the technologies related to Hackintosh and do not use it commercially. If you want to get started, please first read this license in detail and remember that you are a geek, not a criminal.
 
 Here are some other language versions:
