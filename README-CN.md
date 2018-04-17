@@ -65,7 +65,7 @@
 - [Lenovo x230 ](https://github.com/edu-rinaldi/Lenovo-x230-High-Sierra)
 - [Lenovo Yoga 3 Pro](https://github.com/zohaad/hackintosh-Yoga-3-Pro)
 - [Lenovo-v3000-ISE](https://github.com/Xc2333/Hackintosh-Lenovo-v3000-ISE)
-- [lenovo-rescuer-15-isk](https://github.com/oneplusdash/lenovo-rescuer-15-isk-hackintosh)
+- [Lenovo-rescuer-15-isk](https://github.com/oneplusdash/lenovo-rescuer-15-isk-hackintosh)
 - [Lenovo Ideapad 310-14IKB](https://github.com/29satnam/LenovoHackintoshEFI)
 - [Lenovo-XiaoXin700-15ISK](https://github.com/athlonreg/Lenovo-XiaoXin700-15ISK)
 - [HUANAN X79](https://github.com/cheneyveron/clover-x79-e5-2670-gtx650)
