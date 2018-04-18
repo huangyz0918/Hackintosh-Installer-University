@@ -1,0 +1,3 @@
+- Device name: ASUS P8 Z770V LX Gaming Rig
+- CPU: i5-2500K
+- Graphics: AMD R9 290 (to get graphics enabled, since this isn't all in Clover, follow https://www.tonymacx86.com/threads/guide-getting-r9-290-390-non-x-to-work-on-sierra-10-12-and-high-sierra-10-13.210574/)
