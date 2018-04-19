@@ -41,6 +41,7 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 ### Devices available in Res
 
 - [Lenove B50-70](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Res/%20Lenove-B50-intelHD4600-success)
+- [Asus-P8Z77-V-LX-10.12.6](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Res/Asus-P8Z77-V-LX-10.12.6)
 
 ### Devices avaliable in Github
 
