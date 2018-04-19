@@ -79,6 +79,7 @@
 ### 本Repo现有设备配置
 
 - [Lenove B50-70](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Res/%20Lenove-B50-intelHD4600-success)
+- [Asus-P8Z77-V-LX-10.12.6](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Res/Asus-P8Z77-V-LX-10.12.6)
 
 
 ## 我要怎样才能为这个 Repo 做出贡献?
