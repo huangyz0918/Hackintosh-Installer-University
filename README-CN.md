@@ -4,6 +4,8 @@
 # 黑苹果安装学院
 [![Platform](https://img.shields.io/badge/Platform-Markdown-bule.svg)](https://shields.io/)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![contributions](https://img.shields.io/badge/contributions-welcome-green.svg)](https://github.com/CXXT-Projects/CXXT-Website) 
+
 
 :loudspeaker: 这是一个开源的黑苹果教程仓库，对所有用户免费。 
 
