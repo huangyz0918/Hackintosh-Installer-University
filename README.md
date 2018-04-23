@@ -4,6 +4,8 @@
 # Hackintosh-Installer-University
 [![Platform](https://img.shields.io/badge/Platform-Markdown-bule.svg)](https://shields.io/)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![contributions](https://img.shields.io/badge/contributions-welcome-green.svg)](https://github.com/CXXT-Projects/CXXT-Website) 
+
 
 :loudspeaker: This is a open source tutorial & information collector for Hackintosh installations that does not charge readers any fee. 
 
