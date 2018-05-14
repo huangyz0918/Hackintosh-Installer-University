@@ -77,6 +77,7 @@
 - [HP Elitebook Folio 9480m](https://github.com/obviouslyerratic/clover_9480m)
 - [HP EliteDesk 800 G2 TWR](https://github.com/sakoula/hackintosh.hp.800.g2)
 - [HP Z420 Workstation](https://github.com/NTT123/Hackintosh-HP-Z420-MacOS-High-Sierra-10.13)
+- [XiaoMi NoteBook Pro](https://github.com/daliansky/XiaoMi-Pro)
 
 ### 本Repo现有设备配置
 
