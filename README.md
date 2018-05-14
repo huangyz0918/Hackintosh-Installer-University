@@ -7,7 +7,7 @@
 [![contributions](https://img.shields.io/badge/contributions-welcome-green.svg)](https://github.com/CXXT-Projects/CXXT-Website) 
 
 
-:loudspeaker: This is a open source tutorial & information collector for Hackintosh installations that does not charge readers any fee. 
+:loudspeaker: This is an open source tutorial & information collector for Hackintosh installations that does not charge readers any fee. 
 
 :loudspeaker: We don't want to build a universal installation tutorial and, it's also impossible since every devices are different. We are here because we want to gather information and experiences, we want to build an index for most successful builds in github and make them be discovered more easily. When I was just a newbie, I didn't know how to get start building a hackintosh since I didn't know what's a bootloader and an EFI partition. It took me a really long time to find a helpful build in Github due to the deep location of that repo. So this is the purpose why we created this index.
 
