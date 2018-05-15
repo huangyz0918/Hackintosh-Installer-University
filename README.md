@@ -156,7 +156,6 @@ We are all looking forward to your resources! :+1:
 ## License
 [Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
-<div align=center><img width="120" src="https://i.loli.net/2018/05/15/5afaddc9a9789.png"/></div>
-<div align=center><img width="120" src="https://i.loli.net/2018/05/15/5afaddc9aa3f5.png"/></div>
+<div align=center><img width="120" src="https://i.loli.net/2018/05/15/5afaddc9a9789.png"/><img width="120" src="https://i.loli.net/2018/05/15/5afaddc9aa3f5.png"/></div>
 
 
