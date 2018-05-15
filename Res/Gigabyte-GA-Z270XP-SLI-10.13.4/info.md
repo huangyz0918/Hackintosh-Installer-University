@@ -1,0 +1,3 @@
+- Device name: GA-Z270XP-SLI
+- CPU: i7 7700K
+- Graphics: GeForce GTX 1050
