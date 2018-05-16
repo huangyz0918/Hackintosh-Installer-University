@@ -54,6 +54,7 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 - [Acer Aspire V3-371-52FF](https://github.com/Ty3uK/52ff-elcapitan-toolbox)
 - [Acer Aspire E5-473-30N5](https://github.com/b-ggs/aspire-e5-hackintosh)
 - [Acer Aspire V3-572G](https://github.com/FREDwiz/Hackintosh)
+- [Asus H81M-K](https://github.com/Slbomber/AsusH81MK-macos)
 - [Dell XPS13-9350-Skylake](https://github.com/syscl/XPS9350-macOS)
 - [Dell XPS15-9550](https://github.com/corenel/XPS9550-macOS)
 - [Dell XPS15-9550](https://github.com/PromiseYo/XPS15-9550-macOS)
