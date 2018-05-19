@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleGetInfoString</key>
+	<string>0.5.0 Open Source 2018, 300-series XHCI injector</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.rehabman.injector.300-series-XHCI</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Injector for 300-series Intel XHCI Controllers</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.5.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.5.0</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>AppleUSBXHCILPTH 300</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
+			<key>IOClass</key>
+			<string>AppleUSBXHCISPT</string>
+			<key>IOPCIPauseCompatible</key>
+			<true/>
+			<key>IOPCIPrimaryMatch</key>
+			<string>0xa36d8086</string>
+			<key>IOPCITunnelCompatible</key>
+			<true/>
+			<key>IOProbeScore</key>
+			<integer>1000</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+		</dict>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+</dict>
+</plist>
