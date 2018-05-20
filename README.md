@@ -2,9 +2,10 @@
 
 
 # Hackintosh-Installer-University
-[![Platform](https://img.shields.io/badge/Platform-Markdown-bule.svg)](https://shields.io/)
+[![Platform](https://img.shields.io/badge/platform-markdown-red.svg)](https://shields.io/)
 [![License](https://img.shields.io/badge/license-CC%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![contributions](https://img.shields.io/badge/contributions-welcome-green.svg)](https://github.com/CXXT-Projects/CXXT-Website) 
+![progress](https://img.shields.io/badge/progress-developing-yellow.svg)
+[![contributions](https://img.shields.io/badge/contributions-welcome-green.svg)](https://github.com/huangyz0918/Hackintosh-Installer-University) 
 
 
 :loudspeaker: This is an open source tutorial & information collector for Hackintosh installations that does not charge readers any fee. 
