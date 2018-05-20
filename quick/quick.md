@@ -1,2 +1,15 @@
 # Quick Start
+[![Platform](https://img.shields.io/badge/Platform-Markdown-bule.svg)](https://shields.io/)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![contributions](https://img.shields.io/badge/contributions-welcome-green.svg)](https://github.com/CXXT-Projects/CXXT-Website)
 
+This is a quick start with hackintosh installation.
+
+## 1. Download macOS and create a bootable USB drive
+### 1.1 Build from Windows
+
+### 1.2 Build form macOS
+
+## 2. Setting up your BIOS
+## 3. Install macOS (current version is macOS High Sierra)
+## 4. Post Installation
