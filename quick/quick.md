@@ -8,6 +8,7 @@ This is a quick start with hackintosh installation.
 ## 1. Download macOS and create a bootable USB drive
 ### 1.1 Build in Windows
 
+
 ### 1.2 Build in macOS
 
 ## 2. Setting up your BIOS
