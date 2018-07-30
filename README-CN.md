@@ -44,6 +44,9 @@
 - [Acer Aspire V3-371-52FF](https://github.com/Ty3uK/52ff-elcapitan-toolbox)
 - [Acer Aspire E5-473-30N5](https://github.com/b-ggs/aspire-e5-hackintosh)
 - [Acer Aspire V3-572G](https://github.com/FREDwiz/Hackintosh)
+- [Alienware 17 R4 KBL-1060 Dual Graphics](https://github.com/RockJesus/Alienware-17-R4-I7-7700HQ-MacOS-High-Sierra)
+- [Asus H81M-K](https://github.com/Slbomber/AsusH81MK-macos)
+- [Dell 7559 4K SKL](https://github.com/RockJesus/Dell-7559-I7-6700HQ-4K-touch-MacOS-High-Sierra)
 - [Dell XPS13-9350-Skylake](https://github.com/syscl/XPS9350-macOS)
 - [Dell XPS15-9550](https://github.com/corenel/XPS9550-macOS)
 - [Dell XPS15-9550](https://github.com/PromiseYo/XPS15-9550-macOS)
@@ -77,6 +80,7 @@
 - [HP Elitebook Folio 9480m](https://github.com/obviouslyerratic/clover_9480m)
 - [HP EliteDesk 800 G2 TWR](https://github.com/sakoula/hackintosh.hp.800.g2)
 - [HP Z420 Workstation](https://github.com/NTT123/Hackintosh-HP-Z420-MacOS-High-Sierra-10.13)
+- [Samsung nt550p7c-IVY](https://github.com/RockJesus/samsung-nt550p7c-sierra)
 - [XiaoMi NoteBook Pro](https://github.com/daliansky/XiaoMi-Pro)
 
 ### 本 Repo 现有设备配置
