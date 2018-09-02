@@ -46,6 +46,7 @@
 - [Acer Aspire V3-572G](https://github.com/FREDwiz/Hackintosh)
 - [Alienware 17 R4 KBL-1060 Dual Graphics](https://github.com/RockJesus/Alienware-17-R4-I7-7700HQ-MacOS-High-Sierra)
 - [Asus H81M-K](https://github.com/Slbomber/AsusH81MK-macos)
+- [Asus Zenbook](https://github.com/hieplpvip/ASUS-ZENBOOK-HACKINTOSH)
 - [Dell 7559 4K SKL](https://github.com/RockJesus/Dell-7559-I7-6700HQ-4K-touch-MacOS-High-Sierra)
 - [Dell XPS13-9350-Skylake](https://github.com/syscl/XPS9350-macOS)
 - [Dell XPS15-9550](https://github.com/corenel/XPS9550-macOS)
