@@ -45,6 +45,7 @@
 - [Acer Aspire E5-473-30N5](https://github.com/b-ggs/aspire-e5-hackintosh)
 - [Acer Aspire V3-572G](https://github.com/FREDwiz/Hackintosh)
 - [Alienware 17 R4 KBL-1060 Dual Graphics](https://github.com/RockJesus/Alienware-17-R4-I7-7700HQ-MacOS-High-Sierra)
+- [Asus FX50J](https://github.com/Xc2333/Hackintosh-ASUS-FX50J)
 - [Asus H81M-K](https://github.com/Slbomber/AsusH81MK-macos)
 - [Asus Zenbook](https://github.com/hieplpvip/ASUS-ZENBOOK-HACKINTOSH)
 - [Asus Vivobook S510UA](https://github.com/tctien342/Asus-Vivobook-S510UA-High-Sierra-10.13-Hackintosh)
