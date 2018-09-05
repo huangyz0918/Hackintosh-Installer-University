@@ -5,7 +5,7 @@ benefited from Rehabman's repo [OS-X-USB-Inject-All](https://github.com/RehabMan
 
 ### KP in Pre-Installation
 
-This kernel panic usually due to the USB3.0 port, you can change the  port to other USB3.0 port or USB2.0, if all port are failed, then you may need to add [USBInjectAll.kext](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/) to Clover/kexts folder and add some appropriate [patches](https://github.com/RehabMan/OS-X-USB-Inject-All/blob/master/config_patches.plist) for the corresponding version, like **ACPI rename** and **port limit**.
+This kernel panic usually due to the USB3.0 port, you can change the  port to other USB3.0 port or USB2.0, if all ports are failed, then you may need to add [USBInjectAll.kext](https://bitbucket.org/RehabMan/os-x-usb-inject-all/downloads/) to Clover/kexts folder and add some appropriate [patches](https://github.com/RehabMan/OS-X-USB-Inject-All/blob/master/config_patches.plist) for the corresponding version, like **ACPI rename** and **port limit**.
 
 
 ### USB speed issues
@@ -19,7 +19,7 @@ tutorial below:
 
 
 * To creat a custom SSDT for USBInjectAll.kext,see detailed  [tutorial](https://www.tonymacx86.com/threads/guide-creating-a-custom-ssdt-for-usbinjectall-kext.211311/)  
-* Also you may need to inject the correct USB power property for getting the right power supply，see [tutorial here](https://www.tonymacx86.com/threads/guide-usb-power-property-injection-for-sierra-and-later.222266/)
+* Also you may need to inject the correct USB power property for getting the right power supply,see [tutorial here](https://www.tonymacx86.com/threads/guide-usb-power-property-injection-for-sierra-and-later.222266/)
 
 ### Other issues
 
