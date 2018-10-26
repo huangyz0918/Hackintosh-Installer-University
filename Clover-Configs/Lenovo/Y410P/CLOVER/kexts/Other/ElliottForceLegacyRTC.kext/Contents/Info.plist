@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>ElliottForceLegacyRTC</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.tgwbd.driver.ElliottForceLegacyRTC</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>ElliottForceLegacyRTC</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0d1</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>PNP0B00</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.tgwbd.driver.ElliottForceLegacyRTC</string>
+			<key>IOClass</key>
+			<string>ElliottForceLegacyRTC</string>
+			<key>IONameMatch</key>
+			<string>PNP0B00</string>
+			<key>IOProbeScore</key>
+			<string>10</string>
+			<key>IOProviderClass</key>
+			<string>IOACPIPlatformDevice</string>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2009 David F. Elliott. All rights reserved.</string>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IOACPIFamily</key>
+		<string>1.0.0d1</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>8.0.0b3</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>8.0.0b3</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+</dict>
+</plist>

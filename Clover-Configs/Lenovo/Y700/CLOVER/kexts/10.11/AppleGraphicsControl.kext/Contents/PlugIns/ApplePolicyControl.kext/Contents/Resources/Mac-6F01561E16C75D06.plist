@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IOPlatformGPUProfile</key>
+	<dict>
+		<key>CreationDate</key>
+		<string>Thu March 17 17:40:34 PDT 2011</string>
+		<key>ConfigArray</key>
+		<array>
+			<dict>
+				<key>GPU</key>
+				<string>Intel</string>
+			    <key>External</key>
+			    <true/>
+				<key>ActiveHeads</key>
+				<integer>2</integer>
+				<key>Ports</key>
+				<array>
+					<dict>
+						<key>Num</key>
+						<integer>0</integer>
+						<key>Type</key>
+						<string>LVDS</string>
+						<key>T29</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>Num</key>
+						<integer>1</integer>
+						<key>Type</key>
+						<string>DP</string>
+						<key>T29</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>Num</key>
+						<integer>2</integer>
+						<key>Type</key>
+						<string>DP</string>
+						<key>T29</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Num</key>
+						<integer>3</integer>
+						<key>Type</key>
+						<string>DP</string>
+						<key>T29</key>
+						<true/>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

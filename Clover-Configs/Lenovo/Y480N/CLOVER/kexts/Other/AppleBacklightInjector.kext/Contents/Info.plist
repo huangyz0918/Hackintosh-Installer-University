@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleGetInfoString</key>
+	<string>0.9.0, Copyright 2013 RehabMan Inc. All rights reserved.</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.rehabman.injector.AppleBacklightInjector</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>AppleBacklightInjector</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.9.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>0.9.0</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>AppleIntelPanelA</key>
+		<dict>
+			<key>ApplePanels</key>
+			<dict>
+				<key>F10Txxxx</key>
+				<data>ABEAAAA0AFIAcwCUAL4A+gE2AXIBxQIvArkDYAQaBQoGDgcQ</data>
+				<key>F11Txxxx</key>
+				<data>ABEAAAA2AFQAfQCyAPUBSQGxAisCuANZBBME7AXzBzQIrwrZ</data>
+				<key>F12Txxxx</key>
+				<data>ABEAAAAYACcAOgBSAHEAlgDEAPwBQAGTAfYCbgL+A6oEeAVs</data>
+			</dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleBacklight</string>
+			<key>IOClass</key>
+			<string>AppleIntelPanelA</string>
+			<key>IODisplayParameters</key>
+			<dict>
+				<key>brightness</key>
+				<dict>
+					<key>max</key>
+					<integer>255</integer>
+					<key>min</key>
+					<integer>40</integer>
+				</dict>
+				<key>commit</key>
+				<dict>
+					<key>reg</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>IOMatchCategory</key>
+			<string>IODisplayParameters</string>
+			<key>IONameMatch</key>
+			<string>backlight</string>
+			<key>IOProbeScore</key>
+			<integer>2500</integer>
+			<key>IOProviderClass</key>
+			<string>IOACPIPlatformDevice</string>
+		</dict>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Safe Boot</string>
+</dict>
+</plist>

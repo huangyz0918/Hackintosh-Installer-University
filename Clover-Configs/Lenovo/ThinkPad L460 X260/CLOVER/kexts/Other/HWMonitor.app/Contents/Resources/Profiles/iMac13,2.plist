@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>TA0p|Ambient</string>
+	<string>TC:041c|CPU Core %X</string>
+	<string>TCAD|CPU Package</string>
+	<string>TC0p|CPU Proximity</string>
+	<string>TCXc|PECI CPU</string>
+	<string>TCSc|PECI SA</string>
+	<string>TCGc|PECI GFX</string>
+	<string>TPCD|PCH Die</string>
+	<string>Tm:021p|Mainboard Proximity %X</string>
+	<string>TL:021p|LCD Proximity %X</string>
+	<string>Tb0p|BLC Proximity</string>
+	<string>TM:141p|Memory Module %X</string>
+	<string>TM:041p|Memory Module %X Proximity</string>
+	<string>Tp2h|Power Supply Heatsink</string>
+	<string>VC0C|CPU Core</string>
+	<string>VC0M|CPU Memory</string>
+	<string>VN1R|PCH Core</string>
+	<string>VR3R|Main 3.3V</string>
+	<string>VH05|Main 5V</string>
+	<string>VD2R|Main 12V</string>
+	<string>VG0C|GPU Core</string>
+	<string>IC0C|CPU Core</string>
+	<string>IC0M|CPU Memory</string>
+	<string>IN1R|PCH Rail</string>
+	<string>IM0R|Memory Rail</string>
+	<string>IH02|Main 3.3V Rail</string>
+	<string>IH05|Main 5V Rail</string>
+	<string>ID2R|Main 12V Rail</string>
+	<string>IG0C|GPU Rail</string>
+	<string>PC0C|CPU Core</string>
+	<string>PC0M|CPU Memory</string>
+	<string>PCPC|CPU Package Cores</string>
+	<string>PCPG|CPU Package Graphics</string>
+	<string>PCPL|CPU Package Total</string>
+	<string>PN1R|PCH Rail</string>
+	<string>PM0R|Memory Rail</string>
+	<string>PH02|Main 3.3V Rail</string>
+	<string>PH05|Main 5V Rail</string>
+	<string>PD2R|Main 12V Rail</string>
+	<string>PG0C|GPU Core</string>
+	<string>PGTR|GPU Total</string>
+	<string>PDTR|System Total</string>
+	<string>PZ:041G|Zone %X Average</string>
+</array>
+</plist>

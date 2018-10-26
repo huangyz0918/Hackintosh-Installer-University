@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>TC:A2AD|CPU %X Die</string>
+	<string>TC:A2AH|CPU %X Heatsink</string>
+	<string>TN0D|PCH Die</string>
+	<string>TN0H|PCH Heatsink</string>
+	<string>TM:181P|Memory Module %X Proximity</string>
+	<string>TMA:141|Memory Bank A, Slot %X</string>
+	<string>TMB:141|Memory Bank B, Slot %X</string>
+	<string>TeGG|PCIe GPU</string>
+	<string>VC:A2AC|CPU %X</string>
+	<string>VS2C|CPU PLL</string>
+	<string>VN0C|CPU IMC/QPI/DRAM</string>
+	<string>VM:A2AS|Memory Bank %X</string>
+	<string>VS1C|PCH</string>
+	<string>VS8C|Main 3.3V</string>
+	<string>Vp0C|Power Supply 12V</string>
+	<string>IC:A2AC|CPU %X</string>
+	<string>IM:A2AS|Memory Bank %X</string>
+	<string>IH:141Z|Drive Bay %X</string>
+	<string>IN0C|PCH</string>
+	<string>Ie:141S|PCIe Slot %X</string>
+	<string>Ie:A2AS|PCIe Booster %X</string>
+	<string>Ip0C|Power Supply 12V</string>
+	<string>PC:A2AC|CPU %X</string>
+	<string>PM:A2AS|Memory Bank %X</string>
+	<string>PN0C|PCH Core</string>
+	<string>Pe:141S|PCIe Slot %X</string>
+	<string>Pe:A2AS|PCIe Booster %X</string>
+	<string>PpSM|Memory Modules</string>
+	<string>Pp0C|Power Supply 12V</string>
+</array>
+</plist>

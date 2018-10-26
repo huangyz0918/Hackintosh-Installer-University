@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>11D50</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>VoodooTSCSync</string>
+	<key>CFBundleGetInfoString</key>
+	<string>© 2009 Cosmo1t</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.voodoo.driver.VoodooTSCSync</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>VoodooTSCSync</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.1</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1</string>
+	<key>DTCompiler</key>
+	<string></string>
+	<key>DTPlatformBuild</key>
+	<string>4E109</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>10K549</string>
+	<key>DTSDKName</key>
+	<string>macosx10.6</string>
+	<key>DTXcode</key>
+	<string>0430</string>
+	<key>DTXcodeBuild</key>
+	<string>4E109</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>VoodooTSCSync</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.voodoo.driver.VoodooTSCSync</string>
+			<key>IOClass</key>
+			<string>org_voodoo_driver_VoodooTSCSync</string>
+			<key>IOMatchCategory</key>
+			<string>VoodooTSCSync</string>
+			<key>IOPropertyMatch</key>
+			<dict>
+				<key>IOCPUNumber</key>
+				<integer>3</integer>
+			</dict>
+			<key>IOProviderClass</key>
+			<string>AppleACPICPU</string>
+		</dict>
+	</dict>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.kpi.iokit</key>
+		<string>7.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>8.0d0</string>
+		<key>com.apple.kpi.unsupported</key>
+		<string>8.0b1</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+</dict>
+</plist>

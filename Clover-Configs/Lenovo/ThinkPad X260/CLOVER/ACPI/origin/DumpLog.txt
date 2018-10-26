@@ -1,0 +1,91 @@
+17:984  5:823  Found UEFI Acpi 2.0 RSDP at B7FFE014
+17:984  0:000  Saving ACPI tables from RSDP B7FFE014 to EFI\CLOVER\ACPI\origin ...
+17:984  0:000   B7FFE014: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
+17:984  0:000    (Xsdt: B7FD0188, Rsdt: B7FD00C4)
+17:984  0:000    B7FD0188: 'XSDT', 'TP-R02', Rev: 1, Len: 220
+17:984  0:000    B7FD00C4: 'RSDT', 'TP-R02', Rev: 1, Len: 128
+17:984  0:000    Tables in Xsdt: 23
+17:984  0:000    0. B7FF6000: 'FACP', 'TP-R02', Rev: 5, Len: 244
+17:984  0:000        (Dsdt: B7FDF000, Facs: B7FA4000, XDsdt: B7FDF000, XFacs: 0)
+17:984  0:000        B7FDF000: 'DSDT', 'TP-R02', Rev: 2, Len: 74754
+17:986  0:001        B7FA4000: 'FACS', Ver: 2, Len: 64
+17:986  0:000    1. B7FBB000: 'UEFI', 'TP-R02', Rev: 1, Len: 66
+17:986  0:000    2. B7FF8000: 'SSDT', 'SaSsdt', Rev: 2, Len: 20085
+17:986  0:000    3. B7FF7000: 'SSDT', 'PerfTune', Rev: 2, Len: 1477
+17:986  0:000    4. B7FF5000: 'ECDT', 'TP-R02', Rev: 1, Len: 82
+17:986  0:000    5. B7FF4000: 'HPET', 'TP-R02', Rev: 1, Len: 56
+17:986  0:000    6. B7FF3000: 'APIC', 'TP-R02', Rev: 3, Len: 188
+17:986  0:000    7. B7FF2000: 'MCFG', 'TP-R02', Rev: 1, Len: 60
+17:986  0:000    8. B7FDD000: 'SSDT', 'SataAhci', Rev: 1, Len: 6354
+17:986  0:000    9. B7FDC000: 'SSDT', 'Rmv_Batt', Rev: 1, Len: 338
+17:986  0:000    10. B7FDB000: 'DBGP', 'TP-R02', Rev: 1, Len: 52
+17:986  0:000    11. B7FDA000: 'DBG2', 'TP-R02', Rev: 0, Len: 84
+17:986  0:000    12. B7FD9000: 'BOOT', 'TP-R02', Rev: 1, Len: 40
+17:986  0:000    13. B7FD8000: 'BATB', 'TP-R02', Rev: 2, Len: 74
+17:986  0:000    14. B7FD7000: 'SLIC', 'TP-R02', Rev: 1, Len: 374
+17:986  0:000    15. B7FD6000: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3699
+17:986  0:000    16. B7FD5000: 'SSDT', 'CtdpB', Rev: 2, Len: 985
+17:986  0:000    17. B7FD4000: 'POAT', 'TP-R02', Rev: 3, Len: 85
+17:986  0:000    18. B7FD3000: 'DMAR', 'TP-R02', Rev: 1, Len: 168
+17:986  0:000    19. B7FD2000: 'ASF!', 'TP-R02', Rev: 32, Len: 165
+17:986  0:000    20. B7FD1000: 'FPDT', 'TP-R02', Rev: 1, Len: 68
+17:986  0:000    21. B7FFD000: 'BGRT', 'TP-R02', Rev: 1, Len: 56
+17:986  0:000    22. B7FA2000: 'UEFI', 'TP-R02', Rev: 1, Len: 318
+17:986  0:000    Tables in Rsdt: 23
+17:986  0:000    0. B7FF6000: 'FACP', 'TP-R02', Rev: 5, Len: 244
+17:986  0:000        (Dsdt: B7FDF000, Facs: B7FA4000, XDsdt: B7FDF000, XFacs: 0)
+17:986  0:000        B7FDF000: 'DSDT', 'TP-R02', Rev: 2, Len: 74754
+17:988  0:001        B7FA4000: 'FACS', Ver: 2, Len: 64
+17:988  0:000    1. B7FBB000: 'UEFI', 'TP-R02', Rev: 1, Len: 66
+17:988  0:000    2. B7FF8000: 'SSDT', 'SaSsdt', Rev: 2, Len: 20085
+17:988  0:000    3. B7FF7000: 'SSDT', 'PerfTune', Rev: 2, Len: 1477
+17:988  0:000    4. B7FF5000: 'ECDT', 'TP-R02', Rev: 1, Len: 82
+17:988  0:000    5. B7FF4000: 'HPET', 'TP-R02', Rev: 1, Len: 56
+17:988  0:000    6. B7FF3000: 'APIC', 'TP-R02', Rev: 3, Len: 188
+17:988  0:000    7. B7FF2000: 'MCFG', 'TP-R02', Rev: 1, Len: 60
+17:988  0:000    8. B7FDD000: 'SSDT', 'SataAhci', Rev: 1, Len: 6354
+17:988  0:000    9. B7FDC000: 'SSDT', 'Rmv_Batt', Rev: 1, Len: 338
+17:988  0:000    10. B7FDB000: 'DBGP', 'TP-R02', Rev: 1, Len: 52
+17:988  0:000    11. B7FDA000: 'DBG2', 'TP-R02', Rev: 0, Len: 84
+17:988  0:000    12. B7FD9000: 'BOOT', 'TP-R02', Rev: 1, Len: 40
+17:988  0:000    13. B7FD8000: 'BATB', 'TP-R02', Rev: 2, Len: 74
+17:988  0:000    14. B7FD7000: 'SLIC', 'TP-R02', Rev: 1, Len: 374
+17:988  0:000    15. B7FD6000: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3699
+17:988  0:000    16. B7FD5000: 'SSDT', 'CtdpB', Rev: 2, Len: 985
+17:988  0:000    17. B7FD4000: 'POAT', 'TP-R02', Rev: 3, Len: 85
+17:988  0:000    18. B7FD3000: 'DMAR', 'TP-R02', Rev: 1, Len: 168
+17:988  0:000    19. B7FD2000: 'ASF!', 'TP-R02', Rev: 32, Len: 165
+17:988  0:000    20. B7FD1000: 'FPDT', 'TP-R02', Rev: 1, Len: 68
+17:988  0:000    21. B7FFD000: 'BGRT', 'TP-R02', Rev: 1, Len: 56
+17:988  0:000    22. B7FA2000: 'UEFI', 'TP-R02', Rev: 1, Len: 318
+17:988  0:000  Found UEFI Acpi 1.0 RSDP at B7FFE000
+17:988  0:000  Printing ACPI tables from RSDP B7FFE000 ...
+17:988  0:000   B7FFE000: 'RSD PTR ', Rev: 0 (Acpi 1.0), Len: 20
+17:988  0:000    (Rsdt: B7FD0000)
+17:988  0:000    B7FD0000: 'RSDT', 'TP-R02', Rev: 1, Len: 124
+17:988  0:000    Tables in Rsdt: 22
+17:988  0:000    0. B7FF6000: 'FACP', 'TP-R02', Rev: 5, Len: 244
+17:988  0:000        (Dsdt: B7FDF000, Facs: B7FA4000, XDsdt: B7FDF000, XFacs: 0)
+17:988  0:000        B7FDF000: 'DSDT', 'TP-R02', Rev: 2, Len: 74754
+17:989  0:001        B7FA4000: 'FACS', Ver: 2, Len: 64
+17:989  0:000    1. B7FBB000: 'UEFI', 'TP-R02', Rev: 1, Len: 66
+17:989  0:000    2. B7FF8000: 'SSDT', 'SaSsdt', Rev: 2, Len: 20085
+17:989  0:000    3. B7FF7000: 'SSDT', 'PerfTune', Rev: 2, Len: 1477
+17:989  0:000    4. B7FF5000: 'ECDT', 'TP-R02', Rev: 1, Len: 82
+17:989  0:000    5. B7FF4000: 'HPET', 'TP-R02', Rev: 1, Len: 56
+17:989  0:000    6. B7FF3000: 'APIC', 'TP-R02', Rev: 3, Len: 188
+17:989  0:000    7. B7FF2000: 'MCFG', 'TP-R02', Rev: 1, Len: 60
+17:989  0:000    8. B7FDD000: 'SSDT', 'SataAhci', Rev: 1, Len: 6354
+17:989  0:000    9. B7FDC000: 'SSDT', 'Rmv_Batt', Rev: 1, Len: 338
+17:989  0:000    10. B7FDB000: 'DBGP', 'TP-R02', Rev: 1, Len: 52
+17:989  0:000    11. B7FDA000: 'DBG2', 'TP-R02', Rev: 0, Len: 84
+17:989  0:000    12. B7FD9000: 'BOOT', 'TP-R02', Rev: 1, Len: 40
+17:989  0:000    13. B7FD8000: 'BATB', 'TP-R02', Rev: 2, Len: 74
+17:989  0:000    14. B7FD6000: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3699
+17:989  0:000    15. B7FD5000: 'SSDT', 'CtdpB', Rev: 2, Len: 985
+17:989  0:000    16. B7FD4000: 'POAT', 'TP-R02', Rev: 3, Len: 85
+17:989  0:000    17. B7FD3000: 'DMAR', 'TP-R02', Rev: 1, Len: 168
+17:989  0:000    18. B7FD2000: 'ASF!', 'TP-R02', Rev: 32, Len: 165
+17:989  0:000    19. B7FD1000: 'FPDT', 'TP-R02', Rev: 1, Len: 68
+17:989  0:000    20. B7FFD000: 'BGRT', 'TP-R02', Rev: 1, Len: 56
+17:989  0:000    21. B7FA2000: 'UEFI', 'TP-R02', Rev: 1, Len: 318

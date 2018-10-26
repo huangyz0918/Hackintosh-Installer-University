@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Description</key>
+		<string>Apple SD/SM/TS...E/F/G SSDs</string>
+		<key>NameMatch</key>
+		<array>
+			<string>APPLE SSD (S[DM]|TS)0?(128|256|512|768)[EFG]</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>173,raw48</key>
+			<string>Wear_Leveling_Count</string>
+			<key>174,raw48</key>
+			<string>Host_Reads_MiB</string>
+			<key>175,raw48</key>
+			<string>Host_Writes_MiB</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Samsung based SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>SAMSUNG SSD PM800 .*GB</string>
+			<string>SAMSUNG SSD PM810 .*GB</string>
+			<string>SAMSUNG 470 Series SSD</string>
+			<string>SAMSUNG SSD 830 Series</string>
+			<string>Samsung SSD 840 (PRO )?Series</string>
+			<string>Samsung SSD ... EVO .*.B</string>
+			<string>SAMSUNG MZ7WD((120|240)HAFV|480HAGM|960HAGP)-00003</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>187,raw48</key>
+			<string>Uncorrectable_Error_Cnt</string>
+			<key>195,raw48</key>
+			<string>ECC_Error_Rate</string>
+			<key>199,raw48</key>
+			<string>CRC_Error_Count</string>
+			<key>201,raw48</key>
+			<string>Supercap_Status</string>
+			<key>202,raw48</key>
+			<string>Exception_Mode_Status</string>
+			<key>235,raw48</key>
+			<string>POR_Recovery_Count</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>JMicron based SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>ADATA S596 Turbo</string>
+			<string>APPLE SSD TS(064|128|256|512)C</string>
+			<string>KINGSTON SNV425S2(64|128)GB</string>
+			<string>KINGSTON SSDNOW 30GB</string>
+			<string>KINGSTON SS100S2(8|16)G</string>
+			<string>KINGSTON SV200S3(64|128|256)G</string>
+			<string>TOSHIBA THNS128GG4BBAA</string>
+			<string>TOSHIBA THNSNC128GMLJ</string>
+			<string>TS(8|16|32|64|128|192|256|512)GSSD25S?-(MD?|S)</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>3,raw48</key>
+			<string>Unknown_Attribute</string>
+			<key>7,raw48</key>
+			<string>Unknown_Attribute</string>
+			<key>8,raw48</key>
+			<string>Unknown_Attribute</string>
+			<key>10,raw48</key>
+			<string>Unknown_Attribute</string>
+			<key>168,raw48</key>
+			<string>SATA_Phy_Error_Count</string>
+			<key>170,raw16</key>
+			<string>Bad_Block_Count</string>
+			<key>173,raw16</key>
+			<string>Erase_Count</string>
+			<key>175,raw48</key>
+			<string>Bad_Cluster_Table_Count</string>
+			<key>192,raw48</key>
+			<string>Unexpect_Power_Loss_Ct</string>
+			<key>240,raw48</key>
+			<string>Unknown_Attribute</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>JMicron based SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>Kingston SSDNow V Series [0-9]*GB</string>
+			<string>TS(2|4|8|16|32|64|128|192)GSSD25S?-(M|S)</string>
+			<string>[BV].*</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>229,hex64</key>
+			<string>Halt_System/Flash_ID</string>
+			<key>232,hex64</key>
+			<string>Firmware_Version_Info</string>
+			<key>233,hex64</key>
+			<string>ECC_Fail_Record</string>
+			<key>234,raw24/raw24:w01234</key>
+			<string>Max_Erase_Count</string>
+			<key>235,raw24/raw24:w01234</key>
+			<string>Good/Sys_Block_Count</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Kingston branded X25-V SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>KINGSTON SSDNow 40GB</string>
+		</array>
+		<key>FirmwareMatch</key>
+		<array>
+			<string>2CV102(J[89A-Z]|[K-Z].)</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>192,raw48</key>
+			<string>Unsafe_Shutdown_Count</string>
+			<key>225,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>226,raw48</key>
+			<string>Workld_Media_Wear_Indic</string>
+			<key>227,raw48</key>
+			<string>Workld_Host_Reads_Perc</string>
+			<key>228,raw48</key>
+			<string>Workload_Minutes</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Kingston branded X25-V SSD</string>
+		<key>Warning</key>
+		<string>This drive may require a firmware update to
+fix possible drive hangs when reading SMART self-test log.
+To update Kingston branded drives, a modified Intel update
+tool must be used. Search for &quot;kingston 40gb firmware&quot;</string>
+		<key>NameMatch</key>
+		<array>
+			<string>KINGSTON SSDNow 40GB</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>192,raw48</key>
+			<string>Unsafe_Shutdown_Count</string>
+			<key>225,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>226,raw48</key>
+			<string>Workld_Media_Wear_Indic</string>
+			<key>227,raw48</key>
+			<string>Workld_Host_Reads_Perc</string>
+			<key>228,raw48</key>
+			<string>Workload_Minutes</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Intel DC S3700 Series SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>INTEL SSDSC(1N|2B)A(100|200|400|800)G3</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>170,raw48</key>
+			<string>Available_Reservd_Space</string>
+			<key>171,raw48</key>
+			<string>Program_Fail_Count</string>
+			<key>172,raw48</key>
+			<string>Erase_Fail_Count</string>
+			<key>174,raw48</key>
+			<string>Unexpect_Power_Loss_Ct</string>
+			<key>175,raw48</key>
+			<string>Power_Loss_Cap_Test</string>
+			<key>183,raw48</key>
+			<string>SATA_Downshift_Count</string>
+			<key>190,raw48</key>
+			<string>Temperature_Case</string>
+			<key>192,raw48</key>
+			<string>Unsafe_Shutdown_Count</string>
+			<key>194,raw48</key>
+			<string>Temperature_Internal</string>
+			<key>199,raw48</key>
+			<string>CRC_Error_Count</string>
+			<key>225,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>226,raw48</key>
+			<string>Workld_Media_Wear_Indic</string>
+			<key>227,raw48</key>
+			<string>Workld_Host_Reads_Perc</string>
+			<key>228,raw48</key>
+			<string>Workload_Minutes</string>
+			<key>234,raw24/raw32:04321</key>
+			<string>Thermal_Throttle</string>
+			<key>241,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>242,raw48</key>
+			<string>Host_Reads_32MiB</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Intel DC S3500 Series SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>INTEL SSDSC(1N|2B)B(080|120|160|240|300|400|480|600|800)G.</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>170,raw48</key>
+			<string>Available_Reservd_Space</string>
+			<key>171,raw48</key>
+			<string>Program_Fail_Count</string>
+			<key>172,raw48</key>
+			<string>Erase_Fail_Count</string>
+			<key>174,raw48</key>
+			<string>Unexpect_Power_Loss_Ct</string>
+			<key>175,raw48</key>
+			<string>Power_Loss_Cap_Test</string>
+			<key>183,raw48</key>
+			<string>SATA_Downshift_Count</string>
+			<key>190,tempminmax</key>
+			<string>Temperature_Case</string>
+			<key>192,raw48</key>
+			<string>Unsafe_Shutdown_Count</string>
+			<key>194,tempminmax</key>
+			<string>Temperature_Internal</string>
+			<key>199,raw48</key>
+			<string>CRC_Error_Count</string>
+			<key>225,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>226,raw48</key>
+			<string>Workld_Media_Wear_Indic</string>
+			<key>227,raw48</key>
+			<string>Workld_Host_Reads_Perc</string>
+			<key>228,raw48</key>
+			<string>Workload_Minutes</string>
+			<key>234,raw24/raw32:04321</key>
+			<string>Thermal_Throttle</string>
+			<key>241,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>242,raw48</key>
+			<string>Host_Reads_32MiB</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Intel 330/335 Series SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>INTEL SSDSC2CT(060|120|180|240)A[34]</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>9,msec24hour32</key>
+			<string>Power_On_Hours_and_Msec</string>
+			<key>225,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>241,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>242,raw48</key>
+			<string>Host_Reads_32MiB</string>
+			<key>249,raw48</key>
+			<string>NAND_Writes_1GiB</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Intel 530 Series SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>INTEL SSDSC2BW(080|120|180|240|360|480)A4</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>9,msec24hour32</key>
+			<string>Power_On_Hours_and_Msec</string>
+			<key>170,raw48</key>
+			<string>Available_Reservd_Space</string>
+			<key>171,raw48</key>
+			<string>Program_Fail_Count</string>
+			<key>172,raw48</key>
+			<string>Erase_Fail_Count</string>
+			<key>174,raw48</key>
+			<string>Unexpect_Power_Loss_Ct</string>
+			<key>183,raw48</key>
+			<string>SATA_Downshift_Count</string>
+			<key>187,raw48</key>
+			<string>Uncorrectable_Error_Cnt</string>
+			<key>225,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>226,raw48</key>
+			<string>Workld_Media_Wear_Indic</string>
+			<key>227,raw48</key>
+			<string>Workld_Host_Reads_Perc</string>
+			<key>228,raw48</key>
+			<string>Workload_Minutes</string>
+			<key>241,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>242,raw48</key>
+			<string>Host_Reads_32MiB</string>
+			<key>249,raw48</key>
+			<string>NAND_Writes_1GiB</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Intel 525 Series SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>INTEL SSDMCEAC(030|060|090|120|180|240)B3</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>9,msec24hour32</key>
+			<string>Power_On_Hours_and_Msec</string>
+			<key>170,raw48</key>
+			<string>Available_Reservd_Space</string>
+			<key>171,raw48</key>
+			<string>Program_Fail_Count</string>
+			<key>172,raw48</key>
+			<string>Erase_Fail_Count</string>
+			<key>174,raw48</key>
+			<string>Unexpect_Power_Loss_Ct</string>
+			<key>183,raw48</key>
+			<string>SATA_Downshift_Count</string>
+			<key>187,raw48</key>
+			<string>Uncorrectable_Error_Cnt</string>
+			<key>225,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>226,raw48</key>
+			<string>Workld_Media_Wear_Indic</string>
+			<key>227,raw48</key>
+			<string>Workld_Host_Reads_Perc</string>
+			<key>228,raw48</key>
+			<string>Workload_Minutes</string>
+			<key>241,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>242,raw48</key>
+			<string>Host_Reads_32MiB</string>
+			<key>249,raw48</key>
+			<string>NAND_Writes_1GiB</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Intel 520 Series SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>INTEL SSDSC2[BC]W(060|120|180|240|480)A3F?</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>9,msec24hour32</key>
+			<string>Power_On_Hours_and_Msec</string>
+			<key>170,raw48</key>
+			<string>Available_Reservd_Space</string>
+			<key>171,raw48</key>
+			<string>Program_Fail_Count</string>
+			<key>172,raw48</key>
+			<string>Erase_Fail_Count</string>
+			<key>174,raw48</key>
+			<string>Unexpect_Power_Loss_Ct</string>
+			<key>187,raw48</key>
+			<string>Uncorrectable_Error_Cnt</string>
+			<key>225,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>226,raw48</key>
+			<string>Workld_Media_Wear_Indic</string>
+			<key>227,raw48</key>
+			<string>Workld_Host_Reads_Perc</string>
+			<key>228,raw48</key>
+			<string>Workload_Minutes</string>
+			<key>241,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>242,raw48</key>
+			<string>Host_Reads_32MiB</string>
+			<key>249,raw48</key>
+			<string>NAND_Writes_1GiB</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Intel 510 Series SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>INTEL SSDSC2MH(120|250)A2</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>192,raw48</key>
+			<string>Unsafe_Shutdown_Count</string>
+			<key>225,raw48</key>
+			<string>Host_Writes_32MiB</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Intel 710 Series SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>INTEL SSDSA2BZ(100|200|300)G3</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>170,raw48</key>
+			<string>Reserve_Block_Count</string>
+			<key>171,raw48</key>
+			<string>Program_Fail_Count</string>
+			<key>172,raw48</key>
+			<string>Erase_Fail_Count</string>
+			<key>174,raw48</key>
+			<string>Unexpect_Power_Loss_Ct</string>
+			<key>183,raw48</key>
+			<string>SATA_Downshift_Count</string>
+			<key>192,raw48</key>
+			<string>Unsafe_Shutdown_Count</string>
+			<key>225,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>226,raw48</key>
+			<string>Workld_Media_Wear_Indic</string>
+			<key>227,raw48</key>
+			<string>Workld_Host_Reads_Perc</string>
+			<key>228,raw48</key>
+			<string>Workload_Minutes</string>
+			<key>241,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>242,raw48</key>
+			<string>Host_Reads_32MiB</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Intel 320 Series SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>INTEL SSDSA[12][BC][WT](040|080|120|160|300|600)G3A?</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>170,raw48</key>
+			<string>Reserve_Block_Count</string>
+			<key>171,raw48</key>
+			<string>Program_Fail_Count</string>
+			<key>172,raw48</key>
+			<string>Erase_Fail_Count</string>
+			<key>183,raw48</key>
+			<string>SATA_Downshift_Count</string>
+			<key>192,raw48</key>
+			<string>Unsafe_Shutdown_Count</string>
+			<key>199,raw48</key>
+			<string>CRC_Error_Count</string>
+			<key>225,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>226,raw48</key>
+			<string>Workld_Media_Wear_Indic</string>
+			<key>227,raw48</key>
+			<string>Workld_Host_Reads_Perc</string>
+			<key>228,raw48</key>
+			<string>Workload_Minutes</string>
+			<key>241,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>242,raw48</key>
+			<string>Host_Reads_32MiB</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Intel 313 Series SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>INTEL SSDSA2VP(020|024)G3</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>170,raw48</key>
+			<string>Reserve_Block_Count</string>
+			<key>171,raw48</key>
+			<string>Program_Fail_Count</string>
+			<key>172,raw48</key>
+			<string>Erase_Fail_Count</string>
+			<key>183,raw48</key>
+			<string>SATA_Downshift_Count</string>
+			<key>192,raw48</key>
+			<string>Unsafe_Shutdown_Count</string>
+			<key>225,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>226,raw48</key>
+			<string>Workld_Media_Wear_Indic</string>
+			<key>227,raw48</key>
+			<string>Workld_Host_Reads_Perc</string>
+			<key>228,raw48</key>
+			<string>Workload_Minutes</string>
+			<key>241,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>242,raw48</key>
+			<string>Host_Reads_32MiB</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Intel X18-M/X25-M/X25-V G2 SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>INTEL SSDSA[12]M(040|080|120|160)G2.*</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>192,raw48</key>
+			<string>Unsafe_Shutdown_Count</string>
+			<key>225,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>226,raw48</key>
+			<string>Workld_Media_Wear_Indic</string>
+			<key>227,raw48</key>
+			<string>Workld_Host_Reads_Perc</string>
+			<key>228,raw48</key>
+			<string>Workload_Minutes</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Intel X18-M/X25-M G1 SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>INTEL SSDSA[12]MH(080|160)G1.*</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>192,raw48</key>
+			<string>Unsafe_Shutdown_Count</string>
+			<key>225,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>226,raw48</key>
+			<string>Intel_Internal</string>
+			<key>227,raw48</key>
+			<string>Intel_Internal</string>
+			<key>228,raw48</key>
+			<string>Intel_Internal</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Intel X25-E SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>SSDSA2SH(032|064)G1.* INTEL</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>192,raw48</key>
+			<string>Unsafe_Shutdown_Count</string>
+			<key>225,raw48</key>
+			<string>Host_Writes_32MiB</string>
+			<key>226,raw48</key>
+			<string>Intel_Internal</string>
+			<key>227,raw48</key>
+			<string>Intel_Internal</string>
+			<key>228,raw48</key>
+			<string>Intel_Internal</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Indilinx Barefoot 3 based SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>OCZ-VECTOR</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>5,raw48</key>
+			<string>Runtime_Bad_Block</string>
+			<key>171,raw48</key>
+			<string>Avail_OP_Block_Count</string>
+			<key>174,raw48</key>
+			<string>Pwr_Cycle_Ct_Unplanned</string>
+			<key>187,raw48</key>
+			<string>Total_Unc_NAND_Reads</string>
+			<key>195,raw48</key>
+			<string>Total_Prog_Failures</string>
+			<key>196,raw48</key>
+			<string>Total_Erase_Failures</string>
+			<key>197,raw48</key>
+			<string>Total_Unc_Read_Failures</string>
+			<key>198,raw48</key>
+			<string>Host_Reads_GiB</string>
+			<key>199,raw48</key>
+			<string>Host_Writes_GiB</string>
+			<key>208,raw48</key>
+			<string>Average_Erase_Count</string>
+			<key>210,raw48</key>
+			<string>SATA_CRC_Error_Count</string>
+			<key>233,raw48</key>
+			<string>Remaining_Lifetime_Perc</string>
+			<key>249,raw48</key>
+			<string>Total_NAND_Prog_Ct_GiB</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Indilinx Barefoot_2/Everest/Martini based SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>OCZ VERTEX[ -]PLUS</string>
+			<string>OCZ-VERTEX PLUS R2</string>
+			<string>OCZ-PETROL</string>
+			<string>OCZ-AGILITY4</string>
+			<string>OCZ-VERTEX4</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>232,raw48</key>
+			<string>Lifetime_Writes</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Indilinx Barefoot based SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>Corsair CSSD-V(32|60|64|128|256)GB2</string>
+			<string>CRUCIAL_CT(64|128|256)M225</string>
+			<string>G.SKILL FALCON (64|128|256)GB SSD</string>
+			<string>OCZ[ -](AGILITY|ONYX|VERTEX( 1199|-TURBO)?)</string>
+			<string>Patriot[ -]Torqx.*</string>
+			<string>RENICE Z2</string>
+			<string>STT_FT[MD](28|32|56|64)GX25H</string>
+			<string>FM-25S2I-(64|128)GBFII</string>
+			<string>TS(60|120)GSSD25D-M</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>184,raw64</key>
+			<string>Initial_Bad_Block_Count</string>
+			<key>195,raw64</key>
+			<string>Program_Failure_Blk_Ct</string>
+			<key>196,raw64</key>
+			<string>Erase_Failure_Blk_Ct</string>
+			<key>197,raw64</key>
+			<string>Read_Failure_Blk_Ct</string>
+			<key>198,raw64</key>
+			<string>Read_Sectors_Tot_Ct</string>
+			<key>199,raw64</key>
+			<string>Write_Sectors_Tot_Ct</string>
+			<key>200,raw64</key>
+			<string>Read_Commands_Tot_Ct</string>
+			<key>201,raw64</key>
+			<string>Write_Commands_Tot_Ct</string>
+			<key>202,raw64</key>
+			<string>Error_Bits_Flash_Tot_Ct</string>
+			<key>203,raw64</key>
+			<string>Corr_Read_Errors_Tot_Ct</string>
+			<key>204,raw64</key>
+			<string>Bad_Block_Full_Flag</string>
+			<key>205,raw64</key>
+			<string>Max_PE_Count_Spec</string>
+			<key>206,raw64</key>
+			<string>Min_Erase_Count</string>
+			<key>207,raw64</key>
+			<string>Max_Erase_Count</string>
+			<key>208,raw64</key>
+			<string>Average_Erase_Count</string>
+			<key>209,raw64</key>
+			<string>Remaining_Lifetime_Perc</string>
+			<key>210,raw64</key>
+			<string>Indilinx_Internal</string>
+			<key>211,raw64</key>
+			<string>SATA_Error_Ct_CRC</string>
+			<key>212,raw64</key>
+			<string>SATA_Error_Ct_Handshake</string>
+			<key>213,raw64</key>
+			<string>Indilinx_Internal</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Crucial/Micron RealSSD m4/C400/P400</string>
+		<key>NameMatch</key>
+		<array>
+			<string>C400-MTFDDA[ACK](064|128|256|512)MAM</string>
+			<string>M4-CT(064|128|256|512)M4SSD[123]</string>
+			<string>MTFDDAK(064|128|256|512|050|100|200|400)MA[RN]-1[JKS]1AA.*</string>
+		</array>
+		<key>FirmwareMatch</key>
+		<array>
+			<string>030[9-Z]|03[1-Z].|0[4-Z]..|[1-Z]....*</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>170,raw48</key>
+			<string>Grown_Failing_Block_Ct</string>
+			<key>171,raw48</key>
+			<string>Program_Fail_Count</string>
+			<key>172,raw48</key>
+			<string>Erase_Fail_Count</string>
+			<key>173,raw48</key>
+			<string>Wear_Leveling_Count</string>
+			<key>174,raw48</key>
+			<string>Unexpect_Power_Loss_Ct</string>
+			<key>181,raw48</key>
+			<string>Non4k_Aligned_Access</string>
+			<key>183,raw48</key>
+			<string>SATA_Iface_Downshift</string>
+			<key>189,raw48</key>
+			<string>Factory_Bad_Block_Ct</string>
+			<key>202,raw48</key>
+			<string>Perc_Rated_Life_Used</string>
+			<key>206,raw48</key>
+			<string>Write_Error_Rate</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Crucial/Micron RealSSD m4/C400</string>
+		<key>Warning</key>
+		<string>This drive may hang after 5184 hours of power-on time:
+http://www.tomshardware.com/news/Crucial-m4-Firmware-BSOD,14544.html
+See the following web pages for firmware updates:
+http://www.crucial.com/support/firmware.aspx
+http://www.micron.com/products/solid-state-storage/client-ssd#software</string>
+		<key>NameMatch</key>
+		<array>
+			<string>C400-MTFDDA[ACK](064|128|256|512)MAM</string>
+			<string>M4-CT(064|128|256|512)M4SSD[123]</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>170,raw48</key>
+			<string>Grown_Failing_Block_Ct</string>
+			<key>171,raw48</key>
+			<string>Program_Fail_Count</string>
+			<key>172,raw48</key>
+			<string>Erase_Fail_Count</string>
+			<key>173,raw48</key>
+			<string>Wear_Leveling_Count</string>
+			<key>174,raw48</key>
+			<string>Unexpect_Power_Loss_Ct</string>
+			<key>181,raw16</key>
+			<string>Non4k_Aligned_Access</string>
+			<key>183,raw48</key>
+			<string>SATA_Iface_Downshift</string>
+			<key>189,raw48</key>
+			<string>Factory_Bad_Block_Ct</string>
+			<key>202,raw48</key>
+			<string>Perc_Rated_Life_Used</string>
+			<key>206,raw48</key>
+			<string>Write_Error_Rate</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Crucial/Micron RealSSD C300/M500</string>
+		<key>NameMatch</key>
+		<array>
+			<string>C300-CTFDDA[AC](064|128|256)MAG</string>
+			<string>Crucial_CT(120|240|480)M500SSD3</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>170,raw48</key>
+			<string>Grown_Failing_Block_Ct</string>
+			<key>171,raw48</key>
+			<string>Program_Fail_Count</string>
+			<key>172,raw48</key>
+			<string>Erase_Fail_Count</string>
+			<key>173,raw48</key>
+			<string>Wear_Leveling_Count</string>
+			<key>174,raw48</key>
+			<string>Unexpect_Power_Loss_Ct</string>
+			<key>181,raw48</key>
+			<string>Non4k_Aligned_Access</string>
+			<key>183,raw48</key>
+			<string>SATA_Iface_Downshift</string>
+			<key>189,raw48</key>
+			<string>Factory_Bad_Block_Ct</string>
+			<key>202,raw48</key>
+			<string>Perc_Rated_Life_Used</string>
+			<key>206,raw48</key>
+			<string>Write_Error_Rate</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Apacer SDM4</string>
+		<key>NameMatch</key>
+		<array>
+			<string>GB SATA Flash Drive</string>
+			<string>SF(DDA01C|I2101D)</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>160,raw48</key>
+			<string>Initial_Bad_Block_Count</string>
+			<key>161,raw48</key>
+			<string>Bad_Block_Count</string>
+			<key>162,raw48</key>
+			<string>Spare_Block_Count</string>
+			<key>163,raw48</key>
+			<string>Max_Erase_Count</string>
+			<key>164,raw48</key>
+			<string>Min_Erase_Count</string>
+			<key>165,raw48</key>
+			<string>Average_Erase_Count</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>SandForce Driven SSD</string>
+		<key>NameMatch</key>
+		<array>
+			<string>SandForce 1st Ed\\.</string>
+			<string>DATA SSD S(396|510|599) .?..GB</string>
+			<string>ADATA SP900</string>
+			<string>Corsair CSSD-F(40|60|80|115|120|160|240)GBP?2.*</string>
+			<string>Corsair Force (3 SSD|GS|GT)</string>
+			<string>FM-25S2S-(60|120|240)GBP2</string>
+			<string>FTM(06|12|24|48)CT25H</string>
+			<string>KINGSTON SH10[03]S3(90|120|240|480)G</string>
+			<string>KINGSTON SKC300S37A(60|120|240|480)G</string>
+			<string>KINGSTON SVP200S3(7A)?(60|90|120|240|480)G</string>
+			<string>KINGSTON SMS200S3(30|60|120)G</string>
+			<string>KINGSTON SMS450S3(32|64|128)G</string>
+			<string>KINGSTON (SV300|SKC100|SE100)S3.*G</string>
+			<string>MKNSSDCR(45|60|90|120|180|240|480)GB(-DX)?</string>
+			<string>Mushkin MKNSSDCL(40|60|80|90|115|120|180|240|480)GB-DX2?</string>
+			<string>OCZ[ -](AGILITY2([ -]EX)?|COLOSSUS2|ONYX2|VERTEX(2|-LE))( [123]\\..*)?</string>
+			<string>OCZ-NOCTI</string>
+			<string>OCZ-REVODRIVE3?( X2)?</string>
+			<string>OCZ[ -](VELO|VERTEX2[ -](EX|PRO))( [123]\\..*)?</string>
+			<string>D2[CR]STK251...-....</string>
+			<string>OCZ-(AGILITY3|SOLID3|VERTEX3( MI)?)</string>
+			<string>OCZ Z-DRIVE R4 [CR]M8[48]</string>
+			<string>TALOS2</string>
+			<string>(APOC|DENC|DENEVA|FTNC|GFGC|MANG|MMOC|NIMC|TMSC).*</string>
+			<string>(DENR|DRSAK|EC188|NIMR|PSIR|TRSAK).*</string>
+			<string>OWC Mercury Electra [36]G SS</string>
+			<string>OWC Mercury Extreme Pro (RE )?SSD</string>
+			<string>OWC Mercury EXTREME Pro 6G SSD</string>
+			<string>Patriot Pyro</string>
+			<string>SanDisk SDSSDX(60|120|240|480)GG25</string>
+			<string>SuperSSpeed S301 [0-9]*GB</string>
+			<string>(TX32|TX31C1|VN0.?..GCNMK).*</string>
+			<string>(TX22D1|TX21B1).*</string>
+			<string>TX52D1.*</string>
+			<string>TS(64|128|256|512)GSSD320</string>
+			<string>UGB(88P|99S)GC...H[BF].</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>1,raw24/raw32</key>
+			<string>Raw_Read_Error_Rate</string>
+			<key>5,raw48</key>
+			<string>Retired_Block_Count</string>
+			<key>9,msec24hour32</key>
+			<string>Power_On_Hours_and_Msec</string>
+			<key>13,raw24/raw32</key>
+			<string>Soft_Read_Error_Rate</string>
+			<key>100,raw48</key>
+			<string>Gigabytes_Erased</string>
+			<key>170,raw48</key>
+			<string>Reserve_Block_Count</string>
+			<key>171,raw48</key>
+			<string>Program_Fail_Count</string>
+			<key>172,raw48</key>
+			<string>Erase_Fail_Count</string>
+			<key>174,raw48</key>
+			<string>Unexpect_Power_Loss_Ct</string>
+			<key>177,raw48</key>
+			<string>Wear_Range_Delta</string>
+			<key>181,raw48</key>
+			<string>Program_Fail_Count</string>
+			<key>182,raw48</key>
+			<string>Erase_Fail_Count</string>
+			<key>184,raw48</key>
+			<string>IO_Error_Detect_Code_Ct</string>
+			<key>189,raw48</key>
+			<string>Airflow_Temperature_Cel</string>
+			<key>195,raw24/raw32</key>
+			<string>ECC_Uncorr_Error_Count</string>
+			<key>198,raw24/raw32:210zr54</key>
+			<string>Uncorrectable_Sector_Ct</string>
+			<key>199,raw48</key>
+			<string>SATA_CRC_Error_Count</string>
+			<key>201,raw24/raw32</key>
+			<string>Unc_Soft_Read_Err_Rate</string>
+			<key>204,raw24/raw32</key>
+			<string>Soft_ECC_Correct_Rate</string>
+			<key>230,raw48</key>
+			<string>Life_Curve_Status</string>
+			<key>231,raw48</key>
+			<string>SSD_Life_Left</string>
+			<key>233,raw48</key>
+			<string>SandForce_Internal</string>
+			<key>234,raw48</key>
+			<string>SandForce_Internal</string>
+			<key>235,raw48</key>
+			<string>SuperCap_Health</string>
+			<key>241,raw48</key>
+			<string>Lifetime_Writes_GiB</string>
+			<key>242,raw48</key>
+			<string>Lifetime_Reads_GiB</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>Description</key>
+		<string>Some Seagate HDDs</string>
+		<key>NameMatch</key>
+		<array>
+			<string>ST(2000|4000).....-......</string>
+		</array>
+		<key>Attributes</key>
+		<dict>
+			<key>1,raw32(err16)</key>
+			<string>Raw_Read_Error_Rate</string>
+			<key>7,raw32(err16)</key>
+			<string>Seek_Error_Rate</string>
+		</dict>
+	</dict>
+</array>
+</plist>

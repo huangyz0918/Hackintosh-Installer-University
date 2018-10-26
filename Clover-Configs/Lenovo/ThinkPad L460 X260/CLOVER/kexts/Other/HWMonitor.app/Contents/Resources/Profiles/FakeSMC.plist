@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>MlC:081|CPU Core %X</string>
+	<string>MC:081C|CPU Core %X</string>
+	<string>MlCP|CPU Package Multiplier</string>
+	<string>MPkC|CPU Package Multiplier</string>
+	<string>CC:081C|CPU Core %X</string>
+	<string>CC:081A|CPU Core %X Average</string>
+	<string>CCPC|CPU Package Frequency</string>
+	<string>CCPA|CPU Package Average</string>
+	<string>CG0C|GPU Core</string>
+	<string>CG0M|GPU Memory</string>
+	<string>CG0S|GPU Shaders</string>
+	<string>CG0R|GPU ROPs</string>
+	<string>CG:132C|GPU %X Core</string>
+	<string>CG:132M|GPU %X Memory</string>
+	<string>CG:132S|GPU %X Shaders</string>
+	<string>CG:132R|GPU %X ROPs</string>
+</array>
+</plist>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>TA0p|Ambient</string>
+	<string>TA0P|Ambient</string>
+	<string>TC:0F1D|CPU Core %X</string>
+	<string>TC:091C|CPU Core %X</string>
+	<string>TCAD|CPU Package</string>
+	<string>TC:B32D|CPU %X Package</string>
+	<string>TC:A41C|CPU %X Core</string>
+	<string>TC:A41G|CPU %X Graphics</string>
+	<string>TC:A41H|CPU %X Heatsink</string>
+	<string>TC0H|CPU Heatsink</string>
+	<string>Th0H|CPU Heatsink</string>
+	<string>TC0P|CPU Proximity</string>
+	<string>TCXC|PECI CPU</string>
+	<string>TCXc|PECI CPU</string>
+	<string>TCSC|PECI SA</string>
+	<string>TCSc|PECI SA</string>
+	<string>TCSA|PECI SA</string>
+	<string>TCGC|PECI GPU</string>
+	<string>TCGc|PECI GPU</string>
+	<string>TN0D|Northbridge Die</string>
+	<string>TN0P|Northbridge Proximity</string>
+	<string>TN0C|MCH Die</string>
+	<string>TN0H|MCH Heatsink</string>
+	<string>TP0D|PCH Die</string>
+	<string>TPCD|PCH Die</string>
+	<string>TP0P|PCH Proximity</string>
+	<string>TM:091S|Memory Module %X</string>
+	<string>TM:091P|Memory Module %X, Proximity</string>
+	<string>TMA:051|Memory Bank A, Module %X</string>
+	<string>TMB:051|Memory Bank B, Module %X</string>
+	<string>TL0P|LCD Proximity</string>
+	<string>TW0P|Airport Proximity</string>
+	<string>TO0P|Optical Drive</string>
+	<string>TH:081P|HDD Bay %X</string>
+	<string>TB:041P|Battery %X</string>
+	<string>Tm0P|Mainboard Proximity</string>
+	<string>Tp1P|Powerboard Proximity</string>
+	<string>Tp:221H|Power Heatsink %X</string>
+	<string>Te:081S|PCIe Slot %X</string>
+	<string>TG0D|GPU Die</string>
+	<string>TG0H|GPU Heatsink</string>
+	<string>TG0p|GPU Proximity</string>
+	<string>TG:041M|GPU Memory</string>
+	<string>TG:132D|GPU %X Die</string>
+	<string>TG:132H|GPU %X Heatsink</string>
+	<string>TG:132p|GPU %X Proximity</string>
+	<string>TG:132M|GPU %X Memory</string>
+	<string>TZ:0F1C|Thermal Zone %X</string>
+	<string>VC0C|CPU Core</string>
+	<string>VC0G|CPU GFX</string>
+	<string>VC:132G|CPU GFX %X</string>
+	<string>VC:A4AC|CPU %X</string>
+	<string>VV1R|CPU VTT</string>
+	<string>VN1R|PCH Core</string>
+	<string>VM0R|Memory Modules</string>
+	<string>VN0C|MCH Core</string>
+	<string>VV2S|Main 3.3V</string>
+	<string>VV1S|Main 5V</string>
+	<string>VV9S|Main 12V</string>
+	<string>VV7S|Auxiliary 3.3V</string>
+	<string>VV8S|Standby 5V</string>
+	<string>VeES|PCIe 12V</string>
+	<string>VP0R|+12V Rail</string>
+	<string>Vp0C|12V Vcc</string>
+	<string>Vp:172C|Power Supply %X</string>
+	<string>VD0R|Mainboard S0 Rail</string>
+	<string>VD5R|Mainboard S5 Rail</string>
+	<string>Vb0R|CMOS Battery</string>
+	<string>VBAT|Battery</string>
+	<string>VS0C|CPU VRM</string>
+	<string>VS:1E2C|CPU VRM %X</string>
+	<string>VG0C|GPU Core</string>
+	<string>VG:132C|GPU %X Core</string>
+	<string>VC0R|GPU Rail</string>
+	<string>VC:132R|GPU %X Rail</string>
+	<string>IC0C|CPU Core</string>
+	<string>IC1C|CPU VccIO</string>
+	<string>IC2C|CPU VccSA</string>
+	<string>IC5R|CPU DRAM</string>
+	<string>IC8R|CPU PLL</string>
+	<string>IC:A4AC|CPU %X</string>
+	<string>IC0G|CPU GFX</string>
+	<string>IM:A4AS|Memory Bank %X</string>
+	<string>IN0C|MCH Core</string>
+	<string>IM0R|Memory Rail</string>
+	<string>IW0E|Airport Rail</string>
+	<string>IB0R|Battery Rail</string>
+	<string>Ie:081S|PCIe Slot %X</string>
+	<string>IM:A4AS|PCIe Booster %X</string>
+	<string>IG0C|GPU</string>
+	<string>IG:132C|GPU %X</string>
+	<string>ID0R|Mainboard S0 Rail</string>
+	<string>ID5R|Mainboard S5 Rail</string>
+	<string>PC:081C|CPU Core %X</string>
+	<string>PC:A8AC|CPU %X</string>
+	<string>PC0G|CPU GFX</string>
+	<string>PCPC|CPU Package Cores</string>
+	<string>PCPG|CPU Package Graphics</string>
+	<string>PCTR|CPU Package Total</string>
+	<string>PCPT|CPU Package Total</string>
+	<string>PCPD|CPU Package DRAM</string>
+	<string>PC1R|CPU Rail</string>
+	<string>PC5R|CPU 1.5V S0 Rail</string>
+	<string>PM0R|Memory Rail</string>
+	<string>PM:A4AS|Memory Bank %X</string>
+	<string>Pe:041S|PCIe Slot %X</string>
+	<string>Pe:A4AS|PCIe Booster %X</string>
+	<string>PG0C|GPU</string>
+	<string>PG:132C|GPU %X</string>
+	<string>PG0R|GPU Rail</string>
+	<string>PG:132R|GPU %X Rail</string>
+	<string>PD0R|Mainboard S0 Rail</string>
+	<string>PD5R|Mainboard S5 Rail</string>
+	<string>Pp0C|Power Supply 12V</string>
+	<string>PDTR|System Total</string>
+	<string>PZ:041G|Zone %X Average</string>
+</array>
+</plist>

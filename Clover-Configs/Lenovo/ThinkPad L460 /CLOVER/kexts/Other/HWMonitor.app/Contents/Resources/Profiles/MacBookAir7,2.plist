@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>TC1C|CPU Core 1</string>
+	<string>TC2C|CPU Core 2</string>
+	<string>TC0P|CPU Proximity</string>
+	<string>TC0E|CPU 1</string>
+	<string>TC0F|CPU 2</string>
+	<string>TCHP|CPU Heatpipe</string>
+	<string>TCSC|PECI SA</string>
+	<string>TCXC|PECI CPU</string>
+	<string>TCSA|PECI SA</string>
+	<string>TCGC|PECI GPU</string>
+	<string>TPCD|PCH Die</string>
+	<string>TM0P|Memory Bank A1</string>
+	<string>Ts0S|Meomory Proximity</string>
+	<string>TG0D|GPU Die</string>
+	<string>TB0T|Battery TS Max</string>
+	<string>TB1T|Battery 1</string>
+	<string>TBXT|Battery</string>
+	<string>TB2T|Battery 2</string>
+	<string>Th1H|Heatpipe</string>
+	<string>Ts0P|Palm Rest</string>
+	<string>Tm0P|Mainboard Proximity</string>
+	<string>TW0P|Airport Proximity</string>
+	<string>Ta0P|Airflow</string>
+	<string>VC0C|CPU Core</string>
+	<string>VC2C|PCH Core</string>
+	<string>VC0G|CPU GFX</string>
+	<string>VD0R|Power Supply</string>
+	<string>VC1C|CPU 1.05V</string>
+	<string>VCS0|CPU 1.8V</string>
+	<string>VAPC|SMC 3.3V</string>
+	<string>VP0R|PBUS</string>
+	<string>VSDC|VSDC</string>
+	<string>IC0C|CPU Core</string>
+	<string>IC1C|CPU IO</string>
+	<string>IC0R|CPU Rail</string>
+	<string>IBAC|Battery</string>
+	<string>IG0C|GPU</string>
+	<string>IN0C|PCH Core</string>
+	<string>IM0C|Memory Controller</string>
+	<string>IM3C|Memory #2</string>
+	<string>ID0R|Mainboard S0 Rail</string>
+	<string>IO0R|Misc Rail</string>
+	<string>IAPC|SMC3.3V</string>
+	<string>IPBR|Charger BMON</string>
+	<string>PAPC|SMC 3.3V</string>
+	<string>PC1C|CPU 1.05V</string>
+	<string>PC0R|CPU Rail</string>
+	<string>PCPC|CPU Package Cores</string>
+	<string>PCPG|CPU Package Graphics</string>
+	<string>PCPT|CPU Package Total</string>
+	<string>PM0R|Memory Rail</string>
+	<string>PN0C|PCH Core</string>
+	<string>PBLC|Battery Rail</string>
+	<string>PC0R|Mainboard S0 Rail</string>
+	<string>PDTR|DC in Total</string>
+	<string>PSTR|System Total</string>
+	<string>PCS0|CPU 1.8V</string>
+</array>
+</plist>

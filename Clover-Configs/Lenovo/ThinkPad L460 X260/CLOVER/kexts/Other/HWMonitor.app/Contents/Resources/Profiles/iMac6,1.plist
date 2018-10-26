@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>TA0P|Ambient</string>
+	<string>TC:041D|CPU Core %X</string>
+	<string>TCAD|CPU Package</string>
+	<string>TC0H|CPU Heatsink</string>
+	<string>TG0D|GPU Die</string>
+	<string>TG0H|GPU Heatsink</string>
+	<string>TG0P|GPU Proximity</string>
+	<string>TH0P|HDD Bay 1</string>
+	<string>TO0P|Optical Drive</string>
+	<string>Tp0P|Power Supply Heatsink</string>
+	<string>VC0C|CPU Core</string>
+	<string>VD0R|Power Supply 1</string>
+	<string>IC0C|CPU Core</string>
+	<string>ID0R|Power Supply 1</string>
+	<string>PC0C|CPU Core</string>
+</array>
+</plist>

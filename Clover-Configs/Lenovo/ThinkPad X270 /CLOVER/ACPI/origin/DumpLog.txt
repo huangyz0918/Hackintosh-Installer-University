@@ -1,0 +1,174 @@
+4:637  3:344  Found BIOS RSDP at F0140
+4:637  0:000  Printing ACPI tables from RSDP F0140 ...
+4:637  0:000   F0140: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
+4:637  0:000    (Xsdt: CB5C2188, Rsdt: CB5C20C4)
+4:637  0:000    CB5C2188: 'XSDT', 'TP-R0I', Rev: 1, Len: 244
+4:637  0:000    CB5C20C4: 'RSDT', 'TP-R0I', Rev: 1, Len: 140
+4:637  0:000    Tables in Xsdt: 26
+4:637  0:000    0. CB5F7000: 'FACP', 'TP-R0I', Rev: 5, Len: 244
+4:637  0:000        (Dsdt: CB5D2000, Facs: CB523000, XDsdt: CB5D2000, XFacs: 0)
+4:637  0:000        CB5D2000: 'DSDT', 'SKL', Rev: 2, Len: 134455
+4:639  0:001        CB523000: 'FACS', Ver: 2, Len: 64
+4:639  0:000    1. CB529000: 'UEFI', 'TP-R0I', Rev: 1, Len: 66
+4:639  0:000    2. CB5F9000: 'SSDT', 'SaSsdt', Rev: 2, Len: 12870
+4:639  0:000    3. CB5F8000: 'SSDT', 'PerfTune', Rev: 2, Len: 1462
+4:639  0:000    4. CB5F6000: 'HPET', 'TP-R0I', Rev: 1, Len: 56
+4:639  0:000    5. CB5F5000: 'APIC', 'TP-R0I', Rev: 3, Len: 188
+4:639  0:000    6. CB5F4000: 'MCFG', 'TP-R0I', Rev: 1, Len: 60
+4:639  0:000    7. CB5F3000: 'ECDT', 'TP-R0I', Rev: 1, Len: 83
+4:639  0:000    8. CB5D1000: 'SSDT', 'Rmv_Batt', Rev: 1, Len: 540
+4:639  0:000    9. CB5CF000: 'SSDT', 'ProjSsdt', Rev: 2, Len: 5805
+4:639  0:000    10. CB5CE000: 'BOOT', 'TP-R0I', Rev: 1, Len: 40
+4:639  0:000    11. CB5CD000: 'BATB', 'TP-R0I', Rev: 2, Len: 74
+4:639  0:000    12. CB5CC000: 'SLIC', 'TP-R0I', Rev: 1, Len: 374
+4:639  0:000    13. CB5CA000: 'SSDT', 'CpuSsdt', Rev: 2, Len: 6062
+4:639  0:000    14. CB5C9000: 'SSDT', 'CtdpB', Rev: 2, Len: 1389
+4:639  0:000    15. CB5C8000: 'SSDT', 'UsbCTabl', Rev: 2, Len: 1536
+4:639  0:000    16. CB5C7000: 'WSMT', 'TP-R0I', Rev: 1, Len: 40
+4:639  0:000    17. CB5C6000: 'SSDT', 'HdaDsp', Rev: 2, Len: 321
+4:639  0:000    18. CB5C5000: 'SSDT', 'TbtTypeC', Rev: 2, Len: 1221
+4:639  0:000    19. CB5C4000: 'DBGP', 'TP-R0I', Rev: 1, Len: 52
+4:639  0:000    20. CB5C3000: 'DBG2', 'TP-R0I', Rev: 0, Len: 84
+4:639  0:000    21. CB5FD000: 'MSDM', 'TP-R0I', Rev: 3, Len: 85
+4:639  0:000    22. CB5C1000: 'DMAR', 'TP-R0I', Rev: 1, Len: 240
+4:639  0:000    23. CB5C0000: 'ASF!', 'TP-R0I', Rev: 32, Len: 160
+4:639  0:000    24. CB5BF000: 'FPDT', 'TP-R0I', Rev: 1, Len: 68
+4:639  0:000    25. CB521000: 'UEFI', 'TP-R0I', Rev: 1, Len: 318
+4:639  0:000    Tables in Rsdt: 26
+4:639  0:000    0. CB5F7000: 'FACP', 'TP-R0I', Rev: 5, Len: 244
+4:639  0:000        (Dsdt: CB5D2000, Facs: CB523000, XDsdt: CB5D2000, XFacs: 0)
+4:639  0:000        CB5D2000: 'DSDT', 'SKL', Rev: 2, Len: 134455
+4:641  0:001        CB523000: 'FACS', Ver: 2, Len: 64
+4:641  0:000    1. CB529000: 'UEFI', 'TP-R0I', Rev: 1, Len: 66
+4:641  0:000    2. CB5F9000: 'SSDT', 'SaSsdt', Rev: 2, Len: 12870
+4:641  0:000    3. CB5F8000: 'SSDT', 'PerfTune', Rev: 2, Len: 1462
+4:641  0:000    4. CB5F6000: 'HPET', 'TP-R0I', Rev: 1, Len: 56
+4:641  0:000    5. CB5F5000: 'APIC', 'TP-R0I', Rev: 3, Len: 188
+4:641  0:000    6. CB5F4000: 'MCFG', 'TP-R0I', Rev: 1, Len: 60
+4:641  0:000    7. CB5F3000: 'ECDT', 'TP-R0I', Rev: 1, Len: 83
+4:641  0:000    8. CB5D1000: 'SSDT', 'Rmv_Batt', Rev: 1, Len: 540
+4:641  0:000    9. CB5CF000: 'SSDT', 'ProjSsdt', Rev: 2, Len: 5805
+4:641  0:000    10. CB5CE000: 'BOOT', 'TP-R0I', Rev: 1, Len: 40
+4:641  0:000    11. CB5CD000: 'BATB', 'TP-R0I', Rev: 2, Len: 74
+4:641  0:000    12. CB5CC000: 'SLIC', 'TP-R0I', Rev: 1, Len: 374
+4:641  0:000    13. CB5CA000: 'SSDT', 'CpuSsdt', Rev: 2, Len: 6062
+4:641  0:000    14. CB5C9000: 'SSDT', 'CtdpB', Rev: 2, Len: 1389
+4:641  0:000    15. CB5C8000: 'SSDT', 'UsbCTabl', Rev: 2, Len: 1536
+4:641  0:000    16. CB5C7000: 'WSMT', 'TP-R0I', Rev: 1, Len: 40
+4:641  0:000    17. CB5C6000: 'SSDT', 'HdaDsp', Rev: 2, Len: 321
+4:641  0:000    18. CB5C5000: 'SSDT', 'TbtTypeC', Rev: 2, Len: 1221
+4:641  0:000    19. CB5C4000: 'DBGP', 'TP-R0I', Rev: 1, Len: 52
+4:641  0:000    20. CB5C3000: 'DBG2', 'TP-R0I', Rev: 0, Len: 84
+4:641  0:000    21. CB5FD000: 'MSDM', 'TP-R0I', Rev: 3, Len: 85
+4:641  0:000    22. CB5C1000: 'DMAR', 'TP-R0I', Rev: 1, Len: 240
+4:641  0:000    23. CB5C0000: 'ASF!', 'TP-R0I', Rev: 32, Len: 160
+4:641  0:000    24. CB5BF000: 'FPDT', 'TP-R0I', Rev: 1, Len: 68
+4:641  0:000    25. CB521000: 'UEFI', 'TP-R0I', Rev: 1, Len: 318
+4:641  0:000  Found UEFI Acpi 2.0 RSDP at CB5FE014
+4:641  0:000  Saving ACPI tables from RSDP CB5FE014 to EFI\CLOVER\ACPI\origin ...
+4:641  0:000   CB5FE014: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36 -> RSDP.aml
+4:650  0:009    (Xsdt: CB5C2188, Rsdt: CB5C20C4)
+4:650  0:000    CB5C2188: 'XSDT', 'TP-R0I', Rev: 1, Len: 244 -> XSDT.aml
+4:659  0:008    CB5C20C4: 'RSDT', 'TP-R0I', Rev: 1, Len: 140 -> RSDT.aml
+4:665  0:005    Tables in Xsdt: 26
+4:665  0:000    0. CB5F7000: 'FACP', 'TP-R0I', Rev: 5, Len: 244 -> FACP.aml
+4:670  0:005        (Dsdt: CB5D2000, Facs: CB523000, XDsdt: CB5D2000, XFacs: 0)
+4:670  0:000        CB5D2000: 'DSDT', 'SKL', Rev: 2, Len: 134455 -> DSDT.aml
+4:678  0:007        CB523000: 'FACS', Ver: 2, Len: 64 -> FACS.aml
+4:683  0:005    1. CB529000: 'UEFI', 'TP-R0I', Rev: 1, Len: 66 -> UEFI.aml
+4:689  0:005    2. CB5F9000: 'SSDT', 'SaSsdt', Rev: 2, Len: 12870 -> SSDT-0-SaSsdt.aml
+4:694  0:005    3. CB5F8000: 'SSDT', 'PerfTune', Rev: 2, Len: 1462 -> SSDT-1-PerfTune.aml
+4:700  0:005    4. CB5F6000: 'HPET', 'TP-R0I', Rev: 1, Len: 56 -> HPET.aml
+4:705  0:005    5. CB5F5000: 'APIC', 'TP-R0I', Rev: 3, Len: 188 -> APIC.aml
+4:710  0:005    6. CB5F4000: 'MCFG', 'TP-R0I', Rev: 1, Len: 60 -> MCFG.aml
+4:716  0:005    7. CB5F3000: 'ECDT', 'TP-R0I', Rev: 1, Len: 83 -> ECDT.aml
+4:721  0:005    8. CB5D1000: 'SSDT', 'Rmv_Batt', Rev: 1, Len: 540 -> SSDT-2-Rmv_Batt.aml
+4:726  0:005    9. CB5CF000: 'SSDT', 'ProjSsdt', Rev: 2, Len: 5805 -> SSDT-3-ProjSsdt.aml
+4:732  0:005    10. CB5CE000: 'BOOT', 'TP-R0I', Rev: 1, Len: 40 -> BOOT.aml
+4:744  0:011    11. CB5CD000: 'BATB', 'TP-R0I', Rev: 2, Len: 74 -> BATB.aml
+4:749  0:005    12. CB5CC000: 'SLIC', 'TP-R0I', Rev: 1, Len: 374 -> SLIC.aml
+4:754  0:005    13. CB5CA000: 'SSDT', 'CpuSsdt', Rev: 2, Len: 6062 -> SSDT-4-CpuSsdt.aml (Found hidden SSDT 7 pcs)
+4:764  0:009        * CB504098: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1683  53 53 44 54 93 06 00 00 02 D3 50 6D 52 65 66 00 Internal length = 1683 -> SSDT-x4_0-Cpu0Ist.aml
+4:770  0:005        * CB4BB018: 'SSDT', 'ApIst', Rev: 2, Len: 3348  53 53 44 54 14 0D 00 00 02 2A 50 6D 52 65 66 00 Internal length = 3348 -> SSDT-x4_1-ApIst.aml
+4:775  0:005        * CB4BC698: 'SSDT', 'Cpu0Cst', Rev: 2, Len: 1023  53 53 44 54 FF 03 00 00 02 11 50 6D 52 65 66 00 Internal length = 1023 -> SSDT-x4_2-Cpu0Cst.aml
+4:785  0:009        * CB4BA018: 'SSDT', 'ApCst', Rev: 2, Len: 778  53 53 44 54 0A 03 00 00 02 93 50 6D 52 65 66 00 Internal length = 778 -> SSDT-x4_3-ApCst.aml
+4:791  0:006        * CB504B18: 'SSDT', 'Cpu0Hwp', Rev: 2, Len: 186  53 53 44 54 BA 00 00 00 02 7D 50 6D 52 65 66 00 Internal length = 186 -> SSDT-x4_4-Cpu0Hwp.aml
+4:797  0:006        * CB4BA418: 'SSDT', 'ApHwp', Rev: 2, Len: 791  53 53 44 54 17 03 00 00 02 80 50 6D 52 65 66 00 Internal length = 791 -> SSDT-x4_5-ApHwp.aml
+4:804  0:006        * CB4BC018: 'SSDT', 'HwpLvt', Rev: 2, Len: 1576  53 53 44 54 28 06 00 00 02 85 50 6D 52 65 66 00 Internal length = 1576 -> SSDT-x4_6-HwpLvt.aml
+4:810  0:006  
+4:810  0:000    14. CB5C9000: 'SSDT', 'CtdpB', Rev: 2, Len: 1389 -> SSDT-5-CtdpB.aml
+4:817  0:006    15. CB5C8000: 'SSDT', 'UsbCTabl', Rev: 2, Len: 1536 -> SSDT-6-UsbCTabl.aml
+4:823  0:006    16. CB5C7000: 'WSMT', 'TP-R0I', Rev: 1, Len: 40 -> WSMT.aml
+4:829  0:006    17. CB5C6000: 'SSDT', 'HdaDsp', Rev: 2, Len: 321 -> SSDT-7-HdaDsp.aml
+4:836  0:006    18. CB5C5000: 'SSDT', 'TbtTypeC', Rev: 2, Len: 1221 -> SSDT-8-TbtTypeC.aml
+4:842  0:006    19. CB5C4000: 'DBGP', 'TP-R0I', Rev: 1, Len: 52 -> DBGP.aml
+4:848  0:006    20. CB5C3000: 'DBG2', 'TP-R0I', Rev: 0, Len: 84 -> DBG2.aml
+4:855  0:006    21. CB5FD000: 'MSDM', 'TP-R0I', Rev: 3, Len: 85 -> MSDM.aml
+4:863  0:008    22. CB5C1000: 'DMAR', 'TP-R0I', Rev: 1, Len: 240 -> DMAR.aml
+4:869  0:006    23. CB5C0000: 'ASF!', 'TP-R0I', Rev: 32, Len: 160 -> ASF!.aml
+4:876  0:006    24. CB5BF000: 'FPDT', 'TP-R0I', Rev: 1, Len: 68 -> FPDT.aml
+4:881  0:005    25. CB521000: 'UEFI', 'TP-R0I', Rev: 1, Len: 318 -> UEFI.aml
+4:889  0:007    Tables in Rsdt: 26
+4:889  0:000    0. CB5F7000: 'FACP', 'TP-R0I', Rev: 5, Len: 244
+4:889  0:000        (Dsdt: CB5D2000, Facs: CB523000, XDsdt: CB5D2000, XFacs: 0)
+4:889  0:000        CB5D2000: 'DSDT', 'SKL', Rev: 2, Len: 134455
+4:891  0:001        CB523000: 'FACS', Ver: 2, Len: 64
+4:891  0:000    1. CB529000: 'UEFI', 'TP-R0I', Rev: 1, Len: 66
+4:891  0:000    2. CB5F9000: 'SSDT', 'SaSsdt', Rev: 2, Len: 12870
+4:891  0:000    3. CB5F8000: 'SSDT', 'PerfTune', Rev: 2, Len: 1462
+4:891  0:000    4. CB5F6000: 'HPET', 'TP-R0I', Rev: 1, Len: 56
+4:891  0:000    5. CB5F5000: 'APIC', 'TP-R0I', Rev: 3, Len: 188
+4:891  0:000    6. CB5F4000: 'MCFG', 'TP-R0I', Rev: 1, Len: 60
+4:891  0:000    7. CB5F3000: 'ECDT', 'TP-R0I', Rev: 1, Len: 83
+4:891  0:000    8. CB5D1000: 'SSDT', 'Rmv_Batt', Rev: 1, Len: 540
+4:891  0:000    9. CB5CF000: 'SSDT', 'ProjSsdt', Rev: 2, Len: 5805
+4:891  0:000    10. CB5CE000: 'BOOT', 'TP-R0I', Rev: 1, Len: 40
+4:891  0:000    11. CB5CD000: 'BATB', 'TP-R0I', Rev: 2, Len: 74
+4:891  0:000    12. CB5CC000: 'SLIC', 'TP-R0I', Rev: 1, Len: 374
+4:891  0:000    13. CB5CA000: 'SSDT', 'CpuSsdt', Rev: 2, Len: 6062
+4:891  0:000    14. CB5C9000: 'SSDT', 'CtdpB', Rev: 2, Len: 1389
+4:891  0:000    15. CB5C8000: 'SSDT', 'UsbCTabl', Rev: 2, Len: 1536
+4:891  0:000    16. CB5C7000: 'WSMT', 'TP-R0I', Rev: 1, Len: 40
+4:891  0:000    17. CB5C6000: 'SSDT', 'HdaDsp', Rev: 2, Len: 321
+4:891  0:000    18. CB5C5000: 'SSDT', 'TbtTypeC', Rev: 2, Len: 1221
+4:891  0:000    19. CB5C4000: 'DBGP', 'TP-R0I', Rev: 1, Len: 52
+4:891  0:000    20. CB5C3000: 'DBG2', 'TP-R0I', Rev: 0, Len: 84
+4:891  0:000    21. CB5FD000: 'MSDM', 'TP-R0I', Rev: 3, Len: 85
+4:891  0:000    22. CB5C1000: 'DMAR', 'TP-R0I', Rev: 1, Len: 240
+4:891  0:000    23. CB5C0000: 'ASF!', 'TP-R0I', Rev: 32, Len: 160
+4:891  0:000    24. CB5BF000: 'FPDT', 'TP-R0I', Rev: 1, Len: 68
+4:891  0:000    25. CB521000: 'UEFI', 'TP-R0I', Rev: 1, Len: 318
+4:891  0:000  Found UEFI Acpi 1.0 RSDP at CB5FE000
+4:891  0:000  Printing ACPI tables from RSDP CB5FE000 ...
+4:891  0:000   CB5FE000: 'RSD PTR ', Rev: 0 (Acpi 1.0), Len: 20
+4:891  0:000    (Rsdt: CB5C2000)
+4:891  0:000    CB5C2000: 'RSDT', 'TP-R0I', Rev: 1, Len: 136
+4:891  0:000    Tables in Rsdt: 25
+4:891  0:000    0. CB5F7000: 'FACP', 'TP-R0I', Rev: 5, Len: 244
+4:891  0:000        (Dsdt: CB5D2000, Facs: CB523000, XDsdt: CB5D2000, XFacs: 0)
+4:891  0:000        CB5D2000: 'DSDT', 'SKL', Rev: 2, Len: 134455
+4:893  0:001        CB523000: 'FACS', Ver: 2, Len: 64
+4:893  0:000    1. CB529000: 'UEFI', 'TP-R0I', Rev: 1, Len: 66
+4:893  0:000    2. CB5F9000: 'SSDT', 'SaSsdt', Rev: 2, Len: 12870
+4:893  0:000    3. CB5F8000: 'SSDT', 'PerfTune', Rev: 2, Len: 1462
+4:893  0:000    4. CB5F6000: 'HPET', 'TP-R0I', Rev: 1, Len: 56
+4:893  0:000    5. CB5F5000: 'APIC', 'TP-R0I', Rev: 3, Len: 188
+4:893  0:000    6. CB5F4000: 'MCFG', 'TP-R0I', Rev: 1, Len: 60
+4:893  0:000    7. CB5F3000: 'ECDT', 'TP-R0I', Rev: 1, Len: 83
+4:893  0:000    8. CB5D1000: 'SSDT', 'Rmv_Batt', Rev: 1, Len: 540
+4:893  0:000    9. CB5CF000: 'SSDT', 'ProjSsdt', Rev: 2, Len: 5805
+4:893  0:000    10. CB5CE000: 'BOOT', 'TP-R0I', Rev: 1, Len: 40
+4:893  0:000    11. CB5CD000: 'BATB', 'TP-R0I', Rev: 2, Len: 74
+4:893  0:000    12. CB5CA000: 'SSDT', 'CpuSsdt', Rev: 2, Len: 6062
+4:893  0:000    13. CB5C9000: 'SSDT', 'CtdpB', Rev: 2, Len: 1389
+4:893  0:000    14. CB5C8000: 'SSDT', 'UsbCTabl', Rev: 2, Len: 1536
+4:893  0:000    15. CB5C7000: 'WSMT', 'TP-R0I', Rev: 1, Len: 40
+4:893  0:000    16. CB5C6000: 'SSDT', 'HdaDsp', Rev: 2, Len: 321
+4:893  0:000    17. CB5C5000: 'SSDT', 'TbtTypeC', Rev: 2, Len: 1221
+4:893  0:000    18. CB5C4000: 'DBGP', 'TP-R0I', Rev: 1, Len: 52
+4:893  0:000    19. CB5C3000: 'DBG2', 'TP-R0I', Rev: 0, Len: 84
+4:893  0:000    20. CB5FD000: 'MSDM', 'TP-R0I', Rev: 3, Len: 85
+4:893  0:000    21. CB5C1000: 'DMAR', 'TP-R0I', Rev: 1, Len: 240
+4:893  0:000    22. CB5C0000: 'ASF!', 'TP-R0I', Rev: 32, Len: 160
+4:893  0:000    23. CB5BF000: 'FPDT', 'TP-R0I', Rev: 1, Len: 68
+4:893  0:000    24. CB521000: 'UEFI', 'TP-R0I', Rev: 1, Len: 318

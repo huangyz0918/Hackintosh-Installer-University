@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>TC0:C41|CPU Core %X</string>
+	<string>TCAD|CPU Package</string>
+	<string>TC0P|CPU Proximity</string>
+	<string>TPCD|PCH Die</string>
+	<string>TP0P|PCH Proximity</string>
+	<string>TCSA|PECI SA</string>
+	<string>TCGC|PECI GPU</string>
+	<string>TM0S|Memory Modules</string>
+	<string>TM0P|Memory Modules Proximity</string>
+	<string>Th1H|Heatpipe</string>
+	<string>Ts0P|Heatpipe Incoming Air</string>
+	<string>Ts0S|Heatpipe Outgoing Air</string>
+	<string>TB:031T|Battery Unit %X</string>
+	<string>VC0C|CPU Core</string>
+	<string>VP0R|Power Supply 12V</string>
+	<string>VD0R|Main Power Supply</string>
+	<string>IC0R|CPU Rail</string>
+	<string>IB0R|Battery Rail</string>
+	<string>ID0R|Mainboard S0 Rail</string>
+	<string>PC0C|CPU Core</string>
+	<string>PCPC|CPU Package Cores</string>
+	<string>PCPG|CPU Package Graphics</string>
+	<string>PCPT|CPU Package Total</string>
+	<string>PB0R|Battery Rail</string>
+	<string>PZ0S|Zone 1 Average</string>
+</array>
+</plist>

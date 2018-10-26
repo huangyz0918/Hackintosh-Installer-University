@@ -1,0 +1,79 @@
+4:887  3:201  Found UEFI Acpi 2.0 RSDP at 7CEFE014
+4:887  0:000  Saving ACPI tables from RSDP 7CEFE014 to EFI\CLOVER\ACPI\origin ...
+4:887  0:000   7CEFE014: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36 -> RSDP.aml
+5:902  1:014    (Xsdt: 7CEB7188, Rsdt: 7CEB70C4)
+5:902  0:000    7CEB7188: 'XSDT', 'CB-01   ', Rev: 1, Len: 260 -> XSDT.aml
+5:983  0:081    7CEB70C4: 'RSDT', 'CB-01   ', Rev: 1, Len: 148 -> RSDT.aml
+6:065  0:081    Tables in Xsdt: 28
+6:065  0:000    0. 7CEED000: 'FACP', 'CB-01   ', Rev: 5, Len: 244 -> FACP.aml
+6:144  0:079        (Dsdt: 7CEBE000, Facs: 7CE7A000, XDsdt: 7CEBE000, XFacs: 0)
+6:144  0:000        7CEBE000: 'DSDT', 'CB-01   ', Rev: 2, Len: 169287 -> DSDT.aml
+6:919  0:775        7CE7A000: 'FACS', Ver: 2, Len: 64 -> FACS.aml
+7:021  0:102    1. 7CEFD000: 'UEFI', 'CB-01   ', Rev: 1, Len: 566 -> UEFI.aml
+7:116  0:095    2. 7CEFC000: 'UEFI', 'CB-01   ', Rev: 1, Len: 66 -> UEFI.aml
+7:266  0:149    3. 7CEFB000: 'MSDM', 'CB-01   ', Rev: 3, Len: 85 -> MSDM.aml
+7:362  0:096    4. 7CEF6000: 'SSDT', 'CB-01   ', Rev: 2, Len: 20021 -> SSDT-0.aml
+7:556  0:193    5. 7CEF5000: 'DBGP', 'CB-01   ', Rev: 1, Len: 52 -> DBGP.aml
+7:650  0:094    6. 7CEF4000: 'DBG2', 'CB-01   ', Rev: 0, Len: 84 -> DBG2.aml
+7:747  0:096    7. 7CEF2000: 'SSDT', 'CB-01   ', Rev: 2, Len: 6338 -> SSDT-1.aml
+7:855  0:108    8. 7CEF1000: 'ASF!', 'CB-01   ', Rev: 32, Len: 165 -> ASF!.aml
+8:549  0:694    9. 7CEF0000: 'ASPT', 'CB-01   ', Rev: 7, Len: 52 -> ASPT.aml
+8:687  0:137    10. 7CEEF000: 'BOOT', 'CB-01   ', Rev: 1, Len: 40 -> BOOT.aml
+8:801  0:113    11. 7CEEE000: 'DBGP', 'CB-01   ', Rev: 1, Len: 52 -> DBGP.aml
+8:978  0:177    12. 7CEEC000: 'HPET', 'CB-01   ', Rev: 1, Len: 56 -> HPET.aml
+9:094  0:115    13. 7CEEB000: 'LPIT', 'CB-01   ', Rev: 1, Len: 148 -> LPIT.aml
+9:209  0:115    14. 7CEEA000: 'APIC', 'CB-01   ', Rev: 3, Len: 188 -> APIC.aml
+9:323  0:113    15. 7CEE9000: 'MCFG', 'CB-01   ', Rev: 1, Len: 60 -> MCFG.aml
+9:434  0:111    16. 7CEE8000: 'WDAT', 'CB-01   ', Rev: 1, Len: 308 -> WDAT.aml
+9:548  0:114    17. 7CEBD000: 'SSDT', 'CB-01   ', Rev: 1, Len: 724 -> SSDT-2.aml
+9:663  0:115    18. 7CEBA000: 'SSDT', 'CB-01   ', Rev: 2, Len: 11182 -> SSDT-3.aml
+10:383  0:720    19. 7CEB9000: 'SSDT', 'CB-01   ', Rev: 2, Len: 3043 -> SSDT-4.aml
+10:495  0:111    20. 7CEB8000: 'SSDT', 'CB-01   ', Rev: 2, Len: 410 -> SSDT-5.aml
+10:607  0:112    21. 7CEB6000: 'SSDT', 'CB-01   ', Rev: 2, Len: 2889 -> SSDT-6.aml
+10:722  0:114    22. 7CEB5000: 'SSDT', 'CB-01   ', Rev: 2, Len: 1068 -> SSDT-7.aml
+10:837  0:114    23. 7CEB4000: 'SSDT', 'CB-01   ', Rev: 2, Len: 3699
+ Found hidden SSDT 7 pcs
+10:837  0:000        * 7CB4C698: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1500  53 53 44 54 DC 05 00 00 02 FA 50 6D 52 65 66 00 Internal length = 1500 -> SSDT-9x.aml
+10:949  0:112        * 7CB4B618: 'SSDT', 'ApIst', Rev: 2, Len: 1450  53 53 44 54 AA 05 00 00 02 D1 50 6D 52 65 66 00 Internal length = 1450 -> SSDT-10x.aml
+11:084  0:135        * 7CB4BC18: 'SSDT', 'Cpu0Cst', Rev: 2, Len: 895  53 53 44 54 7F 03 00 00 02 68 50 6D 52 65 66 00 Internal length = 895 -> SSDT-11x.aml
+11:206  0:122        * 7CB4AD98: 'SSDT', 'ApCst', Rev: 2, Len: 281  53 53 44 54 19 01 00 00 02 ED 50 6D 52 65 66 00 Internal length = 281 -> SSDT-12x.aml
+11:329  0:122        * 6D3FEA18: 'SSDT', 'Cpu0Hwp', Rev: 2, Len: 142  53 53 44 54 8E 00 00 00 02 2E 50 6D 52 65 66 00 Internal length = 142 -> SSDT-13x.aml
+11:449  0:120        * 6D4B7318: 'SSDT', 'ApHwp', Rev: 2, Len: 281  53 53 44 54 19 01 00 00 02 00 50 6D 52 65 66 00 Internal length = 281 -> SSDT-14x.aml
+12:167  0:717        * 6D4B7198: 'SSDT', 'HwpLvt', Rev: 2, Len: 304  53 53 44 54 30 01 00 00 02 88 50 6D 52 65 66 00 Internal length = 304 -> SSDT-15x.aml
+12:290  0:123   -> SSDT-8.aml
+12:416  0:125    24. 7CEB0000: 'SSDT', 'CB-01   ', Rev: 1, Len: 16305 -> SSDT-16.aml
+12:538  0:121    25. 7CEAF000: 'DMAR', 'CB-01   ', Rev: 1, Len: 168 -> DMAR.aml
+12:661  0:123    26. 7CEAE000: 'FPDT', 'CB-01   ', Rev: 1, Len: 68 -> FPDT.aml
+12:783  0:122    27. 7CEAD000: 'BGRT', 'CB-01   ', Rev: 1, Len: 56 -> BGRT.aml
+12:919  0:135    Tables in Rsdt: 28
+12:919  0:000    0. 7CEED000: 'FACP', 'CB-01   ', Rev: 5, Len: 244
+12:919  0:000        (Dsdt: 7CEBE000, Facs: 7CE7A000, XDsdt: 7CEBE000, XFacs: 0)
+12:919  0:000        7CEBE000: 'DSDT', 'CB-01   ', Rev: 2, Len: 169287
+12:922  0:003        7CE7A000: 'FACS', Ver: 2, Len: 64
+12:922  0:000    1. 7CEFD000: 'UEFI', 'CB-01   ', Rev: 1, Len: 566
+12:922  0:000    2. 7CEFC000: 'UEFI', 'CB-01   ', Rev: 1, Len: 66
+12:922  0:000    3. 7CEFB000: 'MSDM', 'CB-01   ', Rev: 3, Len: 85
+12:922  0:000    4. 7CEF6000: 'SSDT', 'CB-01   ', Rev: 2, Len: 20021
+12:922  0:000    5. 7CEF5000: 'DBGP', 'CB-01   ', Rev: 1, Len: 52
+12:922  0:000    6. 7CEF4000: 'DBG2', 'CB-01   ', Rev: 0, Len: 84
+12:922  0:000    7. 7CEF2000: 'SSDT', 'CB-01   ', Rev: 2, Len: 6338
+12:922  0:000    8. 7CEF1000: 'ASF!', 'CB-01   ', Rev: 32, Len: 165
+12:922  0:000    9. 7CEF0000: 'ASPT', 'CB-01   ', Rev: 7, Len: 52
+12:922  0:000    10. 7CEEF000: 'BOOT', 'CB-01   ', Rev: 1, Len: 40
+12:922  0:000    11. 7CEEE000: 'DBGP', 'CB-01   ', Rev: 1, Len: 52
+12:922  0:000    12. 7CEEC000: 'HPET', 'CB-01   ', Rev: 1, Len: 56
+12:922  0:000    13. 7CEEB000: 'LPIT', 'CB-01   ', Rev: 1, Len: 148
+12:922  0:000    14. 7CEEA000: 'APIC', 'CB-01   ', Rev: 3, Len: 188
+12:922  0:000    15. 7CEE9000: 'MCFG', 'CB-01   ', Rev: 1, Len: 60
+12:922  0:000    16. 7CEE8000: 'WDAT', 'CB-01   ', Rev: 1, Len: 308
+12:922  0:000    17. 7CEBD000: 'SSDT', 'CB-01   ', Rev: 1, Len: 724
+12:922  0:000    18. 7CEBA000: 'SSDT', 'CB-01   ', Rev: 2, Len: 11182
+12:922  0:000    19. 7CEB9000: 'SSDT', 'CB-01   ', Rev: 2, Len: 3043
+12:922  0:000    20. 7CEB8000: 'SSDT', 'CB-01   ', Rev: 2, Len: 410
+12:922  0:000    21. 7CEB6000: 'SSDT', 'CB-01   ', Rev: 2, Len: 2889
+12:922  0:000    22. 7CEB5000: 'SSDT', 'CB-01   ', Rev: 2, Len: 1068
+12:922  0:000    23. 7CEB4000: 'SSDT', 'CB-01   ', Rev: 2, Len: 3699
+12:922  0:000    24. 7CEB0000: 'SSDT', 'CB-01   ', Rev: 1, Len: 16305
+12:922  0:000    25. 7CEAF000: 'DMAR', 'CB-01   ', Rev: 1, Len: 168
+12:922  0:000    26. 7CEAE000: 'FPDT', 'CB-01   ', Rev: 1, Len: 68
+12:922  0:000    27. 7CEAD000: 'BGRT', 'CB-01   ', Rev: 1, Len: 56

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>TC0:C41|CPU Core %X</string>
+	<string>TC0P|CPU Proximity</string>
+	<string>TCXC|PECI CPU</string>
+	<string>TCSA|PECI SA</string>
+	<string>TCGC|PECI GPU</string>
+	<string>TPCD|PCH Die</string>
+	<string>TM0P|Memory Module, Proximity</string>
+	<string>TG0D|GPU Die</string>
+	<string>TB:041P|Battery %X</string>
+	<string>Th1H|Heatpipe</string>
+	<string>Ts0P|Heatpipe Incoming Air</string>
+	<string>Ts0S|Heatpipe Outgoing Air</string>
+	<string>VC0C|CPU Core</string>
+	<string>VC2C|PCH Core</string>
+	<string>VC0G|CPU GFX</string>
+	<string>VD0R|Power Supply</string>
+	<string>IC0C|CPU Core</string>
+	<string>IC0R|CPU Rail</string>
+	<string>IG0C|GPU</string>
+	<string>IN0C|PCH Core</string>
+	<string>IM0R|Memory Rail</string>
+	<string>ID0R|Mainboard S0 Rail</string>
+	<string>PC0C|CPU Core</string>
+	<string>PCPC|CPU Package Cores</string>
+	<string>PCPG|CPU Package Graphics</string>
+	<string>PCPT|CPU Package Total</string>
+	<string>PM0R|Memory Rail</string>
+	<string>PN0C|PCH Core</string>
+	<string>PBLC|Battery Rail</string>
+	<string>PC0R|Mainboard S0 Rail</string>
+	<string>PDTR|System Total</string>
+</array>
+</plist>

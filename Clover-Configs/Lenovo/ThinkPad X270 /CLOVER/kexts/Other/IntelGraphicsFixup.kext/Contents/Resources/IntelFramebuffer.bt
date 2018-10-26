@@ -1,0 +1,600 @@
+/**
+ *   010 Editor v8.0.1 Binary Template
+ *
+ *      File: Intel Framebuffer kexts from 10.13.3
+ *   Authors: vit9696
+ *   Version: 0.5
+ *   Purpose: Intel Framebuffer decoding
+ *
+ * Copyright (c) 2018 vit9696
+ *
+ * Thanks to bcc9, Piker-Alpha, joevt and all the others who reversed Intel Framebuffer code.
+ */
+
+LittleEndian();
+
+/* There is various not so accurate information but it is worth checking:
+ * http://www.insanelymac.com/forum/topic/259705-editing-custom-connectorinfo-for-intel-hd-3000-graphics-sandy-bridge-osx-lion/
+ * https://github.com/Piker-Alpha/AppleIntelFramebufferAzul.sh/blob/master/AppleIntelFramebufferAzul.sh
+ * https://www.tonymacx86.com/threads/skylake-intel-hd-530-integrated-graphics-working-as-of-10-11-4.188891/page-29#post-1297155
+ * https://pikeralpha.wordpress.com/2013/08/02/appleintelframebufferazul-kext-part-ii/
+ */
+
+typedef unsigned char uint8_t;
+typedef uint16 uint16_t;
+typedef uint32 uint32_t;
+typedef uint64 uint64_t;
+typedef char int8_t;
+typedef int16 int16_t;
+typedef int32 int32_t;
+typedef int64 int64_t;
+
+enum <uint32_t> FirstFramebuffer {
+    FirstSandyBridgeId = 0x00040201, /* note, this is just a marker */
+    DefSandyBridgeId   = 0x00010200, /* note, this is just a marker */
+    FirstIvyBridgeId   = 0x01660000,
+    FirstHaswellId     = 0x0c060000,
+    FirstBroadwellId   = 0x16060000,
+    FirstSkylakeId     = 0x191e0000,
+    FirstKabyLakeId    = 0x591e0000
+};
+
+enum <uint32_t> CameliaVersion {
+    CameliaDisabled = 0,      /* -nocam */
+    CameliaV1 = 1,            /* -forcecam1 */
+    CameliaV2 = 2,            /* -forcecam2, CamelliaTcon2 */
+    CameliaV3 = 3,            /* BanksiaTcon */
+    CameliaUnsupported = 0xFF /* dummy value for snb */
+};
+
+union FramebufferFlags {
+    struct FramebufferFlagBits {
+        /* Discovered in AppleIntelFBController::LinkTraining. Disables the use of FastLinkTraining.
+         * According to joevt with zero SKL link training happens at 450 MHz else at 540 MHz */
+        uint8_t FBAvoidFastLinkTraining      :1;  /* 0x1 */
+        uint8_t FBUnknownFlag_2              :1;  /* 0x2 */
+        /* Discovered in AppleIntelFramebufferController::getFeatureControl.
+         * This is equivalent to setting FBC=1 in the plist FeatureControl section. */
+        uint8_t FBFramebufferCompression     :1;  /* 0x4 */
+        /* Discovered in AppleIntelFramebufferController::getFeatureControl.
+         * This is equivalent to setting SliceSDEnable=1, EUSDEnable=1, DynamicSliceSwitch=1 in the plist FeatureControl section.
+         */
+        uint8_t FBEnableSliceFeatures        :1;  /* 0x8 */
+        /* Discovered in AppleIntelFramebufferController::getFeatureControl.
+         * This is equivalent to setting DynamicFBCEnable=1 in the plist FeatureControl section.
+         */
+        uint8_t FBDynamicFBCEnable           :1;  /* 0x10 */
+        /* This sets fUseVideoTurbo=1 and loads GPU turbo frequency from the specific field.
+         * Defaults to 14, can be overridden by VideoTurboFreq in the plist FeatureControl section.
+         */
+        uint8_t FBUseVideoTurbo              :1;  /* 0x20 */
+        /* Discovered in AppleIntelFramebuffer::getDisplayStatus.
+         * Enforces display power reset even on always connected displays (see connector flags CNConnectorAlwaysConnected). 
+         */
+        uint8_t FBForcePowerAlwaysConnected  :1;  /* 0x40 */
+        /* According to joevt this enforces High Bitrate mode 1, which limits DP bitrate to 8.64 Gbit/s instead of normal 17.28 Gbit/s (HBR2).
+         * I do not think this is used on Skylake any longer.
+         */
+        uint8_t FBDisableHighBitrateMode2    :1;  /* 0x80 */
+        /* This bit is not used on Broadwell and newer but set when fPortCount > 0, i.e. for all online framebuffers.
+         * On Haswell it is used by AppleIntelFramebuffer::GetOnlineInfo and is set only on 0x0D260007 (MacBookPro11,3) and 0x0D26000E, which are top models.
+         * This appears to boost pixel frequency limit (aka pixel clock) to 540000000 Hz (from the usual 216000000, 320000000, 360000000, 450000000).
+         */
+        uint8_t FBBoostPixelFrequencyLimit   :1;  /* 0x100 */
+        /* Discovered in AppleIntelFramebuffer::ValidateSourceSize.
+         * Limits source size to 4096x4096.
+         */
+        uint8_t FBLimit4KSourceSize          :1;  /* 0x200 */
+        /* Discovered in AppleIntelFramebufferController::start.
+         * These bits appear to be entirely equivalent and could be used interchangeably. Result in setting:
+         * - PCH_LP_PARTITION_LEVEL_DISABLE (1 << 12) bit in SOUTH_DSPCLK_GATE_D (0xc2020)
+         * - LPT_PWM_GRANULARITY (1 << 5) bit in SOUTH_CHICKEN2 (0xc2004)
+         * See Linux driver sources (lpt_init_clock_gating, lpt_enable_backlight).
+         * Since these bits are setting backlight pulse width modularity, there is no sense in setting them without a built-in display (i.e. on desktop).
+         */
+        uint8_t FBAlternatePWMIncrement1     :1;  /* 0x400 */
+        uint8_t FBAlternatePWMIncrement2     :1;  /* 0x800 */
+        /* Discovered in Broadwell AppleIntelFBController::start / AppleIntelFBController::getFeatureControl.
+         * This is equivalent to setting DisableFeatureIPS=1 in the plist FeatureControl section.
+         * IPS stands for Intermediate Pixel Storage
+         */
+        uint8_t FBDisableFeatureIPS          :1;  /* 0x1000 */
+        uint8_t FBUnknownFlag_2000           :1;  /* 0x2000 */
+        /* Discovered in Broadwell AppleIntelFBController::getOSInformation.
+         * Used by AppleIntelFramebufferController::LinkTraining for camelia version 2.
+         * Can be overridden by -notconrecover boot-arg, which effectively unsets this bit.
+         */
+        uint8_t FBAllowConnectorRecover      :1;  /* 0x4000 */
+        uint8_t FBUnknownFlag_8000           :1;  /* 0x8000 */
+        uint8_t FBUnknownFlag_10000          :1;  /* 0x10000 */
+        uint8_t FBUnknownFlag_20000          :1;  /* 0x20000 */
+        /* Discovered in AppleIntelFramebufferController::getFeatureControl.
+         * This takes its effect only if GFMPPFM in the plist FeatureControl section is set to 2, otherwise GFMPPFM is off. 
+         */
+        uint8_t FBDisableGFMPPFM             :1;  /* 0x40000 */
+        uint8_t FBUnknownFlag_80000          :1;  /* 0x80000 */
+        uint8_t FBUnknownFlag_100000         :1;  /* 0x100000 */
+        /* Discovered in AppleIntelFramebufferController::getFeatureControl.
+         * This takes its effect only if SupportDynamicCDClk in the plist FeatureControl section is set to 1, otherwise off.
+         * Also requires dc6config to be set to 3 (default).
+         */
+        uint8_t FBEnableDynamicCDCLK         :1;  /* 0x200000 */
+        uint8_t FBUnknownFlag_400000         :1;  /* 0x400000 */
+        /* Discovered in AppleIntelFramebuffer::enableController.
+         * Used by AppleIntelFramebuffer::ValidateSourceSize.
+         * Setting this bit increases the maximum source size from 4096x4096 to 5120x5120.
+         * Most likely this enables 5K support via Intel HD.
+         */
+        uint8_t FBSupport5KSourceSize        :1;  /* 0x800000 */
+        uint8_t FBUknownZeroFlags;
+        Assert(FBUknownZeroFlags == 0, "FBUknownZeroFlags are not zero, new flags were added!");
+    } bits;
+    uint32_t value;
+};
+
+/* This is the same as ATI/AMD code.
+ * At this moment only 2, 4, 0x400, and 0x800 are somewhat supported.
+ * Interestingly connector type is not so important nowadays, e.g. VGA works fine on Kaby on DP.
+ * As of SKL and newer ConnectorType is converted to fPortType by the following algo:
+ * - connector with zero index (LVDS) gets fPortType 3.
+ * - connector with ConnectorHDMI type gets fPortType 1.
+ * - otherwise a connector has fPortType 2 (DisplayPort-like).
+ */
+enum <uint32_t> ConnectorType {
+    ConnectorZero       = 0x0,
+    ConnectorDummy      = 0x1,   /* Always used as dummy, seems to sometimes work as VGA */
+    ConnectorLVDS       = 0x2,   /* Just like on AMD LVDS is used for eDP */
+    ConnectorDigitalDVI = 0x4,   /* This is not eDP despite a common misbelief */
+    ConnectorSVID       = 0x8,
+    ConnectorVGA        = 0x10,
+    ConnectorDP         = 0x400,
+    ConnectorHDMI       = 0x800,
+    ConnectorAnalogDVI  = 0x2000
+};
+
+/* I can see very few mentioned in the code (0x1, 0x8, 0x40), though connectors themselves define way more! */
+
+union ConnectorFlags {
+    struct ConnectorFlagBits {
+        /* Bits 1, 2, 8 are mentioned in AppleIntelFramebufferController::GetGPUCapability */
+        /* Lets apperture memory to be not required AppleIntelFramebuffer::isApertureMemoryRequired */
+        uint8_t CNAlterAppertureRequirements :1;  /* 0x1 */
+        uint8_t CNUnknownFlag_2              :1;  /* 0x2 */
+        uint8_t CNUnknownFlag_4              :1;  /* 0x4 */
+        /* Normally set for LVDS displays (i.e. built-in displays) */
+        uint8_t CNConnectorAlwaysConnected   :1;  /* 0x8 */
+        uint8_t CNUnknownFlag_10             :1;  /* 0x10 */
+        uint8_t CNUnknownFlag_20             :1;  /* 0x20 */
+        /* Disable blit translation table? AppleIntelFramebufferController::ConfigureBufferTranslation */
+        uint8_t CNDisableBlitTranslationTable:1;  /* 0x40 */
+        uint8_t CNUnknownFlag_80             :1;  /* 0x80 */
+        uint8_t CNUnknownFlag_100            :1;  /* 0x100 */
+        uint8_t CNUnknownFlag_200            :1;  /* 0x200 */
+        uint8_t CNUnknownFlag_400            :1;  /* 0x400 */
+        uint8_t CNUnknownFlag_800            :1;  /* 0x800 */
+        uint8_t CNUnknownFlag_1000           :1;  /* 0x1000 */
+        uint8_t CNUnknownFlag_2000           :1;  /* 0x2000 */
+        uint8_t CNUnknownFlag_4000           :1;  /* 0x4000 */
+        uint8_t CNUnknownFlag_8000           :1;  /* 0x8000 */
+        uint16_t CNUnknownZeroFlags;
+        Assert(CNUnknownZeroFlags == 0, "CNUnknownZeroFlags are not zero, new flags were added!");
+    } bits;
+    uint32_t value;
+};
+
+struct ConnectorInfo {
+    /* Watch out, this is really messy (see AppleIntelFramebufferController::MapFBToPort).
+     * I am not fully sure why this exists, and recommend setting index to array index (i.e. the sequential number from 0).
+     * 
+     * The only accepted values are 0, 1, 2, 3, and -1 (0xFF). When index is equal to array index the logic is simple:
+     * Port with index    0    is always considered built-in (of LVDS type) regardless of any other values.
+     * Ports with indexes 1~3  are checked against type, HDMI will allow the use of digital audio, otherwise DP is assumed.
+     * Port with index    0xFF is ignored and skipped.
+     *
+     * When index != array index port type will be read from connector[index].type.
+     * Say, we have 2 active ports:
+     * 0 - [1]     busId 4 type LVDS
+     * 1 - [2]     busId 5 type DP
+     * 2 - [3]     busId 6 type HDMI
+     * 3 - [-1]    busId 0 type Dummy
+     * This will result in 2 framebuffers which types will be shifted:
+     * 0 - busId 4 type DP
+     * 1 - busId 5 type HDMI
+     * In fact BusId values are also read as connector[index].busId, but are later mapped back via
+     * AppleIntelFramebufferController::getGMBusIDfromPort by looking up a connector with the specified index.
+     * The lookup will stop as soon as a special marker connector (-1) is found. To illustrate, if we have 2 active ports:
+     * 0 - [1]     busId 4 type LVDS
+     * 1 - [2]     busId 5 type DP
+     * 2 - [-1]    busId 6 type HDMI
+     * 3 - [-1]    busId 0 type Dummy
+     * The result will be 2 framebuffers which types and the second busId will be shifted:
+     * 0 - busId 4 type DP
+     * 1 - busId 6 type HDMI
+     * It is also used for port-number calculation.
+     * - LVDS displays (more precisely, displays with CNConnectorAlwaysConnected flag set) get port-number 0.
+     * - Other displays go through index - port-number mapping: 1 - 5, 2 - 6, 3 - 7, or fallback to 0.
+     */
+    uint8_t index;
+    /* Proven by AppleIntelFramebufferController::MapFBToPort, by a call to AppleIntelFramebufferController::getGMBusIDfromPort.
+     * This is GMBUS (Graphic Management Bus) ID described in https://01.org/sites/default/files/documentation/intel-gfx-prm-osrc-hsw-display_0.pdf.
+     * The use could be found in Intel Linux Graphics Driver source code:
+     * https://github.com/torvalds/linux/blob/6481d5ed076e69db83ca75e751ad492a6fb669a7/drivers/gpu/drm/i915/intel_i2c.c#L43
+     * https://github.com/torvalds/linux/blob/605dc7761d2701f73c17183649de0e3044609817/drivers/gpu/drm/i915/i915_reg.h#L3053
+     * However, it should be noted that Apple identifiers are slightly different from Linux driver.
+     * In Linux 0 means disabled, however, for Apple it has some special meaning and is used for internal display.
+     * Other than that the values are the same:
+     * - GMBUS_PIN_DPC    (4)  HDMIC
+     * - GMBUS_PIN_DPB    (5)  SDVO, HDMIB
+     * - GMBUS_PIN_DPD    (6)  HDMID
+     * - GMBUS_PIN_VGADDC (2)  VGA until Broadwell inclusive.
+     * So basically you could use 4, 5, 6 for arbitrary HDMI or DisplayPort displays.
+     * Since 5 supports SDVO (https://en.wikipedia.org/wiki/Serial_Digital_Video_Out), it may also be used to support DVI displays.
+     * Starting with Skylake VGA works via SDVO too (instead of a dedicated GMBUS_PIN_VGADDC id).
+     */
+    uint8_t busId;
+    /* Appears to be used for grouping ports just like Piker says, but I cannot find the usage. */
+    uint8_t pipe;
+    uint8_t pad;
+    Assert(pad == 0, "Non-zero padding");
+    ConnectorType type <read=connectorTypeToPrintable>;
+    /* These are connector flags, they have nothing to do with delays regardless of what Piker says.
+     * I tried to describe some in ConnectorFlags.
+     */
+    ConnectorFlags flags <read=connectorFlagsToPrintable>;
+};
+
+/* It should be noted that some displays use more than 1 pipe, so maxPipes != maxDisplays. */
+
+struct FramebufferSNB {
+    local uint32_t framebufferId = 0;
+    uint8_t  fMobile;
+    uint8_t  fPipeCount;
+    uint8_t  fPortCount; /* also fNumFramebuffer */
+    uint8_t  fFBMemoryCount;
+    /* 0 means unused. */
+    uint32_t fBacklightFrequency;
+    uint32_t fBacklightMax;
+    ConnectorInfo connectors[4] <read=connectorToPrintable, optimize=false>;
+    local uint32_t fStolenMemorySize = 0;
+    local uint32_t fFramebufferMemorySize = 0;
+    local uint32_t fUnifiedMemorySize = 0;
+    local uint8_t  cameliaVersion = CameliaUnsupported;
+    local uint32_t flags = 0;
+    local uint64_t fModelNameAddr = 0;
+};
+
+string frameIdFromIndex(uint32_t frame, uint32_t index) {
+    local string out;
+    if (frame != 0) {
+       /* Ivy and newer */
+       SPrintf(out, "%08X", frame);
+    } else {
+        /* Sandy Bridge has stupid frame detection logic.
+         * See board-id list below, which enable framebuffer fallbacks.
+         */
+        switch (index) {
+            case 0: out="SNB0 0x10000"; break;
+            case 1: out="SNB1 0x20000"; break;
+            case 2: out="SNB2 0x30010 or 0x30020"; break;
+            case 3: out="SNB3 0x30030"; break;
+            case 4: out="SNB4 0x40000"; break;
+            case 5: out="SNB5 0x50000"; break;
+            case 6: out="SNB6 Not addressible"; break;
+            case 7: out="SNB7 Not addressible"; break;
+            /* There are 8 frames for sandy aside the default one, but only the first 6 are addressible. */
+            default: out="Error";
+        }
+    }
+    return out;
+}
+
+struct FramebufferIVB {
+    uint32_t framebufferId;
+    uint8_t  fMobile;
+    uint8_t  fPipeCount;
+    uint8_t  fPortCount; /* also fNumFramebuffer */
+    uint8_t  fFBMemoryCount;
+    uint32_t fStolenMemorySize <read=bytesToPrintable>;
+    uint32_t fFramebufferMemorySize <read=bytesToPrintable>;
+    uint32_t fUnifiedMemorySize <read=bytesToPrintable>;
+    uint32_t fBacklightFrequency <read=frequencyToPrintable>;
+    uint32_t fBacklightMax <read=frequencyToPrintable>;
+    uint32_t unk1[2];
+    uint32_t unk2[2];
+    uint32_t unk3;
+    ConnectorInfo connectors[4] <read=connectorToPrintable, optimize=false>;
+    uint32_t pad2[26];
+    local uint8_t  cameliaVersion = CameliaUnsupported;
+    local uint32_t flags = 0;
+    local uint64_t fModelNameAddr = 0;
+};
+
+/* Some names are taken from 10.9 Azul driver. While they may not be the same names used in the struct, they are handy at least. */
+struct FramebufferHSW {
+    uint32_t framebufferId;
+    uint8_t  fMobile;
+    uint8_t  fPipeCount;
+    uint8_t  fPortCount; /* also fNumFramebuffer */
+    uint8_t  fFBMemoryCount;
+    uint32_t fStolenMemorySize <read=bytesToPrintable>;
+    uint32_t fFramebufferMemorySize <read=bytesToPrintable>;
+    uint32_t fCursorMemorySize <read=bytesToPrintable>;
+    uint32_t fUnifiedMemorySize <read=bytesToPrintable>;
+    uint32_t fBacklightFrequency <read=frequencyToPrintable>;
+    uint32_t fBacklightMax <read=frequencyToPrintable>;
+    uint32_t pad[2];
+    Assert(pad[0] == 0 && pad[1] == 0, "Non-zero padding");
+    ConnectorInfo connectors[4] <read=connectorToPrintable, optimize=false>;
+    FramebufferFlags flags <read=framebufferFlagsToPrintable>;
+    uint8_t  unk1[3];
+    uint8_t  cameliaVersion <read=cameliaToPrintable>;
+    uint32_t unk2;
+    uint32_t fNumTransactionsThreshold;
+    uint32_t fVideoTurboFreq;
+    uint32_t unk3;
+    local uint64_t fModelNameAddr = 0;
+};
+
+struct FramebufferBDW {
+    uint32_t framebufferId;
+    uint8_t  fMobile;
+    uint8_t  fPipeCount;
+    uint8_t  fPortCount;
+    uint8_t  fFBMemoryCount;
+    uint32_t fStolenMemorySize <read=bytesToPrintable>;
+    uint32_t fFramebufferMemorySize <read=bytesToPrintable>;
+    uint32_t fUnifiedMemorySize <read=bytesToPrintable>;
+    uint32_t fBacklightFrequency <read=frequencyToPrintable>;
+    uint32_t fBacklightMax <read=frequencyToPrintable>;
+    uint32_t pad[3];
+    Assert(pad[0] == 0 && pad[1] == 0 && pad[2] == 0, "Non-zero padding");
+    ConnectorInfo connectors[4] <read=connectorToPrintable, optimize=false>;
+    FramebufferFlags flags <read=framebufferFlagsToPrintable>;
+    uint32_t unk1;
+    uint32_t cameliaVersion <read=cameliaToPrintable>;
+    uint32_t unk2[6];
+    uint32_t fNumTransactionsThreshold;
+    uint32_t fVideoTurboFreq;
+    uint32_t fRC6_Threshold;
+    local uint64_t fModelNameAddr = 0;
+};
+
+struct FramebufferSKL {
+    uint32_t framebufferId;
+    uint32_t pad;
+    Assert(pad == 0, "Non-zero sequence");
+    uint64_t fModelNameAddr <read=modelNameAddrToPrintable>;
+    /* While it is hard to be sure, because having 0 here results in online=true returned by
+     * AppleIntelFramebuffer::GetOnlineInfo, after all it appears to be the case, and the unused
+     * so-called mobile framebufers are simply set to fail-safe defaults.
+     * For some reason it is often called fDisabled...
+     */
+    uint8_t  fMobile;
+    uint8_t  fPipeCount;
+    uint8_t  fPortCount;
+    uint8_t  fFBMemoryCount;
+    /* This one is per framebuffer fStolenMemorySize * fFBMemoryCount */
+    uint32_t fStolenMemorySize <read=bytesToPrintable>;
+    /* This is for boot framebuffer from what I can understand */
+    uint32_t fFramebufferMemorySize <read=bytesToPrintable>;
+    uint32_t fUnifiedMemorySize <read=bytesToPrintable>;
+    uint32_t fBacklightFrequency <read=frequencyToPrintable>;
+    uint32_t fBacklightMax <read=frequencyToPrintable>;
+    uint32_t pad2[2];
+    Assert(pad2[0] == 0 && pad2[1] == 0, "Non-zero sequence");
+    ConnectorInfo connectors[4] <read=connectorToPrintable, optimize=false>;
+    FramebufferFlags flags <read=framebufferFlagsToPrintable>;
+    /* Check DDI Buffer Translations in Linux driver for details. */
+    uint8_t fBTTableOffsetIndexSlice; /* FBEnableSliceFeatures = 1 */
+    uint8_t fBTTableOffsetIndexNormal; /* FBEnableSliceFeatures = 0 */
+    uint8_t fBTTableOffsetIndexHDMI; /* fDisplayType = 1 */
+    uint8_t pad3;
+    Assert(pad3 == 0, "Non-zero sequence");
+    uint32_t cameliaVersion <read=cameliaToPrintable>;
+    uint64_t unk3[3];
+    uint32_t fNumTransactionsThreshold;
+    /* Defaults to 14, used when UseVideoTurbo bit is set */
+    uint32_t fVideoTurboFreq;
+    uint32_t pad4;
+    Assert(pad4 == 0, "Non-zero sequence");
+    uint64_t fBTTArraySliceAddr;
+    uint64_t fBTTArrayNormalAddr;
+    uint64_t fBTTArrayHDMIAddr;
+    uint32_t fSliceCount;
+    uint32_t fEuCount;
+    uint32_t unk6[2];
+};
+
+string bytesToPrintable(uint32_t bytes) {
+    local string out;
+    if (bytes >= 1024*1024) {
+        if (bytes % (1024*1024) == 0) {
+            SPrintf(out, "%d MB", bytes/1024/1024);
+        } else {
+            SPrintf(out, "%d MB (%d bytes)", bytes/1024/1024, bytes);
+        }
+    } else if (bytes >= 1024) {
+        if (bytes % (1024) == 0) {
+            SPrintf(out, "%d KB", bytes/1024);
+        } else {
+            SPrintf(out, "%d KB (%d bytes)", bytes/1024, bytes);
+        }
+    } else {
+        SPrintf(out, "%d bytes", bytes);
+    }
+    return out;
+}
+
+string frequencyToPrintable(uint32_t freq) {
+    local string out;
+    SPrintf(out, "%d Hz", freq);
+    return out;
+}
+
+string cameliaToPrintable(CameliaVersion cam) {
+    local string out;
+    SPrintf(out, "%s (%d)", EnumToString(cam), cam);
+    return out;
+}
+
+string connectorTypeToPrintable(ConnectorType type) {
+    local string out;
+    local string typename = EnumToString(type);
+    Assert(typename != "", "Unknown connector type discovered");
+    SPrintf(out, "0x%08X - %s", type, EnumToString(type));
+    return out;
+}
+
+string connectorToPrintable(ConnectorInfo &con) {
+    local string out;
+    SPrintf(out, "[%d] busId: 0x%02X, pipe: %d, type: 0x%08X, flags: 0x%08X - %s", con.index, con.busId, con.pipe, con.type, con.flags.value, EnumToString(con.type));
+    return out;
+}
+
+string framebufferFlagsToPrintable(FramebufferFlags &flags) {
+    local string out;
+    SPrintf(out, "%08X", flags.value);
+    return out;
+}
+
+string connectorFlagsToPrintable(ConnectorFlags &flags) {
+    local string out;
+    SPrintf(out, "%08X", flags.value);
+    return out;
+}
+
+string modelNameAddrToPrintable(uint64_t addr) {
+    return ReadLine(addr);
+}
+
+string framebufferSNBToPrintable(FramebufferSNB &fb) {
+    local string out;
+    SPrintf(out, "0x%08X (%s, %d connectors%s)", fb.framebufferId, fb.fMobile ? "mobile" : "desktop",
+        fb.fPortCount, fb.fFramebufferMemorySize == 0 ? ", no fbmem" : "");
+    return out;
+}
+
+string framebufferIVBToPrintable(FramebufferIVB &fb) {
+    local string out;
+    SPrintf(out, "0x%08X (%s, %d connectors%s)", fb.framebufferId, fb.fMobile ? "mobile" : "desktop",
+        fb.fPortCount, fb.fFramebufferMemorySize == 0 ? ", no fbmem" : "");
+    return out;
+}
+
+string framebufferHSWToPrintable(FramebufferHSW &fb) {
+    local string out;
+    SPrintf(out, "0x%08X (%s, %d connectors%s)", fb.framebufferId, fb.fMobile ? "mobile" : "desktop",
+        fb.fPortCount, fb.fFramebufferMemorySize == 0 ? ", no fbmem" : "");
+    return out;
+}
+
+string framebufferBDWToPrintable(FramebufferBDW &fb) {
+    local string out;
+    SPrintf(out, "0x%08X (%s, %d connectors%s)", fb.framebufferId, fb.fMobile ? "mobile" : "desktop",
+        fb.fPortCount, fb.fFramebufferMemorySize == 0 ? ", no fbmem" : "");
+    return out;
+}
+
+string framebufferSKLToPrintable(FramebufferSKL &fb) {
+    local string out;
+    SPrintf(out, "0x%08X (%s, %d connectors%s)", fb.framebufferId, fb.fMobile ? "mobile" : "desktop",
+        fb.fPortCount, fb.fFramebufferMemorySize == 0 ? ", no fbmem" : "");
+    return out;
+}
+
+/* Skip a little data to speedup the search. */
+local int64_t pos = 0x20000, size = FileSize();
+local uint32_t i = 0, j = 0;
+local uint32_t firstId = 0;
+local uint32_t fTotalStolen = 0;
+local uint32_t fTotalCursor = 0;
+local uint32_t fOverall = 0;
+
+while (pos < size) {
+    /* Skip to platforms... */
+    firstId = ReadUInt(pos);
+    if (firstId != FirstSandyBridgeId && firstId != FirstIvyBridgeId &&
+        firstId != FirstHaswellId && firstId != FirstBroadwellId &&
+        firstId != FirstSkylakeId && firstId != FirstKabyLakeId) {
+        pos += sizeof(uint32_t);
+        continue;
+    }
+    /* Read platforms from here... */
+    FSeek(pos);
+    while (ReadUInt() != 0xFFFFFFFF) {
+        if (firstId == FirstSandyBridgeId)
+            FramebufferSNB frames <optimize=false, read=framebufferSNBToPrintable>;
+        else if (firstId == FirstIvyBridgeId)
+            FramebufferIVB frames <optimize=false, read=framebufferIVBToPrintable>;
+        else if (firstId == FirstHaswellId)
+            FramebufferHSW frames <optimize=false, read=framebufferHSWToPrintable>;
+        else if (firstId == FirstBroadwellId)
+            FramebufferBDW frames <optimize=false, read=framebufferBDWToPrintable>;
+        /* Skylake and Kaby Lake share the struct as of 10.13.3 */
+        else if (firstId == FirstSkylakeId || firstId == FirstKabyLakeId)
+            FramebufferSKL frames <optimize=false, read=framebufferSKLToPrintable>;
+        Printf("ID: %s, STOLEN: %s, FBMEM: %s, VRAM: %s, Flags: 0x%08X\n", frameIdFromIndex(frames[i].framebufferId, i),
+            bytesToPrintable(frames[i].fStolenMemorySize), bytesToPrintable(frames[i].fFramebufferMemorySize), 
+            bytesToPrintable(frames[i].fUnifiedMemorySize), firstId == FirstSandyBridgeId || firstId == FirstIvyBridgeId ? 0 : frames[i].flags.value);
+        /* Compared to PCI Config 16-bit read from GMCH Control #0 (0x50): ((val << 17) & 0xFE000000) - 0x1000 */
+        fTotalStolen = frames[i].fStolenMemorySize * frames[i].fFBMemoryCount + frames[i].fFramebufferMemorySize + 0x100000;
+        fTotalCursor = frames[i].fPipeCount * 0x80000;
+        fOverall = fTotalCursor + fTotalStolen + frames[i].fPortCount * 0x1000;
+        Printf("TOTAL STOLEN: %s, TOTAL CURSOR: %s, OVERALL: %s\n", bytesToPrintable(fTotalStolen), bytesToPrintable(fTotalCursor), bytesToPrintable(fOverall));
+        if (frames[i].fModelNameAddr != 0)
+            Printf("Model name: %s\n", modelNameAddrToPrintable(frames[i].fModelNameAddr));
+        Printf("Camelia: %s, Freq: %s, FreqMax: %s\n", cameliaToPrintable(frames[i].cameliaVersion), 
+            frequencyToPrintable(frames[i].fBacklightFrequency), frequencyToPrintable(frames[i].fBacklightMax));
+        Printf("Mobile: %d, PipeCount: %d, PortCount: %d, FBMemoryCount: %d\n", frames[i].fMobile, frames[i].fPipeCount,
+            frames[i].fPortCount, frames[i].fFBMemoryCount);
+        for (j = 0; j < frames[i].fPortCount; j++)
+            Printf("%s\n", connectorToPrintable(frames[i].connectors[j]));
+        Printf("\n");
+        /* There is no -1 termination on Sandy */
+        if (firstId == FirstSandyBridgeId && i == 7) break;
+        i++;
+    }
+    break;
+}
+
+/* Additionally read the externally defined default FB on Sandy */
+if (firstId == FirstSandyBridgeId) {
+    pos = 0x20000;
+    while (pos < size) {
+        firstId = ReadUInt(pos);
+        if (firstId == DefSandyBridgeId) {
+            FSeek(pos);
+            FramebufferSNB frames <optimize=false, read=framebufferSNBToPrintable>;
+            Printf("Default SNB, DVMT: %s, FBMEM: %s, VRAM: %s, Flags: 0x00000000\n",
+                bytesToPrintable(frames[i].fStolenMemorySize), bytesToPrintable(frames[i].fFramebufferMemorySize), bytesToPrintable(frames[i].fUnifiedMemorySize));
+            Printf("Camelia: %s, Freq: %s, FreqMax: %s\n", cameliaToPrintable(frames[i].cameliaVersion), 
+                frequencyToPrintable(frames[i].fBacklightFrequency), frequencyToPrintable(frames[i].fBacklightMax));
+            Printf("Mobile: %d, PipeCount: %d, PortCount: %d, FBMemoryCount: %d\n", frames[i].fMobile, frames[i].fPipeCount,
+                frames[i].fPortCount, frames[i].fFBMemoryCount);
+            for (j = 0; j < frames[i].fPortCount; j++)
+                Printf("%s\n", connectorToPrintable(frames[i].connectors[j]));
+            Printf("\n");
+            break;
+        } else {
+            pos += sizeof(uint32_t);
+        }
+    }
+
+    Printf("Note, that without AAPL,snb-platform-id the following models will use predefined IDs:\n");
+    Printf("Mac-94245B3640C91C81 -> SNB0 (MacBookPro8,1)\n");
+    Printf("Mac-94245AF5819B141B -> SNB0\n");
+    Printf("Mac-94245A3940C91C80 -> SNB0 (MacBookPro8,2)\n");
+    Printf("Mac-942459F5819B171B -> SNB0 (MacBookPro8,3)\n");
+    Printf("Mac-8ED6AF5B48C039E1 -> SNB2 (Macmini5,1)\n");
+    Printf("Mac-7BA5B2794B2CDB12 -> SNB2 (Macmini5,3)\n");
+    Printf("Mac-4BC72D62AD45599E -> SNB3 (Macmini5,2)     -> no ports\n");
+    Printf("Mac-742912EFDBEE19B3 -> SNB4 (MacBookAir4,2)\n");
+    Printf("Mac-C08A6BB70A942AC2 -> SNB4 (MacBookAir4,1)\n");
+    Printf("Mac-942B5BF58194151B -> SNB5 (iMac12,1)       -> no ports\n");
+    Printf("Mac-942B5B3A40C91381 -> SNB5                  -> no ports\n");
+    Printf("Mac-942B59F58194171B -> SNB5 (iMac12,2)       -> no ports\n");
+} else if (firstId == FirstSkylakeId) {
+    Printf("Note, that without AAPL,ig-platform-id the following ID is assumed: 0x19120000\n");
+} else if (firstId == FirstKabyLakeId) {
+    Printf("Note, that without AAPL,ig-platform-id the following ID is assumed: 0x59160000\n");
+}

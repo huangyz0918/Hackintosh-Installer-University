@@ -1,0 +1,109 @@
+22:633  21:956  Found UEFI Acpi 2.0 RSDP at ACFFE014
+22:633  0:000  Saving ACPI tables from RSDP ACFFE014 to EFI\CLOVER\ACPI\origin ...
+22:633  0:000   ACFFE014: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36 -> RSDP.aml
+22:638  0:005    (Xsdt: ACFFE1C0, Rsdt: ACFFE0FC)
+22:638  0:000    ACFFE1C0: 'XSDT', 'CB-01   ', Rev: 1, Len: 252 -> XSDT.aml
+22:695  0:056    ACFFE0FC: 'RSDT', 'CB-01   ', Rev: 1, Len: 144 -> RSDT.aml
+22:700  0:004    Tables in Xsdt: 27
+22:700  0:000    0. ACFFA000: 'FACP', 'CB-01   ', Rev: 5, Len: 268 -> FACP.aml
+22:705  0:004        (Dsdt: ACFE2000, Facs: ACF7B000, XDsdt: ACFE2000, XFacs: 0)
+22:705  0:000        ACFE2000: 'DSDT', 'BDW     ', Rev: 2, Len: 77565 -> DSDT.aml
+22:726  0:021        ACF7B000: 'FACS', Ver: 2, Len: 64 -> FACS.aml
+22:730  0:003    1. ACFFD000: 'SSDT', 'OEMTABLE', Rev: 1, Len: 100 -> SSDT-0.aml
+22:734  0:004    2. ACFFC000: 'ASF!', 'CB-01   ', Rev: 32, Len: 165 -> ASF!.aml
+22:739  0:004    3. ACFF9000: 'HPET', 'CB-01   ', Rev: 1, Len: 56 -> HPET.aml
+22:746  0:007    4. ACFF8000: 'LPIT', 'CB-01   ', Rev: 1, Len: 148 -> LPIT.aml
+22:752  0:005    5. ACFF7000: 'APIC', 'CB-01   ', Rev: 1, Len: 152 -> APIC.aml
+22:756  0:003    6. ACFF6000: 'MCFG', 'CB-01   ', Rev: 1, Len: 60 -> MCFG.aml
+22:762  0:005    7. ACFF5000: 'WDAT', 'CB-01   ', Rev: 1, Len: 260 -> WDAT.aml
+22:766  0:004    8. ACFE1000: 'SSDT', 'sensrhub', Rev: 1, Len: 592 -> SSDT-1.aml
+22:773  0:007    9. ACFDD000: 'SSDT', 'PtidDevc', Rev: 1, Len: 13323 -> SSDT-2.aml
+22:780  0:007    10. ACFDA000: 'SSDT', 'SDS_RTD3', Rev: 2, Len: 9330 -> SSDT-3.aml
+22:785  0:004    11. ACFD7000: 'SSDT', 'ULX_RTD3', Rev: 2, Len: 11379 -> SSDT-4.aml
+22:791  0:006    12. ACFD4000: 'SSDT', 'DptfTabl', Rev: 2, Len: 8741 -> SSDT-5.aml
+22:800  0:009    13. ACFD3000: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1337 -> SSDT-6.aml
+22:806  0:005    14. ACFD2000: 'SSDT', 'CpuSsdt', Rev: 2, Len: 2932
+ Found hidden SSDT 4 pcs
+22:806  0:000        * 9FD46A98: 'E', '', Rev: 0, Len: 1811965696  14 45 00 6E 00 67 00 6C 00 69 00 73 00 68 00 00       * ACE4E618: 'SSDT', 'ApIst', Rev: 2, Len: 1450  53 53 44 54 AA 05 00 00 02 D2 50 6D 52 65 66 00 Internal length = 1450 -> SSDT-8x.aml
+22:811  0:005        * ACE4EC18: 'SSDT', 'Cpu0Cst', Rev: 2, Len: 979  53 53 44 54 D3 03 00 00 02 B2 50 6D 52 65 66 00 Internal length = 979 -> SSDT-9x.aml
+22:818  0:006        * ACE4DD98: 'SSDT', 'ApCst', Rev: 2, Len: 281  53 53 44 54 19 01 00 00 02 EE 50 6D 52 65 66 00 Internal length = 281 -> SSDT-10x.aml
+22:824  0:005   -> SSDT-7.aml
+22:829  0:005    15. ACFCC000: 'SSDT', 'SaSsdt ', Rev: 2, Len: 23874 -> SSDT-11.aml
+22:838  0:009    16. ACFCB000: 'SSDT', 'CppcTabl', Rev: 2, Len: 916 -> SSDT-12.aml
+22:846  0:008    17. ACFCA000: 'PCCT', 'CB-01   ', Rev: 5, Len: 110 -> PCCT.aml
+22:851  0:005    18. ACFC9000: 'SSDT', 'Cpc_Tabl', Rev: 1, Len: 2756 -> SSDT-13.aml
+22:857  0:006    19. ACFC8000: 'UEFI', 'CB-01   ', Rev: 1, Len: 66 -> UEFI.aml
+22:867  0:009    20. ACF55000: 'MSDM', 'CB-01   ', Rev: 3, Len: 85 -> MSDM.aml
+22:872  0:004    21. ACFC7000: 'BATB', 'CB-01   ', Rev: 1, Len: 70 -> BATB.aml
+22:876  0:004    22. ACFC6000: 'FPDT', 'CB-01   ', Rev: 1, Len: 100 -> FPDT.aml
+22:882  0:005    23. ACFC5000: 'SLIC', 'CB-01   ', Rev: 1, Len: 374 -> SLIC.aml
+22:889  0:006    24. ACFC4000: 'UEFI', 'CB-01   ', Rev: 1, Len: 638 -> UEFI.aml
+22:899  0:009    25. ACFC3000: 'BGRT', 'CB-01   ', Rev: 1, Len: 56 -> BGRT.aml
+22:903  0:004    26. ACFC2000: 'DMAR', 'CB-01   ', Rev: 1, Len: 204 -> DMAR.aml
+22:910  0:007    Tables in Rsdt: 27
+22:910  0:000    0. ACFFA000: 'FACP', 'CB-01   ', Rev: 5, Len: 268
+22:910  0:000        (Dsdt: ACFE2000, Facs: ACF7B000, XDsdt: ACFE2000, XFacs: 0)
+22:910  0:000        ACFE2000: 'DSDT', 'BDW     ', Rev: 2, Len: 77565
+22:912  0:001        ACF7B000: 'FACS', Ver: 2, Len: 64
+22:912  0:000    1. ACFFD000: 'SSDT', 'OEMTABLE', Rev: 1, Len: 100
+22:912  0:000    2. ACFFC000: 'ASF!', 'CB-01   ', Rev: 32, Len: 165
+22:912  0:000    3. ACFF9000: 'HPET', 'CB-01   ', Rev: 1, Len: 56
+22:912  0:000    4. ACFF8000: 'LPIT', 'CB-01   ', Rev: 1, Len: 148
+22:912  0:000    5. ACFF7000: 'APIC', 'CB-01   ', Rev: 1, Len: 152
+22:912  0:000    6. ACFF6000: 'MCFG', 'CB-01   ', Rev: 1, Len: 60
+22:912  0:000    7. ACFF5000: 'WDAT', 'CB-01   ', Rev: 1, Len: 260
+22:912  0:000    8. ACFE1000: 'SSDT', 'sensrhub', Rev: 1, Len: 592
+22:912  0:000    9. ACFDD000: 'SSDT', 'PtidDevc', Rev: 1, Len: 13323
+22:912  0:000    10. ACFDA000: 'SSDT', 'SDS_RTD3', Rev: 2, Len: 9330
+22:912  0:000    11. ACFD7000: 'SSDT', 'ULX_RTD3', Rev: 2, Len: 11379
+22:912  0:000    12. ACFD4000: 'SSDT', 'DptfTabl', Rev: 2, Len: 8741
+22:912  0:000    13. ACFD3000: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1337
+22:912  0:000    14. ACFD2000: 'SSDT', 'CpuSsdt', Rev: 2, Len: 2932
+22:912  0:000    15. ACFCC000: 'SSDT', 'SaSsdt ', Rev: 2, Len: 23874
+22:912  0:000    16. ACFCB000: 'SSDT', 'CppcTabl', Rev: 2, Len: 916
+22:912  0:000    17. ACFCA000: 'PCCT', 'CB-01   ', Rev: 5, Len: 110
+22:912  0:000    18. ACFC9000: 'SSDT', 'Cpc_Tabl', Rev: 1, Len: 2756
+22:912  0:000    19. ACFC8000: 'UEFI', 'CB-01   ', Rev: 1, Len: 66
+22:912  0:000    20. ACF55000: 'MSDM', 'CB-01   ', Rev: 3, Len: 85
+22:912  0:000    21. ACFC7000: 'BATB', 'CB-01   ', Rev: 1, Len: 70
+22:912  0:000    22. ACFC6000: 'FPDT', 'CB-01   ', Rev: 1, Len: 100
+22:912  0:000    23. ACFC5000: 'SLIC', 'CB-01   ', Rev: 1, Len: 374
+22:912  0:000    24. ACFC4000: 'UEFI', 'CB-01   ', Rev: 1, Len: 638
+22:912  0:000    25. ACFC3000: 'BGRT', 'CB-01   ', Rev: 1, Len: 56
+22:912  0:000    26. ACFC2000: 'DMAR', 'CB-01   ', Rev: 1, Len: 204
+22:912  0:000  Found UEFI Acpi 1.0 RSDP at ACFFE000
+22:912  0:000  Printing ACPI tables from RSDP ACFFE000 ...
+22:912  0:000   ACFFE000: 'RSD PTR ', Rev: 0 (Acpi 1.0), Len: 20
+22:912  0:000    (Rsdt: ACFFE038)
+22:912  0:000    ACFFE038: 'RSDT', 'CB-01   ', Rev: 1, Len: 144
+22:912  0:000    Tables in Rsdt: 27
+22:912  0:000    0. ACFFB000: 'FACP', 'CB-01   ', Rev: 1, Len: 116
+22:912  0:000        (Dsdt: ACFE2000, Facs: ACF7B000)
+22:912  0:000        ACFE2000: 'DSDT', 'BDW     ', Rev: 2, Len: 77565
+22:913  0:001        ACF7B000: 'FACS', Ver: 2, Len: 64
+22:913  0:000    1. ACFFD000: 'SSDT', 'OEMTABLE', Rev: 1, Len: 100
+22:913  0:000    2. ACFFC000: 'ASF!', 'CB-01   ', Rev: 32, Len: 165
+22:913  0:000    3. ACFF9000: 'HPET', 'CB-01   ', Rev: 1, Len: 56
+22:913  0:000    4. ACFF8000: 'LPIT', 'CB-01   ', Rev: 1, Len: 148
+22:913  0:000    5. ACFF7000: 'APIC', 'CB-01   ', Rev: 1, Len: 152
+22:913  0:000    6. ACFF6000: 'MCFG', 'CB-01   ', Rev: 1, Len: 60
+22:913  0:000    7. ACFF5000: 'WDAT', 'CB-01   ', Rev: 1, Len: 260
+22:913  0:000    8. ACFE1000: 'SSDT', 'sensrhub', Rev: 1, Len: 592
+22:913  0:000    9. ACFDD000: 'SSDT', 'PtidDevc', Rev: 1, Len: 13323
+22:913  0:000    10. ACFDA000: 'SSDT', 'SDS_RTD3', Rev: 2, Len: 9330
+22:913  0:000    11. ACFD7000: 'SSDT', 'ULX_RTD3', Rev: 2, Len: 11379
+22:913  0:000    12. ACFD4000: 'SSDT', 'DptfTabl', Rev: 2, Len: 8741
+22:913  0:000    13. ACFD3000: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1337
+22:913  0:000    14. ACFD2000: 'SSDT', 'CpuSsdt', Rev: 2, Len: 2932
+22:913  0:000    15. ACFCC000: 'SSDT', 'SaSsdt ', Rev: 2, Len: 23874
+22:913  0:000    16. ACFCB000: 'SSDT', 'CppcTabl', Rev: 2, Len: 916
+22:913  0:000    17. ACFCA000: 'PCCT', 'CB-01   ', Rev: 5, Len: 110
+22:913  0:000    18. ACFC9000: 'SSDT', 'Cpc_Tabl', Rev: 1, Len: 2756
+22:913  0:000    19. ACFC8000: 'UEFI', 'CB-01   ', Rev: 1, Len: 66
+22:913  0:000    20. ACF55000: 'MSDM', 'CB-01   ', Rev: 3, Len: 85
+22:913  0:000    21. ACFC7000: 'BATB', 'CB-01   ', Rev: 1, Len: 70
+22:913  0:000    22. ACFC6000: 'FPDT', 'CB-01   ', Rev: 1, Len: 100
+22:913  0:000    23. ACFC5000: 'SLIC', 'CB-01   ', Rev: 1, Len: 374
+22:913  0:000    24. ACFC4000: 'UEFI', 'CB-01   ', Rev: 1, Len: 638
+22:913  0:000    25. ACFC3000: 'BGRT', 'CB-01   ', Rev: 1, Len: 56
+22:913  0:000    26. ACFC2000: 'DMAR', 'CB-01   ', Rev: 1, Len: 204

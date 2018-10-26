@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>HWMonitor Credits</title>
+  <style type='text/css'>
+      body {
+          font-size:12pt;
+      }
+      
+      p {
+          text-align:center;
+      }
+        .Container {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 350px;
+            height: 450px;
+            margin: 0em auto;
+            overflow: hidden;
+            background: white;
+            box-sizing: border-box;
+        }
+
+        .Container:before, .Container::before,
+        .Container:after,  .Container::after {
+            left: 0em;
+            z-index: 1;
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            width: 100%; height: 2em;
+            background-image: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,0));
+        }
+
+      .Container:after, .Container::after {
+          bottom: 0em;
+          -webkit-transform: rotate(180deg);
+      }
+
+      .Container:before, .Container::before {
+          top: 0em;
+      }
+
+        .Marquee {
+            margin: 1em;
+            padding: 0em;
+            font-family: "Verdana";
+            font-size: 0.8em;
+            color: #6F6F6F;
+            top: 0em;
+            position: relative;
+            box-sizing: border-box;
+            -webkit-animation: logo;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-duration: 40.0s;
+            -webkit-animation-iteration-count: 1;
+        }
+
+        .Marquee:hover {
+            -webkit-animation-play-state: paused;
+        }
+  
+      @-webkit-keyframes logo {
+          0%    { top: 15% }
+          5%    { top: 15% }
+          85%   { top: -300% }
+          95%   { top: -300% }
+          100%  { top: -385% }
+      }
+
+      @-webkit-keyframes roll {
+          0%    { top: 100% }
+          5%   { top: 15% }
+          15%   { top: 15% }
+          85%   { top: -300% }
+          95%   { top: -300% }
+          100%  { top: -385% }
+      }
+
+  </style>
+  <script type='text/javascript'>//<![CDATA[       
+      window.onload=function(){
+          document.getElementById('marquee').addEventListener('webkitAnimationEnd', function() {
+                                                                marquee.style.webkitAnimationName = "roll";
+                                                                marquee.style.webkitAnimationIterationCount = "infinite";
+                                                             }, false);
+      }//]]>  
+  
+    </script>
+</head>
+<body>
+    <div id="container" class="Container">
+        <div id="marquee" class="Marquee">
+            <p><img src="../logo.png" width="200" height="200"></p>
+            <p><font style="font-size: 1.5em;">HWMonitor</font></p>
+            <p>%version_placeholder</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p><strong>With special thanks to:</strong></p>
+            <p><a href="http://netkas.org">netkas</a> for fakesmc</p>
+
+            <p>slice for plugins and help in developing the project</p>
+
+            <p>usr-sse2 for help in development and first FakeSMC plugins idea and implementation</p>
+
+            <p>Navi for investigation of numeric SMC values encoding/decoding and other useful stuff</p>
+
+            <p>droplets for testing</p>
+
+            <p>The Real Deal and JrCs for French localization</p>
+
+            <p>RehabMan for various significant contributions to the project</p>
+
+            <p>PHPdev32 for an idea of using NVRAM as storage for kext configuration</p>
+
+            <p>oswaldini @ www.osx86.org.pl for Polish translation</p>
+
+            <p>Matteo «Marchrius» Gaggiano for the enhanced about window with credits scroller and Italian translation</p>
+
+            <p>k3nny @ www.insanelymac.com for German translation</p>
+
+            <p>Hale Chan for Chinese localization</p>
+
+            <p>Anna Zalkin for original logo and menubar icons</p>
+
+            <p>Michael Möller for <a href="http://openhardwaremonitor.org">OpenHardwareMonitor</a></p>
+
+            <p>Oliver Bolton for <a href="https://github.com/obolton/OBMenuBarWindow">OBMenuBarWindow</a></p>
+
+            <p>Mozketo for <a href="https://github.com/Mozketo/LaunchAtLoginController">LaunchAtLoginController</a></p>
+
+            <p>Bruce Allen for <a href="http://www.smartmontools.org">smartmontools</a></p>
+
+            <p>Michael Robinson for <a href="https://github.com/faceleg/Cocoa-Categories">Cocoa Categories</a></p>
+
+            <p>Stephane Sudre for Packages (packagesbuild)</p>
+
+            <p>Andy Matuschak  for <a href="https://github.com/andymatuschak/Sparkle">Sparkle</a> framework</p>
+
+            <p>Nouveau Project for nouveau linux driver (GeforceSensors base)</p>
+
+            <p>Advanced Micro Devices and all contributors for AMD Radeon linux driver (RadeonSensors base)</p>
+              
+            <p>Joshua Nozzi for <a href="https://github.com/jnozzi/JLNFadingScrollView">JLNFadingScrollView</a></p>
+              
+            <p>Rheinfabrik for <a href="https://github.com/rheinfabrik/RFOverlayScrollView">RFOverlayScrollView</a></p>
+
+            <p>WLM Fonts for <a href="http://www.fontspace.com/wlm-fonts/lets-go-digital">Let's Go Digital</a> font (<a href="http://www.wlm-ffl.tk">license</a>)</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p><strong>Source code:</strong></p>
+            <p><a href="https://github.com/kozlek/HWSensors">HWSensors on GitHub</a></p>
+            <p><a href="http://sourceforge.net/projects/hwsensors/">HWSensors on SourceForge</a></p>
+            <p><a href="https://bitbucket.org/kozlek/hwsensors">HWSensors on Bitbucket</a></p>
+            <p><a href="https://www.assembla.com/code/fakesmc/git/nodes">HWSensors on Assembla</a></p>
+            <p><strong>Homepage:</strong></p>
+            <p><a href="http://www.hwsensors.com">www.hwsensors.com</a></p>
+            <br>
+            <br>
+            <p style="font: 0.7em Helvetica;">Copyright (c) %year_placeholder Natan Zalkin. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

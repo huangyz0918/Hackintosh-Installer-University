@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>12E55</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>IOAudioFamily</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Version: 1.8.9, Copyright © 2000-2012 Apple Inc. All rights reserved.</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.iokit.IOAudioFamily</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>IOAudioFamily</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.8.9</string>
+	<key>CFBundleSignature</key>
+	<string>aaud</string>
+	<key>CFBundleVersion</key>
+	<string>1.8.9fc11</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>5A1413</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>12D75</string>
+	<key>DTSDKName</key>
+	<string>macosx10.8</string>
+	<key>DTXcode</key>
+	<string>0500</string>
+	<key>DTXcodeBuild</key>
+	<string>5A1413</string>
+	<key>IOKitPersonalities</key>
+	<dict/>
+	<key>OSBundleCompatibleVersion</key>
+	<string>1.1d25</string>
+	<key>OSBundleEnableKextLogging</key>
+	<true/>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.kext.OSvKernDSPLib</key>
+		<string>1.0</string>
+		<key>com.apple.kpi.bsd</key>
+		<string>8.0</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>9.0.0d1</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>9.0.0d1</string>
+		<key>com.apple.kpi.mach</key>
+		<string>9.0.0d1</string>
+	</dict>
+	<key>VBRSupported</key>
+	<string>YES</string>
+</dict>
+</plist>
