@@ -103,6 +103,13 @@
 - [Gigabyte Z270XP-SLI](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Res/Gigabyte-GA-Z270XP-SLI-10.13.4)
 
 
+
+### 一些现有的 EFI 
+
+- [Lenovo](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Lenovo)
+- [Dell](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Dell)
+
+
 ## 我要怎样才能为这个 Repo 做出贡献?
 
 你需要先 `Fork` 这个仓库, 只要点击本页面上方的 `Fork` 按钮即可。

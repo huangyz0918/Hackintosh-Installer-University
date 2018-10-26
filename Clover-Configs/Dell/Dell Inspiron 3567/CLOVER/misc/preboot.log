@@ -1,0 +1,643 @@
+0:100  0:100  MemLog inited, TSC freq: 2593992463
+0:100  0:000  
+0:100  0:000  Now is 9.6.2017,  23:35:58 (GMT)
+0:100  0:000  Starting Clover revision: 4084 on INSYDE Corp. EFI
+0:100  0:000  Build with: [Args: -mc --no-usb -D NO_GRUB_DRIVERS_EMBEDDED -D CHECK_FLAGS -t XCODE8 | -D DISABLE_USB_SUPPORT -D NO_GRUB_DRIVERS_EMBEDDED -D CHECK_FLAGS -D USE_BIOS_BLOCKIO -D USE_LOW_EBDA -a X64 -b RELEASE -t XCODE8 -n 5 | OS: 10.12.6 | XCODE: 8.3.3]
+0:100  0:000  SelfDevicePath=PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(1,GPT,C836E8D0-FA97-4195-961E-D36CEB308092,0x800,0xC8000) @81E63898
+0:100  0:000  SelfDirPath = \EFI\CLOVER
+0:100  0:000  === [ Get Smbios ] ========================================
+0:100  0:000  Type 16 Index = 0
+0:100  0:000  Total Memory Slots Count = 2
+0:100  0:000  Type 17 Index = 0
+0:100  0:000  Table has error information, checking
+0:100  0:000  Found memory information in table 18/0, type=0x3, operation=0x2 syndrome=0x0
+0:100  0:000  ...memory OK
+0:100  0:000  SmbiosTable.Type17->Speed = 1600MHz
+0:100  0:000  SmbiosTable.Type17->Size = 4096MB
+0:100  0:000  SmbiosTable.Type17->Bank/Device = BANK 0 DIMM0
+0:100  0:000  SmbiosTable.Type17->Vendor = Micron Technology
+0:100  0:000  SmbiosTable.Type17->SerialNumber = 0FCC77B9
+0:100  0:000  SmbiosTable.Type17->PartNumber = 8KTF51264HZ-1G6N1 
+0:100  0:000  Type 17 Index = 1
+0:100  0:000  Table has error information, checking
+0:100  0:000  Found memory information in table 18/1, type=0x3, operation=0x2 syndrome=0x0
+0:100  0:000  ...memory OK
+0:100  0:000  SmbiosTable.Type17->Speed = 1600MHz
+0:100  0:000  SmbiosTable.Type17->Size = 4096MB
+0:100  0:000  SmbiosTable.Type17->Bank/Device = BANK 2 DIMM2
+0:100  0:000  SmbiosTable.Type17->Vendor = Unknown
+0:100  0:000  SmbiosTable.Type17->SerialNumber = D894E14F
+0:100  0:000  SmbiosTable.Type17->PartNumber = CT51264BF160BJ.T8 
+0:100  0:000  Boot status=0
+0:100  0:000  Running on: 'K550JK4710' with board 'HM86'
+0:100  0:000  === [ GetCPUProperties ] ==================================
+0:100  0:000  CPU Vendor = 756E6547 Model=306C3
+0:100  0:000   The CPU supported SSE4.1
+0:100  0:000  The CPU supported turbo
+0:100  0:000  BrandString = Intel(R) Core(TM) i5-4210M CPU @ 2.60GHz
+0:100  0:000  MSR 0xE2 before patch 1E008403
+0:100  0:000  MSR 0xE2 is locked, PM patches will be turned on
+0:100  0:000  MSR 0xCE              00080838_F3011A00
+0:100  0:000  MSR 0x1A0             00850089
+0:100  0:000  corrected FLEX_RATIO = 0
+0:100  0:000  MSR 0x1B0             00000000
+0:100  0:000  FSBFrequency = 100 MHz, DMI FSBFrequency = 100 MHz, Corrected FSBFrequency = 100 MHz
+0:100  0:000  MaxDiv/MinDiv: 26.0/8
+0:100  0:000  Turbo: 31/31/31/32
+0:100  0:000  Features: 0xBFEBFBFF
+0:100  0:000  Threads: 4
+0:100  0:000  Cores: 2
+0:100  0:000  FSB: 25 MHz
+0:100  0:000  CPU: 2600 MHz
+0:100  0:000  TSC: 2600 MHz
+0:100  0:000  PIS: 100 MHz
+0:100  0:000  === [ GetDevices ] ========================================
+0:100  0:000  PCI (00|00:00.00) : 8086 0C04 class=060000
+0:100  0:000  PCI (00|00:01.00) : 8086 0C01 class=060400
+0:100  0:000  PCI (00|01:00.00) : 10DE 1341 class=030200
+0:100  0:000  PCI (00|00:02.00) : 8086 0416 class=030000
+0:100  0:000   - GFX: Model=Intel HD Graphics 4600 (Intel)
+0:100  0:000  PCI (00|00:03.00) : 8086 0C0C class=040300
+0:100  0:000  PCI (00|00:14.00) : 8086 8C31 class=0C0330
+0:100  0:000  PCI (00|00:16.00) : 8086 8C3A class=078000
+0:100  0:000  PCI (00|00:1A.00) : 8086 8C2D class=0C0320
+0:100  0:000  PCI (00|00:1B.00) : 8086 8C20 class=040300
+0:100  0:000  PCI (00|00:1C.00) : 8086 8C10 class=060400
+0:100  0:000  PCI (00|00:1C.01) : 8086 8C12 class=060400
+0:100  0:000  PCI (00|08:00.00) : 10EC 8168 class=020000
+0:100  0:000   - LAN: 0 Vendor=Realtek
+0:100  0:000  PCI (00|00:1C.02) : 8086 8C14 class=060400
+0:100  0:000  PCI (00|09:00.00) : 10EC 5227 class=FF0000
+0:100  0:000  PCI (00|00:1C.03) : 8086 8C16 class=060400
+0:100  0:000  PCI (00|0F:00.00) : 14E4 432B class=028000
+0:100  0:000   - WIFI: Vendor=Broadcom
+0:100  0:000  PCI (00|00:1D.00) : 8086 8C26 class=0C0320
+0:100  0:000  PCI (00|00:1F.00) : 8086 8C49 class=060100
+0:100  0:000  PCI (00|00:1F.02) : 8086 8C03 class=010601
+0:100  0:000  PCI (00|00:1F.03) : 8086 8C22 class=0C0500
+0:100  0:000  PCI (00|00:1F.06) : 8086 8C24 class=118000
+0:100  0:000  === [ GetDefaultSettings ] ================================
+0:100  0:000  Clover load options size = 54 bytes
+0:101  0:001  EFI\CLOVER\config.plist loaded: Success
+0:102  0:000  === [ GetListOfThemes ] ===================================
+0:102  0:000  - [00]: black_green
+0:103  0:001  - [01]: christmas
+0:104  0:001  - [02]: El Capitan
+0:106  0:001  - [03]: embedded
+0:106  0:000  - [03]: jobs
+0:107  0:000  - [04]: newyear
+0:108  0:001  - [05]: random
+0:109  0:000  - [05]: YosemiteLogin
+0:110  0:001  - [06]: Sierra 2
+0:112  0:001  - [07]: Sierra
+0:112  0:000  === [ Found config plists ] ===============================
+0:112  0:000  - config.plist
+0:112  0:000  === [ GetEarlyUserSettings ] ==============================
+0:112  0:000  timeout set to 0
+0:112  0:000  Custom boot CUSTOM_BOOT_DISABLED (0x0)
+0:112  0:000  Default theme: YosemiteLogin
+0:112  0:000  Hiding entries with string FECCD459-1C41-4D41-8007-D6CA73ED5D47
+0:112  0:000  Hiding entries with string Windows
+0:112  0:000  Hiding entries with string 3A8A263D-0E43-4CC8-B8E7-5D66383BD067
+0:112  0:000  Hiding entries with string 9857003E-0997-4480-B430-50590F30E5F2
+0:112  0:000  Hiding entries with string \EFI\BOOT\BOOTX64.EFI
+0:112  0:000  Hiding entries with string 564803F9-5956-4317-8609-6AAD42169446
+0:112  0:000  Hiding entries with string AB336817-964D-43A3-A906-B6F180B152EE
+0:112  0:000  Hiding entries with string E578EBC9-7587-412C-9354-3D4C79F1334C
+0:112  0:000  Hiding entries with string 8220B8E7-ACE3-483A-9BDE-927154CA974E
+0:112  0:000   Custom EDID is ok
+0:112  0:000  === [ LoadDrivers ] =======================================
+0:113  0:000  Loading AppleImageCodec-64.efi  status=Success
+0:113  0:000  Loading AppleKeyAggregator-64.efi  status=Success
+0:113  0:000  Loading AppleUITheme-64.efi  status=Success
+0:113  0:000  Loading DataHubDxe-64.efi  status=Success
+0:114  0:000  Loading Fat-64.efi  status=Success
+0:114  0:000   - driver needs connecting
+0:114  0:000  Loading FirmwareVolume-64.efi  status=Success
+0:114  0:000  Loading FSInject-64.efi  status=Success
+0:114  0:000  Loading OsxAptioFix2Drv-64.efi  status=Success
+0:114  0:000  Loading OsxFatBinaryDrv-64.efi  status=Success
+0:114  0:000  Loading PartitionDxe-64.efi  status=Success
+0:115  0:000   - driver needs connecting
+0:115  0:000  Loading SMCHelper-64.efi  status=Success
+0:115  0:000  Loading VBoxExt4-64.efi  status=Success
+0:116  0:001   - driver needs connecting
+0:116  0:000  Loading VBoxHfs-64.efi  status=Success
+0:116  0:000   - driver needs connecting
+0:116  0:000  Loading APFS.efi  status=Success
+0:124  0:007   - driver needs connecting
+0:124  0:000  5 drivers needs connecting ...
+0:124  0:000  PlatformDriverOverrideProtocol not found. Installing ... Success
+0:124  0:000  Partition driver loaded: 
+0:124  0:000  Searching for invalid DiskIo BY_DRIVER connects: not found, all ok
+1:017  0:893  === [ InitScreen ] ========================================
+1:017  0:000  SetScreenResolution: 1920x1080 - already set
+1:017  0:000  Console modes reported: 6, available modes:
+1:017  0:000   - [01]: 80x25
+1:017  0:000   - [02]: 80x50
+1:017  0:000   - [03]: 240x56 (current mode)
+1:017  0:000   - [04]: 100x31
+1:017  0:000   - [05]: 128x40
+1:017  0:000   - [06]: 160x53
+1:017  0:000  SetScreenResolution: 1920x1080 - already set
+1:056  0:038  reinit: self device path=PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(1,GPT,C836E8D0-FA97-4195-961E-D36CEB308092,0x800,0xC8000)
+1:056  0:000  === [ GetMacAddress ] =====================================
+1:056  0:000  === [ ScanSPD ] ===========================================
+1:056  0:000  SMBus device : 8086 8C22 class=0C0500 status=Success
+1:056  0:000  SMBus CmdReg: 0x3
+1:056  0:000  Scanning SMBus [8086:8C22], mmio: 0xD3719004, ioport: 0x6040, hostc: 0x11
+1:056  0:000  Slots to scan [8]...
+1:056  0:000  SPD[0]: Type 11 @0x50
+1:075  0:018  Not using XMP because it is not present
+1:075  0:000  DDR speed 1600MHz
+1:075  0:000  Slot: 0 Type 24 4096MB 1600MHz Vendor=Micron Technology PartNo=8KTF51264HZ-1G6N1N1 SerialNo=000F0C0C07070B09
+1:076  0:000  SPD[2]: Type 11 @0x52
+1:094  0:018  Not using XMP because it is not present
+1:094  0:000  DDR speed 1600MHz
+1:094  0:000  Slot: 2 Type 24 4096MB 1600MHz Vendor=Crucial Technology PartNo=CT51264BF160BJ.T8 SerialNo=0D0809040E01040F
+1:095  0:000  === [ GetAcpiTablesList ] =================================
+1:095  0:000  Get Acpi Tables List from RSDT:
+1:095  0:000   - [00]: FACP  Notebook len=268
+1:095  0:000   - [01]: UEFI  Notebook len=566
+1:095  0:000   - [02]: FPDT  Notebook len=68
+1:095  0:000   - [03]: ASF!  Notebook len=165
+1:095  0:000   - [04]: HPET  Notebook len=56
+1:095  0:000   - [05]: APIC  Notebook len=140
+1:095  0:000   - [06]: MCFG  Notebook len=60
+1:095  0:000   - [07]: SLIC  Notebook len=374
+1:095  0:000   - [08]: SSDT  Notebook len=2014
+1:095  0:000   - [09]: BOOT  Notebook len=40
+1:095  0:000   - [10]: LPIT  Notebook len=148
+1:095  0:000   - [11]: ASPT  Notebook len=52
+1:095  0:000   - [12]: DBGP  Notebook len=52
+1:095  0:000   - [13]: SSDT  Notebook len=1337
+1:095  0:000   - [14]: SSDT  Notebook len=2776
+1:095  0:000   - [15]: SSDT  Notebook len=14997
+1:095  0:000   - [16]: SSDT  Notebook len=15192
+1:095  0:000   - [17]: BGRT  Notebook len=56
+1:095  0:000  Calibrated TSC frequency =2593992463 =2593MHz
+1:095  0:000  === [ GetUserSettings ] ===================================
+1:095  0:000   Custom EDID is ok
+1:095  0:000  USB FixOwnership: yes
+1:095  0:000  Dropping 2 tables:
+1:095  0:000   - [00]: Drop table  signature="SSDT" (54445353) table-id="CpuPm" (0000006D50757043)
+1:095  0:000           - set table: 54445353,       6D50757043 to drop: no
+1:095  0:000   - [01]: Drop table  signature="SSDT" (54445353) table-id="ApIst" (0000007473497041)
+1:095  0:000           - set table: 54445353,       7473497041 to drop: no
+1:095  0:000   - final DSDT Fix mask=00000000
+1:095  0:000  ChassisType: 0x8
+1:095  0:000  Converted CustomUUID A7B8CC9D-732B-A159-8239-F42E0D231E64
+1:096  0:000  === [ ScanVolumes ] =======================================
+1:096  0:000  Found 15 volumes with blockIO
+1:096  0:000  - [00]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x0,0x0,0x0)
+1:096  0:000  - [01]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)
+1:096  0:000  - [02]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x0,0x0,0x0)\HD(1,GPT,84845E0F-180F-11E7-A1AE-78E4001A2E60,0x40,0x35D75EB8)
+1:096  0:000          Result of bootcode detection: bootable Windows (vista,win)
+1:096  0:000  - [03]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x0,0x0,0x0)\HD(2,GPT,BE8A7AC0-AD4B-40AD-9B95-AAF5BFB5BEC1,0x35D76000,0xC8000)
+1:110  0:013          Result of bootcode detection: bootable Windows (win)
+1:117  0:007  - [04]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x0,0x0,0x0)\HD(3,GPT,E9F658E4-27E8-4725-B8B7-95376B25F984,0x35E3E000,0x392C000)
+1:117  0:000  - [05]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x0,0x0,0x0)\HD(4,GPT,D0D0BACE-2EDF-4296-604B-EF9D09B1DA07,0x397AA000,0x2328000)
+1:118  0:000          Result of bootcode detection: bootable unknown (legacy)
+1:118  0:000  - [06]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x0,0x0,0x0)\HD(5,GPT,FECCD459-1C41-4D41-8007-D6CA73ED5D47,0x3BAD2800,0x38C33800)
+1:118  0:000          Result of bootcode detection: bootable Windows (vista,win)
+1:118  0:000          hiding this volume
+1:118  0:000  - [07]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(1,GPT,C836E8D0-FA97-4195-961E-D36CEB308092,0x800,0xC8000)
+1:118  0:000          Result of bootcode detection: bootable Windows (vista,win)
+1:118  0:000          This is SelfVolume !!
+1:118  0:000  - [08]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(2,GPT,CC93D65F-8C32-4E65-823C-D5315796B8A7,0xC8800,0x40000)
+1:118  0:000  - [09]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(3,GPT,50710699-0568-433C-9EC2-BC166070D369,0x108800,0x76DE59F)
+1:118  0:000          Result of bootcode detection: bootable Windows (vista,win)
+1:118  0:000  - [10]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(4,GPT,E2A289F5-E5F4-431F-BB2E-F7174AE8D19C,0x77E7800,0x18D800)
+1:119  0:000          Result of bootcode detection: bootable Windows (vista,win)
+1:119  0:000  - [11]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(5,GPT,78976E7E-3A9E-47BC-A753-265EA8265981,0x7975000,0x64E9C68)
+1:119  0:000          Result of bootcode detection: bootable unknown (legacy)
+1:119  0:000  - [12]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(6,GPT,9F9E13D2-2111-48D4-ABE3-AA0A2F9E19B2,0xDE5EC68,0x135F20)
+1:119  0:000  - [13]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x0,0x0,0x0)\HD(4,GPT,D0D0BACE-2EDF-4296-604B-EF9D09B1DA07,0x397AA000,0x2328000)\VenMedia(BE74FCF7-0B7C-49F3-9147-01F4042E6842,2DE67AC58A1C5B30BB52B6A1AC641735)
+1:119  0:000  - [14]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(5,GPT,78976E7E-3A9E-47BC-A753-265EA8265981,0x7975000,0x64E9C68)\VenMedia(BE74FCF7-0B7C-49F3-9147-01F4042E6842,61E9ECA831FDBC3C81490ACC269920A8)
+1:119  0:000  === [ InitTheme ] =========================================
+1:119  0:000  Using theme 'YosemiteLogin' (EFI\CLOVER\themes\YosemiteLogin)
+1:119  0:000  OS main and drive as badge
+1:121  0:001  Loading font from ThemeDir: Success
+1:122  0:000  Choosing theme YosemiteLogin
+1:122  0:000  found boot-args in NVRAM:, size=1
+1:122  0:000  after NVRAM boot-args=
+1:122  0:000  === [ Dump SMC keys from NVRAM ] ==========================
+1:122  0:000  found AppleSMC protocol
+1:128  0:006  === [ ScanLoader ] ========================================
+1:128  0:000  - [03]: 'EFI'
+1:130  0:002  not png, try icns
+1:130  0:000  not png, try icns
+1:130  0:000  not png, try icns
+1:130  0:000  not png, try icns
+1:130  0:000  not png, try icns
+1:130  0:000  not png, try icns
+1:130  0:000  not png, try icns
+1:131  0:000  not png, try icns
+1:131  0:000  not png, try icns
+1:131  0:000  not png, try icns
+1:131  0:000  not png, try icns
+1:131  0:000  not png, try icns
+1:131  0:000  not png, try icns
+1:131  0:000  not png, try icns
+1:131  0:000  - [04]: 'macOS High'
+1:186  0:054          AddLoaderEntry for Volume Name=macOS High
+1:191  0:005      Check if volume Is Hibernated:
+1:191  0:000      Check sleep image 'by signature':
+1:218  0:027      using default sleep image name = \private\var\vm\sleepimage
+1:253  0:034      no valid sleep image offset was found
+1:253  0:000       sleepimage offset could not be acquired
+1:253  0:000      hibernated: no - sign
+1:255  0:001  not png, try icns
+1:255  0:000  not png, try icns
+1:256  0:000  not png, try icns
+1:256  0:000  not png, try icns
+1:256  0:000  not png, try icns
+1:256  0:000  not png, try icns
+1:256  0:000  not png, try icns
+1:256  0:000  not png, try icns
+1:256  0:000  not png, try icns
+1:256  0:000  not png, try icns
+1:256  0:000  not png, try icns
+1:257  0:000  not png, try icns
+1:257  0:000  not png, try icns
+1:257  0:000  not png, try icns
+1:257  0:000  not png, try icns
+1:257  0:000  not png, try icns
+1:257  0:000  - [07]: 'EFI'
+1:257  0:000          AddLoaderEntry for Volume Name=EFI
+1:258  0:000  not png, try icns
+1:258  0:000  not png, try icns
+1:258  0:000  not png, try icns
+1:258  0:000  not png, try icns
+1:259  0:000  not png, try icns
+1:259  0:000  not png, try icns
+1:259  0:000  not png, try icns
+1:259  0:000  not png, try icns
+1:259  0:000  not png, try icns
+1:259  0:000  not png, try icns
+1:259  0:000  not png, try icns
+1:259  0:000  not png, try icns
+1:259  0:000  not png, try icns
+1:259  0:000  not png, try icns
+1:259  0:000  not png, try icns
+1:259  0:000  not png, try icns
+1:262  0:002  - [12]: 'Recovery HD'
+1:262  0:000          AddLoaderEntry for Volume Name=Recovery HD
+1:263  0:000  not png, try icns
+1:263  0:000  not png, try icns
+1:264  0:000  not png, try icns
+1:708  0:444  not png, try icns
+1:708  0:000  not png, try icns
+1:709  0:000  not png, try icns
+1:709  0:000  not png, try icns
+1:709  0:000  not png, try icns
+1:709  0:000  not png, try icns
+1:709  0:000  not png, try icns
+1:709  0:000  not png, try icns
+1:709  0:000  not png, try icns
+1:709  0:000  not png, try icns
+1:709  0:000  not png, try icns
+1:709  0:000  not png, try icns
+1:709  0:000  not png, try icns
+1:709  0:000  - [13]: 'macOS Sierra'
+1:817  0:107          AddLoaderEntry for Volume Name=macOS Sierra
+1:832  0:015      Check if volume Is Hibernated:
+1:832  0:000      Check sleep image 'by signature':
+1:948  0:115      using default sleep image name = \private\var\vm\sleepimage
+2:001  0:052      no valid sleep image offset was found
+2:001  0:000       sleepimage offset could not be acquired
+2:001  0:000      hibernated: no - sign
+2:001  0:000  not png, try icns
+2:001  0:000  not png, try icns
+2:001  0:000  not png, try icns
+2:001  0:000  not png, try icns
+2:001  0:000  not png, try icns
+2:001  0:000  not png, try icns
+2:002  0:000  not png, try icns
+2:002  0:000  not png, try icns
+2:002  0:000  not png, try icns
+2:002  0:000  not png, try icns
+2:002  0:000  not png, try icns
+2:002  0:000  not png, try icns
+2:002  0:000  not png, try icns
+2:002  0:000  not png, try icns
+2:002  0:000  not png, try icns
+2:003  0:000  - [14]: 'Macintosh HD'
+2:005  0:002          AddLoaderEntry for Volume Name=Macintosh HD
+2:007  0:001      Check if volume Is Hibernated:
+2:007  0:000      Check sleep image 'by signature':
+2:011  0:004      using default sleep image name = \private\var\vm\sleepimage
+2:013  0:001      sleepimage not found -> Not Found
+2:013  0:000      hibernated: no - sign
+2:013  0:000  not png, try icns
+2:015  0:002  not png, try icns
+2:015  0:000  not png, try icns
+2:015  0:000  not png, try icns
+2:016  0:000  not png, try icns
+2:016  0:000  not png, try icns
+2:016  0:000  not png, try icns
+2:016  0:000  not png, try icns
+2:016  0:000  not png, try icns
+2:016  0:000  not png, try icns
+2:016  0:000  not png, try icns
+2:017  0:000  not png, try icns
+2:017  0:000  not png, try icns
+2:017  0:000  not png, try icns
+2:017  0:000  not png, try icns
+2:289  0:272  === [ AddCustomTool ] =====================================
+2:291  0:001  found tool \EFI\CLOVER\tools\Shell64U.efi
+2:291  0:000  Checking EFI partition Volume 3 for Clover
+2:291  0:000   Found Clover
+2:292  0:001  === [ GetEfiBootDeviceFromNvram ] =========================
+2:292  0:000   - found entry 4. 'Boot macOS from Macintosh HD', Volume 'Macintosh HD', DevicePath 'PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(5,GPT,78976E7E-3A9E-47BC-A753-265EA8265981,0x7975000,0x64E9C68)\VenMedia(BE74FCF7-0B7C-49F3-9147-01F4042E6842,61E9ECA831FDBC3C81490ACC269920A8)\System\Library\CoreServices\boot.efii'
+2:292  0:000  DefaultIndex=4 and MainMenu.EntryCount=11
+2:444  0:151  GUI ready
+5:056  2:612  ReinitSelfLib after theme change
+5:056  0:000  reinit: self device path=PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(1,GPT,C836E8D0-FA97-4195-961E-D36CEB308092,0x800,0xC8000)
+5:056  0:000  === [ ScanVolumes ] =======================================
+5:056  0:000  Found 15 volumes with blockIO
+5:056  0:000  - [00]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x0,0x0,0x0)
+5:056  0:000  - [01]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)
+5:056  0:000  - [02]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x0,0x0,0x0)\HD(1,GPT,84845E0F-180F-11E7-A1AE-78E4001A2E60,0x40,0x35D75EB8)
+5:056  0:000          Result of bootcode detection: bootable Windows (vista,win)
+5:056  0:000  - [03]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x0,0x0,0x0)\HD(2,GPT,BE8A7AC0-AD4B-40AD-9B95-AAF5BFB5BEC1,0x35D76000,0xC8000)
+5:110  0:053          Result of bootcode detection: bootable Windows (win)
+5:110  0:000  - [04]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x0,0x0,0x0)\HD(3,GPT,E9F658E4-27E8-4725-B8B7-95376B25F984,0x35E3E000,0x392C000)
+5:116  0:006  - [05]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x0,0x0,0x0)\HD(4,GPT,D0D0BACE-2EDF-4296-604B-EF9D09B1DA07,0x397AA000,0x2328000)
+5:124  0:007          Result of bootcode detection: bootable unknown (legacy)
+5:124  0:000  - [06]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x0,0x0,0x0)\HD(5,GPT,FECCD459-1C41-4D41-8007-D6CA73ED5D47,0x3BAD2800,0x38C33800)
+5:124  0:000          Result of bootcode detection: bootable Windows (vista,win)
+5:124  0:000          hiding this volume
+5:124  0:000  - [07]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(1,GPT,C836E8D0-FA97-4195-961E-D36CEB308092,0x800,0xC8000)
+5:124  0:000          Result of bootcode detection: bootable Windows (vista,win)
+5:124  0:000          This is SelfVolume !!
+5:124  0:000  - [08]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(2,GPT,CC93D65F-8C32-4E65-823C-D5315796B8A7,0xC8800,0x40000)
+5:125  0:000  - [09]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(3,GPT,50710699-0568-433C-9EC2-BC166070D369,0x108800,0x76DE59F)
+5:125  0:000          Result of bootcode detection: bootable Windows (vista,win)
+5:125  0:000  - [10]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(4,GPT,E2A289F5-E5F4-431F-BB2E-F7174AE8D19C,0x77E7800,0x18D800)
+5:125  0:000          Result of bootcode detection: bootable Windows (vista,win)
+5:125  0:000  - [11]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(5,GPT,78976E7E-3A9E-47BC-A753-265EA8265981,0x7975000,0x64E9C68)
+5:125  0:000          Result of bootcode detection: bootable unknown (legacy)
+5:125  0:000  - [12]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(6,GPT,9F9E13D2-2111-48D4-ABE3-AA0A2F9E19B2,0xDE5EC68,0x135F20)
+5:125  0:000  - [13]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x0,0x0,0x0)\HD(4,GPT,D0D0BACE-2EDF-4296-604B-EF9D09B1DA07,0x397AA000,0x2328000)\VenMedia(BE74FCF7-0B7C-49F3-9147-01F4042E6842,2DE67AC58A1C5B30BB52B6A1AC641735)
+5:125  0:000  - [14]: Volume: PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(5,GPT,78976E7E-3A9E-47BC-A753-265EA8265981,0x7975000,0x64E9C68)\VenMedia(BE74FCF7-0B7C-49F3-9147-01F4042E6842,61E9ECA831FDBC3C81490ACC269920A8)
+5:126  0:000  Choosing theme YosemiteLogin
+5:126  0:000  found boot-args in NVRAM:, size=1
+5:126  0:000  after NVRAM boot-args=
+5:126  0:000  === [ ScanLoader ] ========================================
+5:126  0:000  - [03]: 'EFI'
+5:126  0:000  not png, try icns
+5:126  0:000  not png, try icns
+5:126  0:000  not png, try icns
+5:126  0:000  not png, try icns
+5:126  0:000  not png, try icns
+5:126  0:000  not png, try icns
+5:126  0:000  not png, try icns
+5:126  0:000  not png, try icns
+5:126  0:000  not png, try icns
+5:126  0:000  not png, try icns
+5:126  0:000  not png, try icns
+5:127  0:000  not png, try icns
+5:127  0:000  not png, try icns
+5:127  0:000  not png, try icns
+5:127  0:000  - [04]: 'macOS High'
+5:136  0:009          AddLoaderEntry for Volume Name=macOS High
+5:141  0:005      Check if volume Is Hibernated:
+5:141  0:000      Check sleep image 'by signature':
+5:169  0:027      using default sleep image name = \private\var\vm\sleepimage
+5:203  0:034      no valid sleep image offset was found
+5:203  0:000       sleepimage offset could not be acquired
+5:203  0:000      hibernated: no - sign
+5:203  0:000  not png, try icns
+5:204  0:000  not png, try icns
+5:204  0:000  not png, try icns
+5:204  0:000  not png, try icns
+5:204  0:000  not png, try icns
+5:204  0:000  not png, try icns
+5:204  0:000  not png, try icns
+5:204  0:000  not png, try icns
+5:204  0:000  not png, try icns
+5:204  0:000  not png, try icns
+5:205  0:000  not png, try icns
+5:205  0:000  not png, try icns
+5:205  0:000  not png, try icns
+5:205  0:000  not png, try icns
+5:205  0:000  not png, try icns
+5:205  0:000  - [07]: 'EFI'
+5:205  0:000          AddLoaderEntry for Volume Name=EFI
+5:205  0:000  not png, try icns
+5:206  0:000  not png, try icns
+5:206  0:000  not png, try icns
+5:206  0:000  not png, try icns
+5:206  0:000  not png, try icns
+5:206  0:000  not png, try icns
+5:206  0:000  not png, try icns
+5:206  0:000  not png, try icns
+5:206  0:000  not png, try icns
+5:206  0:000  not png, try icns
+5:206  0:000  not png, try icns
+5:206  0:000  not png, try icns
+5:207  0:000  not png, try icns
+5:207  0:000  not png, try icns
+5:207  0:000  not png, try icns
+5:207  0:000  - [12]: 'Recovery HD'
+5:207  0:000          AddLoaderEntry for Volume Name=Recovery HD
+5:208  0:000  not png, try icns
+5:208  0:000  not png, try icns
+5:208  0:000  not png, try icns
+5:208  0:000  not png, try icns
+5:208  0:000  not png, try icns
+5:208  0:000  not png, try icns
+5:208  0:000  not png, try icns
+5:208  0:000  not png, try icns
+5:208  0:000  not png, try icns
+5:209  0:000  not png, try icns
+5:209  0:000  not png, try icns
+5:209  0:000  not png, try icns
+5:209  0:000  not png, try icns
+5:209  0:000  not png, try icns
+5:209  0:000  not png, try icns
+5:209  0:000  - [13]: 'macOS Sierra'
+5:209  0:000          AddLoaderEntry for Volume Name=macOS Sierra
+5:216  0:006      Check if volume Is Hibernated:
+5:216  0:000      Check sleep image 'by signature':
+5:216  0:000      using default sleep image name = \private\var\vm\sleepimage
+5:216  0:000      no valid sleep image offset was found
+5:216  0:000       sleepimage offset could not be acquired
+5:216  0:000      hibernated: no - sign
+5:216  0:000  not png, try icns
+5:217  0:000  not png, try icns
+5:217  0:000  not png, try icns
+5:217  0:000  not png, try icns
+5:217  0:000  not png, try icns
+5:217  0:000  not png, try icns
+5:217  0:000  not png, try icns
+5:217  0:000  not png, try icns
+5:217  0:000  not png, try icns
+5:218  0:000  not png, try icns
+5:218  0:000  not png, try icns
+5:218  0:000  not png, try icns
+5:218  0:000  not png, try icns
+5:218  0:000  not png, try icns
+5:218  0:000  not png, try icns
+5:218  0:000  - [14]: 'Macintosh HD'
+5:219  0:000          AddLoaderEntry for Volume Name=Macintosh HD
+5:219  0:000      Check if volume Is Hibernated:
+5:219  0:000      Check sleep image 'by signature':
+5:219  0:000      using default sleep image name = \private\var\vm\sleepimage
+5:220  0:000      sleepimage not found -> Not Found
+5:220  0:000      hibernated: no - sign
+5:220  0:000  not png, try icns
+5:220  0:000  not png, try icns
+5:220  0:000  not png, try icns
+5:220  0:000  not png, try icns
+5:221  0:000  not png, try icns
+5:221  0:000  not png, try icns
+5:221  0:000  not png, try icns
+5:221  0:000  not png, try icns
+5:221  0:000  not png, try icns
+5:221  0:000  not png, try icns
+5:221  0:000  not png, try icns
+5:222  0:000  not png, try icns
+5:222  0:000  not png, try icns
+5:222  0:000  not png, try icns
+5:222  0:000  not png, try icns
+5:489  0:267  === [ AddCustomTool ] =====================================
+5:489  0:000  found tool \EFI\CLOVER\tools\Shell64U.efi
+5:489  0:000  Checking EFI partition Volume 3 for Clover
+5:489  0:000   Found Clover
+5:489  0:000  === [ GetEfiBootDeviceFromNvram ] =========================
+5:489  0:000   - found entry 4. 'Boot macOS from Macintosh HD', Volume 'Macintosh HD', DevicePath 'PciRoot(0x0)\Pci(0x1F,0x2)\Sata(0x4,0x0,0x0)\HD(5,GPT,78976E7E-3A9E-47BC-A753-265EA8265981,0x7975000,0x64E9C68)\VenMedia(BE74FCF7-0B7C-49F3-9147-01F4042E6842,61E9ECA831FDBC3C81490ACC269920A8)\System\Library\CoreServices\boot.efii'
+5:489  0:000  DefaultIndex=4 and MainMenu.EntryCount=11
+9:437  3:947   enter menu with LoadOptions: <null string>
+9:437  0:000   and with FlagsBits = 0x3
+12:825  3:387   exit menu with LoadOptions: -v 
+12:825  0:000   get FlagsBits = 0x3
+12:825  0:000   boot with args: -v 
+12:825  0:000  BootVariable of the entry is empty
+12:825  0:000  === [ StartLoader ] =======================================
+12:825  0:000  Finally: Bus=99768kHz CPU=2594MHz
+12:825  0:000  Loading boot.efi  status=Success
+12:868  0:043  GetOSVersion: 10.12.6 (16G12b)
+12:868  0:000  CSR_CFG: CSR_ALLOW_UNTRUSTED_KEXTS | CSR_ALLOW_UNRESTRICTED_FS | CSR_ALLOW_TASK_FOR_PID | CSR_ALLOW_UNRESTRICTED_DTRACE | CSR_ALLOW_UNRESTRICTED_NVRAM
+12:868  0:000  === [ PatchSmbios ] =======================================
+12:868  0:000  insert table 9 for dev 0:0
+12:868  0:000  insert table 9 for dev 0:0
+12:868  0:000  Detected alternating SMBIOS channel banks
+12:868  0:000  Channels: 2
+12:868  0:000  Interleave: 0 2 1 3 4 6 5 7 8 10 9 11 12 14 13 15 16 18 17 19 20 22 21 23
+12:868  0:000  SMBIOS Type 17 Index = 0 => 0 0:
+12:868  0:000  BANK 0 DIMM0 1600MHz 4096MB
+12:868  0:000  SMBIOS Type 17 Index = 1 => 1 2:
+12:868  0:000  BANK 1 DIMM0 1600MHz 4096MB
+12:868  0:000  mTotalSystemMemory = 8192
+12:868  0:000  NumberOfMemoryDevices = 2
+12:868  0:000  Type20[0]->End = 0x3FFFFF, Type17[0] = 0x1000
+12:868  0:000  Type20[1]->End = 0x3FFFFF, Type17[1] = 0x3000
+12:868  0:000  Table 131 is present, CPUType=31
+12:868  0:000  Change to: 605
+12:868  0:000  === [ PatchACPI ] =========================================
+12:868  0:000  RSDT 0x9CFFE124
+12:868  0:000  FADT from RSDT: 0x9CFF8000
+12:868  0:000  XSDT 0x9CFFE210
+12:868  0:000  FADT from XSDT: 0x9CFF8000
+12:868  0:000  Xsdt reallocation done
+12:868  0:000  old FADT length=10C
+12:868  0:000  DSDT found in Clover volume OEM folder: EFI\CLOVER\ACPI\patched\DSDT.aml
+12:869  0:000  Apply DsdtFixMask=0x00000000
+12:869  0:000     drop _DSM mask=0xFFFF
+12:869  0:000  === [ FixBiosDsdt ] =======================================
+12:869  0:000  VideoCard devID=0x4168086
+12:869  0:000  DisplayADR1[0] = 0x20000, DisplayADR2[0] = 0xFFFE
+12:869  0:000  USBADR[0] = 0x140000 and PCIe = 0xFFFE
+12:869  0:000  USBADR[1] = 0x1A0000 and PCIe = 0xFFFE
+12:870  0:000  Found Airport BCM at 0x1C0003, 0x0
+12:870  0:000  USBADR[2] = 0x1D0000 and PCIe = 0xFFFE
+12:870  0:000  first CPU found at 1046C offset 10470
+12:870  0:000  score candidate at 10468
+12:870  0:000  score inserted in acpi_cpu_score _PR_
+12:870  0:000  Found ACPI CPU: CPU0 | CPU1 | CPU2 | CPU3 | CPU4 | CPU5 | CPU6 | CPU7 , within the score: _PR_
+12:870  0:000  Found PCIROOTUID = 0
+12:870  0:000  === [ ACPIDropTables ] ====================================
+12:870  0:000  === [ DropSSDT ] ==========================================
+12:870  0:000  Drop tables from Xsdt, SIGN=SSDT TableID= Length=0
+12:870  0:000   Xsdt has tables count=18
+12:870  0:000   Table: SSDT  Notebook  2014 dropped
+12:870  0:000   Table: SSDT  Notebook  1337 dropped
+12:870  0:000   Table: SSDT  Notebook  2776 dropped
+12:870  0:000   Table: SSDT  Notebook  14997 dropped
+12:870  0:000   Table: SSDT  Notebook  15192 dropped
+12:870  0:000  === [ ACPIPatchedAML ] ====================================
+12:870  0:000  Sorted
+12:870  0:000  Inserting table[0]:SSDT.aml from EFI\CLOVER\ACPI\patched ... Success
+12:871  0:000  CPUBase=0 and ApicCPUBase=1 ApicCPUNum=8
+12:871  0:000  Maximum control=0x1A
+12:871  0:000  Turbo control=0x20
+12:871  0:000  P-States: min 0x8, max 0x20
+12:871  0:000  SSDT with CPU P-States generated successfully
+12:871  0:000  SSDT with CPU C-States generated successfully
+12:871  0:000  === [ RestSetup macOS ] ===================================
+12:871  0:000  EdidDiscovered size=128
+12:871  0:000  Inject EDID
+12:871  0:000    Use Custom EDID
+12:871  0:000  ------- Custom EDID Table
+12:871  0:000  000  |  00  FF  FF  FF  FF  FF  FF  00  06  AF
+12:871  0:000  010  |  ED  12  00  00  00  00  00  16  01  04
+12:871  0:000  020  |  95  22  13  78  02  06  95  97  57  53
+12:871  0:000  030  |  94  26  1C  50  54  00  00  00  01  01
+12:871  0:000  040  |  01  01  01  01  01  01  01  01  01  01
+12:871  0:000  050  |  01  01  01  01  3C  37  80  C0  70  38
+12:871  0:000  060  |  20  40  30  64  8E  00  58  C1  10  00
+12:871  0:000  070  |  00  18  D3  24  80  C0  70  38  20  40
+12:871  0:000  080  |  30  64  8E  00  58  C1  10  00  00  18
+12:871  0:000  090  |  00  00  00  FE  00  41  55  4F  0A  20
+12:871  0:000  100  |  20  20  20  20  20  20  20  20  00  00
+12:871  0:000  110  |  00  FE  00  42  31  35  36  48  41  4E
+12:871  0:000  120  |  30  31  2E  32  20  0A  00  22
+12:871  0:000  Intel HD Graphics 4600 [8086:0416] :: PciRoot(0x0)\Pci(0x2,0x0)
+12:871  0:000    Found Full HD Display - 16:9 :: Width=1920 Height=1080
+12:871  0:000    AAPL00,override-no-connect: added
+12:871  0:000    AAPL00,DualLink = 1
+12:871  0:000    FakeID Intel GFX = 0x04128086
+12:871  0:000    ig-platform-id: not set
+12:871  0:000    Beginning Intel GFX auto-detection with ACPI injection
+12:871  0:000    Found ig-platform-id = 0x0A260006
+12:871  0:000  Intel GFX revision  = 0x6
+12:871  0:000   detected codec: 8086:2807
+12:871  0:000   detected codec: 10EC:0282
+12:871  0:000  stringlength = 3620
+12:871  0:000  CurrentMode: Width=1920 Height=1080
+12:871  0:000  Beginning FSInjection
+FSInjectionInstall ...
+- Our FSI_SIMPLE_FILE_SYSTEM_PROTOCOL installed on handle: 81C64698
+FSInjectionInstall ...
+- Our FSI_SIMPLE_FILE_SYSTEM_PROTOCOL installed on handle: 81C64698
+12:872  0:000  ** Warning: Your MLB is not suitable for iMessage(must be 17 chars long) !
+12:887  0:014  Use origin smbios table type 1 guid.
+12:888  0:001  Preparing kexts injection for arch=x86_64 from EFI\CLOVER\kexts\Other
+12:889  0:000    Extra kext: EFI\CLOVER\kexts\Other\ACPIBatteryManager.kext
+12:892  0:002    Extra kext: EFI\CLOVER\kexts\Other\AppleALC.kext
+12:896  0:004      Extra PlugIn kext: EFI\CLOVER\kexts\Other\AppleALC.kext\Contents\PlugIns\PinConfigs.kext
+12:968  0:071    Extra kext: EFI\CLOVER\kexts\Other\ApplePS2SmartTouchPad.kext
+13:000  0:032      Extra PlugIn kext: EFI\CLOVER\kexts\Other\ApplePS2SmartTouchPad.kext\Contents\PlugIns\ApplePS2Controller.kext
+13:007  0:006      Extra PlugIn kext: EFI\CLOVER\kexts\Other\ApplePS2SmartTouchPad.kext\Contents\PlugIns\ApplePS2Keyboard.kext
+13:020  0:012    Extra kext: EFI\CLOVER\kexts\Other\AzulPatcher4600.kext
+13:026  0:006    Extra kext: EFI\CLOVER\kexts\Other\CodecCommander.kext
+13:043  0:016    Extra kext: EFI\CLOVER\kexts\Other\FakeSMC.kext
+13:058  0:014      Extra PlugIn kext: EFI\CLOVER\kexts\Other\FakeSMC.kext\Contents\PlugIns\ACPISensors.kext
+13:073  0:015      Extra PlugIn kext: EFI\CLOVER\kexts\Other\FakeSMC.kext\Contents\PlugIns\CPUSensors.kext
+13:080  0:006      Extra PlugIn kext: EFI\CLOVER\kexts\Other\FakeSMC.kext\Contents\PlugIns\GPUSensors.kext
+13:091  0:010      Extra PlugIn kext: EFI\CLOVER\kexts\Other\FakeSMC.kext\Contents\PlugIns\LPCSensors.kext
+13:150  0:059    Extra kext: EFI\CLOVER\kexts\Other\FakePCIID.kext
+13:156  0:005    Extra kext: EFI\CLOVER\kexts\Other\FakePCIID_Broadcom_WiFi.kext
+13:166  0:009    Extra kext: EFI\CLOVER\kexts\Other\FakePCIID_Intel_HD_Graphics.kext
+13:176  0:009    Extra kext: EFI\CLOVER\kexts\Other\FakePCIID_XHCIMux.kext
+13:185  0:009    Extra kext: EFI\CLOVER\kexts\Other\HibernationFixup.kext
+13:193  0:008    Extra kext: EFI\CLOVER\kexts\Other\IntelGraphicsFixup.kext
+13:201  0:007    Extra kext: EFI\CLOVER\kexts\Other\Lilu.kext
+13:210  0:008    Extra kext: EFI\CLOVER\kexts\Other\LiluFriend.kext
+13:219  0:008    Extra kext: EFI\CLOVER\kexts\Other\RealtekRTL8111.kext
+13:229  0:010    Extra kext: EFI\CLOVER\kexts\Other\Shiki.kext
+13:237  0:008  Preparing kexts injection for arch=x86_64 from EFI\CLOVER\kexts\10.12
+13:242  0:004  Custom boot screen not used because entry has unset use graphics
+13:242  0:000  Closing log

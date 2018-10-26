@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>15F34</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>CodecCommander</string>
+	<key>CFBundleGetInfoString</key>
+	<string>2.6.1, Copyright © 2013-2014 TimeWalker. All rights reserved.</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.tw.CodecCommander</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>CodecCommander</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.6.1</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>2.6.1</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>7D175</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>10M2518</string>
+	<key>DTSDKName</key>
+	<string>macosx10.6</string>
+	<key>DTXcode</key>
+	<string>0730</string>
+	<key>DTXcodeBuild</key>
+	<string>7D175</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>CodecCommander</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.tw.CodecCommander</string>
+			<key>Codec Profile</key>
+			<dict>
+				<key>1002</key>
+				<string>Disabled HDMI</string>
+				<key>10de</key>
+				<string>Disabled HDMI</string>
+				<key>10ec_0233</key>
+				<string>Realtek ALC283,etc</string>
+				<key>10ec_0235</key>
+				<string>Realtek ALC283,etc</string>
+				<key>10ec_0255</key>
+				<string>Realtek ALC283,etc</string>
+				<key>10ec_0269</key>
+				<string>Realtek ALC269</string>
+				<key>10ec_0269_HDA_1028_04d9</key>
+				<string>Realtek ALC269VB</string>
+				<key>10ec_0269_HDA_1458_fa50</key>
+				<string>Realtek ALC269 BRIX</string>
+				<key>10ec_0282</key>
+				<string>Realtek ALC283,etc</string>
+				<key>10ec_0283</key>
+				<string>Realtek ALC283,etc</string>
+				<key>10ec_0292</key>
+				<string>Realtek ALC292</string>
+				<key>10ec_0668</key>
+				<string>Realtek ALC668</string>
+				<key>10ec_0892_HDA_1458</key>
+				<string>Realtek ALC892 desktop</string>
+				<key>10ec_0892_HDA_8086</key>
+				<string>Realtek ALC892 desktop</string>
+				<key>10ec_0900</key>
+				<string>Realtek ALC1150</string>
+				<key>8086</key>
+				<string>Disabled HDMI</string>
+				<key>Default</key>
+				<dict>
+					<key>Check Infinitely</key>
+					<false/>
+					<key>Check Interval</key>
+					<integer>3000</integer>
+					<key>Custom Commands</key>
+					<array/>
+					<key>Perform Reset</key>
+					<true/>
+					<key>Perform Reset on EAPD Fail</key>
+					<false/>
+					<key>Perform Reset on External Wake</key>
+					<true/>
+					<key>Send Delay</key>
+					<integer>300</integer>
+					<key>Sleep Nodes</key>
+					<true/>
+					<key>Update Nodes</key>
+					<true/>
+				</dict>
+				<key>Disabled HDMI</key>
+				<dict>
+					<key>Check Infinitely</key>
+					<false/>
+					<key>Disable</key>
+					<true/>
+					<key>Sleep Nodes</key>
+					<false/>
+					<key>Update Nodes</key>
+					<false/>
+				</dict>
+				<key>Realtek ALC1150</key>
+				<dict>
+					<key>Custom Commands</key>
+					<array>
+						<dict>
+							<key>Command</key>
+							<data>
+							AgUABw==
+							</data>
+							<key>Comment</key>
+							<string>0x20 SET_COEF_INDEX 0x07</string>
+							<key>On Init</key>
+							<true/>
+							<key>On Sleep</key>
+							<true/>
+							<key>On Wake</key>
+							<true/>
+						</dict>
+						<dict>
+							<key>Command</key>
+							<data>
+							AgR8sA==
+							</data>
+							<key>Comment</key>
+							<string>0x20 SET_PROC_COEF 0x7CB0</string>
+							<key>On Init</key>
+							<true/>
+							<key>On Sleep</key>
+							<false/>
+							<key>On Wake</key>
+							<true/>
+						</dict>
+					</array>
+					<key>Send Delay</key>
+					<integer>100</integer>
+					<key>Sleep Nodes</key>
+					<false/>
+					<key>Update Nodes</key>
+					<false/>
+				</dict>
+				<key>Realtek ALC269</key>
+				<dict>
+					<key>Custom Commands</key>
+					<array>
+						<dict>
+							<key>Command</key>
+							<data>
+							AVcIgw==
+							</data>
+							<key>Comment</key>
+							<string>0x15 SET_UNSOLICITED_ENABLE 0x83</string>
+							<key>On Init</key>
+							<true/>
+							<key>On Sleep</key>
+							<false/>
+							<key>On Wake</key>
+							<true/>
+						</dict>
+					</array>
+				</dict>
+				<key>Realtek ALC269 BRIX</key>
+				<dict>
+					<key>Custom Commands</key>
+					<array>
+						<dict>
+							<key>Command</key>
+							<data>
+							AVcIgw==
+							</data>
+							<key>Comment</key>
+							<string>0x15 SET_UNSOLICITED_ENABLE 0x83</string>
+							<key>On Init</key>
+							<false/>
+							<key>On Sleep</key>
+							<false/>
+							<key>On Wake</key>
+							<false/>
+						</dict>
+					</array>
+				</dict>
+				<key>Realtek ALC269VB</key>
+				<dict>
+					<key>Custom Commands</key>
+					<array>
+						<dict>
+							<key>Command</key>
+							<data>
+							AhcIgw==
+							</data>
+							<key>Comment</key>
+							<string>0x21 SET_UNSOLICITED_ENABLE 0x83</string>
+							<key>On Init</key>
+							<true/>
+							<key>On Sleep</key>
+							<false/>
+							<key>On Wake</key>
+							<true/>
+						</dict>
+					</array>
+					<key>Send Delay</key>
+					<integer>20</integer>
+					<key>Sleep Nodes</key>
+					<false/>
+				</dict>
+				<key>Realtek ALC283,etc</key>
+				<dict>
+					<key>Custom Commands</key>
+					<array>
+						<dict>
+							<key>Command</key>
+							<data>
+							AZcHJQ==
+							</data>
+							<key>Comment</key>
+							<string>0x19 SET_PIN_WIDGET_CONTROL 0x25</string>
+							<key>On Init</key>
+							<true/>
+							<key>On Sleep</key>
+							<false/>
+							<key>On Wake</key>
+							<true/>
+						</dict>
+						<dict>
+							<key>Command</key>
+							<data>
+							AhcIgw==
+							</data>
+							<key>Comment</key>
+							<string>0x21 SET_UNSOLICITED_ENABLE 0x83</string>
+							<key>On Init</key>
+							<true/>
+							<key>On Sleep</key>
+							<false/>
+							<key>On Wake</key>
+							<true/>
+						</dict>
+					</array>
+					<key>Perform Reset</key>
+					<false/>
+					<key>Send Delay</key>
+					<integer>10</integer>
+					<key>Sleep Nodes</key>
+					<false/>
+				</dict>
+				<key>Realtek ALC292</key>
+				<dict>
+					<key>Custom Commands</key>
+					<array>
+						<dict>
+							<key>Command</key>
+							<string>0x01a70724</string>
+							<key>Comment</key>
+							<string>Node 0x1a - Pin Control (In Enable / VRefEn)</string>
+							<key>On Init</key>
+							<false/>
+							<key>On Sleep</key>
+							<false/>
+							<key>On Wake</key>
+							<true/>
+						</dict>
+					</array>
+					<key>Perform Reset</key>
+					<false/>
+				</dict>
+				<key>Realtek ALC668</key>
+				<dict>
+					<key>Custom Commands</key>
+					<array>
+						<dict>
+							<key>Command</key>
+							<data>
+							AVcIgw==
+							</data>
+							<key>Comment</key>
+							<string>0x15 SET_UNSOLICITED_ENABLE 0x83</string>
+							<key>On Init</key>
+							<true/>
+							<key>On Sleep</key>
+							<false/>
+							<key>On Wake</key>
+							<true/>
+						</dict>
+						<dict>
+							<key>Command</key>
+							<data>
+							AbcHIA==
+							</data>
+							<key>Comment</key>
+							<string>Node 0x1b - Pin Control (In Enable)</string>
+							<key>On Init</key>
+							<false/>
+							<key>On Sleep</key>
+							<false/>
+							<key>On Wake</key>
+							<true/>
+						</dict>
+					</array>
+					<key>Perform Reset</key>
+					<false/>
+				</dict>
+				<key>Realtek ALC892 desktop</key>
+				<dict>
+					<key>Sleep Nodes</key>
+					<false/>
+					<key>Update Nodes</key>
+					<false/>
+				</dict>
+			</dict>
+			<key>IOClass</key>
+			<string>CodecCommander</string>
+			<key>IOMatchCategory</key>
+			<string>CodecCommander</string>
+			<key>IOProviderClass</key>
+			<string>IOHDACodecFunction</string>
+			<key>IOUserClientClass</key>
+			<string>CodecCommanderClient</string>
+		</dict>
+		<key>CodecCommanderPowerHook</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.tw.CodecCommander</string>
+			<key>Codec Profile</key>
+			<dict>
+				<key>1002</key>
+				<string>Disabled HDMI</string>
+				<key>10de</key>
+				<string>Disabled HDMI</string>
+				<key>8086</key>
+				<string>Disabled HDMI</string>
+				<key>Disabled HDMI</key>
+				<dict>
+					<key>Disable</key>
+					<true/>
+				</dict>
+			</dict>
+			<key>IOClass</key>
+			<string>CodecCommanderPowerHook</string>
+			<key>IOMatchCategory</key>
+			<string>CodecCommanderPowerHook</string>
+			<key>IOProviderClass</key>
+			<string>AppleHDADriver</string>
+		</dict>
+		<key>CodecCommanderProbeInit</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.tw.CodecCommander</string>
+			<key>Codec Profile</key>
+			<dict>
+				<key>Default</key>
+				<dict>
+					<key>Custom Commands</key>
+					<array/>
+				</dict>
+			</dict>
+			<key>IOClass</key>
+			<string>CodecCommanderProbeInit</string>
+			<key>IOProbeScore</key>
+			<integer>5000</integer>
+			<key>IOProviderClass</key>
+			<string>IOHDACodecDevice</string>
+		</dict>
+		<key>CodecCommanderResidency</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.tw.CodecCommander</string>
+			<key>IOClass</key>
+			<string>CodecCommanderResidency</string>
+			<key>IOMatchCategory</key>
+			<string>CodecCommanderResidency</string>
+			<key>IOProviderClass</key>
+			<string>IOResources</string>
+		</dict>
+		<key>CodecCommanderVoodooHDA</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.tw.CodecCommander</string>
+			<key>Codec Profile</key>
+			<dict>
+				<key>1002</key>
+				<string>Disabled HDMI</string>
+				<key>10de</key>
+				<string>Disabled HDMI</string>
+				<key>8086</key>
+				<string>Disabled HDMI</string>
+				<key>Default</key>
+				<dict>
+					<key>Check Infinitely</key>
+					<false/>
+					<key>Perform Reset</key>
+					<false/>
+					<key>Perform Reset on EAPD Fail</key>
+					<false/>
+					<key>Perform Reset on External Wake</key>
+					<false/>
+					<key>Sleep Nodes</key>
+					<false/>
+					<key>Update Nodes</key>
+					<false/>
+				</dict>
+				<key>Disabled HDMI</key>
+				<dict>
+					<key>Check Infinitely</key>
+					<false/>
+					<key>Disable</key>
+					<true/>
+					<key>Sleep Nodes</key>
+					<false/>
+					<key>Update Nodes</key>
+					<false/>
+				</dict>
+			</dict>
+			<key>IOClass</key>
+			<string>CodecCommander</string>
+			<key>IOMatchCategory</key>
+			<string>CodecCommander</string>
+			<key>IOProviderClass</key>
+			<string>VoodooHDADevice</string>
+			<key>IOUserClientClass</key>
+			<string>CodecCommanderClient</string>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2013-2014 TimeWalker/RehabMan. All rights reserved.</string>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IOACPIFamily</key>
+		<string>1.0d1</string>
+		<key>com.apple.iokit.IOAudioFamily</key>
+		<string>1.1</string>
+		<key>com.apple.iokit.IOPCIFamily</key>
+		<string>1.0.0b1</string>
+		<key>com.apple.kpi.bsd</key>
+		<string>9.0.0</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>9.0.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>9.0.0</string>
+	</dict>
+	<key>Source Code</key>
+	<string>https://github.com/RehabMan/EAPD-Codec-Commander</string>
+</dict>
+</plist>

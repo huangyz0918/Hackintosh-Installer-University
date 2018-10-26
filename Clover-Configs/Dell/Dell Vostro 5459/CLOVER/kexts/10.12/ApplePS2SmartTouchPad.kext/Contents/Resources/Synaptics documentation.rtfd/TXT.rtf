@@ -1,0 +1,1903 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 Times-Roman;\f2\froman\fcharset0 TimesNewRomanPSMT;
+\f3\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red198\green0\blue54;\red0\green116\blue0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab529
+\pard\tx529\pardeftab529\pardirnatural
+
+\f0\fs32 \cf2 \expnd0\expndtw0\kerning0
+Relative packet format 
+\f1\fs24 \cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\f2\fs30 \cf0 \expnd0\expndtw0\kerning0
+In the default Relative mode, each motion packet consists of three bytes. The first byte encodes various status bits, and the other two bytes encode the amount of motion in X and Y that has occurred since the previous packet. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f3\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 	//\cf0 \
+    \cf3 // Relative packet format:\cf0 \
+    \cf3 //\cf0 \
+    \cf3 //      7  6  5  4  3  2  1  0\cf0 \
+    \cf3 //     -----------------------\cf0 \
+    \cf3 // [0] YO XO YS XS  1  M  R  L  (Y/X overflow, Y/X sign, buttons)\cf0 \
+    \cf3 // [1] X7 X6 X5 X4 X3 X3 X1 X0  (X delta)\cf0 \
+    \cf3 // [2] Y7 Y6 Y5 Y4 Y3 Y2 Y1 Y0  (Y delta)\cf0 \
+    \cf3 //\cf0 \
+\pard\pardeftab720\sa240
+
+\f2\fs30 \cf0 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+Y ovfl: 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+1 = Y delta value exceeds the range \'96256...255, 0 = no overflow. When this bit is set, the reported Y delta will be either \'96256 or +255. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+X ovfl: 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+Y sign: 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+1 = X delta value exceeds the range \'96256...255, 0 = no overflow. When this bit is set, the reported X delta will be either \'96256 or +255. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+X sign: 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+1 = Y delta value is negative, 0 = Y delta is zero or positive. 1 = X delta value is negative, 0 = X delta is zero or positive. \
+Middle: 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+1 = Middle button is currently pressed, 0 = released.\
+\uc0\u8232 Right: 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+1 = Right button is currently pressed, 0 = released. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+Left: 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+1 = Left button is currently pressed (or gesture in progress), 0 = released. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+This is the amount of motion 
+\f1 \expnd0\expndtw0\kerning0
+\uc0\u8710 
+\f2 \expnd0\expndtw0\kerning0
+X that has occurred in the X (horizontal) direction since the last motion data report. This byte and the \'93X sign\'94 bit 
+\f3\fs22 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx529\pardeftab529\pardirnatural
+\cf0 \
+\pard\pardeftab720\sa240
+
+\f0\fs32 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Absolute packet format 
+\f1\fs24 \cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\f2\fs30 \cf0 \expnd0\expndtw0\kerning0
+When Absolute mode is enabled, each motion report consists of six bytes. These bytes encode the absolute X, Y location of the finger on the sensor surface, as well as the Z (pressure) value and various other measurements and status bits. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+Synaptics TouchPads support two different Absolute packet formats, depending on the setting of the 
+\f1\i \expnd0\expndtw0\kerning0
+Wmode 
+\f2\i0 \expnd0\expndtw0\kerning0
+bit of the TouchPad mode byte. 
+\f3\fs22 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx529\pardeftab529\pardirnatural
+\cf0 \
+	    \
+    \cf3 //\cf0 \
+    \cf3 // The Absolute X/Y/Z/W packet format when Wmode = 1 (Supported by ApplePS2SSmartTouchPad driver)\cf0 \
+    \cf3 //\cf0 \
+    \cf3 //      7  6  5  4  3  2  1  0\cf0 \
+    \cf3 //    -----------------------\cf0 \
+    \cf3 // [0]  1  0 W3 W2  0 W1  R  L  (W bits 3..2, W bit 1, R/L buttons)\cf0 \
+    \cf3 // [1] YB YA Y9 Y8 XB XA X9 X8  (Y bits 11..8, X bits 11..8)\cf0 \
+    \cf3 // [2] Z7 Z6 Z5 Z4 Z3 Z2 Z1 Z0  (Z-pressure, bits 7..0)\cf0 \
+    \cf3 // [3]  1  1 YC XC  0 W0 RD LD  (Y bit 12, X bit 12, W bit 0, RD/LD)\cf0 \
+    \cf3 // [4] X7 X6 X5 X4 X3 X2 X1 X0  (X bits 7..0)\cf0 \
+    \cf3 // [5] Y7 Y6 Y5 Y4 Y3 Y2 Y1 Y0  (Y bits 7..0)\cf0 \
+    \
+\pard\pardeftab720\sa240
+
+\f2\fs30 \cf0 \expnd0\expndtw0\kerning0
+\CocoaLigature1 In this packet, the four-bit W value replaces the 
+\f1\i \expnd0\expndtw0\kerning0
+Finger 
+\f2\i0 \expnd0\expndtw0\kerning0
+and 
+\f1\i \expnd0\expndtw0\kerning0
+Reserved 
+\f2\i0 \expnd0\expndtw0\kerning0
+bits and both 
+\f1\i \expnd0\expndtw0\kerning0
+Gesture 
+\f2\i0 \expnd0\expndtw0\kerning0
+bits. All other bits of the packet remain the same regardless of the 
+\f1\i \expnd0\expndtw0\kerning0
+Wmode 
+\f2\i0 \expnd0\expndtw0\kerning0
+setting. Section 3.2.6 describes the various purposes and interpretations of the W value. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+On typical TouchPads, the L/U bit is identical to the Left button bit, and the R/D bit is identical to the Right bit. On MultiSwitch pads with the 
+\f1\i \expnd0\expndtw0\kerning0
+capFourButtons 
+\f2\i0 \expnd0\expndtw0\kerning0
+capability bit set (see section 4.6 for information on this bit) and 
+\f1\i \expnd0\expndtw0\kerning0
+Wmode 
+\f2\i0 \expnd0\expndtw0\kerning0
+enabled, the L/U and R/D bits also report the states of the Up and Down buttons, respectively. The L/U bit reports the logical XOR of the Left and Up button states. Viewed another way, L/U is the same as the Left bit, unless the Up button is pressed, in which case L/U is the complement of the Left bit. The R/D bit similarly reports the XOR of the Right and Down buttons. This encoding ensures that the packet will be backward compatible (and robust against meddling by \'93too-smart\'94 keyboard controllers) whenever the Up and Down buttons are not pressed. 
+\f3\fs22 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx529\pardeftab529\pardirnatural
+\cf0     \cf3 //\cf0 \
+    \cf3 // This is the format of the 6-byte encapsulation packet.\cf0 \
+    \cf3 // Encapsulation packets are used for PS2 pass through mode, which\cf0 \
+    \cf3 // allows another PS2 device to be connected as a slave to the\cf0 \
+    \cf3 // touchpad.  The touchpad acts as a host for the second evice\cf0 \
+    \cf3 // and forwards packets with a special value for w (w=3)\cf0 \
+    \cf3 // So when w=3 (W3=0,W2=0,W1=1,W0=1), this is what the packets\cf0 \
+    \cf3 // look like.\cf0 \
+    \cf3 //\cf0 \
+    \cf3 // The Absolute X/Y/Z packet format when Wmode = 0\cf0 \
+    \cf3 //\cf0 \
+    \cf3 //      7  6  5  4  3  2  1  0\cf0 \
+    \cf3 //    -----------------------\cf0 \
+    \cf3 // [0]  1  0  0  0  0  1  R  L  (R/L are for touchpad)\cf0 \
+    \cf3 // [1] YO XO YS XS  1  M  R  L  (packet byte 0, Y/X overflow, Y/X sign, buttons)\cf0 \
+    \cf3 // [2]  0  0 B5 B4 Z3 Z2 Z1 Z0  (packet byte 3, B4,B5 buttons, Z=wheel)\cf0 \
+    \cf3 // [3]  1  1  x  x  0  1  R  L  (x=reserved, R/L are for touchpad)\cf0 \
+    \cf3 // [4] X7 X6 X5 X4 X3 X3 X1 X0  (packet byte 1, X delta)\cf0 \
+    \cf3 // [5] Y7 Y6 Y5 Y4 Y3 Y2 Y1 Y0  (packet byte 2, Y delta)\cf0 \
+    \
+\pard\pardeftab720\sa240
+
+\f2\fs30 \cf0 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Note that the 
+\f1\i \expnd0\expndtw0\kerning0
+Gesture
+\f2\i0 \expnd0\expndtw0\kerning0
+, 
+\f1\i \expnd0\expndtw0\kerning0
+Left
+\f2\i0 \expnd0\expndtw0\kerning0
+, and 
+\f1\i \expnd0\expndtw0\kerning0
+Right 
+\f2\i0 \expnd0\expndtw0\kerning0
+bits appear twice in the Absolute packet. These bits are guaranteed to be identical in bytes 1 and 4 for a given packet. This and other aspects of the packet design allow low- level host software to interpret an Absolute packet as a sequence of two mouse-compatible three-byte packets. As high-level host software receives these three-byte half-packets, it can examine the upper two bits of the first byte to determine how to combine consecutive half-packets into full six-byte packets. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f3\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\pardeftab720\sa240
+
+\f0\fs32 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Absolute mode Z values 
+\f1\fs24 \cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\f2\fs30 \cf0 \expnd0\expndtw0\kerning0
+The 
+\f1\i \expnd0\expndtw0\kerning0
+Z value 
+\f2\i0 \expnd0\expndtw0\kerning0
+reports a measure of the amount of finger contact, which is affected by the contact pressure and by the angle at which the finger is held. The following table illustrates some typical Z values. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\i \cf0 \expnd0\expndtw0\kerning0
+26 Copyright \'a9 2001\'972011 Synaptics Incorporated. All Rights Reserved. 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\i \expnd0\expndtw0\kerning0
+Synaptics PS/2 TouchPad Interfacing Guide 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\i \expnd0\expndtw0\kerning0
+PN: 511-000275-01 Rev. B 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth980\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw60\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw60\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\i\fs26 \cf0 \expnd0\expndtw0\kerning0
+V alue 
+\i0\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\i\fs26 \cf0 \expnd0\expndtw0\kerning0
+Interpretation 
+\i0\fs24 \expnd0\expndtw0\kerning0
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth980\clftsWidth3 \clbrdrt\brdrs\brdrw60\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw60\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Z=0 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+No finger contact 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth980\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Z = 10 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Finger hovering near the sensor surface 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth980\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Z = 30 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Very light finger contact 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth980\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Z = 80 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Normal finger contact 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth980\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Z >110 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Very heavy finger contact 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth980\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth4100\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Z = 255 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Maximum reportable Z 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell \lastrow\row
+\pard\pardeftab720\sa240
+
+\f2\fs30 \cf0 \expnd0\expndtw0\kerning0
+The measurement of Z is approximate; actual reported Z values will vary from one TouchPad to another and from one user to another. In fact, because capacitance is influenced by environmental effects such as the moisture of the skin, Z measurements may even vary from day to day for the same TouchPad and user. The measurement of Z also varies depending on the interpolation method used by the TouchPad. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\f0\fs32 \cf2 \expnd0\expndtw0\kerning0
+Absolute mode W values 
+\f1\fs24 \cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\f2\fs30 \cf0 \expnd0\expndtw0\kerning0
+Synaptics TouchPads support an optional value in the Absolute packet called 
+\f1\i \expnd0\expndtw0\kerning0
+W
+\f2\i0 \expnd0\expndtw0\kerning0
+. The W value is reported only when the host enables a special 
+\f1\i \expnd0\expndtw0\kerning0
+W mode
+\f2\i0 \expnd0\expndtw0\kerning0
+. The W value supplies extra information about the character of the contact with the sensor. The host can use W to distinguish among normal fingers, accidental palm contact, and multiple fingers. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+The following table shows the W values defined for Synaptics TouchPads: 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1140\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw60\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4300\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw60\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5440\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw60\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\i\fs26 \cf0 \expnd0\expndtw0\kerning0
+V alue 
+\i0\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\i\fs26 \cf0 \expnd0\expndtw0\kerning0
+Capability bit set (bit = 1) 
+\i0\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\i\fs26 \cf0 \expnd0\expndtw0\kerning0
+Interpretation 
+\i0\fs24 \expnd0\expndtw0\kerning0
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1140\clftsWidth3 \clbrdrt\brdrs\brdrw60\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4300\clftsWidth3 \clbrdrt\brdrs\brdrw60\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5440\clftsWidth3 \clbrdrt\brdrs\brdrw60\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+W=0 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\i\fs26 \cf0 \expnd0\expndtw0\kerning0
+capMultiFinger 
+\i0\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Two fingers on the pad 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1140\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4300\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5440\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+W=1 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\i\fs26 \cf0 \expnd0\expndtw0\kerning0
+capMultiFinger 
+\i0\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Three or more fingers on the pad 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1140\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4300\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5440\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+W=2 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\i\fs26 \cf0 \expnd0\expndtw0\kerning0
+capEWmode 
+\i0\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Extended W mode 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1140\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4300\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5440\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+W=3 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\i\fs26 \cf0 \expnd0\expndtw0\kerning0
+capPassThru 
+\i0\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Pass-Through encapsulation packet (see section 5.1) 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1140\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth4300\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth5440\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+W = 4\'9615 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\i\fs26 \cf0 \expnd0\expndtw0\kerning0
+capPalmDetect 
+\i0\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Finger width; 15 is the maximum reportable width 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell \lastrow\row
+\pard\pardeftab720\sa240
+\cf0 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+If the 
+\f1\i \expnd0\expndtw0\kerning0
+capPalmDetect 
+\f2\i0 \expnd0\expndtw0\kerning0
+capability bit is set, then W values from 4 to 15 indicate that the TouchPad has sensed a single finger of a particular width. The host can watch for especially wide \'93fingers\'94 as evidence that the TouchPad was activated by an accidental brush of the hand or palm rather than deliberate finger contact. If 
+\f1\i \expnd0\expndtw0\kerning0
+capPalmDetect 
+\f2\i0 \expnd0\expndtw0\kerning0
+is clear, the W value is reported as 4, regardless of actual finger width. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+Note: The finger width measurement is very approximate. Actual widths will vary from one TouchPad to another and from one user to another. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\f0\fs32 \cf2 \expnd0\expndtw0\kerning0
+Absolute X and Y coordinates 
+\f1\fs24 \cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\f2\fs30 \cf0 \expnd0\expndtw0\kerning0
+The X and Y values report the finger\'92s absolute location on the TouchPad surface at any given time. When Z is zero, X and Y cannot be calculated and so are reported as 0. When Z > 0, X and Y are calculated and scaled to lie in the ranges 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f3\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\pardeftab720\sa240
+
+\f1\b\fs30 \cf0 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Read Capabilities. \
+\pard\pardeftab720\sa240
+
+\f2\b0 \cf0 \expnd0\expndtw0\kerning0
+Beginning with firmware version 7.5, this query has been redefined. See query $00 to obtain the firmware version information. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+For firmware version 7.5 and above, the first and third bytes hold the extended capability bits. The second byte is the model sub-number. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\i \cf0 \expnd0\expndtw0\kerning0
+Bit 7 Bit 6 Bit 5 Bit 4 Bit 3 Bit 2 Bit 1 Bit 0 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\i \expnd0\expndtw0\kerning0
+Byte 1 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\i \expnd0\expndtw0\kerning0
+Byte 2 \
+Byte 3 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1580\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw38\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1080
+\clmgf \clvertalc \clshdrawnil \clwWidth6020\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2160
+\clmrg \clvertalc \clshdrawnil \clwWidth6020\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3240
+\clmrg \clvertalc \clshdrawnil \clwWidth6020\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth1600\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5400
+\clvertalc \clshdrawnil \clwWidth2180\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6480
+\clmgf \clvertalc \clshdrawnil \clwWidth3200\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx7560
+\clmrg \clvertalc \clshdrawnil \clwWidth3200\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+cap- Extended 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image75600.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page42image75760.png \width14 \height14
+}¬} {{\NeXTGraphic page42image76080.png \width864 \height16
+}¬} {{\NeXTGraphic page42image76672.png \width15 \height45
+}¬} {{\NeXTGraphic page42image76832.png \width15 \height45
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\i\fs26 \cf0 \expnd0\expndtw0\kerning0
+n
+\f2\i0 \expnd0\expndtw0\kerning0
+ExtendedQueries 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image77440.png \width14 \height44
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image77600.png \width14 \height44
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image77920.png \width14 \height14
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image78240.png \width864 \height16
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image78848.png \width28 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page42image79272.png \width728 \height16
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+Reserved 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image81272.png \width736 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image82192.png \width28 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+cap- Middle- Button 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image83992.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image84520.png \width28 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page42image85104.png \width14 \height14
+}¬} {{\NeXTGraphic page42image85528.png \width15 \height45
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Reserved 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image86456.png \width14 \height44
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image86936.png \width728 \height16
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image87360.png \width14 \height14
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clmgf \clvertalc \clshdrawnil \clwWidth14760\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1080
+\clmrg \clvertalc \clshdrawnil \clwWidth14760\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2160
+\clmrg \clvertalc \clshdrawnil \clwWidth14760\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3240
+\clmrg \clvertalc \clshdrawnil \clwWidth14760\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clmrg \clvertalc \clshdrawnil \clwWidth14760\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5400
+\clmrg \clvertalc \clshdrawnil \clwWidth14760\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6480
+\clmrg \clvertalc \clshdrawnil \clwWidth14760\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx7560
+\clmrg \clvertalc \clshdrawnil \clwWidth14760\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image88112.png \width15 \height45
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page42image88272.png \width15 \height45
+}¬} {{\NeXTGraphic page42image88912.png \width15 \height45
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Model sub-number 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1580\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1080
+\clvertalc \clshdrawnil \clwWidth1600\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2160
+\clvertalc \clshdrawnil \clwWidth2460\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3240
+\clvertalc \clshdrawnil \clwWidth1900\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth1600\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5400
+\clvertalc \clshdrawnil \clwWidth2180\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6480
+\clvertalc \clshdrawnil \clwWidth1580\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx7560
+\clvertalc \clshdrawnil \clwWidth1580\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+capPass Through 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image93040.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2 \cf0 \expnd0\expndtw0\kerning0
+capLow Power 
+\f1 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image95864.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page42image96184.png \width14 \height14
+}¬} \cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+capMultiFinger Report 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image97536.png \width864 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2 \cf0 \expnd0\expndtw0\kerning0
+capSleep 
+\f1 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image99496.png \width736 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2 \cf0 \expnd0\expndtw0\kerning0
+capFour Buttons 
+\f1 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+capBallistics 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image103272.png \width728 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+capMulti Finger 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page42image105384.png \width728 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page42image105808.png \width14 \height14
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2 \cf0 \expnd0\expndtw0\kerning0
+capPalm Detect 
+\f1 \expnd0\expndtw0\kerning0
+\cell \lastrow\row
+\pard\pardeftab720\sa240
+
+\f2\fs30 \cf0 \expnd0\expndtw0\kerning0
+\
+For firmware versions prior to 7.5, the first and third bytes hold the extended capability bits. The second byte is the constant $47. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\i \cf0 \expnd0\expndtw0\kerning0
+Bit 7 Bit 6 Bit 5 Bit 4 Bit 3 Bit 2 Bit 1 Bit 0 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\i \expnd0\expndtw0\kerning0
+Byte 1 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\i \expnd0\expndtw0\kerning0
+Byte 2 \
+Byte 3 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1520\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw38\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1080
+\clmgf \clvertalc \clshdrawnil \clwWidth5580\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2160
+\clmrg \clvertalc \clshdrawnil \clwWidth5580\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3240
+\clmrg \clvertalc \clshdrawnil \clwWidth5580\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth1540\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5400
+\clvertalc \clshdrawnil \clwWidth2100\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6480
+\clmgf \clvertalc \clshdrawnil \clwWidth3120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx7560
+\clmrg \clvertalc \clshdrawnil \clwWidth3120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+cap- Extended 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image24304.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page43image24464.png \width14 \height14
+}¬} {{\NeXTGraphic page43image24784.png \width728 \height16
+}¬} {{\NeXTGraphic page43image25376.png \width15 \height45
+}¬} {{\NeXTGraphic page43image25536.png \width15 \height45
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\i\fs26 \cf0 \expnd0\expndtw0\kerning0
+n
+\f2\i0 \expnd0\expndtw0\kerning0
+ExtendedQueries 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image26144.png \width15 \height45
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image26304.png \width15 \height45
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image26624.png \width14 \height14
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image26944.png \width728 \height16
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image27568.png \width28 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page43image28152.png \width28 \height14
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+Reserved 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image29984.png \width728 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image30408.png \width14 \height14
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image30736.png \width965 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page43image31160.png \width14 \height14
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+cap- Middle- Button 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image32696.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image33232.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page43image33392.png \width711 \height16
+}¬} {{\NeXTGraphic page43image33816.png \width14 \height14
+}¬} {{\NeXTGraphic page43image34240.png \width15 \height45
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Reserved 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image35168.png \width15 \height45
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image35648.png \width14 \height14
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image35968.png \width14 \height14
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clmgf \clvertalc \clshdrawnil \clwWidth14040\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1080
+\clmrg \clvertalc \clshdrawnil \clwWidth14040\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2160
+\clmrg \clvertalc \clshdrawnil \clwWidth14040\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3240
+\clmrg \clvertalc \clshdrawnil \clwWidth14040\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clmrg \clvertalc \clshdrawnil \clwWidth14040\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5400
+\clmrg \clvertalc \clshdrawnil \clwWidth14040\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6480
+\clmrg \clvertalc \clshdrawnil \clwWidth14040\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx7560
+\clmrg \clvertalc \clshdrawnil \clwWidth14040\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image36720.png \width14 \height44
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page43image36880.png \width14 \height44
+}¬} {{\NeXTGraphic page43image37520.png \width14 \height44
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+01000111 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1520\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1080
+\clvertalc \clshdrawnil \clwWidth1560\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2160
+\clvertalc \clshdrawnil \clwWidth2400\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3240
+\clvertalc \clshdrawnil \clwWidth1560\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4320
+\clvertalc \clshdrawnil \clwWidth1540\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx5400
+\clvertalc \clshdrawnil \clwWidth2100\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6480
+\clvertalc \clshdrawnil \clwWidth1540\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx7560
+\clvertalc \clshdrawnil \clwWidth1540\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+capPass Through 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2 \cf0 \expnd0\expndtw0\kerning0
+capLow Power 
+\f1 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+capMultiFinger Report 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image46136.png \width736 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+capSleep 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image48136.png \width728 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image48560.png \width14 \height14
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image49048.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+capFour Buttons 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image50440.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+capBallistics 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image51704.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page43image52024.png \width14 \height14
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+capMulti- Finger 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image53736.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image54056.png \width14 \height14
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image54544.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs22 \cf0 \expnd0\expndtw0\kerning0
+capPalm Detect 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page43image55936.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \cell \lastrow\row
+\pard\tx529\pardeftab529\pardirnatural
+
+\f3\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\pardeftab720\sa240
+
+\f2\fs30 \cf0 \expnd0\expndtw0\kerning0
+\CocoaLigature1 Synaptics TouchPads support an extended capability query which reports to the host the presence or absence of various advanced features. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\i\fs30 \cf0 \expnd0\expndtw0\kerning0
+capExtended 
+\f2\i0 \expnd0\expndtw0\kerning0
+(bit 23)\uc0\u8232 This bit is set if the extended capability bits are supported. The host can examine this bit to see whether the other 15 extended capability bits are present and meaningful. The 
+\f1\i \expnd0\expndtw0\kerning0
+capExtended 
+\f2\i0 \expnd0\expndtw0\kerning0
+bit also signifies that the TouchPad supports W mode. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\i\fs30 \expnd0\expndtw0\kerning0
+nExtendedQueries
+\f2\i0 \expnd0\expndtw0\kerning0
+[2..0] (bits 22..20)\uc0\u8232 These bits represent the number of extended queries the TouchPad supports. Taken together they form a 3-bit number which encodes the number of extended query pages that the TouchPad can report. If 
+\f1\i \expnd0\expndtw0\kerning0
+nExtendedQueries 
+\f2\i0 \expnd0\expndtw0\kerning0
+is 1 or greater, then the maximum meaningful query is $08 plus 
+\f1\i \expnd0\expndtw0\kerning0
+nExtendedQueries
+\f2\i0 \expnd0\expndtw0\kerning0
+. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\f2\fs30 \cf0 \expnd0\expndtw0\kerning0
+Note: 
+\f1\i \expnd0\expndtw0\kerning0
+capFourButtons 
+\f2\i0 \expnd0\expndtw0\kerning0
+and 
+\f1\i \expnd0\expndtw0\kerning0
+capMiddleButton 
+\f2\i0 \expnd0\expndtw0\kerning0
+/ 
+\f1\i \expnd0\expndtw0\kerning0
+nExtendedButtons 
+\f2\i0 \expnd0\expndtw0\kerning0
+are mutually exclusive. If a TouchPad reports 
+\f1\i \expnd0\expndtw0\kerning0
+capFourButtons 
+\f2\i0 \expnd0\expndtw0\kerning0
+set then 
+\f1\i \expnd0\expndtw0\kerning0
+capMiddleButton 
+\f2\i0 \expnd0\expndtw0\kerning0
+will be clear and 
+\f1\i \expnd0\expndtw0\kerning0
+nExtendedButtons 
+\f2\i0 \expnd0\expndtw0\kerning0
+will be zero. If 
+\f1\i \expnd0\expndtw0\kerning0
+capMiddleButton 
+\f2\i0 \expnd0\expndtw0\kerning0
+is set and/or 
+\f1\i \expnd0\expndtw0\kerning0
+nExtendedButtons 
+\f2\i0 \expnd0\expndtw0\kerning0
+is non-zero, then the multi-button option is set. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\i\fs30 \cf0 \expnd0\expndtw0\kerning0
+capMiddleButton 
+\f2\i0 \expnd0\expndtw0\kerning0
+(bit 18)\uc0\u8232 This bit is set if the TouchPad has a middle button. If this bit is set, the TouchPad reports the middle button state in the appropriate place in the Relative mode packet, and in the Absolute mode packet (when Wmode=1). The middle button is not considered to be an extended button. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\i\fs30 \expnd0\expndtw0\kerning0
+capPassThrough 
+\f2\i0 \expnd0\expndtw0\kerning0
+(bit 7)\uc0\u8232 This bit is set if the TouchPad uses the Pass-Through option. See section 5 for a complete description. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\i\fs30 \expnd0\expndtw0\kerning0
+capLowPower 
+\f2\i0 \expnd0\expndtw0\kerning0
+(bit 6)\uc0\u8232 This feature allows the TouchPad to automatically reduce power when the device is not in use. Because it is automatic, there is no mode bit to control this option. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\i\fs30 \expnd0\expndtw0\kerning0
+capMultiFingerReport 
+\f2\i0 \expnd0\expndtw0\kerning0
+(bit 5)\uc0\u8232 The 
+\f1\i \expnd0\expndtw0\kerning0
+capMultiFingerReport 
+\f2\i0 \expnd0\expndtw0\kerning0
+bit is set if the TouchPad supports Extended W mode and is able to report two finger locations in interleaved packets \
+
+\f1\i \expnd0\expndtw0\kerning0
+capSleep 
+\f2\i0 \expnd0\expndtw0\kerning0
+(bit 4)\uc0\u8232 The 
+\f1\i \expnd0\expndtw0\kerning0
+capSleep 
+\f2\i0 \expnd0\expndtw0\kerning0
+bit is set if sleep mode is supported. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\i\fs30 \expnd0\expndtw0\kerning0
+capFourButtons 
+\f2\i0 \expnd0\expndtw0\kerning0
+(bit 3)\uc0\u8232 This bit is set if the TouchPad is a MultiSwitch that supports four mouse buttons labeled Left, Right, Up, and Down. The Up and Down buttons are reported only during Absolute mode with the 
+\f1\i \expnd0\expndtw0\kerning0
+Wmode 
+\f2\i0 \expnd0\expndtw0\kerning0
+bit set. A four-button TouchPad takes the current value to report for the two extra buttons (Up and Down) and XORs them with the current value of the Right and Left buttons, as shown in Figure 3-4. The driver can decode the state of the two extra buttons by reversing this operation. Note that many devices are multi-button, rather than four-button. See Figure 4-16 for a description of the 
+\f1\i \expnd0\expndtw0\kerning0
+nExtendedButtons 
+\f2\i0 \expnd0\expndtw0\kerning0
+query. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\i\fs30 \expnd0\expndtw0\kerning0
+capBallistics 
+\f2\i0 \expnd0\expndtw0\kerning0
+(bit 2)\uc0\u8232 This bit is only used by TouchStyks, which are described separately in the 
+\f1\i \expnd0\expndtw0\kerning0
+Synaptics TouchStyk Interfacing Guide 
+\f2\i0 \expnd0\expndtw0\kerning0
+(PN 511-000003-01). 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\b\fs30 \cf0 \kerning1\expnd0\expndtw0 capMultiFinger
+\i\b0 \expnd0\expndtw0\kerning0
+ 
+\f2\i0 \expnd0\expndtw0\kerning0
+(bit 1)\uc0\u8232 This bit is set if multi-finger detection is supported. The TouchPad is then able to count the number of simultaneous fingers on the sensor and report the finger count via the W field of the Absolute packet. If this bit is 0, the TouchPad does not support multi-finger detection; any finger contact will be assumed to be a single finger. If 
+\f1\i \expnd0\expndtw0\kerning0
+capPalmDetect 
+\f2\i0 \expnd0\expndtw0\kerning0
+is set and multiple fingers are present, W reports a large width for the assumed single finger. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\i\fs30 \cf0 \expnd0\expndtw0\kerning0
+capPalmDetect 
+\f2\i0 \expnd0\expndtw0\kerning0
+(bit 0)\uc0\u8232 This bit is set if palm detection is supported. In W mode, the TouchPad measures the apparent size or width of the finger and reports the width in the W field of the Absolute mode packet. The host can use this information to help distinguish between intentional finger contact and accidental palm or hand contact. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\f0\fs32 \cf2 \expnd0\expndtw0\kerning0
+Extended W mode  (Multi fingers track)
+\f1\fs24 \cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\f2\fs30 \cf0 \expnd0\expndtw0\kerning0
+The extended model ID query  contains an option for Extended W mode. To enter Extended W mode, the TouchPad must be configured with the Absolute Mode bit, 
+\f1\i \expnd0\expndtw0\kerning0
+Wmode 
+\f2\i0 \expnd0\expndtw0\kerning0
+bit and 
+\f1\i \expnd0\expndtw0\kerning0
+EWmode 
+\f2\i0 \expnd0\expndtw0\kerning0
+bit all set to 1. The 
+\f1\i \expnd0\expndtw0\kerning0
+EWmode 
+\f2\i0 \expnd0\expndtw0\kerning0
+is bit 2 of the TouchPad mode byte. Extended W mode encapsulates data into an absolute mode 6-byte PS/2 packet. In this mode, a W value of 2 indicates that this is an encapsulated packet and that the X, Y, and Z fields have all been redefined by the EW packet code. 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs30 \expnd0\expndtw0\kerning0
+EW packet codes 0-7 return 30 bits of encapsulated data: 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\i \cf0 \expnd0\expndtw0\kerning0
+Byte 1 Byte 2 Byte 3 Byte 4 Byte 5 Byte 6 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\i \expnd0\expndtw0\kerning0
+Bit 7 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\i \expnd0\expndtw0\kerning0
+Bit 6 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\i \expnd0\expndtw0\kerning0
+Bit 5 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\i \expnd0\expndtw0\kerning0
+Bit 4 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\i \expnd0\expndtw0\kerning0
+Bit 3 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\i \expnd0\expndtw0\kerning0
+Bit 2 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\i \expnd0\expndtw0\kerning0
+Bit 1 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\i \expnd0\expndtw0\kerning0
+Bit 0 
+\i0 \expnd0\expndtw0\kerning0
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2740\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw38\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1234
+\clvertalc \clshdrawnil \clwWidth1340\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2468
+\clvertalc \clshdrawnil \clwWidth1360\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3702
+\clvertalc \clshdrawnil \clwWidth1380\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4937
+\clvertalc \clshdrawnil \clwWidth1360\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6171
+\clvertalc \clshdrawnil \clwWidth1340\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx7405
+\clvertalc \clshdrawnil \clwWidth1340\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image13008.png \width796 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page30image13432.png \width14 \height14
+}¬} {{\NeXTGraphic page30image13912.png \width15 \height45
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+10 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image14840.png \width14 \height44
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image15160.png \width813 \height16
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image16448.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page30image16608.png \width14 \height14
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+0 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image18496.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image18808.png \width813 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+0 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image20328.png \width813 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+0 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image21840.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page30image22000.png \width813 \height16
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+1 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image24168.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image24328.png \width813 \height16
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image25088.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page30image25248.png \width14 \height14
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Right 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image26496.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image26984.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Left 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image28496.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clmgf \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1234
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2468
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3702
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4937
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6171
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx7405
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image29088.png \width15 \height45
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Defined by EW packet code 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image31456.png \width14 \height44
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image31616.png \width14 \height44
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image31776.png \width14 \height44
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image31936.png \width14 \height44
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image32096.png \width14 \height44
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image32256.png \width14 \height44
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image32416.png \width14 \height44
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clmgf \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1234
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2468
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3702
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4937
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6171
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx7405
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image33264.png \width813 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page30image33848.png \width14 \height14
+}¬} {{\NeXTGraphic page30image34168.png \width14 \height14
+}¬} {{\NeXTGraphic page30image34328.png \width1592 \height16
+}¬} {{\NeXTGraphic page30image34920.png \width14 \height14
+}¬} {{\NeXTGraphic page30image35080.png \width1592 \height16
+}¬} {{\NeXTGraphic page30image35672.png \width14 \height14
+}¬} {{\NeXTGraphic page30image35992.png \width14 \height14
+}¬} {{\NeXTGraphic page30image36312.png \width15 \height45
+}¬} {{\NeXTGraphic page30image36472.png \width15 \height45
+}¬} {{\NeXTGraphic page30image36632.png \width15 \height45
+}¬} {{\NeXTGraphic page30image36792.png \width15 \height45
+}¬} {{\NeXTGraphic page30image36952.png \width15 \height45
+}¬} {{\NeXTGraphic page30image37112.png \width15 \height45
+}¬} {{\NeXTGraphic page30image37272.png \width15 \height45
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Defined by EW packet code 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image38680.png \width14 \height44
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image39000.png \width14 \height44
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth2740\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1234
+\clmgf \clvertalc \clshdrawnil \clwWidth2760\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2468
+\clmrg \clvertalc \clshdrawnil \clwWidth2760\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3702
+\clvertalc \clshdrawnil \clwWidth1380\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4937
+\clvertalc \clshdrawnil \clwWidth1360\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6171
+\clvertalc \clshdrawnil \clwWidth1340\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx7405
+\clvertalc \clshdrawnil \clwWidth1340\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image40360.png \width813 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page30image41264.png \width15 \height45
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+11 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image42512.png \width14 \height44
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image42992.png \width813 \height16
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image44072.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page30image44392.png \width15 \height45
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Defined by EW 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image45080.png \width14 \height44
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image45400.png \width14 \height14
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image45872.png \width813 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+0 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image47224.png \width813 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image47840.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page30image48000.png \width813 \height16
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+0 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image49832.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image49992.png \width813 \height16
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image50744.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Right 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image51992.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image52480.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Left 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image53728.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clmgf \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1234
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2468
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3702
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4937
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6171
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx7405
+\clmrg \clvertalc \clshdrawnil \clwWidth11120\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image54320.png \width15 \height45
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page30image54640.png \width15 \height45
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Defined by EW packet code 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image56688.png \width14 \height44
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image56848.png \width14 \height44
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image57008.png \width14 \height44
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image57328.png \width14 \height44
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image57488.png \width14 \height44
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image57648.png \width14 \height44
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clmgf \clvertalc \clshdrawnil \clwWidth5540\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx1234
+\clmrg \clvertalc \clshdrawnil \clwWidth5540\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx2468
+\clmrg \clvertalc \clshdrawnil \clwWidth5540\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw38\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx3702
+\clmgf \clvertalc \clshdrawnil \clwWidth5540\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx4937
+\clmrg \clvertalc \clshdrawnil \clwWidth5540\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx6171
+\clmrg \clvertalc \clshdrawnil \clwWidth5540\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx7405
+\clmrg \clvertalc \clshdrawnil \clwWidth5540\clftsWidth3 \clbrdrt\brdrs\brdrw19\brdrcf0 \clbrdrl\brdrs\brdrw19\brdrcf0 \clbrdrb\brdrs\brdrw19\brdrcf0 \clbrdrr\brdrs\brdrw19\brdrcf0 \clpadt20 \clpadl20 \clpadb20 \clpadr20 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image58464.png \width813 \height16
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page30image59048.png \width14 \height14
+}¬} {{\NeXTGraphic page30image59368.png \width14 \height14
+}¬} {{\NeXTGraphic page30image59528.png \width813 \height16
+}¬} {{\NeXTGraphic page30image60112.png \width15 \height45
+}¬} {{\NeXTGraphic page30image60272.png \width15 \height45
+}¬} {{\NeXTGraphic page30image60432.png \width15 \height45
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+EW packet code (0 \'96 7) 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image61880.png \width15 \height45
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image62040.png \width15 \height45
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image62200.png \width15 \height45
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image63104.png \width14 \height14
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image63424.png \width14 \height14
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image63744.png \width14 \height14
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image64064.png \width14 \height14
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image64672.png \width14 \height14
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ {{\NeXTGraphic page30image64832.png \width1592 \height16
+}¬} {{\NeXTGraphic page30image65424.png \width14 \height14
+}¬} {{\NeXTGraphic page30image65744.png \width14 \height14
+}¬} {{\NeXTGraphic page30image65904.png \width15 \height45
+}¬} {{\NeXTGraphic page30image66064.png \width15 \height45
+}¬} {{\NeXTGraphic page30image66224.png \width15 \height45
+}¬}\
+\pard\intbl\itap1\pardeftab720\sa240
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+Defined by EW packet code 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image67312.png \width15 \height45
+}¬}\pard\intbl\itap1\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image67472.png \width15 \height45
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image67632.png \width15 \height45
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image68112.png \width14 \height14
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image68432.png \width813 \height16
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image68856.png \width14 \height14
+}¬}\expnd0\expndtw0\kerning0
+ \expnd0\expndtw0\kerning0
+{{\NeXTGraphic page30image69176.png \width14 \height14
+}¬}\expnd0\expndtw0\kerning0
+ \cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell 
+\pard\intbl\itap1\cell \lastrow\row
+\pard\pardeftab720\sa240
+
+\i\fs26 \cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa240
+
+\f2\i0\fs30 \cf0 \expnd0\expndtw0\kerning0
+As the figure indicates, the definitions of the bits in Bytes 2, 3, 5, and parts of Bytes 4 and 6 are defined by the Packet Code in bits 7:4 of Byte 6. Three of the available packet codes are used: 
+\f1\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa293
+\ls1\ilvl0
+\f2\fs30 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+0 \'96 This code defines a scroll wheel packet, described in section 3.2.9.1. 
+\f1 \expnd0\expndtw0\kerning0
+\uc0\u8232 \
+\ls1\ilvl0
+\f2 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+1 \'96 This code defines the secondary finger packet, described in section 3.2.9.2. 
+\f1 \expnd0\expndtw0\kerning0
+\uc0\u8232 \
+\ls1\ilvl0
+\f2 \kerning1\expnd0\expndtw0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+2 \'96 This code defines finger state information 
+\f1 \expnd0\expndtw0\kerning0
+\uc0\u8232 \
+\pard\pardeftab720\sa240
+
+\fs24 \cf0 \expnd0\expndtw0\kerning0
+\
+}

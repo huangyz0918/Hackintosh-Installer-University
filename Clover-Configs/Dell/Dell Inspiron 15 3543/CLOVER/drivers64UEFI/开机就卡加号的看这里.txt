@@ -1,0 +1,1 @@
+删除OsxAptioFix2Drv-64.efi，将OsxAptioFixDrv256m-64.efi123的后缀123去掉恢复成efi文件即可

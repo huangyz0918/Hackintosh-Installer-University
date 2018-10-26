@@ -107,6 +107,13 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 - [Samsung nt550p7c-IVY](https://github.com/RockJesus/samsung-nt550p7c-sierra)
 - [XiaoMi NoteBook Pro](https://github.com/daliansky/XiaoMi-Pro)
 
+
+
+We have collected some **EFI configurations**, you can checkout in our repo:
+
+- [Lenovo](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Lenovo)
+- [Dell](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Dell)
+
 If you have a laptop, there are many good guides for laptops on Tonymacx86. Search your laptop and you may find a guide for it or similar one.
 
 ## How to contribute to this repository?

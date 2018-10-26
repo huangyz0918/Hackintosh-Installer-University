@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>13A603</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>FakeSMCKeyStore</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.hwsensors.driver.FakeSMCKeyStore</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>FakeSMCKeyStore</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>6.0.1011</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1011</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>5A3005</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>12F37</string>
+	<key>DTSDKName</key>
+	<string>macosx10.8</string>
+	<key>DTXcode</key>
+	<string>0502</string>
+	<key>DTXcodeBuild</key>
+	<string>5A3005</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>FakeSMCKeyStore</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.hwsensors.driver.FakeSMCKeyStore</string>
+			<key>IOClass</key>
+			<string>FakeSMCKeyStore</string>
+			<key>IOMatchCategory</key>
+			<string>FakeSMCKeyStore</string>
+			<key>IOProviderClass</key>
+			<string>IOResources</string>
+			<key>IOResourceMatch</key>
+			<string>IOKit</string>
+			<key>IOUserClientClass</key>
+			<string>FakeSMCKeyStoreUserClient</string>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2013 Natan Zalkin &lt;natan.zalkin@me.com&gt;. All rights reserved.</string>
+	<key>OSBundleCompatibleVersion</key>
+	<string>949</string>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.kpi.bsd</key>
+		<string>10.6</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>10.6</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>10.6</string>
+		<key>com.apple.kpi.mach</key>
+		<string>10.6</string>
+		<key>com.apple.kpi.unsupported</key>
+		<string>10.6</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+</dict>
+</plist>

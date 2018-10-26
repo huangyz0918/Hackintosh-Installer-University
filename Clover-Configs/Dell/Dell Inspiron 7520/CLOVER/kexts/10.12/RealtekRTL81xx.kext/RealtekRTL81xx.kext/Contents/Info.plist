@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>RealtekRTL81xx</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.lnx2mac.driver.RealtekRTL81xx</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Realtek RTL816X/811X Family Gigabit Ethernet Driver</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.0.90</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.0.90</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>Realtek RTL811x/RTL816x NIC</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.lnx2mac.driver.RealtekRTL81xx</string>
+			<key>IOClass</key>
+			<string>com_lnx2mac_RealtekRTL81xx</string>
+			<key>IOPCIClassMatch</key>
+			<string>0x02000000&amp;0xffff0000</string>
+			<key>IOPCIPrimaryMatch</key>
+			<string>0x816810ec</string>
+			<key>IOProbeScore</key>
+			<integer>15000</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+			<key>LogLevel</key>
+			<integer>132</integer>
+			<key>PHYCfgMode</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>©2010-2011 Lnx2Mac@gmail.com</string>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IONetworkingFamily</key>
+		<string>1.4.3</string>
+		<key>com.apple.iokit.IOPCIFamily</key>
+		<string>1.6</string>
+		<key>com.apple.kpi.bsd</key>
+		<string>8.0.0b2</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>8.0.0b2</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>8.0.0b2</string>
+		<key>com.apple.kpi.mach</key>
+		<string>8.0.0b2</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Network-Root</string>
+</dict>
+</plist>
