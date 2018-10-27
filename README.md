@@ -108,13 +108,13 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 - [XiaoMi NoteBook Pro](https://github.com/daliansky/XiaoMi-Pro)
 
 
-## *
+## * CLOVER Collections
 We have collected some **CLOVER EFI configurations**, you can checkout in our repo:
 
 - [Lenovo](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Lenovo)
 - [Dell](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Dell)
 - [Asus](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Asus)
-- [Aser](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Aser)
+- [Acer](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Acer)
 
 If you have a laptop, there are many good guides for laptops on Tonymacx86. Search your laptop and you may find a guide for it or similar one.
 
