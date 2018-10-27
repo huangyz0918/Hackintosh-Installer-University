@@ -1,0 +1,162 @@
+15:451  0:282  Found BIOS RSDP at F0070
+15:451  0:000  Printing ACPI tables from RSDP F0070 ...
+15:451  0:000   F0070: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
+15:451  0:000    (Xsdt: 56A980A0, Rsdt: 56A98028)
+15:451  0:000    56A980A0: 'XSDT', 'Notebook', Rev: 1, Len: 196
+15:451  0:000    56A98028: 'RSDT', 'Notebook', Rev: 1, Len: 116
+15:451  0:000    Tables in Xsdt: 20
+15:451  0:000    0. 56ABDEA8: 'FACP', 'Notebook', Rev: 5, Len: 268
+15:451  0:000        (Dsdt: 56A981F8, Facs: 57332F80, XDsdt: 56A981F8, XFacs: 0)
+15:451  0:000        56A981F8: 'DSDT', 'Notebook', Rev: 2, Len: 154798
+15:453  0:002        57332F80: 'FACS', Ver: 2, Len: 64
+15:453  0:000    1. 56ABDFB8: 'APIC', 'Notebook', Rev: 3, Len: 132
+15:453  0:000    2. 56ABE040: 'FPDT', 'Notebook', Rev: 1, Len: 68
+15:453  0:000    3. 56ABE088: 'FIDT', 'Notebook', Rev: 1, Len: 156
+15:453  0:000    4. 56ABE128: 'MCFG', 'Notebook', Rev: 1, Len: 60
+15:453  0:000    5. 56ABE168: 'HPET', 'Notebook', Rev: 1, Len: 56
+15:453  0:000    6. 56ABE1A0: 'SSDT', 'SataTabl', Rev: 1, Len: 789
+15:453  0:000    7. 56ABE4B8: 'ECDT', 'Notebook', Rev: 1, Len: 193
+15:453  0:000    8. 56ABE580: 'LPIT', 'SKL', Rev: 1, Len: 148
+15:453  0:000    9. 56ABE618: 'SSDT', 'sensrhub', Rev: 2, Len: 584
+15:453  0:000    10. 56ABE860: 'DBGP', '', Rev: 1, Len: 52
+15:453  0:000    11. 56ABE898: 'DBG2', '', Rev: 0, Len: 84
+15:453  0:000    12. 56ABE8F0: 'SSDT', 'DptfTabl', Rev: 2, Len: 15708
+15:453  0:000    13. 56AC2650: 'SSDT', 'SaSsdt ', Rev: 2, Len: 26245
+15:453  0:000    14. 56AC8CD8: 'UEFI', '', Rev: 1, Len: 66
+15:453  0:000    15. 56AC8D20: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3672
+15:453  0:000    16. 56AC9B78: 'BGRT', 'Notebook', Rev: 1, Len: 56
+15:453  0:000    17. 56AC9BB0: 'SSDT', 'SgPeg', Rev: 2, Len: 165
+15:453  0:000    18. 56AC9C58: 'SSDT', 'OptTabl', Rev: 1, Len: 6628
+15:453  0:000    19. 5613BF18: 'MSDM', 'Notebook', Rev: 3, Len: 85
+15:453  0:000    Tables in Rsdt: 20
+15:453  0:000    0. 56A98170: 'FACP', 'Notebook', Rev: 2, Len: 132
+15:453  0:000        (Dsdt: 56A981F8, Facs: 57332F40)
+15:453  0:000        56A981F8: 'DSDT', 'Notebook', Rev: 2, Len: 154798
+15:456  0:002        57332F40: 'FACS', Ver: 0, Len: 64
+15:456  0:000    1. 56ABDFB8: 'APIC', 'Notebook', Rev: 3, Len: 132
+15:456  0:000    2. 56ABE040: 'FPDT', 'Notebook', Rev: 1, Len: 68
+15:456  0:000    3. 56ABE088: 'FIDT', 'Notebook', Rev: 1, Len: 156
+15:456  0:000    4. 56ABE128: 'MCFG', 'Notebook', Rev: 1, Len: 60
+15:456  0:000    5. 56ABE168: 'HPET', 'Notebook', Rev: 1, Len: 56
+15:456  0:000    6. 56ABE1A0: 'SSDT', 'SataTabl', Rev: 1, Len: 789
+15:456  0:000    7. 56ABE4B8: 'ECDT', 'Notebook', Rev: 1, Len: 193
+15:456  0:000    8. 56ABE580: 'LPIT', 'SKL', Rev: 1, Len: 148
+15:456  0:000    9. 56ABE618: 'SSDT', 'sensrhub', Rev: 2, Len: 584
+15:456  0:000    10. 56ABE860: 'DBGP', '', Rev: 1, Len: 52
+15:456  0:000    11. 56ABE898: 'DBG2', '', Rev: 0, Len: 84
+15:456  0:000    12. 56ABE8F0: 'SSDT', 'DptfTabl', Rev: 2, Len: 15708
+15:456  0:000    13. 56AC2650: 'SSDT', 'SaSsdt ', Rev: 2, Len: 26245
+15:456  0:000    14. 56AC8CD8: 'UEFI', '', Rev: 1, Len: 66
+15:456  0:000    15. 56AC8D20: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3672
+15:456  0:000    16. 56AC9B78: 'BGRT', 'Notebook', Rev: 1, Len: 56
+15:456  0:000    17. 56AC9BB0: 'SSDT', 'SgPeg', Rev: 2, Len: 165
+15:456  0:000    18. 56AC9C58: 'SSDT', 'OptTabl', Rev: 1, Len: 6628
+15:456  0:000    19. 5613BF18: 'MSDM', 'Notebook', Rev: 3, Len: 85
+15:456  0:000  Found UEFI Acpi 2.0 RSDP at 56A98000
+15:456  0:000  Saving ACPI tables from RSDP 56A98000 to EFI\CLOVER\ACPI\origin ...
+15:456  0:000   56A98000: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
+15:456  0:000    (Xsdt: 56A980A0, Rsdt: 56A98028)
+15:456  0:000    56A980A0: 'XSDT', 'Notebook', Rev: 1, Len: 196
+15:456  0:000    56A98028: 'RSDT', 'Notebook', Rev: 1, Len: 116
+15:456  0:000    Tables in Xsdt: 20
+15:456  0:000    0. 56ABDEA8: 'FACP', 'Notebook', Rev: 5, Len: 268
+15:456  0:000        (Dsdt: 56A981F8, Facs: 57332F80, XDsdt: 56A981F8, XFacs: 0)
+15:456  0:000        56A981F8: 'DSDT', 'Notebook', Rev: 2, Len: 154798
+15:458  0:002        57332F80: 'FACS', Ver: 2, Len: 64
+15:458  0:000    1. 56ABDFB8: 'APIC', 'Notebook', Rev: 3, Len: 132
+15:458  0:000    2. 56ABE040: 'FPDT', 'Notebook', Rev: 1, Len: 68
+15:458  0:000    3. 56ABE088: 'FIDT', 'Notebook', Rev: 1, Len: 156
+15:458  0:000    4. 56ABE128: 'MCFG', 'Notebook', Rev: 1, Len: 60
+15:458  0:000    5. 56ABE168: 'HPET', 'Notebook', Rev: 1, Len: 56
+15:458  0:000    6. 56ABE1A0: 'SSDT', 'SataTabl', Rev: 1, Len: 789
+15:458  0:000    7. 56ABE4B8: 'ECDT', 'Notebook', Rev: 1, Len: 193
+15:458  0:000    8. 56ABE580: 'LPIT', 'SKL', Rev: 1, Len: 148
+15:458  0:000    9. 56ABE618: 'SSDT', 'sensrhub', Rev: 2, Len: 584
+15:458  0:000    10. 56ABE860: 'DBGP', '', Rev: 1, Len: 52
+15:458  0:000    11. 56ABE898: 'DBG2', '', Rev: 0, Len: 84
+15:458  0:000    12. 56ABE8F0: 'SSDT', 'DptfTabl', Rev: 2, Len: 15708
+15:458  0:000    13. 56AC2650: 'SSDT', 'SaSsdt ', Rev: 2, Len: 26245
+15:458  0:000    14. 56AC8CD8: 'UEFI', '', Rev: 1, Len: 66
+15:458  0:000    15. 56AC8D20: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3672
+15:458  0:000    16. 56AC9B78: 'BGRT', 'Notebook', Rev: 1, Len: 56
+15:458  0:000    17. 56AC9BB0: 'SSDT', 'SgPeg', Rev: 2, Len: 165
+15:458  0:000    18. 56AC9C58: 'SSDT', 'OptTabl', Rev: 1, Len: 6628
+15:458  0:000    19. 5613BF18: 'MSDM', 'Notebook', Rev: 3, Len: 85
+15:458  0:000    Tables in Rsdt: 20
+15:458  0:000    0. 56A98170: 'FACP', 'Notebook', Rev: 2, Len: 132
+15:458  0:000        (Dsdt: 56A981F8, Facs: 57332F40)
+15:458  0:000        56A981F8: 'DSDT', 'Notebook', Rev: 2, Len: 154798
+15:460  0:002        57332F40: 'FACS', Ver: 0, Len: 64
+15:460  0:000    1. 56ABDFB8: 'APIC', 'Notebook', Rev: 3, Len: 132
+15:460  0:000    2. 56ABE040: 'FPDT', 'Notebook', Rev: 1, Len: 68
+15:460  0:000    3. 56ABE088: 'FIDT', 'Notebook', Rev: 1, Len: 156
+15:460  0:000    4. 56ABE128: 'MCFG', 'Notebook', Rev: 1, Len: 60
+15:460  0:000    5. 56ABE168: 'HPET', 'Notebook', Rev: 1, Len: 56
+15:460  0:000    6. 56ABE1A0: 'SSDT', 'SataTabl', Rev: 1, Len: 789
+15:460  0:000    7. 56ABE4B8: 'ECDT', 'Notebook', Rev: 1, Len: 193
+15:460  0:000    8. 56ABE580: 'LPIT', 'SKL', Rev: 1, Len: 148
+15:460  0:000    9. 56ABE618: 'SSDT', 'sensrhub', Rev: 2, Len: 584
+15:460  0:000    10. 56ABE860: 'DBGP', '', Rev: 1, Len: 52
+15:460  0:000    11. 56ABE898: 'DBG2', '', Rev: 0, Len: 84
+15:460  0:000    12. 56ABE8F0: 'SSDT', 'DptfTabl', Rev: 2, Len: 15708
+15:460  0:000    13. 56AC2650: 'SSDT', 'SaSsdt ', Rev: 2, Len: 26245
+15:460  0:000    14. 56AC8CD8: 'UEFI', '', Rev: 1, Len: 66
+15:460  0:000    15. 56AC8D20: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3672
+15:460  0:000    16. 56AC9B78: 'BGRT', 'Notebook', Rev: 1, Len: 56
+15:460  0:000    17. 56AC9BB0: 'SSDT', 'SgPeg', Rev: 2, Len: 165
+15:460  0:000    18. 56AC9C58: 'SSDT', 'OptTabl', Rev: 1, Len: 6628
+15:460  0:000    19. 5613BF18: 'MSDM', 'Notebook', Rev: 3, Len: 85
+15:460  0:000  Found UEFI Acpi 1.0 RSDP at 56A98000
+15:460  0:000  Printing ACPI tables from RSDP 56A98000 ...
+15:460  0:000   56A98000: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
+15:460  0:000    (Xsdt: 56A980A0, Rsdt: 56A98028)
+15:460  0:000    56A980A0: 'XSDT', 'Notebook', Rev: 1, Len: 196
+15:460  0:000    56A98028: 'RSDT', 'Notebook', Rev: 1, Len: 116
+15:460  0:000    Tables in Xsdt: 20
+15:460  0:000    0. 56ABDEA8: 'FACP', 'Notebook', Rev: 5, Len: 268
+15:460  0:000        (Dsdt: 56A981F8, Facs: 57332F80, XDsdt: 56A981F8, XFacs: 0)
+15:460  0:000        56A981F8: 'DSDT', 'Notebook', Rev: 2, Len: 154798
+15:463  0:002        57332F80: 'FACS', Ver: 2, Len: 64
+15:463  0:000    1. 56ABDFB8: 'APIC', 'Notebook', Rev: 3, Len: 132
+15:463  0:000    2. 56ABE040: 'FPDT', 'Notebook', Rev: 1, Len: 68
+15:463  0:000    3. 56ABE088: 'FIDT', 'Notebook', Rev: 1, Len: 156
+15:463  0:000    4. 56ABE128: 'MCFG', 'Notebook', Rev: 1, Len: 60
+15:463  0:000    5. 56ABE168: 'HPET', 'Notebook', Rev: 1, Len: 56
+15:463  0:000    6. 56ABE1A0: 'SSDT', 'SataTabl', Rev: 1, Len: 789
+15:463  0:000    7. 56ABE4B8: 'ECDT', 'Notebook', Rev: 1, Len: 193
+15:463  0:000    8. 56ABE580: 'LPIT', 'SKL', Rev: 1, Len: 148
+15:463  0:000    9. 56ABE618: 'SSDT', 'sensrhub', Rev: 2, Len: 584
+15:463  0:000    10. 56ABE860: 'DBGP', '', Rev: 1, Len: 52
+15:463  0:000    11. 56ABE898: 'DBG2', '', Rev: 0, Len: 84
+15:463  0:000    12. 56ABE8F0: 'SSDT', 'DptfTabl', Rev: 2, Len: 15708
+15:463  0:000    13. 56AC2650: 'SSDT', 'SaSsdt ', Rev: 2, Len: 26245
+15:463  0:000    14. 56AC8CD8: 'UEFI', '', Rev: 1, Len: 66
+15:463  0:000    15. 56AC8D20: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3672
+15:463  0:000    16. 56AC9B78: 'BGRT', 'Notebook', Rev: 1, Len: 56
+15:463  0:000    17. 56AC9BB0: 'SSDT', 'SgPeg', Rev: 2, Len: 165
+15:463  0:000    18. 56AC9C58: 'SSDT', 'OptTabl', Rev: 1, Len: 6628
+15:463  0:000    19. 5613BF18: 'MSDM', 'Notebook', Rev: 3, Len: 85
+15:463  0:000    Tables in Rsdt: 20
+15:463  0:000    0. 56A98170: 'FACP', 'Notebook', Rev: 2, Len: 132
+15:463  0:000        (Dsdt: 56A981F8, Facs: 57332F40)
+15:463  0:000        56A981F8: 'DSDT', 'Notebook', Rev: 2, Len: 154798
+15:465  0:002        57332F40: 'FACS', Ver: 0, Len: 64
+15:465  0:000    1. 56ABDFB8: 'APIC', 'Notebook', Rev: 3, Len: 132
+15:465  0:000    2. 56ABE040: 'FPDT', 'Notebook', Rev: 1, Len: 68
+15:465  0:000    3. 56ABE088: 'FIDT', 'Notebook', Rev: 1, Len: 156
+15:465  0:000    4. 56ABE128: 'MCFG', 'Notebook', Rev: 1, Len: 60
+15:465  0:000    5. 56ABE168: 'HPET', 'Notebook', Rev: 1, Len: 56
+15:465  0:000    6. 56ABE1A0: 'SSDT', 'SataTabl', Rev: 1, Len: 789
+15:465  0:000    7. 56ABE4B8: 'ECDT', 'Notebook', Rev: 1, Len: 193
+15:465  0:000    8. 56ABE580: 'LPIT', 'SKL', Rev: 1, Len: 148
+15:465  0:000    9. 56ABE618: 'SSDT', 'sensrhub', Rev: 2, Len: 584
+15:465  0:000    10. 56ABE860: 'DBGP', '', Rev: 1, Len: 52
+15:465  0:000    11. 56ABE898: 'DBG2', '', Rev: 0, Len: 84
+15:465  0:000    12. 56ABE8F0: 'SSDT', 'DptfTabl', Rev: 2, Len: 15708
+15:465  0:000    13. 56AC2650: 'SSDT', 'SaSsdt ', Rev: 2, Len: 26245
+15:465  0:000    14. 56AC8CD8: 'UEFI', '', Rev: 1, Len: 66
+15:465  0:000    15. 56AC8D20: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3672
+15:465  0:000    16. 56AC9B78: 'BGRT', 'Notebook', Rev: 1, Len: 56
+15:465  0:000    17. 56AC9BB0: 'SSDT', 'SgPeg', Rev: 2, Len: 165
+15:465  0:000    18. 56AC9C58: 'SSDT', 'OptTabl', Rev: 1, Len: 6628
+15:465  0:000    19. 5613BF18: 'MSDM', 'Notebook', Rev: 3, Len: 85

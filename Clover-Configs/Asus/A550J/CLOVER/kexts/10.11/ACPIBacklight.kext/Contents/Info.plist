@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>14A389</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>ACPIBacklight</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.darwin.driver.ACPIBacklight</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>ACPIBacklight</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.0.3</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>2.0.3</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>6A1046a</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>12D75</string>
+	<key>DTSDKName</key>
+	<string>macosx10.8</string>
+	<key>DTXcode</key>
+	<string>0610</string>
+	<key>DTXcodeBuild</key>
+	<string>6A1046a</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>ACPIBacklight</key>
+		<dict>
+			<key>BQC use index</key>
+			<false/>
+			<key>CFBundleIdentifier</key>
+			<string>com.darwin.driver.ACPIBacklight</string>
+			<key>IOClass</key>
+			<string>ACPIBacklightPanel</string>
+			<key>IODisplayParameters</key>
+			<dict>
+				<key>brightness</key>
+				<dict>
+					<key>max</key>
+					<integer>100</integer>
+					<key>min</key>
+					<integer>0</integer>
+				</dict>
+				<key>commit</key>
+				<dict>
+					<key>reg</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>IOMatchCategory</key>
+			<string>IODisplayParameters</string>
+			<key>IONameMatch</key>
+			<string>backlight</string>
+			<key>IOProbeScore</key>
+			<integer>3000</integer>
+			<key>IOProviderClass</key>
+			<string>IOACPIPlatformDevice</string>
+			<key>RM,Build</key>
+			<string>Release-RehabMan</string>
+			<key>RM,Version</key>
+			<string>ACPIBacklight 2.0.3d1</string>
+		</dict>
+	</dict>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IOACPIFamily</key>
+		<string>1.0d1</string>
+		<key>com.apple.iokit.IOGraphicsFamily</key>
+		<string>1.0b1</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>7.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>8.0d0</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Safe Boot</string>
+	<key>Source Code</key>
+	<string>https://github.com/RehabMan/OS-X-ACPI-Backlight</string>
+</dict>
+</plist>

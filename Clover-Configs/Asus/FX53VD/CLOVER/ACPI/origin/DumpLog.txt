@@ -1,0 +1,83 @@
+13:139  11:050  Found UEFI Acpi 2.0 RSDP at 8AEFE014
+13:139  0:000  Saving ACPI tables from RSDP 8AEFE014 to EFI\CLOVER\ACPI\origin ...
+13:139  0:000   8AEFE014: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36 -> RSDP.aml
+13:473  0:333    (Xsdt: 8AEB9188, Rsdt: 8AEB90C4)
+13:473  0:000    8AEB9188: 'XSDT', 'SLIC-MPC', Rev: 1, Len: 276 -> XSDT.aml
+13:594  0:120    8AEB90C4: 'RSDT', 'SLIC-MPC', Rev: 1, Len: 156 -> RSDT.aml
+13:716  0:122    Tables in Xsdt: 30
+13:716  0:000    0. 8AEE3000: 'FACP', 'SLIC-MPC', Rev: 5, Len: 268 -> FACP.aml
+13:830  0:113        (Dsdt: 8AEBF000, Facs: 8AE59000, XDsdt: 8AEBF000, XFacs: 0)
+13:830  0:000        8AEBF000: 'DSDT', '8259    ', Rev: 2, Len: 133111 -> DSDT.aml
+14:247  0:417        8AE59000: 'FACS', Ver: 2, Len: 64 -> FACS.aml
+14:372  0:124    1. 8AEFD000: 'UEFI', '8259    ', Rev: 1, Len: 566 -> UEFI.aml
+14:876  0:503    2. 8AEFC000: 'UEFI', '8259    ', Rev: 1, Len: 66 -> UEFI.aml
+15:080  0:203    3. 8AEF4000: 'SSDT', '8259    ', Rev: 1, Len: 28836 -> SSDT-0.aml
+15:218  0:138    4. 8AEF3000: 'MSDM', 'SLIC-MPC', Rev: 3, Len: 85 -> MSDM.aml
+15:341  0:123    5. 8AEEF000: 'SSDT', '8259    ', Rev: 2, Len: 12606 -> SSDT-1.aml
+15:467  0:125    6. 8AEEC000: 'SSDT', '8259    ', Rev: 2, Len: 8246 -> SSDT-2.aml
+15:980  0:513    7. 8AEE8000: 'SSDT', '8259    ', Rev: 2, Len: 13258 -> SSDT-3.aml
+16:126  0:146    8. 8AEE7000: 'ASF!', '8259    ', Rev: 32, Len: 165 -> ASF!.aml
+16:255  0:128    9. 8AEE6000: 'ASPT', '8259    ', Rev: 7, Len: 52 -> ASPT.aml
+16:381  0:126    10. 8AEE5000: 'BOOT', '8259    ', Rev: 1, Len: 40 -> BOOT.aml
+16:621  0:239    11. 8AEE4000: 'DBGP', 'SLIC-MPC', Rev: 1, Len: 52 -> DBGP.aml
+16:749  0:127    12. 8AEE2000: 'HPET', '8259    ', Rev: 1, Len: 56 -> HPET.aml
+17:251  0:502    13. 8AEE1000: 'APIC', '8259    ', Rev: 3, Len: 188 -> APIC.aml
+17:387  0:135    14. 8AEE0000: 'MCFG', '8259    ', Rev: 1, Len: 60 -> MCFG.aml
+17:512  0:124    15. 8AEBE000: 'SSDT', '8259    ', Rev: 2, Len: 444 -> SSDT-4.aml
+17:639  0:127    16. 8AEBD000: 'LPIT', '8259    ', Rev: 1, Len: 148 -> LPIT.aml
+17:765  0:126    17. 8AEBC000: 'WSMT', '8259    ', Rev: 1, Len: 40 -> WSMT.aml
+18:268  0:502    18. 8AEBB000: 'SSDT', '8259    ', Rev: 2, Len: 671 -> SSDT-5.aml
+18:402  0:133    19. 8AEBA000: 'SSDT', '8259    ', Rev: 1, Len: 838 -> SSDT-6.aml
+18:534  0:131    20. 8AEB5000: 'SSDT', '8259    ', Rev: 2, Len: 12290 -> SSDT-7.aml
+18:861  0:326    21. 8AEB4000: 'SSDT', '8259    ', Rev: 2, Len: 1310 -> SSDT-8.aml
+18:991  0:130    22. 8AEB3000: 'DBGP', 'SLIC-MPC', Rev: 1, Len: 52 -> DBGP.aml
+19:567  0:576    23. 8AEB2000: 'DBG2', '8259    ', Rev: 0, Len: 84 -> DBG2.aml
+19:701  0:133    24. 8AEB0000: 'SSDT', '8259    ', Rev: 2, Len: 4202 -> SSDT-9.aml
+19:829  0:127    25. 8AEAF000: 'SSDT', '8259    ', Rev: 2, Len: 3806
+ Found hidden SSDT 7 pcs
+19:829  0:000        * 8A699018: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1617  53 53 44 54 51 06 00 00 02 AF 50 6D 52 65 66 00 Internal length = 1617 -> SSDT-11x.aml
+19:959  0:130        * 8A698018: 'SSDT', 'ApIst', Rev: 2, Len: 1628  53 53 44 54 5C 06 00 00 02 A9 50 6D 52 65 66 00 Internal length = 1628 -> SSDT-12x.aml
+20:081  0:122        * 8A698898: 'SSDT', 'Cpu0Cst', Rev: 2, Len: 1023  53 53 44 54 FF 03 00 00 02 A9 50 6D 52 65 66 00 Internal length = 1023 -> SSDT-13x.aml
+20:215  0:134        * 8A698DD8: 'SSDT', 'ApCst', Rev: 2, Len: 394  53 53 44 54 8A 01 00 00 02 33 50 6D 52 65 66 00 Internal length = 394 -> SSDT-14x.aml
+20:829  0:613        * 8A699DD8: 'SSDT', 'Cpu0Hwp', Rev: 2, Len: 277  53 53 44 54 15 01 00 00 02 A8 50 6D 52 65 66 00 Internal length = 277 -> SSDT-15x.aml
+20:965  0:136        * 8A699A98: 'SSDT', 'ApHwp', Rev: 2, Len: 407  53 53 44 54 97 01 00 00 02 EB 50 6D 52 65 66 00 Internal length = 407 -> SSDT-16x.aml
+21:090  0:125        * 8A699898: 'SSDT', 'HwpLvt', Rev: 2, Len: 420  53 53 44 54 A4 01 00 00 02 36 50 6D 52 65 66 00 Internal length = 420 -> SSDT-17x.aml
+21:220  0:129   -> SSDT-10.aml
+21:350  0:130    26. 8AEAA000: 'SSDT', '8259    ', Rev: 1, Len: 18446 -> SSDT-18.aml
+21:858  0:508    27. 8AEA9000: 'DMAR', '8259    ', Rev: 1, Len: 168 -> DMAR.aml
+21:986  0:127    28. 8AEA8000: 'FPDT', 'SLIC-MPC', Rev: 1, Len: 68 -> FPDT.aml
+22:120  0:134    29. 8AEA7000: 'BGRT', '8259    ', Rev: 1, Len: 56 -> BGRT.aml
+22:244  0:123    Tables in Rsdt: 30
+22:244  0:000    0. 8AEE3000: 'FACP', 'SLIC-MPC', Rev: 5, Len: 268
+22:244  0:000        (Dsdt: 8AEBF000, Facs: 8AE59000, XDsdt: 8AEBF000, XFacs: 0)
+22:244  0:000        8AEBF000: 'DSDT', '8259    ', Rev: 2, Len: 133111
+22:245  0:001        8AE59000: 'FACS', Ver: 2, Len: 64
+22:245  0:000    1. 8AEFD000: 'UEFI', '8259    ', Rev: 1, Len: 566
+22:245  0:000    2. 8AEFC000: 'UEFI', '8259    ', Rev: 1, Len: 66
+22:245  0:000    3. 8AEF4000: 'SSDT', '8259    ', Rev: 1, Len: 28836
+22:245  0:000    4. 8AEF3000: 'MSDM', 'SLIC-MPC', Rev: 3, Len: 85
+22:245  0:000    5. 8AEEF000: 'SSDT', '8259    ', Rev: 2, Len: 12606
+22:245  0:000    6. 8AEEC000: 'SSDT', '8259    ', Rev: 2, Len: 8246
+22:245  0:000    7. 8AEE8000: 'SSDT', '8259    ', Rev: 2, Len: 13258
+22:245  0:000    8. 8AEE7000: 'ASF!', '8259    ', Rev: 32, Len: 165
+22:245  0:000    9. 8AEE6000: 'ASPT', '8259    ', Rev: 7, Len: 52
+22:245  0:000    10. 8AEE5000: 'BOOT', '8259    ', Rev: 1, Len: 40
+22:245  0:000    11. 8AEE4000: 'DBGP', 'SLIC-MPC', Rev: 1, Len: 52
+22:245  0:000    12. 8AEE2000: 'HPET', '8259    ', Rev: 1, Len: 56
+22:245  0:000    13. 8AEE1000: 'APIC', '8259    ', Rev: 3, Len: 188
+22:245  0:000    14. 8AEE0000: 'MCFG', '8259    ', Rev: 1, Len: 60
+22:245  0:000    15. 8AEBE000: 'SSDT', '8259    ', Rev: 2, Len: 444
+22:245  0:000    16. 8AEBD000: 'LPIT', '8259    ', Rev: 1, Len: 148
+22:245  0:000    17. 8AEBC000: 'WSMT', '8259    ', Rev: 1, Len: 40
+22:245  0:000    18. 8AEBB000: 'SSDT', '8259    ', Rev: 2, Len: 671
+22:245  0:000    19. 8AEBA000: 'SSDT', '8259    ', Rev: 1, Len: 838
+22:245  0:000    20. 8AEB5000: 'SSDT', '8259    ', Rev: 2, Len: 12290
+22:245  0:000    21. 8AEB4000: 'SSDT', '8259    ', Rev: 2, Len: 1310
+22:245  0:000    22. 8AEB3000: 'DBGP', 'SLIC-MPC', Rev: 1, Len: 52
+22:245  0:000    23. 8AEB2000: 'DBG2', '8259    ', Rev: 0, Len: 84
+22:245  0:000    24. 8AEB0000: 'SSDT', '8259    ', Rev: 2, Len: 4202
+22:245  0:000    25. 8AEAF000: 'SSDT', '8259    ', Rev: 2, Len: 3806
+22:245  0:000    26. 8AEAA000: 'SSDT', '8259    ', Rev: 1, Len: 18446
+22:245  0:000    27. 8AEA9000: 'DMAR', '8259    ', Rev: 1, Len: 168
+22:245  0:000    28. 8AEA8000: 'FPDT', 'SLIC-MPC', Rev: 1, Len: 68
+22:245  0:000    29. 8AEA7000: 'BGRT', '8259    ', Rev: 1, Len: 56

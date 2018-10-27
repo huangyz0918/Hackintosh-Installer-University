@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>16D32</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>Sinetek-rtsx</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.sinet3k.Sinetek-rtsx</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Sinetek-rtsx</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>8C1002</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>16C58</string>
+	<key>DTSDKName</key>
+	<string>macosx10.12</string>
+	<key>DTXcode</key>
+	<string>0821</string>
+	<key>DTXcodeBuild</key>
+	<string>8C1002</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>rtsx_softc</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.sinet3k.Sinetek-rtsx</string>
+			<key>IOClass</key>
+			<string>rtsx_softc</string>
+			<key>IOKitDebug</key>
+			<integer>65535</integer>
+			<key>IOPCIMatch</key>
+			<string>0x520910EC 0x522710EC 0x522910EC 0x522A10EC 0x524910EC 0x528610EC 0x528710EC 0x528910EC</string>
+			<key>IOProbeScore</key>
+			<integer>1000</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2017 sinetek. All rights reserved.</string>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IOPCIFamily</key>
+		<string>2.9</string>
+		<key>com.apple.iokit.IOStorageFamily</key>
+		<string>2.1</string>
+		<key>com.apple.kpi.bsd</key>
+		<string>16.4</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>16.4</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>16.4</string>
+		<key>com.apple.kpi.mach</key>
+		<string>16.4</string>
+		<key>com.apple.kpi.unsupported</key>
+		<string>8.0</string>
+	</dict>
+</dict>
+</plist>

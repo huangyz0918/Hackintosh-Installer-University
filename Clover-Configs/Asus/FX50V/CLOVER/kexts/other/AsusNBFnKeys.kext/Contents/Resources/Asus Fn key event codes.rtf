@@ -1,0 +1,130 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1347\cocoasubrtf570
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red28\green0\blue207;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 F1 -  
+\f1\fs22 \cf2 \CocoaLigature0 0x5F - Received as Keyboard scan code
+\f0\fs24 \cf0 \CocoaLigature1 \
+F2 -  
+\f1\fs22 \cf2 \CocoaLigature0 0x5E - WiFi on, 0x5F - WiFi off, 0x7D - BT on, 0x7E - BT off
+\f0\fs24 \cf0 \CocoaLigature1 \
+F3 -  
+\f1\fs22 \cf2 \CocoaLigature0 0x50 - Nothing, 0xC5 - Keyboard Backlight down
+\f0\fs24 \cf0 \CocoaLigature1 \
+F4 -  
+\f1\fs22 \cf2 \CocoaLigature0 0x51 - Nothing, 0xC4 - Keyboard Backlight up
+\f0\fs24 \cf0 \CocoaLigature1 \
+F5 -  
+\f1\fs22 \cf2 \CocoaLigature0 0x20 - 0x2F - Brightness down
+\f0\fs24 \cf0 \CocoaLigature1 \
+F6 -  
+\f1\fs22 \cf2 \CocoaLigature0 0x10 - 0x1F - Brightness up
+\f0\fs24 \cf0 \CocoaLigature1 \
+F7 -  
+\f1\fs22 \cf2 \CocoaLigature0 0x33 - Native backlight on, 0x34 - Native backlight off, 0x35 - Soft on/off 
+\f0\fs24 \cf0 \CocoaLigature1 \
+F8 -  
+\f1\fs22 \cf2 \CocoaLigature0 0x61 - Display switch
+\f0\fs24 \cf0 \CocoaLigature1 \
+F9 -  
+\f1\fs22 \cf2 \CocoaLigature0 0x6B - Touchpad on/off
+\f0\fs24 \cf0 \CocoaLigature1 \
+F10 -  
+\f1\fs22 \cf2 \CocoaLigature0 0x32 - Mute
+\f0\fs24 \cf0 \CocoaLigature1 \
+F11 -  
+\f1\fs22 \cf2 \CocoaLigature0 0x31 - Volume down
+\f0\fs24 \cf0 \CocoaLigature1 \
+F12 -  
+\f1\fs22 \cf2 \CocoaLigature0 0x30 - Volume up
+\f0\fs24 \cf0 \CocoaLigature1 \
+C -  
+\f1\fs22 \cf2 \CocoaLigature0 0x82 - Asus splendid key
+\f0\fs24 \cf0 \CocoaLigature1 \
+V -  
+\f1\fs22 \cf2 \CocoaLigature0 0x8A - Asus Camera key
+\f0\fs24 \cf0 \CocoaLigature1 \
+A -  
+\f1\fs22 \cf2 \CocoaLigature0 0x7A - ALS on/off
+\f0\fs24 \cf0 \CocoaLigature1 \
+Space - 
+\f1\fs22 \cf2 \CocoaLigature0 0x5C - Asus Power profiles switch
+\f0\fs24 \cf0 \CocoaLigature1 \
+Arrow Left -   
+\f1\fs22 \cf2 \CocoaLigature0 0x40 - Media previous
+\f0\fs24 \cf0 \CocoaLigature1 \
+Arrow Right - 
+\f1\fs22 \cf2 \CocoaLigature0 0x41 - Media next
+\f0\fs24 \cf0 \CocoaLigature1 \
+Arrow Down - 
+\f1\fs22 \cf2 \CocoaLigature0 0x45 - Media Play
+\f0\fs24 \cf0 \CocoaLigature1 \
+Arrow Up -  
+\f1\fs22 \cf2 \CocoaLigature0 0x43 - Media Stop
+\f0\fs24 \cf0 \CocoaLigature1 \
+Instant Key - 
+\f1\fs22 \cf2 \CocoaLigature0 0x71 - Asus Instant key\
+\
+\
+ALS Ranges:\
+\
+IvyBridge system\
+\
+			If (ALAE)\
+                \{\
+                    Store (RRAM (0x04C9), Local0)\
+                    If (LLessEqual (Local0, One))\
+                    \{\
+                        Store (0x32, Local1)\
+                    \}\
+                    Else\
+                    \{\
+                        If (LLessEqual (Local0, 0x06))\
+                        \{\
+                            Store (0xC8, Local1)\
+                        \}\
+                        Else\
+                        \{\
+                            If (LLessEqual (Local0, 0x0A))\
+                            \{\
+                                Store (0x0190, Local1)\
+                            \}\
+                            Else\
+                            \{\
+                                If (LLessEqual (Local0, 0x0E))\
+                                \{\
+                                    Store (0x0258, Local1)\
+                                \}\
+                                Else\
+                                \{\
+                                    Store (0x0320, Local1)\
+                                \}\
+                            \}\
+                        \}\
+                    \}\
+\
+                    Return (Local1)\
+                \}\
+                Else\
+                \{\
+                    Return (0xC8)\
+                \}\
+\
+Haswell system\
+\
+			If (ALAE)\
+                \{\
+                    Store (RRAM (0x02A3), Local0)\
+                    Store (RRAM (0x02A4), Local1)\
+                    ShiftLeft (Local0, 0x08, Local0)\
+                    Add (Local0, Local1, Local0)\
+                    Multiply (Local0, 0x03E8, Local1)\
+                    Divide (Local1, ALSA, Local2, Local3)\
+                    Return (Local3)\
+                \}\
+                Else\
+                \{\
+                    Return (0x012C)\
+                \}}

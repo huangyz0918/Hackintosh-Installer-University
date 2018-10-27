@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>15A178l</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>IO80211NetBooter</string>
+	<key>CFBundleGetInfoString</key>
+	<string>11.0, Copyright © 2005–2012 Apple Inc. All rights reserved.</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.driver.IO80211NetBooter</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>IO80211NetBooter</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>11.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1100.23</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>7A176g</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>15A277</string>
+	<key>DTSDKName</key>
+	<string>macosx10.11internal</string>
+	<key>DTXcode</key>
+	<string>0700</string>
+	<key>DTXcodeBuild</key>
+	<string>7A176g</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>IO80211NetBooter</key>
+		<dict>
+			<key>IOClass</key>
+			<string>IO80211NetBooter</string>
+			<key>IOProviderClass</key>
+			<string>IO80211NetBootNub</string>
+		</dict>
+	</dict>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IO80211Family</key>
+		<string>1100.23</string>
+		<key>com.apple.iokit.IONetworkingFamily</key>
+		<string>3.0</string>
+		<key>com.apple.kpi.bsd</key>
+		<string>15.0.0</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>15.0.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>15.0.0</string>
+		<key>com.apple.kpi.mach</key>
+		<string>15.0.0</string>
+		<key>com.apple.kpi.unsupported</key>
+		<string>15.0.0</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Network-Root</string>
+</dict>
+</plist>

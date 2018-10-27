@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>CosmosCJ/宇宙</string>
+	<key>Description</key>
+	<string>El Capitan v1</string>
+	<key>Theme</key>
+	<dict>
+		<key>Anime</key>
+		<array>
+			<dict>
+				<key>DistanceFromScreenEdgeX%</key>
+				<integer>43</integer>
+				<key>DistanceFromScreenEdgeY%</key>
+				<integer>20</integer>
+				<key>FrameTime</key>
+				<integer>25</integer>
+				<key>Frames</key>
+				<integer>150</integer>
+				<key>ID</key>
+				<integer>1</integer>
+				<key>NudgeX</key>
+				<integer>0</integer>
+				<key>NudgeY</key>
+				<integer>0</integer>
+				<key>Once</key>
+				<false/>
+				<key>Path</key>
+				<string>Anim_1_Logo</string>
+				<key>ScreenEdgeX</key>
+				<string>left</string>
+				<key>ScreenEdgeY</key>
+				<string>bottom</string>
+			</dict>
+		</array>
+		<key>Background</key>
+		<dict>
+			<key>Path</key>
+			<string>El capitan blur.png</string>
+			<key>Type</key>
+			<string>Scale</string>
+		</dict>
+		<key>Badges</key>
+		<dict>
+			<key>Inline</key>
+			<false/>
+			<key>Show</key>
+			<true/>
+			<key>Swap</key>
+			<true/>
+		</dict>
+		<key>Banner</key>
+		<string>apple logo.png</string>
+		<key>Font</key>
+		<dict>
+			<key>CharWidth</key>
+			<integer>23</integer>
+			<key>Path</key>
+			<string>font.png</string>
+			<key>Proportional</key>
+			<true/>
+			<key>Type</key>
+			<string>Load</string>
+		</dict>
+		<key>Selection</key>
+		<dict>
+			<key>Big</key>
+			<string>Selection_big.png</string>
+			<key>Color</key>
+			<string>0x00000065</string>
+			<key>Small</key>
+			<string>Selection_small.png</string>
+		</dict>
+	</dict>
+	<key>Year</key>
+	<string>2015</string>
+</dict>
+</plist>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.vanilla.injector.AppleLPCInjector</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>AppleLPC</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>9.9</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>9.9</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>AppleLPC</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleLPC</string>
+			<key>IOClass</key>
+			<string>AppleLPC</string>
+			<key>IONameMatch</key>
+			<array>
+				<string>pci8086,a14e</string>
+			</array>
+			<key>IOProbeScore</key>
+			<integer>2000</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+			<key>LCTL_Offset</key>
+			<integer>424</integer>
+		</dict>
+		<key>AppleLPC_SB</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleLPC</string>
+			<key>IOClass</key>
+			<string>AppleLPC</string>
+			<key>IONameMatch</key>
+			<array>
+				<string>pci8086,a14e</string>
+			</array>
+			<key>IOProbeScore</key>
+			<integer>2000</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+			<key>LCTL_Offset</key>
+			<integer>8616</integer>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>AppleLPCInjector 9.9 Copyright © 2016 Vanilla. All rights reserved.</string>
+</dict>
+</plist>

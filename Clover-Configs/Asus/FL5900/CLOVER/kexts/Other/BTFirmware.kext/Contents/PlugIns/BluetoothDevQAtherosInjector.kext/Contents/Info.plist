@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>14F27</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.emlydinesh.driver.BluetoothDevQAtherosInjector</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>BluetoothDevQAtherosInjector</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>3.1.5</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>3.1.5</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>7B1005</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>15A278</string>
+	<key>DTSDKName</key>
+	<string>macosx10.11</string>
+	<key>DTXcode</key>
+	<string>0711</string>
+	<key>DTXcodeBuild</key>
+	<string>7B1005</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>Info - AR3011-0215 -0930</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3011 Bluetooth 3.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>533</integer>
+			<key>idVendor</key>
+			<integer>2352</integer>
+		</dict>
+		<key>Info - AR3011-179c-0b05</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3011 Bluetooth 3.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>6044</integer>
+			<key>idVendor</key>
+			<integer>2821</integer>
+		</dict>
+		<key>Info - AR3011-3000-0cf3</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3011 Bluetooth 3.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>12288</integer>
+			<key>idVendor</key>
+			<integer>3315</integer>
+		</dict>
+		<key>Info - AR3011-3002-04ca</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3011 Bluetooth 3.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>12290</integer>
+			<key>idVendor</key>
+			<integer>1226</integer>
+		</dict>
+		<key>Info - AR3011-3002-0cf3</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3011 Bluetooth 3.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>12290</integer>
+			<key>idVendor</key>
+			<integer>3315</integer>
+		</dict>
+		<key>Info - AR3011-3005-0cf3</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3011 Bluetooth 3.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>12293</integer>
+			<key>idVendor</key>
+			<integer>3315</integer>
+		</dict>
+		<key>Info - AR3011-311d-03f0</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3011 Bluetooth 3.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>12573</integer>
+			<key>idVendor</key>
+			<integer>1008</integer>
+		</dict>
+		<key>Info - AR3011-3304-13d3</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3011 Bluetooth 3.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>13060</integer>
+			<key>idVendor</key>
+			<integer>5075</integer>
+		</dict>
+		<key>Info - AR3011-aff1-04f2</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3011 Bluetooth 3.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>45041</integer>
+			<key>idVendor</key>
+			<integer>1266</integer>
+		</dict>
+		<key>Info - AR3011-e027-0489</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3011 Bluetooth 3.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>57383</integer>
+			<key>idVendor</key>
+			<integer>1161</integer>
+		</dict>
+		<key>Info - AR3011-e02c-0489</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3011 Bluetooth 3.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>57388</integer>
+			<key>idVendor</key>
+			<integer>1161</integer>
+		</dict>
+		<key>Info - AR3011-e03d-0489</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3011 Bluetooth 3.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>57405</integer>
+			<key>idVendor</key>
+			<integer>1161</integer>
+		</dict>
+		<key>Info - AR3012-036-0cf3</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>54</integer>
+			<key>idVendor</key>
+			<integer>3315</integer>
+		</dict>
+		<key>Info - AR3012-3004-0cf3</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>12292</integer>
+			<key>idVendor</key>
+			<integer>3315</integer>
+		</dict>
+		<key>Info - AR3012-3005-04ca</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>12293</integer>
+			<key>idVendor</key>
+			<integer>1226</integer>
+		</dict>
+		<key>Info - AR3012-3006-04ca</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>12294</integer>
+			<key>idVendor</key>
+			<integer>1226</integer>
+		</dict>
+		<key>Info - AR3012-3010-04ca</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>12304</integer>
+			<key>idVendor</key>
+			<integer>1226</integer>
+		</dict>
+		<key>Info - AR3012-311d-0cf3</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>12573</integer>
+			<key>idVendor</key>
+			<integer>3315</integer>
+		</dict>
+		<key>Info - AR3012-3362-13d3</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>13154</integer>
+			<key>idVendor</key>
+			<integer>5075</integer>
+		</dict>
+		<key>Info - AR3012-3402-13d3</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>13314</integer>
+			<key>idVendor</key>
+			<integer>5075</integer>
+		</dict>
+		<key>Info - AR3012-3474-13d3</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>13428</integer>
+			<key>idVendor</key>
+			<integer>5075</integer>
+		</dict>
+		<key>Info - AR3012-e004-0cf3</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>57348</integer>
+			<key>idVendor</key>
+			<integer>3315</integer>
+		</dict>
+		<key>Info - AR3012-e036-489</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>57398</integer>
+			<key>idVendor</key>
+			<integer>1161</integer>
+		</dict>
+		<key>Info - AR3012-e03c-489</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>57404</integer>
+			<key>idVendor</key>
+			<integer>1161</integer>
+		</dict>
+		<key>Info - AR3012-e056-489</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>57430</integer>
+			<key>idVendor</key>
+			<integer>1161</integer>
+		</dict>
+		<key>Info - AR9462-AR3012-17d0-0b05</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>6096</integer>
+			<key>idVendor</key>
+			<integer>2821</integer>
+		</dict>
+		<key>Info - AR965x-AR3012-e078-489</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBMergeNub</string>
+			<key>IOClass</key>
+			<string>AppleUSBMergeNub</string>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>USB Product Name</key>
+				<string>Atheros USB AR3012 Bluetooth 4.0 Controller</string>
+			</dict>
+			<key>idProduct</key>
+			<integer>57464</integer>
+			<key>idVendor</key>
+			<integer>1161</integer>
+		</dict>
+	</dict>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © EMlyDinEsH (mg-dinesh@live.com) 2012-2016. All rights reserved.</string>
+	<key>OSBundleRequired</key>
+	<string>Safe Boot</string>
+</dict>
+</plist>

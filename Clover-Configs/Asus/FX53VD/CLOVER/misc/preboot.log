@@ -1,0 +1,700 @@
+0:100  0:100  MemLog inited, TSC freq: 2804101520
+0:100  0:000  CPU was calibrated without ACPI PM Timer: ACPI I/O space is not enabled., use RTC
+0:100  0:000  
+0:100  0:000  Now is 15.9.2017,  11:42:46 (GMT)
+0:100  0:000  Starting Clover revision: 4200 on INSYDE Corp. EFI
+0:100  0:000  Build with: [Args: -D NO_GRUB_DRIVERS_EMBEDDED | -D NO_GRUB_DRIVERS_EMBEDDED -D USE_LOW_EBDA -a X64 -b RELEASE -t XCODE5 -n 5 | OS: 10.12.6 | XCODE: 8.3.3]
+0:100  0:000  SelfDevicePath=PciRoot(0x0)\Pci(0x14,0x0)\USB(0x1,0x0)\USB(0x2,0x0)\HD(1,MBR,0xCAD4EBEA,0x100,0x777F00) @7A606798
+0:100  0:000  SelfDirPath = \EFI\BOOT
+0:103  0:003  === [ Get Smbios ] ========================================
+0:103  0:000  Type 16 Index = 0
+0:103  0:000  Total Memory Slots Count = 2
+0:103  0:000  Type 17 Index = 0
+0:103  0:000  Ignoring insane frequency value 0MHz
+0:103  0:000  SmbiosTable.Type17->Speed = 0MHz
+0:103  0:000  SmbiosTable.Type17->Size = 0MB
+0:103  0:000  SmbiosTable.Type17->Bank/Device = BANK 0 Bottom-Slot 1(left) 
+0:103  0:000  SmbiosTable.Type17->Vendor = <null string>
+0:103  0:000  SmbiosTable.Type17->SerialNumber = <null string>
+0:103  0:000  SmbiosTable.Type17->PartNumber = <null string>
+0:103  0:000  Type 17 Index = 1
+0:103  0:000  SmbiosTable.Type17->Speed = 2400MHz
+0:103  0:000  SmbiosTable.Type17->Size = 8192MB
+0:103  0:000  SmbiosTable.Type17->Bank/Device = BANK 2 Bottom-Slot 2(right)
+0:103  0:000  SmbiosTable.Type17->Vendor = Samsung
+0:103  0:000  SmbiosTable.Type17->SerialNumber = 3463FC21
+0:103  0:000  SmbiosTable.Type17->PartNumber = M471A1K43CB1-CRC    
+0:103  0:000  Boot status=0
+0:103  0:000  Running on: 'OMEN by HP Laptop' with board '8259'
+0:103  0:000  === [ GetCPUProperties ] ==================================
+0:103  0:000  CPU Vendor = 756E6547 Model=906E9
+0:103  0:000   The CPU supported SSE4.1
+0:103  0:000   The CPU supported turbo
+0:103  0:000  BrandString = Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
+0:103  0:000   TSC/CCC Information Leaf:
+0:103  0:000    numerator     : 234
+0:103  0:000    denominator   : 2
+0:103  0:000   Calibrated ARTFrequency: 23966679
+0:103  0:000  MSR 0xE2 before patch 1E008008
+0:103  0:000  MSR 0xE2 is locked, PM patches will be turned on
+0:103  0:000  MSR 0xCE              0008083B_F1011C00
+0:103  0:000  MSR 0x1A0             00850089
+0:103  0:000  corrected FLEX_RATIO = 0
+0:103  0:000  MSR 0x1B0             00000000
+0:103  0:000  FSBFrequency = 96 MHz, DMI FSBFrequency = 100 MHz, Corrected FSBFrequency = 100 MHz
+0:103  0:000  MaxDiv/MinDiv: 28.0/8
+0:103  0:000  Turbo: 34/35/36/38
+0:103  0:000  Features: 0xBFEBFBFF
+0:103  0:000  Threads: 8
+0:103  0:000  Cores: 4
+0:103  0:000  FSB: 100 MHz
+0:103  0:000  CPU: 2700 MHz
+0:103  0:000  TSC: 2700 MHz
+0:103  0:000  PIS: 100 MHz
+0:103  0:000  ExternalClock: 25 MHz
+0:103  0:000  === [ GetDevices ] ========================================
+0:103  0:000  PCI (00|00:00.00) : 8086 5910 class=060000
+0:103  0:000  PCI (00|00:01.00) : 8086 1901 class=060400
+0:103  0:000  PCI (00|01:00.00) : 10DE 1C8C class=030200
+0:103  0:000  PCI (00|01:00.01) : FFFF FFFF class=FFFFFF
+0:103  0:000  PCI (00|00:02.00) : 8086 591B class=030000
+0:103  0:000   - GFX: Model=Intel HD Graphics 630 (Intel)
+0:103  0:000  PCI (00|00:04.00) : 8086 1903 class=118000
+0:103  0:000  PCI (00|00:14.00) : 8086 A12F class=0C0330
+0:103  0:000  PCI (00|00:14.02) : 8086 A131 class=118000
+0:104  0:000  PCI (00|00:16.00) : 8086 A13A class=078000
+0:104  0:000  PCI (00|00:17.00) : 8086 A103 class=010601
+0:104  0:000  PCI (00|00:1C.00) : 8086 A110 class=060400
+0:104  0:000  PCI (00|00:1C.04) : 8086 A114 class=060400
+0:104  0:000  PCI (00|03:00.00) : 10EC 522A class=FF0000
+0:104  0:000  PCI (00|00:1C.05) : 8086 A115 class=060400
+0:104  0:000  PCI (00|04:00.00) : 14E4 43B1 class=028000
+0:104  0:000   - WIFI: Vendor=Broadcom
+0:104  0:000  PCI (00|00:1C.06) : 8086 A116 class=060400
+0:104  0:000  PCI (00|05:00.00) : 10EC 8168 class=020000
+0:104  0:000   - LAN: 0 Vendor=Realtek
+0:104  0:000  PCI (00|00:1F.00) : 8086 A152 class=060100
+0:104  0:000  PCI (00|00:1F.02) : 8086 A121 class=058000
+0:104  0:000  PCI (00|00:1F.03) : 8086 A171 class=040300
+0:104  0:000  PCI (00|00:1F.04) : 8086 A123 class=0C0500
+0:104  0:000  === [ GetDefaultSettings ] ================================
+0:104  0:000  Clover load options size = 0 bytes
+0:116  0:012  EFI\CLOVER\config.plist loaded: Success
+0:116  0:000  === [ GetListOfThemes ] ===================================
+0:120  0:003  - [00]: black_green
+0:125  0:005  - [01]: embedded
+0:131  0:005  - [01]: random
+0:137  0:005  - [01]: metal
+0:142  0:005  === [ Found config plists ] ===============================
+0:143  0:000  - config.plist
+0:143  0:000  - config-10.13.plist
+0:143  0:000  - config-10.12.plist
+0:143  0:000  - config-13.3.plist
+0:143  0:000  - config-14.3.plist
+0:143  0:000  - config_HD615_620_630_640_650.plist
+0:143  0:000  === [ GetEarlyUserSettings ] ==============================
+0:143  0:000  timeout set to 5
+0:143  0:000  Custom boot CUSTOM_BOOT_DISABLED (0x0)
+0:143  0:000  ForceKextsToLoad: 1 requested
+0:143  0:000   - [0]: System\Library\Extensions\IONetworkingFamily.kext
+0:143  0:000  KextsToPatch: 4 requested
+0:143  0:000   - [00]: com.apple.driver.AppleIntelKBLGraphicsFramebuffer (0x591b0000, 32MB BIOS, 19MB framebuffer 9MB cursor bytes (credit RehabMan)) :: BinPatch :: data len: 8
+0:143  0:000   - [01]: com.apple.driver.AppleIntelKBLGraphicsFramebuffer (0x591b0000, 0105 instead of 0306, HDMI) :: BinPatch :: data len: 36
+0:143  0:000   - patch disabled at config
+0:143  0:000   - [02]: com.apple.iokit.IOAHCIBlockStorage (Enable TRIM for SSD) :: BinPatch :: data len: 11
+0:143  0:000   - [03]: com.apple.driver.AppleBacklight (change F%uT%04x to F%uTxxxx in AppleBacklightInjector.kext (credit RehabMan)) :: BinPatch :: data len: 9
+0:143  0:000  KernelToPatch: 1 requested
+0:143  0:000   - [00]: MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha :: data len: 8
+0:143  0:000  Default theme: black_green
+0:143  0:000  ** Warning: unknown custom entry Type 'Other'
+0:143  0:000  === [ LoadDrivers ] =======================================
+0:146  0:002  Loading APFS.efi  status=Success
+0:168  0:022   - driver needs connecting
+0:168  0:000  Loading AppleImageCodec-64.efi  status=Success
+0:171  0:003  Loading AppleKeyAggregator-64.efi  status=Success
+0:171  0:000  Loading AppleUITheme-64.efi  status=Success
+0:174  0:003  Loading CsmVideoDxe-64.efi  status=Success
+0:175  0:000   - driver needs connecting
+0:175  0:000  Loading DataHubDxe-64.efi  status=Success
+0:175  0:000  Loading EmuVariableUefi-64.efi  status=Success
+0:178  0:003  EmuVariableUefi Initialize: VariableCommonInitialize = Success, orig services stored, install gEmuVariableControlProtocolGuid = Success
+0:178  0:000  Loading Fat-64.efi  status=Success
+0:178  0:000   - driver needs connecting
+0:178  0:000  Loading FirmwareVolume-64.efi  status=Success
+0:179  0:000  Loading FSInject-64.efi  status=Success
+0:182  0:003  Loading HFSPlus-64.efi  status=Success
+0:182  0:000   - driver needs connecting
+0:182  0:000  Loading NTFS.efi  status=Success
+0:188  0:005   - driver needs connecting
+0:188  0:000  Loading OsxAptioFixDrv-64.efi  status=Success
+0:191  0:003  Loading OsxFatBinaryDrv-64.efi  status=Success
+0:191  0:000  Loading PartitionDxe-64.efi  status=Success
+0:191  0:000   - driver needs connecting
+0:191  0:000  Loading SMCHelper-64.efi  status=Success
+0:195  0:003  6 drivers needs connecting ...
+0:195  0:000  PlatformDriverOverrideProtocol->GetDriver overriden
+0:195  0:000  Partition driver loaded: 
+0:195  0:000  HFS+ driver loaded
+0:195  0:000  APFS driver loaded
+0:195  0:000  Video driver loaded: disconnect Success
+0:463  0:267  Searching for invalid DiskIo BY_DRIVER connects: not found, all ok
+1:541  1:078  EmuVariable InstallEmulation: orig vars copied, emu.var.services installed, CreateEvent VirtualAddressChange = Success, CreateEvent ExitBootServices = Success, set Status=Success
+1:561  0:020  === [ InitScreen ] ========================================
+1:561  0:000  SetScreenResolution: 1920x1080 - already set
+1:561  0:000  Console modes reported: 7, available modes:
+1:561  0:000   - [01]: 80x25
+1:561  0:000   - [02]: 80x50
+1:561  0:000   - [03]: 80x25
+1:561  0:000   - [04]: 240x56 (current mode)
+1:561  0:000   - [05]: 100x31
+1:561  0:000   - [06]: 128x40
+1:561  0:000   - [07]: 160x53
+1:561  0:000  SetScreenResolution: 1920x1080 - already set
+1:561  0:000  reinit: self device path=PciRoot(0x0)\Pci(0x14,0x0)\USB(0x1,0x0)\USB(0x2,0x0)\HD(1,MBR,0xCAD4EBEA,0x100,0x777F00)
+1:561  0:000  Using embedded font: Success
+1:562  0:000  === [ GetMacAddress ] =====================================
+1:562  0:000  MAC address of LAN #0= C8:D3:FF:E8:CA:5E:
+1:562  0:000  === [ ScanSPD ] ===========================================
+1:563  0:000  SMBus device : 8086 A123 class=0C0500 status=Success
+1:563  0:000  SMBus CmdReg: 0x3
+1:563  0:000  Scanning SMBus [8086:A123], mmio: 0xB4735004, ioport: 0x5040, hostc: 0x11
+1:563  0:000  Slots to scan [8]...
+1:563  0:000  SPD[2]: Type 12 @0x52
+1:581  0:017  Not using XMP because it is not present
+1:581  0:000  DDR speed 2400MHz
+1:581  0:000  Slot: 2 Type 26 8192MB 2400MHz Vendor=Samsung PartNo=M471A1K43CB1-CRC SerialNo=030406030F0C0201
+1:582  0:000  === [ GetAcpiTablesList ] =================================
+1:582  0:000  Get Acpi Tables List from RSDT:
+1:582  0:000   - [00]: FACP  SLIC-MPC len=268
+1:582  0:000   - [01]: UEFI  8259     len=566
+1:582  0:000   - [02]: UEFI  8259     len=66
+1:582  0:000   - [03]: SSDT  8259     len=28836
+1:582  0:000   - [04]: MSDM  SLIC-MPC len=85
+1:582  0:000   - [05]: SSDT  8259     len=12606
+1:582  0:000   - [06]: SSDT  8259     len=8246
+1:582  0:000   - [07]: SSDT  8259     len=13258
+1:582  0:000   - [08]: ASF!  8259     len=165
+1:582  0:000   - [09]: ASPT  8259     len=52
+1:582  0:000   - [10]: BOOT  8259     len=40
+1:582  0:000   - [11]: DBGP  SLIC-MPC len=52
+1:582  0:000   - [12]: HPET  8259     len=56
+1:582  0:000   - [13]: APIC  8259     len=188
+1:582  0:000   - [14]: MCFG  8259     len=60
+1:582  0:000   - [15]: SSDT  8259     len=444
+1:582  0:000   - [16]: LPIT  8259     len=148
+1:582  0:000   - [17]: WSMT  8259     len=40
+1:582  0:000   - [18]: SSDT  8259     len=671
+1:582  0:000   - [19]: SSDT  8259     len=838
+1:582  0:000   - [20]: SSDT  8259     len=12290
+1:582  0:000   - [21]: SSDT  8259     len=1310
+1:582  0:000   - [22]: DBGP  SLIC-MPC len=52
+1:582  0:000   - [23]: DBG2  8259     len=84
+1:582  0:000   - [24]: SSDT  8259     len=4202
+1:582  0:000   - [25]: SSDT  8259     len=3806
+1:582  0:000   - [26]: SSDT  8259     len=18446
+1:582  0:000   - [27]: DMAR  8259     len=168
+1:582  0:000   - [28]: FPDT  SLIC-MPC len=68
+1:582  0:000   - [29]: BGRT  8259     len=56
+1:582  0:000  Calibrated TSC Frequency = 2804101520 = 2804MHz
+1:582  0:000  === [ GetUserSettings ] ===================================
+1:582  0:000  USB FixOwnership: yes
+1:582  0:000  Dropping 3 tables:
+1:582  0:000   - [00]: Drop table  signature="#MCF" (46434D23)
+1:582  0:000           - set table: 46434D23,                0 to drop: no
+1:582  0:000   - [01]: Drop table  signature="DMAR" (52414D44)
+1:582  0:000           - set table: 52414D44,                0 to drop: yes
+1:582  0:000   - [02]: Drop table  signature="SSDT" (54445353) table-id="xh_rvp10" (30317076725F6878)
+1:582  0:000           - set table: 54445353, 30317076725F6878 to drop: no
+1:582  0:000   - final DSDT Fix mask=00260050
+1:582  0:000  PatchesDSDT: 15 requested
+1:582  0:000   - [00]: (change _OSI to XOSI, pair with SSDT-XOSI.aml) lenToFind: 4, lenToReplace: 4
+1:582  0:000   - [01]: (change _DSM to XDSM) lenToFind: 4, lenToReplace: 4
+1:582  0:000   - [02]: (change EC0 to EC, optionally pair with SSDT-BAT0.aml) lenToFind: 4, lenToReplace: 4
+1:582  0:000   - [03]: (change Method(UPBI,0,N) to XPBI) lenToFind: 5, lenToReplace: 5
+1:582  0:000   - [04]: (change Method(UPBS,0,N) to XPBS) lenToFind: 5, lenToReplace: 5
+1:582  0:000   - [05]: (change Method(SMRD,4,N) to XMRD) lenToFind: 5, lenToReplace: 5
+1:582  0:000   - [06]: (change Method(SMWR,4,N) to XMWR) lenToFind: 5, lenToReplace: 5
+1:582  0:000   - [07]: (change Method(CLRI,0,S) to XLRI) lenToFind: 5, lenToReplace: 5
+1:582  0:000   - [08]: (change HDAS to HDEF, optionally pair with SSDT-HDEF.aml) lenToFind: 4, lenToReplace: 4
+1:582  0:000   - [09]: (change HECI to IMEI) lenToFind: 4, lenToReplace: 4
+1:582  0:000   - [10]: (change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml) lenToFind: 5, lenToReplace: 5
+1:582  0:000   - [11]: (change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml) lenToFind: 4, lenToReplace: 4
+1:582  0:000   - [12]: (change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml) lenToFind: 5, lenToReplace: 5
+1:582  0:000   - [13]: (change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml) lenToFind: 5, lenToReplace: 5
+1:582  0:000   - [14]: (change SAT0 to SATA, optionally pair with SSDT-SATA.aml) lenToFind: 4, lenToReplace: 4
+1:582  0:000  PluginType: 1
+1:582  0:000  Using ProductName from config
+1:582  0:000  ProductName: MacBookPro14,3
+1:582  0:000  Found same BiosVersion in clover and config
+1:582  0:000  BiosVersion: MBP143.88Z.0167.B00.1708080129
+1:582  0:000  BiosReleaseDate: 08/08/2017
+1:582  0:000  Using FirmwareFeatures from clover
+1:582  0:000  FirmwareFeatures: 0xFC0FE13E
+1:582  0:000  Using FirmwareFeaturesMask from clover
+1:582  0:000  FirmwareFeaturesMask: 0xFF1FFF3F
+1:582  0:000  Using PlatformFeature from clover
+1:582  0:000  PlatformFeature: 0x1A
+1:582  0:000  BoardType: 0xA
+1:582  0:000  ChassisType: 0x9
+1:583  0:000  === [ ScanVolumes ] =======================================
+1:583  0:000  Found 13 volumes with blockIO
+1:583  0:000  - [00]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x0,0x0,0x0)
+1:584  0:001  - [01]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x0,0x0,0x0)\HD(1,GPT,2A9DF107-7E17-40A9-A043-2D18F10A715D,0x800,0xE1000)
+1:584  0:000          Result of bootcode detection: bootable Windows (vista,win)
+1:584  0:000  - [02]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x0,0x0,0x0)\HD(2,GPT,5FCD502C-F2AF-4D7A-BF09-12419C5C591F,0xE1800,0x32000)
+1:585  0:000          Result of bootcode detection: bootable Windows (vista,win)
+1:585  0:000  - [03]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x0,0x0,0x0)\HD(3,GPT,D738766F-F378-4608-97A6-E371C7084C13,0x113800,0x8000)
+1:585  0:000  - [04]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x0,0x0,0x0)\HD(4,GPT,6A95F4F4-2ECF-4072-A9DE-8AB8915EC370,0x11B800,0xED60800)
+1:585  0:000          Result of bootcode detection: bootable Windows (vista,win)
+1:585  0:000  - [05]: Volume: PciRoot(0x0)\Pci(0x14,0x0)\USB(0x1,0x0)\USB(0x2,0x0)
+1:585  0:000          Result of bootcode detection: bootable unknown (legacy)
+1:585  0:000          USB volume
+1:585  0:000          USB volume
+1:585  0:000  - [06]: Volume: PciRoot(0x0)\Pci(0x14,0x0)\USB(0x1,0x0)\USB(0x2,0x0)\HD(1,MBR,0xCAD4EBEA,0x100,0x777F00)
+1:586  0:000          Result of bootcode detection: bootable Windows (vista,win)
+1:586  0:000          USB volume
+1:586  0:000          USB volume
+1:590  0:004          This is SelfVolume !!
+1:590  0:000  - [07]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x1,0x0,0x0)
+1:592  0:001  - [08]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x1,0x0,0x0)\HD(1,GPT,9A436658-5F60-4FA0-A551-A43880C441D6,0x64028,0xEE18260)
+1:592  0:000          Result of bootcode detection: bootable unknown (legacy)
+1:592  0:000  - [09]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x1,0x0,0x0)\HD(1,GPT,9A436658-5F60-4FA0-A551-A43880C441D6,0x64028,0xEE18260)\VenMedia(BE74FCF7-0B7C-49F3-9147-01F4042E6842,4DF71E6CA451FD4FA24CD6B28E02C985)
+1:592  0:000  - [10]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x1,0x0,0x0)\HD(1,GPT,9A436658-5F60-4FA0-A551-A43880C441D6,0x64028,0xEE18260)\VenMedia(BE74FCF7-0B7C-49F3-9147-01F4042E6842,30243ECBB56FB145A36211AA90F8C5F2)
+1:592  0:000  - [11]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x1,0x0,0x0)\HD(1,GPT,9A436658-5F60-4FA0-A551-A43880C441D6,0x64028,0xEE18260)\VenMedia(BE74FCF7-0B7C-49F3-9147-01F4042E6842,C1EE2F964ED1254889FBBFFB10A1FD61)
+1:592  0:000  - [12]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x1,0x0,0x0)\HD(1,GPT,9A436658-5F60-4FA0-A551-A43880C441D6,0x64028,0xEE18260)\VenMedia(BE74FCF7-0B7C-49F3-9147-01F4042E6842,9F7B03646D3F184B9AC6FF0C33FC86C8)
+1:593  0:000  PutNvramPlistToRtVars: nvram.plist not found
+1:593  0:000  === [ InitTheme ] =========================================
+1:595  0:002  Using theme 'black_green' (EFI\CLOVER\themes\black_green)
+1:595  0:000  OS main and drive as badge
+1:595  0:000  Loading font from ThemeDir: Success
+1:596  0:000  Choosing theme black_green
+1:596  0:000  after NVRAM boot-args=kext-dev-mode=1 dart=0 nv_disable=1 -lilubeta -alcbeta -igfxbeta
+1:596  0:000  === [ Dump SMC keys from NVRAM ] ==========================
+1:596  0:000  found AppleSMC protocol
+1:596  0:000  === [ AddCustomEntries ] ==================================
+1:596  0:000  Custom entry 0 skipped because it is disabled.
+1:596  0:000  === [ ScanLoader ] ========================================
+1:596  0:000  - [01]: 'b'
+1:630  0:034  - [02]: 'EFI'
+1:632  0:001          AddLoaderEntry for Volume Name=EFI
+1:632  0:000      Not match custom entry 0: Type: not match
+1:642  0:010  - [04]: ''
+1:653  0:011  - [06]: ''
+1:659  0:005  - [09]: 'Preboot'
+1:660  0:000          AddLoaderEntry for Volume Name=Preboot
+1:660  0:000      Not match custom entry 0: Type: not match
+1:660  0:000      hibernated: set as never
+1:660  0:000  not png, try icns
+1:660  0:000          [!] Icon 17 (icons\vol_internal_hfs.icns) not found (path: EFI\CLOVER\themes\black_green)
+1:667  0:007  - [10]: 'Sierra'
+1:671  0:003          AddLoaderEntry for Volume Name=Sierra
+1:671  0:000      Not match custom entry 0: Type: not match
+1:672  0:000      hibernated: set as never
+1:672  0:000  not png, try icns
+1:678  0:006  - [11]: 'Recovery'
+1:679  0:000          AddLoaderEntry for Volume Name=Recovery
+1:679  0:000      Not match custom entry 0: Type: not match
+1:679  0:000  not png, try icns
+1:685  0:006  - [12]: 'VM'
+1:691  0:005  === [ AddCustomTool ] =====================================
+1:692  0:000  found tool \EFI\CLOVER\tools\Shell64U.efi
+1:692  0:000  Checking EFI partition Volume 2 for Clover
+1:695  0:003  EmuVariable InstallEmulation: EFI_ALREADY_STARTED
+1:695  0:000  === [ GetEfiBootDeviceFromNvram ] =========================
+1:695  0:000  Default boot entry not found
+1:695  0:000  EmuVariable UninstallEmulation: CloseEvent = Success, original var services restored
+1:695  0:000  DefaultIndex=-1 and MainMenu.EntryCount=9
+1:814  0:118  GUI ready
+4:383  2:569   enter menu with LoadOptions: kext-dev-mode=1 dart=0 nv_disable=1 -lilubeta -alcbeta -igfxbeta
+4:383  0:000   and with FlagsBits = 0x7
+6:181  1:798   exit menu with LoadOptions: kext-dev-mode=1 dart=0 nv_disable=1 -lilubeta -alcbeta -igfxbeta
+6:181  0:000   boot with args: kext-dev-mode=1 dart=0 nv_disable=1 -lilubeta -alcbeta -igfxbeta
+6:578  0:396   exit menu with LoadOptions: kext-dev-mode=1 dart=0 nv_disable=1 -lilubeta -alcbeta -igfxbeta
+6:578  0:000   boot with args: kext-dev-mode=1 dart=0 nv_disable=1 -lilubeta -alcbeta -igfxbeta
+9:522  2:944   exit menu with LoadOptions: kext-dev-mode=1 dart=0 nv_disable=1 -lilubeta -alcbeta -igfxbeta
+9:522  0:000   boot with args: kext-dev-mode=1 dart=0 nv_disable=1 -lilubeta -alcbeta -igfxbeta
+18:831  9:308  BootVariable of the entry is empty
+18:831  0:000  === [ StartLoader ] =======================================
+18:831  0:000  Finally: ExternalClock=25MHz BusSpeed=100146kHz CPUFreq=2804MHz PIS: hw.busfrequency=100000000Hz
+18:831  0:000  Loading boot.efi  status=Success
+18:872  0:041  GetOSVersion: 10.13 (17A360a)
+18:872  0:000  CSR_CFG: CSR_ALLOW_UNTRUSTED_KEXTS | CSR_ALLOW_UNRESTRICTED_FS | CSR_ALLOW_TASK_FOR_PID | CSR_ALLOW_UNRESTRICTED_DTRACE | CSR_ALLOW_UNRESTRICTED_NVRAM
+18:872  0:000  Filtering KextPatches:
+18:872  0:000   - [00]: com.apple.driver.AppleIntelKBLGraphicsFramebuffer (0x591b0000, 32MB BIOS, 19MB framebuffer 9MB cursor bytes (credit RehabMan)) :: BinPatch :: [OS: 10.13 | MatchOS: All | MatchBuild: All] ==> allowed
+18:872  0:000   - [01]: com.apple.driver.AppleIntelKBLGraphicsFramebuffer (0x591b0000, 0105 instead of 0306, HDMI) :: BinPatch :: [OS: 10.13 | MatchOS: All | MatchBuild: All] ==> disabled by user
+18:872  0:000   - [02]: com.apple.iokit.IOAHCIBlockStorage (Enable TRIM for SSD) :: BinPatch :: [OS: 10.13 | MatchOS: All | MatchBuild: All] ==> allowed
+18:872  0:000   - [03]: com.apple.driver.AppleBacklight (change F%uT%04x to F%uTxxxx in AppleBacklightInjector.kext (credit RehabMan)) :: BinPatch :: [OS: 10.13 | MatchOS: All | MatchBuild: All] ==> allowed
+18:872  0:000  Filtering KernelPatches:
+18:872  0:000   - [00]: MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha :: [OS: 10.13 | MatchOS: All | MatchBuild: no] ==> allowed by OS
+18:872  0:000  EmuVariable InstallEmulation: orig vars copied, emu.var.services installed, CreateEvent VirtualAddressChange = Success, CreateEvent ExitBootServices = Success, set Status=Success
+18:893  0:020  === [ PatchSmbios ] =======================================
+18:893  0:000  insert table 9 for dev 0:0
+18:893  0:000  insert table 9 for dev 0:0
+18:893  0:000  Trusting SMBIOS...
+18:893  0:000  Detected alternating SMBIOS channel banks
+18:893  0:000  Channels: 1
+18:893  0:000  Interleave: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+18:893  0:000  SMBIOS Type 17 Index = 0 => 0 0:
+18:893  0:000  BANK 0 DIMM0 EMPTY
+18:893  0:000   partNum=M471A1K43CB1-CRC    
+18:893  0:000  SMBIOS Type 17 Index = 1 => 1 1:
+18:893  0:000  BANK 0 DIMM1 2400MHz 8192MB
+18:893  0:000  mTotalSystemMemory = 8192
+18:893  0:000  NumberOfMemoryDevices = 2
+18:893  0:000  Type20[0]->End = 0x7FFFFF, Type17[1] = 0x2000
+18:893  0:000  Table 131 is present, CPUType=31
+18:893  0:000  Change to: 705
+18:893  0:000  === [ PatchACPI ] =========================================
+18:893  0:000  RSDT 0x8AEB90C4
+18:893  0:000  FADT from RSDT: 0x8AEE3000
+18:893  0:000  XSDT 0x8AEB9188
+18:893  0:000  FADT from XSDT: 0x8AEE3000
+18:893  0:000  Xsdt reallocation done
+18:893  0:000  old FADT length=10C
+18:897  0:003  Apply DsdtFixMask=0x00260050
+18:897  0:000     drop _DSM mask=0xFFFF
+18:897  0:000  === [ FixBiosDsdt ] =======================================
+18:897  0:000  VideoCard devID=0x591B8086
+18:897  0:000  DisplayADR1[0] = 0x20000, DisplayADR2[0] = 0xFFFE
+18:897  0:000  USBADR[0] = 0x140000 and PCIe = 0xFFFE
+18:897  0:000  Found Airport BCM at 0x1C0005, 0x0
+18:898  0:000  Audio HDA (addr:0x1F0003) setting specified layout-id=28 (0x1C)
+18:898  0:000  Patching DSDT:
+18:898  0:000   - [change _OSI to XOSI, pair with SSDT-XOSI.aml]: pattern 5F4F5349, patched at: [ (11795) (3) (11) (18) (18) (1C) (1C) (1A) (18) (18) (18) (18) (C0A) ]
+18:898  0:000   - [change _DSM to XDSM]: pattern 5F44534D, patched at: [ (2FE0) (1CCA) (6B) (29) (786) (6) (7E0) (17) (53) (22) (22) (33) (8A) (112) (379) (379) (379) (379) (379) (3B3) (3B3) (379) (379) (379) (379) (379) (379) (379) (379) (379) (379) (379) (379) (379) (379) (379) (379) (28B) (141) (2343) (D3) (D3) (D3) (D3) (D3) (BE) (BE) (CC) (104) (104) (129) (739) (6FB5) (691) (691) (691) (691) (691) (691) (691) (691) (691) (691) (691) (691) (691) (691) (691) (691) (691) (691) (212F) (1687) ]
+18:898  0:000   - [change EC0 to EC, optionally pair with SSDT-BAT0.aml]: pattern 4543305F, patched at: [ (304C) (1B) (3E) (14) (14) (14) (14) (14) (14) (14) (14) (1E) (30) (E) (3C) (C) (18) (14) (14) (14) (27) (14) (13) (14) (14) (16) (1B) (10) (22) (20) (D) (22) (E) (22E) (13) (39) (13) (30) (13) (43) (48) (6E) (11) (12) (47) (12) (A7) (4F) (40) (11) (1F) (19) (7A5A) (10) (1D) (10) (33AF) (1315) (12) (44) (14) (1E) (E32) (651) (19) (18) (A1) (A6) (46) (17) (26) (18) (41) (85) (11DE) (268) (18) (2C) (15) (143) (16) (1E) (16) (289) (15) (15) (3A) (1C) (18) (21) (17) (1C) (15) (19) (17) (1C) (15) ]
+18:898  0:000   - [change Method(UPBI,0,N) to XPBI]: pattern 55504249, patched at: [ (3710) ]
+18:898  0:000   - [change Method(UPBS,0,N) to XPBS]: pattern 55504253, patched at: [ (3905) ]
+18:898  0:000   - [change Method(SMRD,4,N) to XMRD]: pattern 534D5244, patched at: [ (F5F7) ]
+18:899  0:000   - [change Method(SMWR,4,N) to XMWR]: pattern 534D5752, patched at: [ (F771) ]
+18:899  0:000   - [change Method(CLRI,0,S) to XLRI]: pattern 434C5249, patched at: [ (3338) ]
+18:899  0:000   - [change HDAS to HDEF, optionally pair with SSDT-HDEF.aml]: pattern 48444153, patched at: [ (295) (12) (12) (5849) (84) (D) (2B) (32) (4F) (75) (C3) (1A942) ]
+18:899  0:000   - [change HECI to IMEI]: pattern 48454349, patched at: [ (E816) ]
+18:899  0:000   - [change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml]: pattern 47505257, patched at: [ (11CE3) ]
+18:899  0:000   - [change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml]: pattern 47465830, patched at: [ (51) (E) (12) (12) (12) (78) (12) (12) (12) (280) (157) (12) (2A6D) (BFFB) (34) (31) (A16) (17) (8) (16) (8) (3512) (197E) (14) (86BE) (14F2) ]
+18:899  0:000   - [change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml]: pattern 5F513130, patched at: [ (EFD7) ]
+18:899  0:000   - [change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml]: pattern 5F513131, patched at: [ (F00C) ]
+18:900  0:000   - [change SAT0 to SATA, optionally pair with SSDT-SATA.aml]: pattern 53415430, patched at: [ (2CE) (D) (D) (16) (AF7B) (30) (3ED3) (5) (DEA5) (3F) (1496) (4E2) (2A) (29) (2E) (2E) (2E) (2E) ]
+18:900  0:000  first CPU found at 12169 offset 1216C
+18:900  0:000  score candidate at 12165
+18:900  0:000  score inserted in acpi_cpu_score _PR_
+18:900  0:000  Found ACPI CPU: CPU0 | CPU1 | CPU2 | CPU3 | CPU4 | CPU5 | CPU6 | CPU7 , within the score: _PR_
+18:900  0:000  Found PCIROOTUID = 0
+18:900  0:000  Start RTC Fix
+18:900  0:000  found RTC Length not match, Maybe will cause CMOS reset will patch it.
+18:900  0:000  found RTC had IRQNoFlag will move -3 bytes
+18:900  0:000  ...len=207F4
+18:900  0:000  new size written to FEB9 shift=0 len=207F4
+18:900  0:000  len after correct outers 207F4
+18:900  0:000  Start TMR Fix
+18:901  0:000  Start PIC Fix
+18:901  0:000  PIC size=A5 at FCD9
+18:901  0:000  found CRS at FCED size 8D
+18:901  0:000  found PIC had IRQNoFlag will move -3 bytes
+18:901  0:000  Fix Device PIC size -3
+18:901  0:000  Start HPET Fix
+18:901  0:000  Start _WAK Return Fix
+18:901  0:000  return len=207C3
+18:902  0:000  === [ ACPIDropTables ] ====================================
+18:902  0:000  Drop tables from Xsdt, SIGN=DMAR TableID=8259     Length=168
+18:902  0:000   Xsdt has tables count=30
+18:902  0:000   Table: DMAR  8259      168 dropped
+18:902  0:000  === [ PatchAllSSDT ] ======================================
+18:902  0:000  Patch table: SSDT  8259     len=0x70A4
+18:902  0:000  0. [change _OSI to XOSI, pair with SSDT-XOSI.aml]: pattern 5F4F5349, bin not found / already patched!
+18:902  0:000  1. [change _DSM to XDSM]: pattern 5F44534D, bin not found / already patched!
+18:902  0:000  2. [change EC0 to EC, optionally pair with SSDT-BAT0.aml]: pattern 4543305F, patched at: [ (11A) (16) (16) (16) (16) (16) (16) (16) (16) (16) (16) (16) (16) (16) (16) (16) (16) (16) (16) (16) (16) (16) (16) (16) (16) (2E6D) (19) (21) (26) (19) (21) (1A) (22) (1D) (26) (21) (36) (3A) (37) (37) (37) (43) (37) (37) (37) (37) (37) (37) (37) (37) (6D) (121) (4F) (7A) (4F) (4F) (36) (37) (37) (37) (37) (37) (37) (49) (99) (16) (16) (1E) (45) (16) (15) (16) (BC) (16) (1B4) (25) (15) (16) (15) (31C) (16) (16) (16) (105) (FF) (18) (15) (998) (17) (17) (32) (87) (1C) (15) (49) (23) (7F) (15) (7F) (18) (27) (26) (2BE) (17) (16) (16) (14) (2C) (40) (22) (B3) (1D) (16) (14) (3F) (1F) (5B) (1D) (65) (18) (24) (EB) (19) (1D) (21) (20) (53) (16) (15) (16) (14) (15) (116E) (53) (51) ]
+18:902  0:000  3. [change Method(UPBI,0,N) to XPBI]: pattern 55504249, bin not found / already patched!
+18:902  0:000  4. [change Method(UPBS,0,N) to XPBS]: pattern 55504253, bin not found / already patched!
+18:902  0:000  5. [change Method(SMRD,4,N) to XMRD]: pattern 534D5244, bin not found / already patched!
+18:902  0:000  6. [change Method(SMWR,4,N) to XMWR]: pattern 534D5752, bin not found / already patched!
+18:902  0:000  7. [change Method(CLRI,0,S) to XLRI]: pattern 434C5249, bin not found / already patched!
+18:902  0:000  8. [change HDAS to HDEF, optionally pair with SSDT-HDEF.aml]: pattern 48444153, bin not found / already patched!
+18:902  0:000  9. [change HECI to IMEI]: pattern 48454349, bin not found / already patched!
+18:902  0:000  10. [change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml]: pattern 47505257, bin not found / already patched!
+18:902  0:000  11. [change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml]: pattern 47465830, patched at: [ (7C) (12) (12) (12) (12) (12) (12) (3D35) (13) (1B) (13) (1A) (13) (2A) (13) (1B) (13) (1A) (13) (23) (120) (46) (6A) (13) (1B) (13) (1A) (13) (2A) (13) (1B) (13) (1A) (13) (23) ]
+18:902  0:000  12. [change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml]: pattern 5F513130, bin not found / already patched!
+18:902  0:000  13. [change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml]: pattern 5F513131, bin not found / already patched!
+18:902  0:000  14. [change SAT0 to SATA, optionally pair with SSDT-SATA.aml]: pattern 53415430, bin not found / already patched!
+18:902  0:000  Patch table: SSDT  8259     len=0x313E
+18:902  0:000  0. [change _OSI to XOSI, pair with SSDT-XOSI.aml]: pattern 5F4F5349, bin not found / already patched!
+18:902  0:000  1. [change _DSM to XDSM]: pattern 5F44534D, patched at: [ (2C2C) ]
+18:902  0:000  2. [change EC0 to EC, optionally pair with SSDT-BAT0.aml]: pattern 4543305F, bin not found / already patched!
+18:902  0:000  3. [change Method(UPBI,0,N) to XPBI]: pattern 55504249, bin not found / already patched!
+18:902  0:000  4. [change Method(UPBS,0,N) to XPBS]: pattern 55504253, bin not found / already patched!
+18:902  0:000  5. [change Method(SMRD,4,N) to XMRD]: pattern 534D5244, bin not found / already patched!
+18:902  0:000  6. [change Method(SMWR,4,N) to XMWR]: pattern 534D5752, bin not found / already patched!
+18:902  0:000  7. [change Method(CLRI,0,S) to XLRI]: pattern 434C5249, bin not found / already patched!
+18:902  0:000  8. [change HDAS to HDEF, optionally pair with SSDT-HDEF.aml]: pattern 48444153, bin not found / already patched!
+18:902  0:000  9. [change HECI to IMEI]: pattern 48454349, bin not found / already patched!
+18:902  0:000  10. [change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml]: pattern 47505257, bin not found / already patched!
+18:902  0:000  11. [change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml]: pattern 47465830, patched at: [ (2D) (20) (46) (25A) (1CB5) (A3A) (1D) (6EC) ]
+18:902  0:000  12. [change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml]: pattern 5F513130, bin not found / already patched!
+18:902  0:000  13. [change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml]: pattern 5F513131, bin not found / already patched!
+18:902  0:000  14. [change SAT0 to SATA, optionally pair with SSDT-SATA.aml]: pattern 53415430, bin not found / already patched!
+18:902  0:000  Patch table: SSDT  8259     len=0x2036
+18:902  0:000  0. [change _OSI to XOSI, pair with SSDT-XOSI.aml]: pattern 5F4F5349, bin not found / already patched!
+18:902  0:000  1. [change _DSM to XDSM]: pattern 5F44534D, patched at: [ (456) (261) ]
+18:902  0:000  2. [change EC0 to EC, optionally pair with SSDT-BAT0.aml]: pattern 4543305F, bin not found / already patched!
+18:902  0:000  3. [change Method(UPBI,0,N) to XPBI]: pattern 55504249, bin not found / already patched!
+18:902  0:000  4. [change Method(UPBS,0,N) to XPBS]: pattern 55504253, bin not found / already patched!
+18:902  0:000  5. [change Method(SMRD,4,N) to XMRD]: pattern 534D5244, bin not found / already patched!
+18:902  0:000  6. [change Method(SMWR,4,N) to XMWR]: pattern 534D5752, bin not found / already patched!
+18:902  0:000  7. [change Method(CLRI,0,S) to XLRI]: pattern 434C5249, bin not found / already patched!
+18:902  0:000  8. [change HDAS to HDEF, optionally pair with SSDT-HDEF.aml]: pattern 48444153, bin not found / already patched!
+18:902  0:000  9. [change HECI to IMEI]: pattern 48454349, bin not found / already patched!
+18:902  0:000  10. [change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml]: pattern 47505257, bin not found / already patched!
+18:902  0:000  11. [change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml]: pattern 47465830, bin not found / already patched!
+18:902  0:000  12. [change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml]: pattern 5F513130, bin not found / already patched!
+18:902  0:000  13. [change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml]: pattern 5F513131, bin not found / already patched!
+18:902  0:000  14. [change SAT0 to SATA, optionally pair with SSDT-SATA.aml]: pattern 53415430, bin not found / already patched!
+18:902  0:000  Patch table: SSDT  8259     len=0x33CA
+18:902  0:000  0. [change _OSI to XOSI, pair with SSDT-XOSI.aml]: pattern 5F4F5349, bin not found / already patched!
+18:902  0:000  1. [change _DSM to XDSM]: pattern 5F44534D, bin not found / already patched!
+18:903  0:000  2. [change EC0 to EC, optionally pair with SSDT-BAT0.aml]: pattern 4543305F, patched at: [ (6DA) (12) (16) (16) (16) (16) (297) (16) (3A7) (15) (5CA) (D98) (15) (35) (21) (33) (E14) (27) ]
+18:903  0:000  3. [change Method(UPBI,0,N) to XPBI]: pattern 55504249, bin not found / already patched!
+18:903  0:000  4. [change Method(UPBS,0,N) to XPBS]: pattern 55504253, bin not found / already patched!
+18:903  0:000  5. [change Method(SMRD,4,N) to XMRD]: pattern 534D5244, bin not found / already patched!
+18:903  0:000  6. [change Method(SMWR,4,N) to XMWR]: pattern 534D5752, bin not found / already patched!
+18:903  0:000  7. [change Method(CLRI,0,S) to XLRI]: pattern 434C5249, bin not found / already patched!
+18:903  0:000  8. [change HDAS to HDEF, optionally pair with SSDT-HDEF.aml]: pattern 48444153, bin not found / already patched!
+18:903  0:000  9. [change HECI to IMEI]: pattern 48454349, bin not found / already patched!
+18:903  0:000  10. [change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml]: pattern 47505257, bin not found / already patched!
+18:903  0:000  11. [change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml]: pattern 47465830, bin not found / already patched!
+18:903  0:000  12. [change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml]: pattern 5F513130, bin not found / already patched!
+18:903  0:000  13. [change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml]: pattern 5F513131, bin not found / already patched!
+18:903  0:000  14. [change SAT0 to SATA, optionally pair with SSDT-SATA.aml]: pattern 53415430, bin not found / already patched!
+18:903  0:000  Patch table: SSDT  8259     len=0x1BC
+18:903  0:000  0. [change _OSI to XOSI, pair with SSDT-XOSI.aml]: pattern 5F4F5349, bin not found / already patched!
+18:903  0:000  1. [change _DSM to XDSM]: pattern 5F44534D, bin not found / already patched!
+18:903  0:000  2. [change EC0 to EC, optionally pair with SSDT-BAT0.aml]: pattern 4543305F, bin not found / already patched!
+18:903  0:000  3. [change Method(UPBI,0,N) to XPBI]: pattern 55504249, bin not found / already patched!
+18:903  0:000  4. [change Method(UPBS,0,N) to XPBS]: pattern 55504253, bin not found / already patched!
+18:903  0:000  5. [change Method(SMRD,4,N) to XMRD]: pattern 534D5244, bin not found / already patched!
+18:903  0:000  6. [change Method(SMWR,4,N) to XMWR]: pattern 534D5752, bin not found / already patched!
+18:903  0:000  7. [change Method(CLRI,0,S) to XLRI]: pattern 434C5249, bin not found / already patched!
+18:903  0:000  8. [change HDAS to HDEF, optionally pair with SSDT-HDEF.aml]: pattern 48444153, bin not found / already patched!
+18:903  0:000  9. [change HECI to IMEI]: pattern 48454349, bin not found / already patched!
+18:903  0:000  10. [change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml]: pattern 47505257, bin not found / already patched!
+18:903  0:000  11. [change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml]: pattern 47465830, bin not found / already patched!
+18:903  0:000  12. [change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml]: pattern 5F513130, bin not found / already patched!
+18:903  0:000  13. [change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml]: pattern 5F513131, bin not found / already patched!
+18:903  0:000  14. [change SAT0 to SATA, optionally pair with SSDT-SATA.aml]: pattern 53415430, patched at: [ (2C) (10) ]
+18:903  0:000  Patch table: SSDT  8259     len=0x29F
+18:903  0:000  0. [change _OSI to XOSI, pair with SSDT-XOSI.aml]: pattern 5F4F5349, bin not found / already patched!
+18:903  0:000  1. [change _DSM to XDSM]: pattern 5F44534D, patched at: [ (A5) ]
+18:903  0:000  2. [change EC0 to EC, optionally pair with SSDT-BAT0.aml]: pattern 4543305F, bin not found / already patched!
+18:903  0:000  3. [change Method(UPBI,0,N) to XPBI]: pattern 55504249, bin not found / already patched!
+18:903  0:000  4. [change Method(UPBS,0,N) to XPBS]: pattern 55504253, bin not found / already patched!
+18:903  0:000  5. [change Method(SMRD,4,N) to XMRD]: pattern 534D5244, bin not found / already patched!
+18:903  0:000  6. [change Method(SMWR,4,N) to XMWR]: pattern 534D5752, bin not found / already patched!
+18:903  0:000  7. [change Method(CLRI,0,S) to XLRI]: pattern 434C5249, bin not found / already patched!
+18:903  0:000  8. [change HDAS to HDEF, optionally pair with SSDT-HDEF.aml]: pattern 48444153, bin not found / already patched!
+18:903  0:000  9. [change HECI to IMEI]: pattern 48454349, bin not found / already patched!
+18:903  0:000  10. [change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml]: pattern 47505257, bin not found / already patched!
+18:903  0:000  11. [change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml]: pattern 47465830, bin not found / already patched!
+18:903  0:000  12. [change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml]: pattern 5F513130, bin not found / already patched!
+18:903  0:000  13. [change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml]: pattern 5F513131, bin not found / already patched!
+18:903  0:000  14. [change SAT0 to SATA, optionally pair with SSDT-SATA.aml]: pattern 53415430, bin not found / already patched!
+18:903  0:000  Patch table: SSDT  8259     len=0x346
+18:903  0:000  0. [change _OSI to XOSI, pair with SSDT-XOSI.aml]: pattern 5F4F5349, bin not found / already patched!
+18:903  0:000  1. [change _DSM to XDSM]: pattern 5F44534D, patched at: [ (D3) ]
+18:903  0:000  2. [change EC0 to EC, optionally pair with SSDT-BAT0.aml]: pattern 4543305F, bin not found / already patched!
+18:903  0:000  3. [change Method(UPBI,0,N) to XPBI]: pattern 55504249, bin not found / already patched!
+18:903  0:000  4. [change Method(UPBS,0,N) to XPBS]: pattern 55504253, bin not found / already patched!
+18:903  0:000  5. [change Method(SMRD,4,N) to XMRD]: pattern 534D5244, bin not found / already patched!
+18:903  0:000  6. [change Method(SMWR,4,N) to XMWR]: pattern 534D5752, bin not found / already patched!
+18:903  0:000  7. [change Method(CLRI,0,S) to XLRI]: pattern 434C5249, bin not found / already patched!
+18:903  0:000  8. [change HDAS to HDEF, optionally pair with SSDT-HDEF.aml]: pattern 48444153, bin not found / already patched!
+18:903  0:000  9. [change HECI to IMEI]: pattern 48454349, bin not found / already patched!
+18:903  0:000  10. [change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml]: pattern 47505257, bin not found / already patched!
+18:903  0:000  11. [change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml]: pattern 47465830, bin not found / already patched!
+18:903  0:000  12. [change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml]: pattern 5F513130, bin not found / already patched!
+18:903  0:000  13. [change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml]: pattern 5F513131, bin not found / already patched!
+18:903  0:000  14. [change SAT0 to SATA, optionally pair with SSDT-SATA.aml]: pattern 53415430, bin not found / already patched!
+18:903  0:000  Patch table: SSDT  8259     len=0x3002
+18:903  0:000  0. [change _OSI to XOSI, pair with SSDT-XOSI.aml]: pattern 5F4F5349, bin not found / already patched!
+18:903  0:000  1. [change _DSM to XDSM]: pattern 5F44534D, bin not found / already patched!
+18:903  0:000  2. [change EC0 to EC, optionally pair with SSDT-BAT0.aml]: pattern 4543305F, bin not found / already patched!
+18:903  0:000  3. [change Method(UPBI,0,N) to XPBI]: pattern 55504249, bin not found / already patched!
+18:903  0:000  4. [change Method(UPBS,0,N) to XPBS]: pattern 55504253, bin not found / already patched!
+18:903  0:000  5. [change Method(SMRD,4,N) to XMRD]: pattern 534D5244, bin not found / already patched!
+18:903  0:000  6. [change Method(SMWR,4,N) to XMWR]: pattern 534D5752, bin not found / already patched!
+18:903  0:000  7. [change Method(CLRI,0,S) to XLRI]: pattern 434C5249, bin not found / already patched!
+18:903  0:000  8. [change HDAS to HDEF, optionally pair with SSDT-HDEF.aml]: pattern 48444153, bin not found / already patched!
+18:903  0:000  9. [change HECI to IMEI]: pattern 48454349, bin not found / already patched!
+18:903  0:000  10. [change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml]: pattern 47505257, bin not found / already patched!
+18:903  0:000  11. [change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml]: pattern 47465830, bin not found / already patched!
+18:903  0:000  12. [change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml]: pattern 5F513130, bin not found / already patched!
+18:903  0:000  13. [change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml]: pattern 5F513131, bin not found / already patched!
+18:903  0:000  14. [change SAT0 to SATA, optionally pair with SSDT-SATA.aml]: pattern 53415430, bin not found / already patched!
+18:903  0:000  Patch table: SSDT  8259     len=0x51E
+18:903  0:000  0. [change _OSI to XOSI, pair with SSDT-XOSI.aml]: pattern 5F4F5349, bin not found / already patched!
+18:903  0:000  1. [change _DSM to XDSM]: pattern 5F44534D, patched at: [ (B6) (1F8) ]
+18:903  0:000  2. [change EC0 to EC, optionally pair with SSDT-BAT0.aml]: pattern 4543305F, bin not found / already patched!
+18:903  0:000  3. [change Method(UPBI,0,N) to XPBI]: pattern 55504249, bin not found / already patched!
+18:903  0:000  4. [change Method(UPBS,0,N) to XPBS]: pattern 55504253, bin not found / already patched!
+18:903  0:000  5. [change Method(SMRD,4,N) to XMRD]: pattern 534D5244, bin not found / already patched!
+18:903  0:000  6. [change Method(SMWR,4,N) to XMWR]: pattern 534D5752, bin not found / already patched!
+18:903  0:000  7. [change Method(CLRI,0,S) to XLRI]: pattern 434C5249, bin not found / already patched!
+18:903  0:000  8. [change HDAS to HDEF, optionally pair with SSDT-HDEF.aml]: pattern 48444153, bin not found / already patched!
+18:903  0:000  9. [change HECI to IMEI]: pattern 48454349, bin not found / already patched!
+18:903  0:000  10. [change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml]: pattern 47505257, bin not found / already patched!
+18:903  0:000  11. [change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml]: pattern 47465830, bin not found / already patched!
+18:903  0:000  12. [change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml]: pattern 5F513130, bin not found / already patched!
+18:903  0:000  13. [change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml]: pattern 5F513131, bin not found / already patched!
+18:903  0:000  14. [change SAT0 to SATA, optionally pair with SSDT-SATA.aml]: pattern 53415430, patched at: [ (20) (12) (71) (1F8) (254) ]
+18:903  0:000  Patch table: SSDT  8259     len=0x106A
+18:903  0:000  0. [change _OSI to XOSI, pair with SSDT-XOSI.aml]: pattern 5F4F5349, bin not found / already patched!
+18:903  0:000  1. [change _DSM to XDSM]: pattern 5F44534D, patched at: [ (6F2) ]
+18:903  0:000  2. [change EC0 to EC, optionally pair with SSDT-BAT0.aml]: pattern 4543305F, bin not found / already patched!
+18:903  0:000  3. [change Method(UPBI,0,N) to XPBI]: pattern 55504249, bin not found / already patched!
+18:903  0:000  4. [change Method(UPBS,0,N) to XPBS]: pattern 55504253, bin not found / already patched!
+18:903  0:000  5. [change Method(SMRD,4,N) to XMRD]: pattern 534D5244, bin not found / already patched!
+18:903  0:000  6. [change Method(SMWR,4,N) to XMWR]: pattern 534D5752, bin not found / already patched!
+18:903  0:000  7. [change Method(CLRI,0,S) to XLRI]: pattern 434C5249, bin not found / already patched!
+18:903  0:000  8. [change HDAS to HDEF, optionally pair with SSDT-HDEF.aml]: pattern 48444153, bin not found / already patched!
+18:903  0:000  9. [change HECI to IMEI]: pattern 48454349, bin not found / already patched!
+18:903  0:000  10. [change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml]: pattern 47505257, bin not found / already patched!
+18:903  0:000  11. [change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml]: pattern 47465830, bin not found / already patched!
+18:903  0:000  12. [change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml]: pattern 5F513130, bin not found / already patched!
+18:903  0:000  13. [change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml]: pattern 5F513131, bin not found / already patched!
+18:903  0:000  14. [change SAT0 to SATA, optionally pair with SSDT-SATA.aml]: pattern 53415430, bin not found / already patched!
+18:903  0:000  Patch table: SSDT  8259     len=0xEDE
+18:903  0:000  0. [change _OSI to XOSI, pair with SSDT-XOSI.aml]: pattern 5F4F5349, bin not found / already patched!
+18:903  0:000  1. [change _DSM to XDSM]: pattern 5F44534D, bin not found / already patched!
+18:903  0:000  2. [change EC0 to EC, optionally pair with SSDT-BAT0.aml]: pattern 4543305F, bin not found / already patched!
+18:903  0:000  3. [change Method(UPBI,0,N) to XPBI]: pattern 55504249, bin not found / already patched!
+18:903  0:000  4. [change Method(UPBS,0,N) to XPBS]: pattern 55504253, bin not found / already patched!
+18:903  0:000  5. [change Method(SMRD,4,N) to XMRD]: pattern 534D5244, bin not found / already patched!
+18:903  0:000  6. [change Method(SMWR,4,N) to XMWR]: pattern 534D5752, bin not found / already patched!
+18:903  0:000  7. [change Method(CLRI,0,S) to XLRI]: pattern 434C5249, bin not found / already patched!
+18:903  0:000  8. [change HDAS to HDEF, optionally pair with SSDT-HDEF.aml]: pattern 48444153, bin not found / already patched!
+18:903  0:000  9. [change HECI to IMEI]: pattern 48454349, bin not found / already patched!
+18:903  0:000  10. [change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml]: pattern 47505257, bin not found / already patched!
+18:903  0:000  11. [change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml]: pattern 47465830, bin not found / already patched!
+18:903  0:000  12. [change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml]: pattern 5F513130, bin not found / already patched!
+18:903  0:000  13. [change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml]: pattern 5F513131, bin not found / already patched!
+18:903  0:000  14. [change SAT0 to SATA, optionally pair with SSDT-SATA.aml]: pattern 53415430, bin not found / already patched!
+18:903  0:000  Patch table: SSDT  8259     len=0x480E
+18:903  0:000  0. [change _OSI to XOSI, pair with SSDT-XOSI.aml]: pattern 5F4F5349, bin not found / already patched!
+18:903  0:000  1. [change _DSM to XDSM]: pattern 5F44534D, patched at: [ (45C9) ]
+18:903  0:000  2. [change EC0 to EC, optionally pair with SSDT-BAT0.aml]: pattern 4543305F, patched at: [ (2F5) (2E) (3B) (16) (A45) (DA) (1228) (7DD) (16) (17) (174) ]
+18:903  0:000  3. [change Method(UPBI,0,N) to XPBI]: pattern 55504249, bin not found / already patched!
+18:903  0:000  4. [change Method(UPBS,0,N) to XPBS]: pattern 55504253, bin not found / already patched!
+18:903  0:000  5. [change Method(SMRD,4,N) to XMRD]: pattern 534D5244, bin not found / already patched!
+18:903  0:000  6. [change Method(SMWR,4,N) to XMWR]: pattern 534D5752, bin not found / already patched!
+18:903  0:000  7. [change Method(CLRI,0,S) to XLRI]: pattern 434C5249, bin not found / already patched!
+18:903  0:000  8. [change HDAS to HDEF, optionally pair with SSDT-HDEF.aml]: pattern 48444153, bin not found / already patched!
+18:904  0:000  9. [change HECI to IMEI]: pattern 48454349, bin not found / already patched!
+18:904  0:000  10. [change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml]: pattern 47505257, bin not found / already patched!
+18:904  0:000  11. [change GFX0 to IGPU, optionally pair with SSDT-IGPU.aml]: pattern 47465830, patched at: [ (55) (28) (12) (12) (12) (12) (12) (12) (12) (12) (12) (12) (12) (12) (12) (12) (12) (12) (410) (50) (15DB) (599) (E40) (13) (28) (27) (13) (28) (27) (13) (28) (27) (13) (28) (27) (13) (28) (27) (13) (28) (27) (13) (28) (27) (13) (28) (27) (13) (28) (27) (13) (28) (27) (13) (28) (27) (13) (28) (27) (13) (28) (27) (13) (28) (27) (13) (28) (27) (13) (28) ]
+18:904  0:000  12. [change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml]: pattern 5F513130, bin not found / already patched!
+18:904  0:000  13. [change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml]: pattern 5F513131, bin not found / already patched!
+18:904  0:000  14. [change SAT0 to SATA, optionally pair with SSDT-SATA.aml]: pattern 53415430, bin not found / already patched!
+18:904  0:000  Drop tables from Xsdt, SIGN=XXXX TableID= Length=0
+18:904  0:000   Xsdt has tables count=29
+18:904  0:000  === [ ACPIPatchedAML ] ====================================
+18:904  0:000  Sorted
+18:904  0:000  Inserting table[0]:SSDT-BAT0.aml from EFI\CLOVER\ACPI\patched ... Success
+18:910  0:006  Inserting table[1]:SSDT-Config.aml from EFI\CLOVER\ACPI\patched ... Success
+18:910  0:000  Inserting table[2]:SSDT-FN.aml from EFI\CLOVER\ACPI\patched ... Success
+18:910  0:000  Inserting table[3]:SSDT-HDEF.aml from EFI\CLOVER\ACPI\patched ... Success
+18:910  0:000  Inserting table[4]:SSDT-IGPU.aml from EFI\CLOVER\ACPI\patched ... Success
+18:910  0:000  Inserting table[5]:SSDT-PluginType1.aml from EFI\CLOVER\ACPI\patched ... Success
+18:913  0:003  Inserting table[6]:SSDT-PNLF.aml from EFI\CLOVER\ACPI\patched ... Success
+18:913  0:000  Inserting table[7]:SSDT-PRW.aml from EFI\CLOVER\ACPI\patched ... Success
+18:913  0:000  Inserting table[8]:SSDT-SATA.aml from EFI\CLOVER\ACPI\patched ... Success
+18:913  0:000  Inserting table[9]:SSDT-SMBUS.aml from EFI\CLOVER\ACPI\patched ... Success
+18:916  0:002  Inserting table[10]:SSDT-UIAC.aml from EFI\CLOVER\ACPI\patched ... Success
+18:916  0:000  Inserting table[11]:SSDT-XOSI.aml from EFI\CLOVER\ACPI\patched ... Success
+18:916  0:000  Inserting table[12]:SSDT-LPC.aml from EFI\CLOVER\ACPI\patched ... Success
+18:916  0:000  Inserting table[13]:SSDT-EN0.aml from EFI\CLOVER\ACPI\patched ... Success
+18:916  0:000  Inserting table[14]:SSDT-Disable_DGPU.aml from EFI\CLOVER\ACPI\patched ... Success
+18:921  0:004  CPUBase=0 and ApicCPUBase=1 ApicCPUNum=8
+18:921  0:000  === [ RestSetup macOS ] ===================================
+18:921  0:000  EdidDiscovered size=128
+18:921  0:000  Inject EDID
+18:921  0:000  ------- EDID Table
+18:921  0:000  000  |  00  FF  FF  FF  FF  FF  FF  00  30  E4
+18:921  0:000  010  |  32  05  00  00  00  00  00  1A  01  04
+18:921  0:000  020  |  95  22  13  78  03  A1  C5  94  59  57
+18:921  0:000  030  |  8F  27  20  50  54  00  00  00  01  01
+18:921  0:000  040  |  01  01  01  01  01  01  01  01  01  01
+18:921  0:000  050  |  01  01  01  01  2E  36  80  A0  70  38
+18:921  0:000  060  |  1F  40  30  20  35  00  58  C2  10  00
+18:921  0:000  070  |  00  19  22  24  80  A0  70  38  1F  40
+18:921  0:000  080  |  30  20  35  00  58  C2  10  00  00  19
+18:921  0:000  090  |  00  00  00  FD  00  28  3C  43  43  0E
+18:921  0:000  100  |  01  0A  20  20  20  20  20  20  00  00
+18:921  0:000  110  |  00  02  00  0C  47  FF  0A  3C  6E  1C
+18:921  0:000  120  |  15  1F  6E  00  00  00  00  15
+18:921  0:000      ProductID = 0x9C7C
+18:921  0:000  ------- New EDID Table
+18:921  0:000  000  |  00  FF  FF  FF  FF  FF  FF  00  30  E4
+18:921  0:000  010  |  7C  9C  00  00  00  00  00  1A  01  04
+18:921  0:000  020  |  95  22  13  78  03  A1  C5  94  59  57
+18:921  0:000  030  |  8F  27  20  50  54  00  00  00  01  01
+18:921  0:000  040  |  01  01  01  01  01  01  01  01  01  01
+18:921  0:000  050  |  01  01  01  01  2E  36  80  A0  70  38
+18:921  0:000  060  |  1F  40  30  20  35  00  58  C2  10  00
+18:921  0:000  070  |  00  19  22  24  80  A0  70  38  1F  40
+18:921  0:000  080  |  30  20  35  00  58  C2  10  00  00  19
+18:921  0:000  090  |  00  00  00  FD  00  28  3C  43  43  0E
+18:921  0:000  100  |  01  0A  20  20  20  20  20  20  00  00
+18:921  0:000  110  |  00  02  00  0C  47  FF  0A  3C  6E  1C
+18:921  0:000  120  |  15  1F  6E  00  00  00  00  34
+18:921  0:000  Intel HD Graphics 630 [8086:591B] :: PciRoot(0x0)\Pci(0x2,0x0)
+18:921  0:000    Found Full HD Display - 16:9 :: Width=1920 Height=1080
+18:921  0:000    AAPL00,override-no-connect: added
+18:921  0:000    Beginning DualLink auto-detection
+18:921  0:000    High Resolution Display
+18:921  0:000    AAPL00,DualLink = 1
+18:921  0:000    FakeID Intel GFX = 0x59168086
+18:921  0:000    ig-platform-id = 0x591B0000
+18:921  0:000  Intel GFX revision  = 0x4
+18:921  0:000   RCBA disabled; cannot use it
+18:921  0:000   setting specified layout-id=28 (0x1C)
+18:921  0:000  stringlength = 2340
+18:921  0:000  CurrentMode: Width=1920 Height=1080
+18:921  0:000  Beginning FSInjection
+FSInjectionInstall ...
+- Our FSI_SIMPLE_FILE_SYSTEM_PROTOCOL installed on handle: 79E32D18
+FSInjectionInstall ...
+- Our FSI_SIMPLE_FILE_SYSTEM_PROTOCOL installed on handle: 79E32D18
+18:923  0:001  Use origin smbios table type 1 guid.
+18:923  0:000    Force kext: System\Library\Extensions\IONetworkingFamily.kext
+18:928  0:004      Force PlugIn kext: System\Library\Extensions\IONetworkingFamily.kext\Contents\PlugIns\nvenet.kext
+18:929  0:001      Force PlugIn kext: System\Library\Extensions\IONetworkingFamily.kext\Contents\PlugIns\AppleBCM5701Ethernet.kext
+18:932  0:002      Force PlugIn kext: System\Library\Extensions\IONetworkingFamily.kext\Contents\PlugIns\AppleIntelI210Ethernet.kext
+18:934  0:002      Force PlugIn kext: System\Library\Extensions\IONetworkingFamily.kext\Contents\PlugIns\Intel82574L.kext
+18:937  0:002      Force PlugIn kext: System\Library\Extensions\IONetworkingFamily.kext\Contents\PlugIns\IOEthernetAVBController.kext
+18:938  0:001      Force PlugIn kext: System\Library\Extensions\IONetworkingFamily.kext\Contents\PlugIns\AppleYukon2.kext
+18:944  0:005      Force PlugIn kext: System\Library\Extensions\IONetworkingFamily.kext\Contents\PlugIns\AppleIntel8254XEthernet.kext
+18:946  0:002      Force PlugIn kext: System\Library\Extensions\IONetworkingFamily.kext\Contents\PlugIns\AppleVmxnet3Ethernet.kext
+18:947  0:001      Force PlugIn kext: System\Library\Extensions\IONetworkingFamily.kext\Contents\PlugIns\mDNSOffloadUserClient.kext
+18:949  0:001  Preparing kexts injection for arch=x86_64 from EFI\CLOVER\kexts\Other
+18:949  0:000    Extra kext: EFI\CLOVER\kexts\Other\AppleALC.kext
+18:991  0:042      Extra PlugIn kext: EFI\CLOVER\kexts\Other\AppleALC.kext\Contents\PlugIns\PinConfigs.kext
+19:079  0:088    Extra kext: EFI\CLOVER\kexts\Other\FakeSMC.kext
+19:101  0:021    Extra kext: EFI\CLOVER\kexts\Other\USBInjectAll.kext
+19:342  0:241    Extra kext: EFI\CLOVER\kexts\Other\VoodooPS2Controller.kext
+19:357  0:014      Extra PlugIn kext: EFI\CLOVER\kexts\Other\VoodooPS2Controller.kext\Contents\PlugIns\VoodooPS2Keyboard.kext
+19:397  0:039      Extra PlugIn kext: EFI\CLOVER\kexts\Other\VoodooPS2Controller.kext\Contents\PlugIns\VoodooPS2Mouse.kext
+19:408  0:011      Extra PlugIn kext: EFI\CLOVER\kexts\Other\VoodooPS2Controller.kext\Contents\PlugIns\VoodooPS2Trackpad.kext
+19:437  0:028    Extra kext: EFI\CLOVER\kexts\Other\FakePCIID.kext
+19:448  0:010    Extra kext: EFI\CLOVER\kexts\Other\FakePCIID_Broadcom_WiFi.kext
+19:460  0:011    Extra kext: EFI\CLOVER\kexts\Other\FakePCIID_Intel_HD_Graphics.kext
+19:470  0:010    Extra kext: EFI\CLOVER\kexts\Other\IntelGraphicsFixup.kext
+19:480  0:010    Extra kext: EFI\CLOVER\kexts\Other\Lilu.kext
+19:498  0:018    Extra kext: EFI\CLOVER\kexts\Other\RealtekRTL8111.kext
+19:526  0:027    Extra kext: EFI\CLOVER\kexts\Other\ACPIBatteryManager.kext
+19:543  0:016    Extra kext: EFI\CLOVER\kexts\Other\AppleBacklightInjector.kext
+19:550  0:007  SetStartupDiskVolume:
+19:550  0:000    * Volume: 'Sierra'
+19:550  0:000    * LoaderPath: '<null string>'
+19:550  0:000    * DevPath: Sierra
+19:550  0:000    * GUID = 9A436658-5F60-4FA0-A551-A43880C441D6
+19:550  0:000    * efi-boot-device: <array><dict><key>IOMatch</key><dict><key>IOProviderClass</key><string>IOMedia</string><key>IOPropertyMatch</key><dict><key>UUID</key><string>9A436658-5F60-4FA0-A551-A43880C441D6</string></dict></dict></dict></array>
+19:550  0:000  Custom boot is disabled
+19:550  0:000  Closing log

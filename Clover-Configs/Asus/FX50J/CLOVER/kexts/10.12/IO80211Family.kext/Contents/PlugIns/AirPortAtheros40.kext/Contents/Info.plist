@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>15A178l</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>AirPortAtheros40</string>
+	<key>CFBundleGetInfoString</key>
+	<string>7.0, Copyright © 2006–2013 Apple Inc. All rights reserved.</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.driver.AirPort.Atheros40</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>AirPortAtheros40</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>7.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>700.74.5</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>7A176g</string>
+	<key>DTPlatformVersion</key>
+	<string>GM</string>
+	<key>DTSDKBuild</key>
+	<string>15A283</string>
+	<key>DTSDKName</key>
+	<string>macosx10.11internal</string>
+	<key>DTXcode</key>
+	<string>0700</string>
+	<key>DTXcodeBuild</key>
+	<string>7A176g</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>Atheros Wireless LAN PCI</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AirPort.Atheros40</string>
+			<key>IOClass</key>
+			<string>AirPort_AtherosNewma40</string>
+			<key>IOMatchCategory</key>
+			<string>IODefaultMatchCategory</string>
+			<key>IONameMatch</key>
+			<array>
+				<string>pci168c,36</string>
+			</array>
+			<key>IOProbeScore</key>
+			<integer>700</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+		</dict>
+	</dict>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IO80211Family</key>
+		<string>600.0</string>
+		<key>com.apple.iokit.IONetworkingFamily</key>
+		<string>3.1</string>
+		<key>com.apple.iokit.IOPCIFamily</key>
+		<string>2.8</string>
+		<key>com.apple.kpi.bsd</key>
+		<string>13.0.0</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>13.0.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>13.0.0</string>
+		<key>com.apple.kpi.mach</key>
+		<string>13.0.0</string>
+		<key>com.apple.kpi.unsupported</key>
+		<string>13.0.0</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Network-Root</string>
+</dict>
+</plist>
