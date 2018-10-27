@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>ApplePS2Trackpad</string>
+	<key>CFBundleGetInfoString</key>
+	<string>2.0.0, Copyright Apple Computer, Inc. 2002-2003</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.driver.ApplePS2Trackpad</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Apple PS/2 Trackpad</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.0.0`</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>2.0.0</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>ALPS GlidePoint</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.ApplePS2Trackpad</string>
+			<key>IOClass</key>
+			<string>ApplePS2ALPSGlidePoint</string>
+			<key>IOProbeScore</key>
+			<integer>1000</integer>
+			<key>IOProviderClass</key>
+			<string>ApplePS2MouseDevice</string>
+		</dict>
+		<key>Synaptics TouchPad</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.ApplePS2Trackpad</string>
+			<key>IOClass</key>
+			<string>ApplePS2SynapticsTouchPad</string>
+			<key>IOProbeScore</key>
+			<integer>5000</integer>
+			<key>IOProviderClass</key>
+			<string>ApplePS2MouseDevice</string>
+		</dict>
+	</dict><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>ApplePS2Trackpad</string>
+	<key>CFBundleGetInfoString</key>
+	<string>2.0.0, Copyright Apple Computer, Inc. 2002-2003</string>
+	<key>CFBundleIde

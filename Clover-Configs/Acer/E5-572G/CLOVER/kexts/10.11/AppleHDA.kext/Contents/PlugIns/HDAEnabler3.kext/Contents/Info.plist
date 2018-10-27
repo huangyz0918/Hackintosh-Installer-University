@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>HDAEnabler</string>
+	<key>CFBundleGetInfoString</key>
+	<string>1.0.0d1, Copyright © 2008 by Kabyl</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.kext.HDAEnabler</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>HDAEnabler</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0d1</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.0d1</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>HDAEnabler</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.kext.HDAEnabler</string>
+			<key>HDAProperties</key>
+			<dict>
+				<key>PinConfigurations</key>
+				<data>
+				</data>
+				<key>built-in</key>
+				<data>
+				AA==
+				</data>
+				<key>hda-gfx</key>
+				<string>&lt;onboard-1&gt;</string>
+				<key>layout-id</key>
+				<data>
+				AwAAAA==
+				</data>
+			</dict>
+			<key>IOClass</key>
+			<string>HDAEnabler</string>
+			<key>IOPCIClassMatch</key>
+			<string>0x04030000&amp;0xffff0000</string>
+			<key>IOProbeScore</key>
+			<integer>600</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+		</dict>
+	</dict>
+	<key>OSBundleCompatibleVersion</key>
+	<string>1.0.0d1</string>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IOPCIFamily</key>
+		<string>1.0.0b1</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>8.0.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>8.0.0</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+</dict>
+</plist>

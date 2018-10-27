@@ -1,0 +1,542 @@
+﻿[V4.2.9.10]
+ 1.Fixed : Mac STA connects to Ad-hoc on 2.4G The data rate will show only 11Mbps
+
+[V4.2.9.9]
+ 1. Add checking for spinlock to avoid kernel panic.
+
+[V4.2.9.8]
+ 1. Remove log print of RTMPXmitLinkSpeed.
+
+[V4.2.9.7]
+ 1. Implement the feature of the Network Utility statistic.
+
+[V4.2.9.6]
+ 1. Fixed the scutum cannot connect by bssid in 10.9.
+
+﻿[V4.2.9.5]
+ 1. Fixed WCNCR00005491. throughput of Tx does not reach standard in legacy mode.
+ 2. Change copyright info
+
+[V4.2.9.4]
+ 1. Fixed the free wrong size memory in MlmeFreeMemoryHandler(), it will cause kernel panic in 10.9.
+
+[V4.2.9.3]
+ 1. Remove the patch that switchband(BW 20) in scan, Due to it is only a patch not the root cause.
+
+[V4.2.9.2]
+ 1. fixed WCNCR00005490. Radio Off -> Radio on in Raui then nscan no AP
+ 2. fixed WCNCR00005496. Overnight fail. scan no AP
+ 3. fixed WCNCR00005485. IOT issue with realtek 2*2 AP. unable to connect with WPA/WPA2PSK 5Ghz.
+ 4. fixed WCNCR00005473. Sleep -> Resume Scan no AP
+
+
+[V4.2.9.1]
+ 1. fixed the hidden AP connect issue by sending seconde probe req
+ 2. switchband(BW 20) in scan, to prevent that sometimes sta cannot recieve probe response from hidden AP when scanning.
+
+[V4.2.9.0]
+ 1. Formal Release
+ 2. Implement Throughput issue
+  
+[V4.2.8.27]
+1.) For MT7610 fixed the issue that Cold/Warm boot cannot reconize the NIC by add IOMatchCategoey property in plist file.
+
+[V4.2.8.26]
+
+1.) Fixed 
+WCNCR00004812.[MT7610U][sta][wifi-function][MAC]:sta ??N?AP (tkip),??N ?AP (aes)sta????N AP ?BA.
+
+[V4.2.8.25]
+
+1.) Add case RT_OID_QUERY_HW_ARCHITECTURE_VERSION for OID query to determine if the chip is 6x9x.
+To fix UI get wrong tx rx rate(the transmit setting is different if the chip is 6x9x).
+
+
+
+[V4.2.8.24]
+
+1.) Add new MT7610U PID/VID PID:17D1,VID:0B05  for ASUS.
+
+
+
+[V4.2.8.23]
+
+1.) Set Led Off after sleep.
+
+2.) Set Led bling when hwpbc is running.
+
+
+
+[V4.2.8.22]
+
+1.) insert new field(ULONG   Rsv;// RF Bank Number) into the RT_802_11_HARDWARE_REGISTER
+	// structure for query/set hardware register - MAC, BBP, RF register
+	
+typedef struct _RT_802_11_HARDWARE_REGISTER 
+{
+		
+ULONG   HardwareType;       // 0:MAC, 1:BBP, 2:RF register, 3:EEPROM
+		
+ULONG   Offset;             // Q/S register offset addr
+		
+ULONG   Data;               // R/W data buffer
+		
+ULONG   Rsv;				// RF Bank Number
+	
+} RT_802_11_HARDWARE_REGISTER, *PRT_802_11_HARDWARE_REGISTER;
+
+
+2.) Add to query and set RF register settings
+
+
+
+[V4.2.8.21]
+
+1.) Modify the MAX_LEN_OF_BSS_TABLE from 64 to 128, sync to windows, for [WCNCR00004857] which cannot find the AP in the sitesurvey page.
+
+
+
+[V4.2.8.20]
+
+1.) Add new MT7610U PID/VID PID:AB31,VID:2019  for PCI(PLANEX COMMUNICATIONS INC).
+
+[V4.2.8.19]
+1.) Set Led in MlmeRadiooff(), it fixed reload firmware after wake up fail .
+2.) Add compile source file for build setting of non-supplicant build.
+
+2.) Remove loadfirmware in radio on(for not 6x9x). Move it to setPowerState() for wake up from sleep.
+
+
+
+[V4.2.8.18]
+
+1.) Reload firmware after wake up from sleep. Fixed bulkout command packet blocked after sleep and caused reload firmware failed. 
+
+2.) Add the value check to prevent access to null pointer in getTargetAndMethodForIndex().
+
+3.) Fixed potential unreleased spinlock in RTUSBVendorRequest().
+
+
+
+[V4.2.8.17]
+
+1.) Modify the mlmebulkout mechanism to only bulk out one packet at a time, after the previous one is completed then we bulk out the next one.(Paul Wu)
+
+2.) Remove some spin locks which has not been used. 
+
+3.) Add that if the adapter is 6x9x we don't write the USB class and subclass value(0x0206) in eFuse/EEPROM. Because the offset is not the same and no such a offset in MT7610U.
+
+4.) Restore NICloadfirmware in MlmeRadioOn if the adapter is not 6x9x.
+
+
+
+[V4.2.8.16]
+1.) Add RTMPSetLEDbyStatus6x9x Function for 6X9X Led control, sync LED control from windows.
+
+[V4.2.8.15]
+1.) Sync MlmeRadioOn and MlmeRadioOff to Windows. It fixed Scan no AP after switch Radio off and then switch radio on.
+2.) Temporarily remove set LED in MlmeRadioOn/MlmeRadioOff. It might cause Scan no AP after (S4).
+3.) Rename PerformPowerUpCalibration to PowerOnFullCalibration (sync to windows)
+4.) Sync PowerOnFullCalibration to Windows with enable RF. It fixed Scan no AP after wake from sleep (S4).
+
+[V4.2.8.14]
+1.) Correct check in error in mlme dataoutpipe[1] => dataoutpipe[2]
+
+[V4.2.8.13]
+1.) Sync Rt6x9x.cpp functions from XP
+2.) Correct the parameter in ScanNextChannel() when adding ExtHtIE.
+3.) Separate the dataoutpipe to 3 pipes 0: data 1: nullframe, mlmepacket 2: pktcmd.
+4.) Remove delay 1500 in TXWI()(work around in 4.2.8.8).
+5.) Only send one probe req in one channel when scan to avoid scan no AP.
+
+[V4.2.8.12]
+1.) Add table "LED.h" and "MT7650_tables.h".
+2.) Fixed the parameters of switchband might be invalid such as channel = 0 or Use CentralChannel in BW_20.
+3.) Fixed before end of scan in "ScanNextChannel()" we need to restore the current BW.
+4.) Fixed the NullPacket with no header in only set the "fRTUSB_BULK_OUT_DATA_NULL" flag.
+5.) Temporary set BW to 20 in "MlmeJoinReqAction" to patch that BW is always 80.
+6.) Swap the sequence of "WscStop()" and "RTMPReleaseAllTimers()" in "MlmeHalt()" to avod cancel timer failed due to release timer before cancel timer.	
+7.) Sync from XP, not to adjust TxPower in "STAMlmePeriodicExec()". Use it before calling periodicexec.
+8.) With all logs been turned off, *Scan no AP* still happens in MT7610u.
+
+[V4.2.8.11]
+1.) Ported switch channel offload.
+2.) Fixed pktcmd set timer fail.
+3.) Update FW7650.h FW7601.h PowerTable.h MT7650E2_tables.h
+
+[V4.2.8.10]
+1.) Recover the action of posting message to supplicant in ioctl_supplicant.cpp, which had been mod in 4.2.8.1. Without this action may cause kernel panic Also recover some other actions that might affect
+
+[V4.2.8.9]
+1.) Remove the RT2xxx(RT2770/RT2870/RT2070) PID&VID form plist file
+2.) For the workaround solution un-stable connected AP issue, change to delay 1.5ms without using the debug messages method
+
+[V4.2.8.8]
+1.) Sync XP driver form V5.0.6.1 to V5.0.8.0 (Not Include TSSI)
+2.) Workaround Solution: Add the debug message to avoid the un-stable connected AP issue for MT7610u
+
+[V4.2.8.7]
+1.) Fix the MT7610u sometimes unconnected to BW 80Mbps issue.
+2.) Fix command packet complete take long time issue. 
+3.) Add FW SwitchChannel Offload, control by registry "SwitchChannelOffloadEnable" 
+
+
+[V4.2.8.6]
+1. Modify READ_RXWI_KEY_IDX for READ_RXINFO_MY_BSS error
+2. For AsicUpdateProtect(), Update VhtProtect command
+3. Improve the MT7610 TP. about 5G TX 150Mbps and RX 165Mbps
+4. Patch for turn off TxBurst solution (Broadcom Cisco AP TP Issue)
+
+[V4.2.8.5]
+1. Updated RegTransmitSetting for TransmitSetting value (MT7610u/MT7610u)
+2. Modify Debug method and add some debug messages
+3. Fix Un-connected to 5G AP
+
+[V4.2.8.4]
+1.) For MT7610u, change the default phy mode vale to PHY_11VHT 
+2.) Remove the MlmeRadioOff()/MlmeRadioOn(), and avoid reloading firmware 2 times
+3.) Update IS_RT_NEW_DUAL_BAND_NIC(), let it support VHT chip
+4.) Fix Un-scannig 5G AP issue
+
+[V4.2.8.03]
+1.) Fix the built errors that if the DBGPRINT is enabled
+2.) Add Trace macro to print log
+
+[V4.2.8.02]
+1.) Connected to AP unstable issue (Rx MlmeQueueFull Error => Scan No AP)
+
+[V4.2.8.01]
+1.) Un-connect to AP issue (MT7601u/MT7610u)
+2.) Mark unused variable.
+3.) Reduce the warnings in built.
+4.) Avoid the kernel panic for the pipeOutMDPs writed action of RTUSBBulkOutPktCmd()
+5.) Add tables folder
+6.) Add vht.cpp, vht.h, oid_rt6x9x.cpp, oid_rt6x9x.h, PktCmdRspEvt.cpp, PktCmdRspEvt.h, rt6x9x.cpp, rt6x9x.h
+
+[V4.2.8.0]
+1.) Support RT6X9X Chip (MT7601/MT7610)
+2.) Sync to XP driver V5.0.3.2
+3.) Sync to XP driver V5.0.6.0
+	
+[V4.2.7.1]
+	1. New Add SiteCom VID_0DF6/PID_006E
+
+[V4.2.7.0] 2012-10-18
+	1. For RT3573: Disable HW_GPIO checking Radio On/Off
+	2. For RT3573: Set VCO to middle
+	3. New Add WNC VID_13B1/PID_003B
+	
+[V.4.2.6.0]
+	1. 5G band canﾡﾦt scan AP after radio on/off.
+
+[V.4.2.5.0]
+	1. Re-modify 4.2.4.0.
+	
+[V.4.2.4.0]
+	1. Changed Sitecomﾡﾦs RT3573 from 3x3 to 2x3.
+
+[V.4.2.3.0]
+	1. Fixed 5370G PPAD of Aux Antenna problem.
+
+[V.4.2.2.0]
+	1.	Fixed WEP 128 bit connection problem.
+	2.	Enhanced auto co-work for 32/64 bit driver with 32/64bit UI.
+
+[V.4.2.1.0]
+	1.	32Bits Driver supported 64Bits Preferecne Panel UI..
+
+[V.4.2.0.0]
+	1.	Tuned scan time.
+
+[V.4.1.5.0]
+1.	Remove some setting in message function.
+
+[V.4.1.5.0]
+1.	Remove some setting in message function.
+
+[V.4.1.4.0]
+1.	Fixed WPA2-PSK/AES/TKIP connection problem on MAC OS 10.4.
+
+[V.4.1.3.0]
+1.	Fixed crash caused by spin lock deadlock.
+2.	Fixed remove key too late when connect to WPA2-PSK/AES AP.
+
+[V.4.1.2.0]
+1.	Fixed RT3572 with HW PBCﾡﾦs GPIO problem. Register wrote wrong value.
+
+[V.4.1.1.0]
+1.	Fixed crashed problem when setting WDS type in mbuf.
+
+[V.4.1.0.0]
+1.	Supported RT5370.
+
+[V.4.1.0.0]
+1.	Supported RT3573.
+
+[V.4.0.0.0]
+1.	Supported SoftAp.
+
+[V.3.0.3.0]
+1.	Fixed WPA-PSK/WPA2-PSK Handshake function fro group key.
+2.	Fixed Scutum canﾡﾦt connect when reboot.
+
+[V.3.0.2.0]
+1.	Fixed WPS LED MODE 8 when turn off Radio.
+2.	Fixed group key hasdshake when rekey problem of TKIP.
+
+[V.3.0.1.0]
+1. Added VCO calibration.
+
+	
+[V 1.1.1.0] 2008-06-02
+	1. Sync with VSS
+	2. Resolved connection problem with DIR-300. Changed location of preparing IE of WPA-PSK/WPA2-PSK.
+
+[V 1.0.0.0] 2007-03-29
+	for intel MBP, remove unnecessary SimpleLocks
+	release verison
+
+[V 1.0.0.0] - RC1
+	first release version
+
+[V 0.0.1.e3]
+	seems solve the sleep and wakeup panic issue.
+	solve RT2890 on MacBookPro driver not release issue.
+		return kIOReturnSuccess for message(kIOMessageServiceIsTerminated, ...)
+
+[V 0.0.1.e2]
+	longer the sleep time (to 100ms)for MlmeRadioON();
+
+[V 0.0.1.e1]
+	do not indicate connect for WPA-NONE in RTMPWPAAddKeyProc
+
+[V 0.0.1.d9]
+	sync with windows v1.0.2.0
+
+[V 0.0.1.d8]
+	fix sleep and wake connection
+
+[V 0.0.1.d7]
+	fix WPA-TKIP, AdHoc Beacon TxWI endian
+	set init parameters
+
+
+[V 0.0.1.d6]
+[V 0.0.1.d5]
+	sync to Windows - v1.0.1.0
+		fix AddBAReq sequence
+	
+	PSK group TKIP msg2 problem, addAsicKey fail??
+	
+
+[V 0.0.1.d4]
+[V 0.0.1.d3]
+Shared-WEP: do not swap endian for Authen SEQ#3 for shared-wep
+WPA2-PSK () - RTMPMakeRSNIE - have to do this in CntlOidRTBssidProc
+
+[V 0.0.1.d2]
+deadlock in MlmeHandler called by SetInfo
+correct AID endian for PS mode
+WPA2-PSK () - RTMPMakeRSNIE - have to do this in set OID_802_11_WEP_STATUS
+
+
+[V 0.0.1.d1]
+
+====================================================================================================
+The base windows version
+====================================================================================================
+[V0.1.8.3]
+1. BBP R69,R70,R73 has different value for rt2860D. So driver set different value for rt2860C/D.
+
+[V0.1.8.2]
+1. Before do scanning, set BBP R4 to 20MHz mode.
+2. Let TX/RX PSDU max size limit as 16KB. (p.s : set {MAX_LEN_CFG,0x00001fff} /pAd->CommonCfg.HtCapability.HtCapParm.MaxRAmpduFactor = 1; respectively)
+
+[V0.1.8.1]
+1.change b/g protect mode ,frame gap to HT_TXOP
+[V0.1.8.0]
+1. release
+2. Fix WiFi-dual band problems
+3. Fix Adhoc problem in A band
+4. Fix site survey issue when change country region
+5. Fix RTS issue
+
+[V0.1.7.0]
+1. release
+
+[V0.1.6.1]
+1. Pass APSD, WMM, h+d in-house certification
+2. Updat firmware v0.3, and support signal led mode
+3. Fix surprise remove issue
+4. Modify power save, the min current is about 24mA
+5. Support legacy DLS protocol
+
+[V0.1.6.0]
+1. Improve Softap <-> Intel IOT 
+2. Update some MAT register based on Jerry
+
+[V0.1.5.6]
+1. Update Led default value
+2. Update WMM parameter
+3. Fix check build crash issue
+
+[V0.1.5.5]
+1. Update some IOT in TGn plugfest#4.  (Stick to ShortGI(use #if WIFI_TEST), INTEL BA setup issue, MCS=32)
+
+[V0.1.5.4]
+1. Fix site survey in dual band because the scan time is too long
+2. Support legacy WMM (haven't passed certification)
+3. Support APSD (haven't passed certification)
+4. Support 11h+d (haven't passed certification)
+5. Fix driver freezed when Adhoc
+6. Updat firmware v0.2, fix led issue.
+
+[V0.1.5.3]
+1. Solve IOT issue. Details in nIOT.doc.
+2. PaulWu suggest spinklock in MiniportMMRequest
+
+[V0.1.5.0]
+1. Shift 802.11n OID definition that has conflict with WMM, Aggregation OID definition that was applied in rt61 after rt2860 driver coding.
+2. V0.1.5.0 version driver should be used with new rt2860 GUI after 11/30.
+
+[V0.1.4.0]
+1. release
+
+[V0.1.3.3]
+1. Fix Tkip MIC fragment issue
+2. Fix ZeroConfig/FunK UI with WPA2 security issue
+3. Fix Adhoc Beacon Issue
+
+[V0.1.3.2]
+1. Fix fragment issue
+2. Update the E2PROM reading routine for tx power per channel since we will support 40MHz in A band
+3. Fix bug in auto wake routine
+4. Update LED default value
+5. Fix dual band issue in SoftAP
+6. Update RF channel programming table to support 40MHz in A band
+7. Fix Tx rate error when Adhoc with more than two clients
+8. Check in firmware v0.1, this version is the first version which supports LED mode, power saving.
+
+[V0.1.3.1]
+1. Add Station connects to Pre-N only AP.
+2. Rx EAP Fragment frames will fail on TKIP mode.
+3. EAPOL frame will be encrypted while WPA_802_1X_PORT_SECURED.
+4. Fix 2c_wlan_wep failed item.
+
+[V0.1.3.0]
+1. release
+
+[V0.1.2.4]
+1. fix surprise remove may cause infinite loop
+2. fix WPA-None security issue.
+3. fix counter measure issue.
+4. fix DHCP frame checking on SoftAP mode.
+5. fix wep encryption might fail cause by bTxkey floating.
+6. fix WPA both mode security.
+7. Retry to more times will cause WHQL testing failed on FailedCount checking.
+
+[V0.1.2.3]
+1. Fix adhoc basic rate in beacon
+2. Fix basic rate bitmap in MAC register
+3. Fix RSSI report error in UI site survey page
+4. Support Hardware Radio on/off
+5. Support TxPower percentage control
+6. Fix TSSI read from E2PROM error
+7. Fix bug, always 1Mbps when B mode
+
+[V0.1.2.2]
+1. Support RTS/CTS-to-Self
+2. Fix countermeasure 
+3. Fix country region issue
+
+[V0.1.2.1]
+1. Support dual band
+2. Fix country region issue
+3. Fix PHY issue between difference BW
+
+[V0.1.2.0]
+1. release
+2. Fix some n negociation bug. [Jan - mlme.c]
+3. Make initial N(Phymode) setting from registry correct. [Jan - init.c, info.c]
+4. IOT with MBA more stable. (Marvel/Broadcom/Atheros) [Jan - data.c]
+
+[V0.1.1.1]
+1. NdisMIndicateStatus can't be called when driver is on halt progresss (ap.c)
+2. Put WPA(#221) Element ID on the end of inside the association frame. (assoc.c)
+
+[V0.1.1.0]
+1. release
+
+[V0.1.0.2]
+1. Remove LinkDown Timer here. move it to properly place.
+2. Used LinkUp Timer to indicate link up event.
+3. Modify security relative codes
+4. Use LinkDown Timer to indicate link down event after intiailize.
+5. All security work.
+
+[V0.1.0.1]
+1. Fix MacTableInsertEntry will clear WEP Cipher if on station mode on ap.c
+2. remove unnecessary code on connect.c
+3. Modify RTMPAddBSSIDCipher for fixing WEP not work on rtmp.h & rtmp_info.c & sanity.c
+4. Modify RTMPHandleInterrupt consider false interrupt cause by suprise remove on rtmp_man.c
+5. Modify RTMPHalt on NIC exist or not in rtmp_main.c
+---
+6. Auto recognize Bad atheros chip , and turn on ASIC sending RTS register.
+7. Add HTIOTCheck function for test, if not work, will delete in the future. 
+8. IOT_STRUC structure is to store all InterOpbility action parameter.
+
+[V0.1.0.0]
+1. handle BAR control frame.
+2. Periodically check BA reordering queue and refresh if possible.
+3. Atheros IOT problem workaround.
+
+[V0.0.9.4]
+1. Fix countermeasure
+2. Fix SoftAP WPAPSK/WPA2PSK
+3. Update DRS algorithm to imporve throughput when open environment
+
+[V0.0.9.3]
+Release by Jan to fix atheros compatible issue, it should be checked in later.
+
+[V0.0.9.2]
+1. Fix Radio on/off issue, but not best power save
+2. Fix NdisReset issue
+3. Fix hibernate issue
+4. Fix bug in RTMPMaxRssi 
+5. Fix DRS issue
+
+[V0.0.9.1]
+1. Fix prefast build issue.
+2. Support x64 platform
+3. Rename .inf and .sys file name
+
+[V0.0.9.0]
+1. AP dynamic antenna status check
+2. Modify calcuating rssi method according to Gain and RssiOffset in E2PROM
+3. Modify load firmware routine about CRC check 
+4. Update DRS function
+5. Fix 20/40 MHz bandwidth issue
+
+[V0.0.8.0]
+[V0.0.7.1]
+1. Change broadcast and mlme rate as CCK 1Mbps
+2. Fix BA bugs
+3. Dynamic antenna status check
+4. Fix rssi report issue
+5. Fix DHCP issue
+6. Fix throughput issue caused by protection
+
+[V0.0.7.0]
+1. Basic MCS rate adaptation
+2. MCS initial rate according RSSI
+3. Update ASIC auto-fallback according to MCS table
+4. Fix WindowsXP SoftAP bridge issue when AMSDU
+5. Fix CCK fail issue becasue of BBP AGC
+6. Update ethreal format to support rate, rssi
+7. Update BBP, MAC, RF register initial value
+8. Fix 20/40 MHz bandwidth issue
+
+[V0.0.0.6]
+1. RT2860c emulation ping ok
+
+
