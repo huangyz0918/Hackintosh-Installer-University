@@ -108,9 +108,11 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 - [XiaoMi NoteBook Pro](https://github.com/daliansky/XiaoMi-Pro)
 
 
+## * CLOVER Collections
+We have collected some **CLOVER EFI configurations**, you can checkout in our repo:
 
-We have collected some **EFI configurations**, you can checkout in our repo:
-
+- [Asus](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Asus)
+- [Acer](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Acer)
 - [Lenovo](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Lenovo)
 - [Dell](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Dell)
 - [Xiao Mi](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/XiaoMi)
