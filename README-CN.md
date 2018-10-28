@@ -106,6 +106,8 @@
 
 ## 一些现有的 CLOVER EFI 收集
 
+- [Asus](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Asus)
+- [Acer](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Acer)
 - [Lenovo](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Lenovo)
 - [Dell](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Dell)
 - [Xiao Mi](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/XiaoMi)
