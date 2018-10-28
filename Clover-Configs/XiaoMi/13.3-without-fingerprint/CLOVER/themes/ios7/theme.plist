@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>Ukr55, Winlog</string>
+	<key>Description</key>
+	<string>ios7</string>
+	<key>Theme</key>
+	<dict>
+		<key>Background</key>
+		<dict>
+			<key>Path</key>
+			<string>bg.png</string>
+			<key>Sharp</key>
+			<string>0xFF</string>
+		</dict>
+		<key>Badges</key>
+		<dict>
+			<key>Inline</key>
+			<false/>
+			<key>Show</key>
+			<false/>
+			<key>Swap</key>
+			<true/>
+		</dict>
+		<key>Banner</key>
+		<string>logo_trans.png</string>
+		<key>Components</key>
+		<dict>
+			<key>Banner</key>
+			<true/>
+			<key>Functions</key>
+			<true/>
+			<key>Label</key>
+			<true/>
+			<key>Revision</key>
+			<false/>
+			<key>Tools</key>
+			<true/>
+		</dict>
+		<key>Font</key>
+		<dict>
+			<key>CharWidth</key>
+			<integer>10</integer>
+			<key>Path</key>
+			<string>mpr.png</string>
+			<key>Type</key>
+			<string>Load</string>
+		</dict>
+		<key>Origination</key>
+		<dict>
+			<key>DesignHeight</key>
+			<integer>1080</integer>
+			<key>DesignWidth</key>
+			<integer>1920</integer>
+		</dict>
+		<key>Selection</key>
+		<dict>
+			<key>Big</key>
+			<string>selection_big.png</string>
+			<key>Color</key>
+			<string>0x06ACF980</string>
+			<key>OnTop</key>
+			<true/>
+			<key>Small</key>
+			<string>selection_small.png</string>
+		</dict>
+	</dict>
+	<key>Year</key>
+	<string>2013</string>
+</dict>
+</plist>

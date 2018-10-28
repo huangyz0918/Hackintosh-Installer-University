@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleGetInfoString</key>
+	<string>Version 0.9.2, Copyright 2013-2016, RehabMan (GPLv2)</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.rehabman.injector.SATA-RAID-282a</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>SATA-RAID-282a</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.9.2</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.9.2</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>ICH8MAHCI-SATA-RAID-unsupported</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleAHCIPort</string>
+			<key>Chipset Name</key>
+			<string>ICH8-M AHCI HPRAID</string>
+			<key>IOClass</key>
+			<string>AppleICH8AHCI</string>
+			<key>IOPCIPrimaryMatch</key>
+			<string>0x282a8086</string>
+			<key>IOProbeScore</key>
+			<integer>2000</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+			<key>Vendor Name</key>
+			<string>Intel</string>
+		</dict>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Local-Root</string>
+</dict>
+</plist>

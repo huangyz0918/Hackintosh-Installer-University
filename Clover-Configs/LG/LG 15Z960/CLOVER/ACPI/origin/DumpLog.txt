@@ -1,0 +1,141 @@
+4:482  2:997  Found BIOS RSDP at F0120
+4:482  0:000  Printing ACPI tables from RSDP F0120 ...
+4:482  0:000   F0120: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36
+4:482  0:000    (Xsdt: B7FFC0E8, Rsdt: B7FFC074)
+4:482  0:000    B7FFC0E8: 'XSDT', 'LGPC    ', Rev: 1, Len: 188
+4:482  0:000    B7FFC074: 'RSDT', 'LGPC    ', Rev: 1, Len: 112
+4:482  0:000    Tables in Xsdt: 19
+4:482  0:000    0. B7FF5000: 'FACP', 'LGPC    ', Rev: 5, Len: 244
+4:482  0:000        (Dsdt: B7FD9000, Facs: B7F81000, XDsdt: B7FD9000, XFacs: 0)
+4:482  0:000        B7FD9000: 'DSDT', 'SKL     ', Rev: 2, Len: 94646
+4:484  0:001        B7F81000: 'FACS', Ver: 2, Len: 64
+4:484  0:000    1. B7F97000: 'UEFI', 'LGPC    ', Rev: 1, Len: 66
+4:484  0:000    2. B7FF6000: 'SSDT', 'SaSsdt ', Rev: 2, Len: 21293
+4:484  0:000    3. B7FF4000: 'HPET', 'LGPC    ', Rev: 1, Len: 56
+4:484  0:000    4. B7FF3000: 'LPIT', 'LGPC    ', Rev: 1, Len: 148
+4:484  0:000    5. B7FF2000: 'APIC', 'LGPC    ', Rev: 3, Len: 188
+4:484  0:000    6. B7FF1000: 'MCFG', 'LGPC    ', Rev: 1, Len: 60
+4:484  0:000    7. B7FD8000: 'DBGP', 'LGPC    ', Rev: 1, Len: 52
+4:484  0:000    8. B7FD7000: 'DBG2', 'LGPC    ', Rev: 0, Len: 84
+4:484  0:000    9. B7FD6000: 'SSDT', 'xh_rvp07', Rev: 2, Len: 1697
+4:484  0:000    10. B7FD5000: 'BOOT', 'LGPC    ', Rev: 1, Len: 40
+4:484  0:000    11. B7FD4000: 'BATB', 'LGPC    ', Rev: 1, Len: 70
+4:484  0:000    12. B7FD3000: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3699
+4:484  0:000    13. B7FD2000: 'MSDM', 'LGPC    ', Rev: 3, Len: 85
+4:484  0:000    14. B7FD1000: 'SLIC', 'LGPC    ', Rev: 1, Len: 374
+4:484  0:000    15. B7FD0000: 'DMAR', 'LGPC    ', Rev: 1, Len: 168
+4:484  0:000    16. B7FCF000: 'FPDT', 'LGPC    ', Rev: 1, Len: 100
+4:484  0:000    17. B7FCE000: 'BGRT', 'LGPC    ', Rev: 1, Len: 56
+4:484  0:000    18. B7F7E000: 'UEFI', 'LGPC    ', Rev: 1, Len: 298
+4:484  0:000    Tables in Rsdt: 19
+4:484  0:000    0. B7FF5000: 'FACP', 'LGPC    ', Rev: 5, Len: 244
+4:484  0:000        (Dsdt: B7FD9000, Facs: B7F81000, XDsdt: B7FD9000, XFacs: 0)
+4:484  0:000        B7FD9000: 'DSDT', 'SKL     ', Rev: 2, Len: 94646
+4:485  0:001        B7F81000: 'FACS', Ver: 2, Len: 64
+4:485  0:000    1. B7F97000: 'UEFI', 'LGPC    ', Rev: 1, Len: 66
+4:485  0:000    2. B7FF6000: 'SSDT', 'SaSsdt ', Rev: 2, Len: 21293
+4:485  0:000    3. B7FF4000: 'HPET', 'LGPC    ', Rev: 1, Len: 56
+4:485  0:000    4. B7FF3000: 'LPIT', 'LGPC    ', Rev: 1, Len: 148
+4:485  0:000    5. B7FF2000: 'APIC', 'LGPC    ', Rev: 3, Len: 188
+4:485  0:000    6. B7FF1000: 'MCFG', 'LGPC    ', Rev: 1, Len: 60
+4:485  0:000    7. B7FD8000: 'DBGP', 'LGPC    ', Rev: 1, Len: 52
+4:485  0:000    8. B7FD7000: 'DBG2', 'LGPC    ', Rev: 0, Len: 84
+4:485  0:000    9. B7FD6000: 'SSDT', 'xh_rvp07', Rev: 2, Len: 1697
+4:485  0:000    10. B7FD5000: 'BOOT', 'LGPC    ', Rev: 1, Len: 40
+4:485  0:000    11. B7FD4000: 'BATB', 'LGPC    ', Rev: 1, Len: 70
+4:485  0:000    12. B7FD3000: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3699
+4:485  0:000    13. B7FD2000: 'MSDM', 'LGPC    ', Rev: 3, Len: 85
+4:485  0:000    14. B7FD1000: 'SLIC', 'LGPC    ', Rev: 1, Len: 374
+4:485  0:000    15. B7FD0000: 'DMAR', 'LGPC    ', Rev: 1, Len: 168
+4:485  0:000    16. B7FCF000: 'FPDT', 'LGPC    ', Rev: 1, Len: 100
+4:485  0:000    17. B7FCE000: 'BGRT', 'LGPC    ', Rev: 1, Len: 56
+4:485  0:000    18. B7F7E000: 'UEFI', 'LGPC    ', Rev: 1, Len: 298
+4:485  0:000  Found UEFI Acpi 2.0 RSDP at B7FFD014
+4:485  0:000  Saving ACPI tables from RSDP B7FFD014 to EFI\CLOVER\ACPI\origin ...
+4:485  0:000   B7FFD014: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36 -> RSDP.aml
+4:499  0:013    (Xsdt: B7FFC0E8, Rsdt: B7FFC074)
+4:499  0:000    B7FFC0E8: 'XSDT', 'LGPC    ', Rev: 1, Len: 188 -> XSDT.aml
+4:507  0:008    B7FFC074: 'RSDT', 'LGPC    ', Rev: 1, Len: 112 -> RSDT.aml
+4:515  0:008    Tables in Xsdt: 19
+4:515  0:000    0. B7FF5000: 'FACP', 'LGPC    ', Rev: 5, Len: 244 -> FACP.aml
+4:524  0:009        (Dsdt: B7FD9000, Facs: B7F81000, XDsdt: B7FD9000, XFacs: 0)
+4:524  0:000        B7FD9000: 'DSDT', 'SKL     ', Rev: 2, Len: 94646 -> DSDT.aml
+4:537  0:012        B7F81000: 'FACS', Ver: 2, Len: 64 -> FACS.aml
+4:545  0:008    1. B7F97000: 'UEFI', 'LGPC    ', Rev: 1, Len: 66 -> UEFI.aml
+4:553  0:008    2. B7FF6000: 'SSDT', 'SaSsdt ', Rev: 2, Len: 21293 -> SSDT-0.aml
+4:562  0:008    3. B7FF4000: 'HPET', 'LGPC    ', Rev: 1, Len: 56 -> HPET.aml
+4:572  0:010    4. B7FF3000: 'LPIT', 'LGPC    ', Rev: 1, Len: 148 -> LPIT.aml
+4:580  0:008    5. B7FF2000: 'APIC', 'LGPC    ', Rev: 3, Len: 188 -> APIC.aml
+4:588  0:008    6. B7FF1000: 'MCFG', 'LGPC    ', Rev: 1, Len: 60 -> MCFG.aml
+4:596  0:008    7. B7FD8000: 'DBGP', 'LGPC    ', Rev: 1, Len: 52 -> DBGP.aml
+4:604  0:008    8. B7FD7000: 'DBG2', 'LGPC    ', Rev: 0, Len: 84 -> DBG2.aml
+4:613  0:008    9. B7FD6000: 'SSDT', 'xh_rvp07', Rev: 2, Len: 1697 -> SSDT-1.aml
+4:621  0:008    10. B7FD5000: 'BOOT', 'LGPC    ', Rev: 1, Len: 40 -> BOOT.aml
+4:629  0:008    11. B7FD4000: 'BATB', 'LGPC    ', Rev: 1, Len: 70 -> BATB.aml
+4:637  0:008    12. B7FD3000: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3699
+ Found hidden SSDT 7 pcs
+4:637  0:000        * B7F05698: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1580  53 53 44 54 2C 06 00 00 02 B9 50 6D 52 65 66 00 Internal length = 1580 -> SSDT-3x.aml
+4:645  0:008        * B7F04618: 'SSDT', 'ApIst', Rev: 2, Len: 1450  53 53 44 54 AA 05 00 00 02 D0 50 6D 52 65 66 00 Internal length = 1450 -> SSDT-4x.aml
+4:654  0:008        * B7F04C18: 'SSDT', 'Cpu0Cst', Rev: 2, Len: 895  53 53 44 54 7F 03 00 00 02 67 50 6D 52 65 66 00 Internal length = 895 -> SSDT-5x.aml
+4:662  0:008        * B7F03D98: 'SSDT', 'ApCst', Rev: 2, Len: 281  53 53 44 54 19 01 00 00 02 EC 50 6D 52 65 66 00 Internal length = 281 -> SSDT-6x.aml
+4:670  0:008        * B3586F18: 'SSDT', 'Cpu0Hwp', Rev: 2, Len: 142  53 53 44 54 8E 00 00 00 02 2D 50 6D 52 65 66 00 Internal length = 142 -> SSDT-7x.aml
+4:678  0:008        * B3586A98: 'SSDT', 'ApHwp', Rev: 2, Len: 281  53 53 44 54 19 01 00 00 02 FF 50 6D 52 65 66 00 Internal length = 281 -> SSDT-8x.aml
+4:687  0:008        * B3586918: 'SSDT', 'HwpLvt', Rev: 2, Len: 304  53 53 44 54 30 01 00 00 02 87 50 6D 52 65 66 00 Internal length = 304 -> SSDT-9x.aml
+4:695  0:008   -> SSDT-2.aml
+4:705  0:010    13. B7FD2000: 'MSDM', 'LGPC    ', Rev: 3, Len: 85 -> MSDM.aml
+4:713  0:008    14. B7FD1000: 'SLIC', 'LGPC    ', Rev: 1, Len: 374 -> SLIC.aml
+4:722  0:008    15. B7FD0000: 'DMAR', 'LGPC    ', Rev: 1, Len: 168 -> DMAR.aml
+4:730  0:008    16. B7FCF000: 'FPDT', 'LGPC    ', Rev: 1, Len: 100 -> FPDT.aml
+4:738  0:008    17. B7FCE000: 'BGRT', 'LGPC    ', Rev: 1, Len: 56 -> BGRT.aml
+4:746  0:008    18. B7F7E000: 'UEFI', 'LGPC    ', Rev: 1, Len: 298 -> UEFI.aml
+4:754  0:008    Tables in Rsdt: 19
+4:754  0:000    0. B7FF5000: 'FACP', 'LGPC    ', Rev: 5, Len: 244
+4:754  0:000        (Dsdt: B7FD9000, Facs: B7F81000, XDsdt: B7FD9000, XFacs: 0)
+4:754  0:000        B7FD9000: 'DSDT', 'SKL     ', Rev: 2, Len: 94646
+4:756  0:001        B7F81000: 'FACS', Ver: 2, Len: 64
+4:756  0:000    1. B7F97000: 'UEFI', 'LGPC    ', Rev: 1, Len: 66
+4:756  0:000    2. B7FF6000: 'SSDT', 'SaSsdt ', Rev: 2, Len: 21293
+4:756  0:000    3. B7FF4000: 'HPET', 'LGPC    ', Rev: 1, Len: 56
+4:756  0:000    4. B7FF3000: 'LPIT', 'LGPC    ', Rev: 1, Len: 148
+4:756  0:000    5. B7FF2000: 'APIC', 'LGPC    ', Rev: 3, Len: 188
+4:756  0:000    6. B7FF1000: 'MCFG', 'LGPC    ', Rev: 1, Len: 60
+4:756  0:000    7. B7FD8000: 'DBGP', 'LGPC    ', Rev: 1, Len: 52
+4:756  0:000    8. B7FD7000: 'DBG2', 'LGPC    ', Rev: 0, Len: 84
+4:756  0:000    9. B7FD6000: 'SSDT', 'xh_rvp07', Rev: 2, Len: 1697
+4:756  0:000    10. B7FD5000: 'BOOT', 'LGPC    ', Rev: 1, Len: 40
+4:756  0:000    11. B7FD4000: 'BATB', 'LGPC    ', Rev: 1, Len: 70
+4:756  0:000    12. B7FD3000: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3699
+4:756  0:000    13. B7FD2000: 'MSDM', 'LGPC    ', Rev: 3, Len: 85
+4:756  0:000    14. B7FD1000: 'SLIC', 'LGPC    ', Rev: 1, Len: 374
+4:756  0:000    15. B7FD0000: 'DMAR', 'LGPC    ', Rev: 1, Len: 168
+4:756  0:000    16. B7FCF000: 'FPDT', 'LGPC    ', Rev: 1, Len: 100
+4:756  0:000    17. B7FCE000: 'BGRT', 'LGPC    ', Rev: 1, Len: 56
+4:756  0:000    18. B7F7E000: 'UEFI', 'LGPC    ', Rev: 1, Len: 298
+4:756  0:000  Found UEFI Acpi 1.0 RSDP at B7FFD000
+4:756  0:000  Printing ACPI tables from RSDP B7FFD000 ...
+4:756  0:000   B7FFD000: 'RSD PTR ', Rev: 0 (Acpi 1.0), Len: 20
+4:756  0:000    (Rsdt: B7FFC000)
+4:756  0:000    B7FFC000: 'RSDT', 'LGPC    ', Rev: 1, Len: 112
+4:756  0:000    Tables in Rsdt: 19
+4:756  0:000    0. B7FF5000: 'FACP', 'LGPC    ', Rev: 5, Len: 244
+4:756  0:000        (Dsdt: B7FD9000, Facs: B7F81000, XDsdt: B7FD9000, XFacs: 0)
+4:756  0:000        B7FD9000: 'DSDT', 'SKL     ', Rev: 2, Len: 94646
+4:757  0:001        B7F81000: 'FACS', Ver: 2, Len: 64
+4:757  0:000    1. B7F97000: 'UEFI', 'LGPC    ', Rev: 1, Len: 66
+4:757  0:000    2. B7FF6000: 'SSDT', 'SaSsdt ', Rev: 2, Len: 21293
+4:757  0:000    3. B7FF4000: 'HPET', 'LGPC    ', Rev: 1, Len: 56
+4:757  0:000    4. B7FF3000: 'LPIT', 'LGPC    ', Rev: 1, Len: 148
+4:757  0:000    5. B7FF2000: 'APIC', 'LGPC    ', Rev: 3, Len: 188
+4:757  0:000    6. B7FF1000: 'MCFG', 'LGPC    ', Rev: 1, Len: 60
+4:757  0:000    7. B7FD8000: 'DBGP', 'LGPC    ', Rev: 1, Len: 52
+4:757  0:000    8. B7FD7000: 'DBG2', 'LGPC    ', Rev: 0, Len: 84
+4:757  0:000    9. B7FD6000: 'SSDT', 'xh_rvp07', Rev: 2, Len: 1697
+4:757  0:000    10. B7FD5000: 'BOOT', 'LGPC    ', Rev: 1, Len: 40
+4:757  0:000    11. B7FD4000: 'BATB', 'LGPC    ', Rev: 1, Len: 70
+4:757  0:000    12. B7FD3000: 'SSDT', 'CpuSsdt', Rev: 2, Len: 3699
+4:757  0:000    13. B7FD2000: 'MSDM', 'LGPC    ', Rev: 3, Len: 85
+4:757  0:000    14. B7FD1000: 'SLIC', 'LGPC    ', Rev: 1, Len: 374
+4:757  0:000    15. B7FD0000: 'DMAR', 'LGPC    ', Rev: 1, Len: 168
+4:757  0:000    16. B7FCF000: 'FPDT', 'LGPC    ', Rev: 1, Len: 100
+4:757  0:000    17. B7FCE000: 'BGRT', 'LGPC    ', Rev: 1, Len: 56
+4:758  0:000    18. B7F7E000: 'UEFI', 'LGPC    ', Rev: 1, Len: 298

@@ -1,0 +1,74 @@
+62:623  61:399  Found UEFI Acpi 2.0 RSDP at 8CFFD014
+62:623  0:000  Saving ACPI tables from RSDP 8CFFD014 to EFI\CLOVER\ACPI\origin ...
+62:623  0:000   8CFFD014: 'RSD PTR ', Rev: 2 (Acpi 2.0 or newer), Len: 36 -> RSDP.aml
+62:626  0:002    (Xsdt: 8CFC0188, Rsdt: 8CFC00C4)
+62:626  0:000    8CFC0188: 'XSDT', 'XMCC1703', Rev: 1, Len: 244 -> XSDT.aml
+62:628  0:001    8CFC00C4: 'RSDT', 'XMCC1703', Rev: 1, Len: 140 -> RSDT.aml
+62:630  0:002    Tables in Xsdt: 26
+62:630  0:000    0. 8CFE9000: 'FACP', 'XMCC1703', Rev: 5, Len: 268 -> FACP.aml
+62:632  0:002        (Dsdt: 8CFC4000, Facs: 8CF55000, XDsdt: 8CFC4000, XFacs: 0)
+62:632  0:000        8CFC4000: 'DSDT', 'XMCC1703', Rev: 2, Len: 133274 -> DSDT.aml
+62:637  0:004        8CF55000: 'FACS', Ver: 2, Len: 64 -> FACS.aml
+62:639  0:001    1. 8CFF7000: 'SSDT', 'XMCC1703', Rev: 2, Len: 17839 -> SSDT-0-XMCC1703.aml
+62:641  0:002    2. 8CFF5000: 'MSDM', 'XMCC1703', Rev: 3, Len: 85 -> MSDM.aml
+62:643  0:002    3. 8CFF3000: 'SSDT', 'XMCC1703', Rev: 2, Len: 70 -> SSDT-1-XMCC1703.aml
+62:645  0:002    4. 8CFEE000: 'SSDT', 'XMCC1703', Rev: 2, Len: 12594 -> SSDT-2-XMCC1703.aml
+62:647  0:002    5. 8CFEC000: 'ASPT', 'XMCC1703', Rev: 7, Len: 52 -> ASPT.aml
+62:649  0:002    6. 8CFEA000: 'DBGP', 'XMCC1703', Rev: 1, Len: 52 -> DBGP.aml
+62:651  0:002    7. 8CFE7000: 'APIC', 'XMCC1703', Rev: 3, Len: 300 -> APIC.aml
+62:654  0:002    8. 8CFC3000: 'LPIT', 'XMCC1703', Rev: 1, Len: 148 -> LPIT.aml
+62:656  0:002    9. 8CFC1000: 'DBGP', 'XMCC1703', Rev: 1, Len: 52 -> DBGP.aml
+62:658  0:002    10. 8CFBC000: 'SSDT', 'XMCC1703', Rev: 2, Len: 2511 -> SSDT-3-XMCC1703.aml
+62:661  0:002    11. 8CFB8000: 'DMAR', 'XMCC1703', Rev: 1, Len: 240 -> DMAR.aml
+62:662  0:001    12. 8CFFC000: 'UEFI', 'XMCC1703', Rev: 1, Len: 566 -> UEFI.aml
+62:665  0:002    13. 8CFF4000: 'SSDT', 'XMCC1703', Rev: 2, Len: 1219 -> SSDT-4-XMCC1703.aml
+62:667  0:002    14. 8CFED000: 'ASF!', 'XMCC1703', Rev: 32, Len: 165 -> ASF!.aml
+62:675  0:008    15. 8CFE8000: 'HPET', 'XMCC1703', Rev: 1, Len: 56 -> HPET.aml
+62:677  0:002    16. 8CFC2000: 'WSMT', 'XMCC1703', Rev: 1, Len: 40 -> WSMT.aml
+62:682  0:005    17. 8CFBD000: 'SSDT', 'XMCC1703', Rev: 2, Len: 6062 -> SSDT-5-XMCC1703.aml (Found hidden SSDT 7 pcs)
+62:685  0:002        * 8C762018: 'SSDT', 'Cpu0Ist', Rev: 2, Len: 1419  53 53 44 54 8B 05 00 00 02 63 50 6D 52 65 66 00 Internal length = 1419 -> SSDT-x5_0-Cpu0Ist.aml
+62:687  0:002        * 8C760018: 'SSDT', 'ApIst', Rev: 2, Len: 3348  53 53 44 54 14 0D 00 00 02 2A 50 6D 52 65 66 00 Internal length = 3348 -> SSDT-x5_1-ApIst.aml
+62:695  0:008        * 8C761898: 'SSDT', 'Cpu0Cst', Rev: 2, Len: 1023  53 53 44 54 FF 03 00 00 02 11 50 6D 52 65 66 00 Internal length = 1023 -> SSDT-x5_2-Cpu0Cst.aml
+62:697  0:002        * 8C762898: 'SSDT', 'ApCst', Rev: 2, Len: 778  53 53 44 54 0A 03 00 00 02 93 50 6D 52 65 66 00 Internal length = 778 -> SSDT-x5_3-ApCst.aml
+62:699  0:002        * 8C762DD8: 'SSDT', 'Cpu0Hwp', Rev: 2, Len: 186  53 53 44 54 BA 00 00 00 02 7D 50 6D 52 65 66 00 Internal length = 186 -> SSDT-x5_4-Cpu0Hwp.aml
+62:701  0:002        * 8C75F018: 'SSDT', 'ApHwp', Rev: 2, Len: 791  53 53 44 54 17 03 00 00 02 80 50 6D 52 65 66 00 Internal length = 791 -> SSDT-x5_5-ApHwp.aml
+62:704  0:002        * 8C761018: 'SSDT', 'HwpLvt', Rev: 2, Len: 1576  53 53 44 54 28 06 00 00 02 85 50 6D 52 65 66 00 Internal length = 1576 -> SSDT-x5_6-HwpLvt.aml
+62:712  0:008  
+62:712  0:000    18. 8CFE5000: 'FPDT', 'XMCC1703', Rev: 1, Len: 68 -> FPDT.aml
+62:714  0:002    19. 8CFF6000: 'UEFI', 'XMCC1703', Rev: 1, Len: 66 -> UEFI.aml
+62:717  0:002    20. 8CFEB000: 'BOOT', 'XMCC1703', Rev: 1, Len: 40 -> BOOT.aml
+62:719  0:001    21. 8CFBF000: 'DBG2', 'XMCC1703', Rev: 0, Len: 84 -> DBG2.aml
+62:721  0:001    22. 8CFE6000: 'MCFG', 'XMCC1703', Rev: 1, Len: 60 -> MCFG.aml
+62:723  0:001    23. 8CFF2000: 'TPM2', 'XMCC1703', Rev: 3, Len: 52 -> TPM2.aml
+62:725  0:001    24. 8CFB9000: 'SSDT', 'XMCC1703', Rev: 1, Len: 11240 -> SSDT-6-XMCC1703.aml
+62:727  0:002    25. 8CFB7000: 'BGRT', 'XMCC1703', Rev: 1, Len: 56 -> BGRT.aml
+62:729  0:001    Tables in Rsdt: 26
+62:729  0:000    0. 8CFE9000: 'FACP', 'XMCC1703', Rev: 5, Len: 268
+62:729  0:000        (Dsdt: 8CFC4000, Facs: 8CF55000, XDsdt: 8CFC4000, XFacs: 0)
+62:729  0:000        8CFC4000: 'DSDT', 'XMCC1703', Rev: 2, Len: 133274
+62:731  0:001        8CF55000: 'FACS', Ver: 2, Len: 64
+62:731  0:000    1. 8CFF7000: 'SSDT', 'XMCC1703', Rev: 2, Len: 17839
+62:731  0:000    2. 8CFF5000: 'MSDM', 'XMCC1703', Rev: 3, Len: 85
+62:731  0:000    3. 8CFF3000: 'SSDT', 'XMCC1703', Rev: 2, Len: 70
+62:731  0:000    4. 8CFEE000: 'SSDT', 'XMCC1703', Rev: 2, Len: 12594
+62:731  0:000    5. 8CFEC000: 'ASPT', 'XMCC1703', Rev: 7, Len: 52
+62:731  0:000    6. 8CFEA000: 'DBGP', 'XMCC1703', Rev: 1, Len: 52
+62:731  0:000    7. 8CFE7000: 'APIC', 'XMCC1703', Rev: 3, Len: 300
+62:731  0:000    8. 8CFC3000: 'LPIT', 'XMCC1703', Rev: 1, Len: 148
+62:731  0:000    9. 8CFC1000: 'DBGP', 'XMCC1703', Rev: 1, Len: 52
+62:731  0:000    10. 8CFBC000: 'SSDT', 'XMCC1703', Rev: 2, Len: 2511
+62:731  0:000    11. 8CFB8000: 'DMAR', 'XMCC1703', Rev: 1, Len: 240
+62:731  0:000    12. 8CFFC000: 'UEFI', 'XMCC1703', Rev: 1, Len: 566
+62:731  0:000    13. 8CFF4000: 'SSDT', 'XMCC1703', Rev: 2, Len: 1219
+62:731  0:000    14. 8CFED000: 'ASF!', 'XMCC1703', Rev: 32, Len: 165
+62:731  0:000    15. 8CFE8000: 'HPET', 'XMCC1703', Rev: 1, Len: 56
+62:731  0:000    16. 8CFC2000: 'WSMT', 'XMCC1703', Rev: 1, Len: 40
+62:731  0:000    17. 8CFBD000: 'SSDT', 'XMCC1703', Rev: 2, Len: 6062
+62:731  0:000    18. 8CFE5000: 'FPDT', 'XMCC1703', Rev: 1, Len: 68
+62:731  0:000    19. 8CFF6000: 'UEFI', 'XMCC1703', Rev: 1, Len: 66
+62:731  0:000    20. 8CFEB000: 'BOOT', 'XMCC1703', Rev: 1, Len: 40
+62:731  0:000    21. 8CFBF000: 'DBG2', 'XMCC1703', Rev: 0, Len: 84
+62:731  0:000    22. 8CFE6000: 'MCFG', 'XMCC1703', Rev: 1, Len: 60
+62:731  0:000    23. 8CFF2000: 'TPM2', 'XMCC1703', Rev: 3, Len: 52
+62:731  0:000    24. 8CFB9000: 'SSDT', 'XMCC1703', Rev: 1, Len: 11240
+62:731  0:000    25. 8CFB7000: 'BGRT', 'XMCC1703', Rev: 1, Len: 56

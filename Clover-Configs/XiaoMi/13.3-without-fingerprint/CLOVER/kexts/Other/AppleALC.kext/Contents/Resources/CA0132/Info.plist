@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>Wern Apfel with some changes by Yassinex and Andres</string>
+	<key>CodecID</key>
+	<integer>17</integer>
+	<key>CodecName</key>
+	<string>CA0132</string>
+	<key>Files</key>
+	<dict>
+		<key>Layouts</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Wern Apfel - 2.0 default</string>
+				<key>Id</key>
+				<integer>0</integer>
+				<key>Path</key>
+				<string>layout0.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Wern Apfel - 2.0 Alienware 15 R2 </string>
+				<key>Id</key>
+				<integer>1</integer>
+				<key>Path</key>
+				<string>layout1.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Wern Apfel - 2.0 + front HP</string>
+				<key>Id</key>
+				<integer>2</integer>
+				<key>Path</key>
+				<string>layout2.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Wern Apfel - 2.0 + rear line-out</string>
+				<key>Id</key>
+				<integer>3</integer>
+				<key>Path</key>
+				<string>layout3.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Wern Apfel - 5.1 with C/Sub</string>
+				<key>Id</key>
+				<integer>4</integer>
+				<key>Path</key>
+				<string>layout4.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Wern Apfel - 2.0 front + rear HP, simultaneously + front Mic</string>
+				<key>Id</key>
+				<integer>5</integer>
+				<key>Path</key>
+				<string>layout5.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Wern Apfel - 5.1 with front HP</string>
+				<key>Id</key>
+				<integer>6</integer>
+				<key>Path</key>
+				<string>layout6.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Andres ZeroCross - No Volume Control</string>
+				<key>Id</key>
+				<integer>9</integer>
+				<key>Path</key>
+				<string>layout9.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Andres ZeroCross - No Volume Control</string>
+				<key>Id</key>
+				<integer>10</integer>
+				<key>Path</key>
+				<string>layout10.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Custom Creative CA0132 5.1 channel</string>
+				<key>Id</key>
+				<integer>11</integer>
+				<key>Path</key>
+				<string>layout11.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Custom Creative CA0132</string>
+				<key>Id</key>
+				<integer>12</integer>
+				<key>Path</key>
+				<string>layout12.xml.zlib</string>
+			</dict>
+		</array>
+		<key>Platforms</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Wern Apfel - generic</string>
+				<key>Id</key>
+				<integer>0</integer>
+				<key>Path</key>
+				<string>PlatformsW.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Wern Apfel - generic</string>
+				<key>Id</key>
+				<integer>1</integer>
+				<key>Path</key>
+				<string>PlatformsW.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Wern Apfel - generic</string>
+				<key>Id</key>
+				<integer>2</integer>
+				<key>Path</key>
+				<string>PlatformsW.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Wern Apfel - generic</string>
+				<key>Id</key>
+				<integer>3</integer>
+				<key>Path</key>
+				<string>PlatformsW.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Wern Apfel - generic</string>
+				<key>Id</key>
+				<integer>4</integer>
+				<key>Path</key>
+				<string>PlatformsW.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Wern Apfel - generic</string>
+				<key>Id</key>
+				<integer>5</integer>
+				<key>Path</key>
+				<string>PlatformsW.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Wern Apfel - generic</string>
+				<key>Id</key>
+				<integer>6</integer>
+				<key>Path</key>
+				<string>PlatformsW.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Andres ZeroCross - No Volume Control</string>
+				<key>Id</key>
+				<integer>9</integer>
+				<key>Path</key>
+				<string>Platforms9.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Andres ZeroCross </string>
+				<key>Id</key>
+				<integer>10</integer>
+				<key>Path</key>
+				<string>Platforms10.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Custom Creative CA0132 5.1 channel</string>
+				<key>Id</key>
+				<integer>11</integer>
+				<key>Path</key>
+				<string>Platforms11.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Custom Creative CA0132</string>
+				<key>Id</key>
+				<integer>12</integer>
+				<key>Path</key>
+				<string>Platforms12.xml.zlib</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Patches</key>
+	<array>
+		<dict>
+			<key>Count</key>
+			<integer>1</integer>
+			<key>Find</key>
+			<data>QcaGQwEAAAA=</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>QcaGQwEAAAE=</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>AIjsGg==</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>EQACEQ==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>/4fsGg==</data>
+			<key>MaxKernel</key>
+			<integer>14</integer>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>EAACEQ==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>dBmtFQ==</data>
+			<key>MaxKernel</key>
+			<integer>15</integer>
+			<key>MinKernel</key>
+			<integer>15</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>EAACEQ==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>ihnUEQ==</data>
+			<key>MinKernel</key>
+			<integer>16</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>EAACEQ==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>1</integer>
+			<key>Find</key>
+			<data>a3Bzaes=</data>
+			<key>MinKernel</key>
+			<string>13</string>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Provider</key>
+			<string>Wern Apfel</string>
+			<key>Replace</key>
+			<data>Y2ltaes=</data>
+		</dict>
+	</array>
+	<key>Revisions</key>
+	<array>
+		<integer>1050904</integer>
+	</array>
+	<key>Vendor</key>
+	<string>Creative</string>
+</dict>
+</plist>

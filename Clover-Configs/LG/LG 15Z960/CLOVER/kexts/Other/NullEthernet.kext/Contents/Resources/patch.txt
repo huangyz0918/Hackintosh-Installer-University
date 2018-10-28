@@ -1,0 +1,27 @@
+# DSDT patch to enable NullEthernet.kext
+
+into device label RMNE remove_entry;
+into definitionblock code_regex . insert
+begin
+Device (RMNE)\n
+{\n
+    Name (_ADR, Zero)\n
+    // The NullEthernet kext matches on this HID\n
+    Name (_HID, "NULE0000")\n
+    // This is the MAC address returned by the kext. Modify if necessary.\n
+    Name (MAC, Buffer() { 0x11, 0x22, 0x33, 0x44, 0x55, 0x66 })\n
+    Method (_DSM, 4, NotSerialized)\n
+    {\n
+        If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }\n
+        Return (Package()\n
+        {\n
+            "built-in", Buffer() { 0x00 },\n
+            "IOName", "ethernet",\n
+            "name", Buffer() { "ethernet" },\n
+            "model", Buffer() { "RM-NullEthernet-1001" },\n
+            "device_type", Buffer() { "ethernet" },\n
+        })\n
+    }\n
+}\n
+end;
+

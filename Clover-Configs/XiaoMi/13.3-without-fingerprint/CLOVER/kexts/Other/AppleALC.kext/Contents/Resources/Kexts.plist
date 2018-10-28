@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppleHDA</key>
+	<dict>
+		<key>Id</key>
+		<string>com.apple.driver.AppleHDA</string>
+		<key>Detect</key>
+		<true/>
+		<key>Paths</key>
+		<array>
+			<string>/System/Library/Extensions/AppleHDA.kext/Contents/MacOS/AppleHDA</string>
+		</array>
+	</dict>
+	<key>AppleHDAController</key>
+	<dict>
+		<key>Id</key>
+		<string>com.apple.driver.AppleHDAController</string>
+		<key>Paths</key>
+		<array>
+			<string>/System/Library/Extensions/AppleHDA.kext/Contents/PlugIns/AppleHDAController.kext/Contents/MacOS/AppleHDAController</string>
+		</array>
+	</dict>
+	<key>AppleIntelFramebufferAzul</key>
+	<dict>
+		<key>Id</key>
+		<string>com.apple.driver.AppleIntelFramebufferAzul</string>
+		<key>Paths</key>
+		<array>
+			<string>/System/Library/Extensions/AppleIntelFramebufferAzul.kext/Contents/MacOS/AppleIntelFramebufferAzul</string>
+		</array>
+	</dict>
+	<key>AppleIntelFramebufferCapri</key>
+	<dict>
+		<key>Id</key>
+		<string>com.apple.driver.AppleIntelFramebufferCapri</string>
+		<key>Paths</key>
+		<array>
+			<string>/System/Library/Extensions/AppleIntelFramebufferCapri.kext/Contents/MacOS/AppleIntelFramebufferCapri</string>
+		</array>
+	</dict>
+	<key>AppleIntelBDWGraphicsFramebuffer</key>
+	<dict>
+		<key>Id</key>
+		<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
+		<key>Paths</key>
+		<array>
+			<string>/System/Library/Extensions/AppleIntelBDWGraphicsFramebuffer.kext/Contents/MacOS/AppleIntelBDWGraphicsFramebuffer</string>
+		</array>
+	</dict>
+	<key>AppleIntelSKLGraphicsFramebuffer</key>
+	<dict>
+		<key>Id</key>
+		<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+		<key>Paths</key>
+		<array>
+			<string>/System/Library/Extensions/AppleIntelSKLGraphicsFramebuffer.kext/Contents/MacOS/AppleIntelSKLGraphicsFramebuffer</string>
+		</array>
+	</dict>
+</dict>
+</plist>

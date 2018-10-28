@@ -113,6 +113,8 @@ We have collected some **EFI configurations**, you can checkout in our repo:
 
 - [Lenovo](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Lenovo)
 - [Dell](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Dell)
+- [Xiao Mi](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/XiaoMi)
+- [LG](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/LG)
 
 If you have a laptop, there are many good guides for laptops on Tonymacx86. Search your laptop and you may find a guide for it or similar one.
 

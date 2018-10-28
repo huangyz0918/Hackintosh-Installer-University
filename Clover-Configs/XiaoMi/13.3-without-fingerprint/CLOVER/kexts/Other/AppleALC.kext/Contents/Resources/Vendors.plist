@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CirrusLogic</key>
+	<integer>4115</integer>
+	<key>Creative</key>
+	<integer>4354</integer>
+	<key>IDT</key>
+	<integer>4381</integer>
+	<key>AMD</key>
+	<integer>4098</integer>
+	<key>AnalogDevices</key>
+	<integer>4564</integer>
+	<key>Intel</key>
+	<integer>32902</integer>
+	<key>NVIDIA</key>
+	<integer>4318</integer>
+	<key>Realtek</key>
+	<integer>4332</integer>
+	<key>Conexant</key>
+	<integer>5361</integer>
+	<key>VIA</key>
+	<integer>4358</integer>
+</dict>
+</plist>

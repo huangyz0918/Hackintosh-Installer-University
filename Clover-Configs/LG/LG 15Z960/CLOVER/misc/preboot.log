@@ -1,0 +1,226 @@
+0:100  0:100  MemLog inited, TSC freq: 2402230420
+0:100  0:000  MemLog was calibrated without ACPI PM Timer: ACPI I/O space is not enabled.
+0:100  0:000  
+0:100  0:000  Now is 22.6.2018,  9:29:2 (GMT)
+0:100  0:000  Starting Clover revision: 3923 on Phoenix Technologies Ltd. EFI
+0:100  0:000  Build with: [Args: -D NO_GRUB_DRIVERS_EMBEDDED | -D NO_GRUB_DRIVERS_EMBEDDED -D USE_LOW_EBDA -a X64 -b RELEASE -t XCODE5 -n 5 | OS: 10.12.2 | XCODE: 8.1]
+0:100  0:000  SelfDevicePath=PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x1,0x0,0x0)\HD(1,GPT,60A35960-C297-477C-9371-78E16E961906,0x800,0x82000) @B314AF18
+0:100  0:000  SelfDirPath = \EFI\CLOVER
+0:100  0:000  === [ Get Smbios ] ========================================
+0:100  0:000  Type 16 Index = 0
+0:100  0:000  Total Memory Slots Count = 2
+0:100  0:000  Type 17 Index = 0
+0:100  0:000  Ignoring insane frequency value 0MHz
+0:100  0:000  SmbiosTable.Type17->Speed = 0MHz
+0:100  0:000  SmbiosTable.Type17->Size = 0MB
+0:100  0:000  SmbiosTable.Type17->Bank/Device = BANK 0 ChannelA-DIMM0
+0:100  0:000  SmbiosTable.Type17->Vendor = <null string>
+0:100  0:000  SmbiosTable.Type17->SerialNumber = <null string>
+0:100  0:000  SmbiosTable.Type17->PartNumber = <null string>
+0:100  0:000  Type 17 Index = 1
+0:100  0:000  Ignoring insane frequency value 0MHz
+0:100  0:000  SmbiosTable.Type17->Speed = 0MHz
+0:100  0:000  SmbiosTable.Type17->Size = 0MB
+0:100  0:000  SmbiosTable.Type17->Bank/Device = BANK 1 ChannelA-DIMM1
+0:100  0:000  SmbiosTable.Type17->Vendor = <null string>
+0:100  0:000  SmbiosTable.Type17->SerialNumber = <null string>
+0:100  0:000  SmbiosTable.Type17->PartNumber = <null string>
+0:100  0:000  Boot status=0
+0:100  0:000  Running on: '15Z960-A.AA52U1' with board '15Z960'
+0:100  0:000  === [ GetCPUProperties ] ==================================
+0:100  0:000  CPU Vendor = 756E6547 Model=406E3
+0:100  0:000  got cores from CPUID_1 = 0
+0:100  0:000  The CPU supported turbo
+0:100  0:000  BrandString = Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz
+0:100  0:000   TSC/CCC Information Leaf:
+0:100  0:000    numerator     : 200
+0:100  0:000    denominator   : 2
+0:100  0:000   Calibrated ARTFrequency: 24022304
+0:100  0:000  MSR 0xE2 before patch 7E008006
+0:100  0:000  MSR 0xE2 is locked, PM patches will be turned on
+0:100  0:000  MSR 0xE4              00051814
+0:100  0:000  MSR 0xCE              0004043D_F1011800
+0:100  0:000  non-usable FLEX_RATIO = 10000
+0:100  0:000  corrected FLEX_RATIO = 0
+0:100  0:000  MSR 0x1B0             00000000
+0:100  0:000  FSBFrequency=100MHz DMIvalue=100000kHz
+0:100  0:000  Corrected FSBFrequency=100MHz
+0:100  0:000  Vendor/Model/Stepping: 0x756E6547/0x4E/0x3
+0:100  0:000  Family/ExtFamily: 0x6/0x0
+0:100  0:000  MaxDiv/MinDiv: 24.0/4
+0:100  0:000  Turbo: 27/27/27/28
+0:100  0:000  Features: 0xBFEBFBFF
+0:100  0:000  Threads: 4
+0:100  0:000  Cores: 2
+0:100  0:000  FSB: 100 MHz
+0:100  0:000  CPU: 2400 MHz
+0:100  0:000  TSC: 2400 MHz
+0:100  0:000  PIS: 400 MHz
+0:100  0:000  === [ GetDevices ] ========================================
+0:100  0:000  PCI (00|00:00.00) : 8086 1904 class=060000
+0:100  0:000  PCI (00|00:02.00) : 8086 1916 class=030000
+0:100  0:000   - GFX: Model=Intel HD Graphics 520 (Intel)
+0:100  0:000  PCI (00|00:14.00) : 8086 9D2F class=0C0330
+0:100  0:000  PCI (00|00:14.02) : 8086 9D31 class=118000
+0:100  0:000  PCI (00|00:16.00) : 8086 9D3A class=078000
+0:100  0:000  PCI (00|00:17.00) : 8086 9D03 class=010601
+0:100  0:000  PCI (00|00:1D.00) : 8086 9D18 class=060400
+0:100  0:000  PCI (00|01:00.00) : 14E4 43B1 class=028000
+0:100  0:000   - WIFI: Vendor=Broadcom
+0:100  0:000  PCI (00|00:1E.04) : 8086 9D2B class=080501
+0:100  0:000  PCI (00|00:1E.06) : 8086 9D2D class=080501
+0:100  0:000  PCI (00|00:1F.00) : 8086 9D48 class=060100
+0:100  0:000  PCI (00|00:1F.02) : 8086 9D21 class=058000
+0:100  0:000  PCI (00|00:1F.03) : 8086 9D70 class=040300
+0:100  0:000  PCI (00|00:1F.04) : 8086 9D23 class=0C0500
+0:100  0:000  === [ GetDefaultSettings ] ================================
+0:100  0:000  Clover load options size = 0 bytes
+0:102  0:001  EFI\CLOVER\config.plist loaded: Success
+0:102  0:000  === [ GetListOfThemes ] ===================================
+0:102  0:000  - [00]: Yosemite
+0:103  0:000  === [ Found config plists ] ===============================
+0:103  0:000  - config.plist
+0:103  0:000  === [ GetEarlyUserSettings ] ==============================
+0:103  0:000  timeout set to 5
+0:103  0:000  Custom boot CUSTOM_BOOT_DISABLED (0x0)
+0:103  0:000  KextsToPatch: 10 requested
+0:103  0:000   - [00]: AppleUSBXHCIPCI (-series)) :: BinPatch :: data len: 7
+0:103  0:000   - [01]: AppleIntelSKLGraphicsFramebuffer (Disable minStolenSize less or equal fStolenMemorySize assertion, 10.12.0 ( (based on Austere.J patch)) :: BinPatch :: data len: 7
+0:103  0:000   - [02]: IOAHCIBlockStorage (Ds) :: BinPatch :: data len: 11
+0:103  0:000   - [03]: IOGraphicsFamily (kop)) :: BinPatch :: data len: 5
+0:103  0:000   - [04]: AirPortBrcm4360 (abMan) :: BinPatch :: data len: 8
+0:103  0:000   - [05]: AirPortBrcm4360 (oid) :: BinPatch :: data len: 7
+0:103  0:000   - [06]: AirPortBrcm4360 (void)) :: BinPatch :: data len: 8
+0:103  0:000   - [07]: IOBluetoothFamily (ginal) :: BinPatch :: data len: 8
+0:103  0:000   - [08]: AppleIntelSKLGraphicsFramebuffer (00) :: BinPatch :: data len: 12
+0:103  0:000   - [09]: AppleIntelSKLGraphicsFramebuffer (0) :: BinPatch :: data len: 12
+0:103  0:000  Default theme: Bluemac
+0:103  0:000  Hiding entries with string Install El Capitan 10.11.5 (15F34)
+0:103  0:000  Hiding entries with string Recovery HD
+0:103  0:000  Hiding entries with string LRS_ESP
+0:103  0:000  Hiding entries with string ##El Capitan Custom Installer
+0:103  0:000  Hiding entries with string Sierra Custom Installer
+0:103  0:000  ** Warning: unknown custom entry Type 'Other'
+0:103  0:000  Error in Early settings0: Not Found
+0:103  0:000  === [ LoadDrivers ] =======================================
+0:104  0:000  Loading DataHubDxe-64.efi  status=Success
+0:109  0:004  Loading EmuVariableUefi-64.efi  status=Success
+0:109  0:000  EmuVariableUefi Initialize: VariableCommonInitialize = Success, orig services stored, install gEmuVariableControlProtocolGuid = Success
+0:109  0:000  Loading FSInject-64.efi  status=Success
+0:110  0:000  Loading HFSPlus.efi  status=Success
+0:111  0:000   - driver needs connecting
+0:111  0:000  Loading OsxAptioFixDrv-64.efi  status=Success
+0:111  0:000  Loading OsxFatBinaryDrv-64.efi  status=Success
+0:112  0:000  Loading PartitionDxe-64.efi  status=Success
+0:113  0:001   - driver needs connecting
+0:113  0:000  2 drivers needs connecting ...
+0:113  0:000  PlatformDriverOverrideProtocol->GetDriver overriden
+0:113  0:000  Partition driver loaded: 
+0:113  0:000  HFS+ driver loaded
+0:113  0:000  Searching for invalid DiskIo BY_DRIVER connects: not found, all ok
+0:281  0:168  EmuVariable InstallEmulation: orig vars copied, emu.var.services installed, CreateEvent VirtualAddressChange = Success, CreateEvent ExitBootServices = Success, set Status=Success
+0:336  0:054  === [ InitScreen ] ========================================
+0:336  0:000  SetScreenResolution: 1920x1080 - already set
+0:336  0:000  Console modes reported: 5, available modes:
+0:336  0:000   - [01]: 80x25
+0:336  0:000   - [03]: 128x40
+0:336  0:000   - [04]: 100x31
+0:336  0:000   - [05]: 240x56 (current mode)
+0:336  0:000  SetScreenResolution: 1920x1080 - already set
+0:336  0:000  reinit: self device path=PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x1,0x0,0x0)\HD(1,GPT,60A35960-C297-477C-9371-78E16E961906,0x800,0x82000)
+0:336  0:000  === [ GetMacAddress ] =====================================
+0:336  0:000  === [ ScanSPD ] ===========================================
+0:337  0:000  SMBus device : 8086 9D23 class=0C0500 status=Success
+0:337  0:000  SMBus CmdReg: 0x1
+0:337  0:000  Scanning SMBus [8086:9D23], mmio: 0xD1331004, ioport: 0xEFA0, hostc: 0x11
+0:337  0:000  Slots to scan [8]...
+0:337  0:000  SPD[2]: Type 11 @0x52
+0:356  0:018  Not using XMP because it is not present
+0:356  0:000  DDR speed 1600MHz
+0:356  0:000  Slot: 2 Type 24 8192MB 1600MHz Vendor=Hynix Semiconductor PartNo=HMT41GS6BFR8A-PBN0 SerialNo=010205010D03000D
+0:356  0:000  === [ GetAcpiTablesList ] =================================
+0:356  0:000  Get Acpi Tables List from RSDT:
+0:356  0:000   - [00]: FACP  LGPC     len=244
+0:356  0:000   - [01]: UEFI  LGPC     len=66
+0:356  0:000   - [02]: SSDT  SaSsdt  len=21293
+0:356  0:000   - [03]: HPET  LGPC     len=56
+0:356  0:000   - [04]: LPIT  LGPC     len=148
+0:356  0:000   - [05]: APIC  LGPC     len=188
+0:356  0:000   - [06]: MCFG  LGPC     len=60
+0:356  0:000   - [07]: DBGP  LGPC     len=52
+0:356  0:000   - [08]: DBG2  LGPC     len=84
+0:356  0:000   - [09]: SSDT  xh_rvp07 len=1697
+0:356  0:000   - [10]: BOOT  LGPC     len=40
+0:356  0:000   - [11]: BATB  LGPC     len=70
+0:356  0:000   - [12]: SSDT  CpuSsdt len=3699
+0:356  0:000   - [13]: MSDM  LGPC     len=85
+0:356  0:000   - [14]: SLIC  LGPC     len=374
+0:356  0:000   - [15]: DMAR  LGPC     len=168
+0:356  0:000   - [16]: FPDT  LGPC     len=100
+0:356  0:000   - [17]: BGRT  LGPC     len=56
+0:356  0:000   - [18]: UEFI  LGPC     len=298
+0:356  0:000  Calibrated TSC frequency =2402230420 =2402MHz
+0:356  0:000  === [ GetUserSettings ] ===================================
+0:356  0:000  Add 2 properties:
+0:356  0:000   - [00]: IntelGFX, len: 4
+0:356  0:000   - [01]: IntelGFX, len: 4
+0:356  0:000  USB FixOwnership: yes
+0:356  0:000   - final DSDT Fix mask=00000000
+0:357  0:000  PatchesDSDT: 4 requested
+0:357  0:000   - [00]: (change EHC1 to EH01) lenToFind: 4, lenToReplace: 4
+0:357  0:000   - [01]: (change EHC2 to EH02) lenToFind: 4, lenToReplace: 4
+0:357  0:000   - [02]: (change EUSB to EH01) lenToFind: 4, lenToReplace: 4
+0:357  0:000   - [03]: (change USBE to EH02) lenToFind: 4, lenToReplace: 4
+0:357  0:000  PluginType: 1
+0:357  0:000  ChassisType: 0x9
+0:358  0:000  === [ ScanVolumes ] =======================================
+0:358  0:000  Found 7 volumes with blockIO
+0:358  0:000  - [00]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x1,0x0,0x0)
+0:358  0:000  - [01]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x1,0x0,0x0)\HD(1,GPT,60A35960-C297-477C-9371-78E16E961906,0x800,0x82000)
+0:358  0:000          Result of bootcode detection: bootable Windows (vista,win)
+0:358  0:000          This is SelfVolume !!
+0:358  0:000  - [02]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x1,0x0,0x0)\HD(2,GPT,19652291-F688-42CF-A377-AEB9DFF57943,0x82800,0x8000)
+0:358  0:000  - [03]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x1,0x0,0x0)\HD(3,GPT,90010023-1362-43FB-B5A5-245E49EA0524,0x8A800,0xFE67129)
+0:358  0:000          Result of bootcode detection: bootable Windows (vista,win)
+0:359  0:000  - [04]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x1,0x0,0x0)\HD(4,GPT,27EF73F9-0480-4ABF-9264-73044FBA85CC,0xFEF2000,0x19B000)
+0:359  0:000          Result of bootcode detection: bootable Windows (vista,win)
+0:359  0:000  - [05]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x1,0x0,0x0)\HD(5,GPT,E7F68A34-82B4-4041-B879-AE8FF22930A1,0x1148E000,0xC72C000)
+0:359  0:000  - [06]: Volume: PciRoot(0x0)\Pci(0x17,0x0)\Sata(0x1,0x0,0x0)\HD(6,GPT,4169D690-FE00-418C-8AE5-6EFC4DA39B92,0x1DBBD368,0x135F20)
+0:359  0:000          hiding this volume
+0:359  0:000  PutNvramPlistToRtVars: nvram.plist not found
+0:359  0:000  === [ InitTheme ] =========================================
+0:359  0:000  GlobalConfig: theme.plist not found, get random theme Yosemite
+0:359  0:000  Using theme 'Yosemite' (EFI\CLOVER\themes\Yosemite)
+0:359  0:000  OS main and drive as badge
+0:361  0:001  Loading font from ThemeDir: Success
+0:361  0:000  Choosing theme Yosemite
+0:361  0:000  after NVRAM boot-args=dart=0 nv_disable=1 kext-dev-mode=1
+0:361  0:000  === [ Dump SMC keys from NVRAM ] ==========================
+0:361  0:000  no AppleSMC protocol
+0:361  0:000  === [ AddCustomEntries ] ==================================
+0:361  0:000  Custom entry 0 skipped because it is disabled.
+0:361  0:000  === [ ScanLoader ] ========================================
+0:361  0:000  - [01]: 'SYSTEM'
+0:362  0:000          AddLoaderEntry for Volume Name=SYSTEM
+0:362  0:000      Not match custom entry 0: Type: not match
+0:363  0:001  not png, try icns
+0:364  0:000  not png, try icns
+0:364  0:000  - [05]: '10.12'
+0:366  0:001          AddLoaderEntry for Volume Name=10.12
+0:366  0:000      Not match custom entry 0: Type: not match
+0:367  0:001      hibernated: set as never
+0:368  0:000  not png, try icns
+0:368  0:000          [!] Icon 17 (icons\vol_internal_hfs.icns) not found (path: EFI\CLOVER\themes\Yosemite)
+0:368  0:000  not png, try icns
+0:369  0:001  - [06]: 'Recovery HD', hidden
+0:369  0:000  === [ AddCustomTool ] =====================================
+0:370  0:001  found tool \EFI\CLOVER\tools\Shell64U.efi
+0:370  0:000  Checking EFI partition Volume 1 for Clover
+0:370  0:000   Found Clover
+0:371  0:000  EmuVariable UninstallEmulation: CloseEvent = Success, original var services restored
+0:372  0:001  EmuVariable InstallEmulation: orig vars copied, emu.var.services installed, CreateEvent VirtualAddressChange = Success, CreateEvent ExitBootServices = Success, set Status=Success
+0:427  0:055  === [ GetEfiBootDeviceFromNvram ] =========================
+0:427  0:000  Default boot entry not found
+0:427  0:000  EmuVariable UninstallEmulation: CloseEvent = Success, original var services restored
+0:427  0:000  DefaultIndex=-1 and MainMenu.EntryCount=8
+1:520  1:092  GUI ready

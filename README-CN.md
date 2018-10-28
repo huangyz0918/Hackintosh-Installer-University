@@ -104,10 +104,12 @@
 
 
 
-### 一些现有的 EFI 
+## 一些现有的 CLOVER EFI 收集
 
 - [Lenovo](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Lenovo)
 - [Dell](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/Dell)
+- [Xiao Mi](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/XiaoMi)
+- [LG](https://github.com/huangyz0918/Hackintosh-Installer-University/tree/master/Clover-Configs/LG)
 
 
 ## 我要怎样才能为这个 Repo 做出贡献?

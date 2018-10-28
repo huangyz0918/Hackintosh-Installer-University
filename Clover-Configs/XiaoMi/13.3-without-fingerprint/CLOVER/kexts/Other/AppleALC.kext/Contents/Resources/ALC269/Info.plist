@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Vendor</key>
+	<string>Realtek</string>
+	<key>CodecID</key>
+	<integer>617</integer>
+	<key>CodecName</key>
+	<string>ALC269</string>
+	<key>Author</key>
+	<string>Multiple</string>
+	<key>Files</key>
+	<dict>
+		<key>Layouts</key>
+		<array>
+			<dict>
+				<key>Id</key>
+				<integer>1</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269 Asus N53J</string>
+				<key>Path</key>
+				<string>layout1.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>2</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269-VB v1</string>
+				<key>Path</key>
+				<string>layout2.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>3</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269 Asus K53SJ, Asus G73s</string>
+				<key>Path</key>
+				<string>layout3.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>4</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269-VB v2</string>
+				<key>Path</key>
+				<string>layout4.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>5</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269-VB v3</string>
+				<key>Path</key>
+				<string>layout5.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>6</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269-VC v1</string>
+				<key>Path</key>
+				<string>layout6.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>7</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269-VC v2</string>
+				<key>Path</key>
+				<string>layout7.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>8</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269-VC v3</string>
+				<key>Path</key>
+				<string>layout8.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>9</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269-VB v4</string>
+				<key>Path</key>
+				<string>layout9.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>11</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VB for Dell Precision Workstation T1600 - Mosser</string>
+				<key>Path</key>
+				<string>layout11.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>13</integer>
+				<key>Comment</key>
+				<string>InsanelyDeepak - Realtek ALC269VC for Samsung NP350V5C-S08IT</string>
+				<key>Path</key>
+				<string>layout13.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>14</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VC for Samsung NT550P7C-S65 with subwoofer 2.1ch by Rockjesus</string>
+				<key>Path</key>
+				<string>layout14.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>MacPeet - ALC269VB for Dell Optiplex 790</string>
+				<key>Id</key>
+				<integer>15</integer>
+				<key>Path</key>
+				<string>layout15.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>19</integer>
+				<key>Comment</key>
+				<string>Asus Vivobook S300CA by chunnann</string>
+				<key>Path</key>
+				<string>layout19.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>20</integer>
+				<key>Comment</key>
+				<string>Custom ALC269 Sony Vaio VPCEB3M1R by Rodion</string>
+				<key>Path</key>
+				<string>layout20.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>27</integer>
+				<key>Comment</key>
+				<string>Custom ALC269 Acer Aspire by Andrey1970</string>
+				<key>Path</key>
+				<string>layout27.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>28</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VC Lenovo Z580 by John</string>
+				<key>Path</key>
+				<string>layout28.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>29</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VC Lenovo V580 by ar4er</string>
+				<key>Path</key>
+				<string>layout29.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>31</integer>
+				<key>Comment</key>
+				<string>Custom ALC271x Acer Aspire s3-951</string>
+				<key>Path</key>
+				<string>layout9.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>32</integer>
+				<key>Comment</key>
+				<string>Custom ALC269 Samsung np880z5e-x01ru by Constanta</string>
+				<key>Path</key>
+				<string>layout32.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>33</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VC for Samsung NP530U3C-A0F by BblDE3HAP</string>
+				<key>Path</key>
+				<string>layout33.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>35</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VC for Samsung NP350V5C-S0URU by Mirone</string>
+				<key>Path</key>
+				<string>layout35.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>76</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VB ENZ C16B by jimmy19990</string>
+				<key>Path</key>
+				<string>layout76.xml.zlib</string>
+			</dict>
+		</array>
+		<key>Platforms</key>
+		<array>
+			<dict>
+				<key>Id</key>
+				<integer>1</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269 Asus N53J</string>
+				<key>Path</key>
+				<string>PlatformsM1.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>2</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269-VB v1</string>
+				<key>Path</key>
+				<string>PlatformsM2.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>3</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269 Asus K53SJ, Asus G73s</string>
+				<key>Path</key>
+				<string>PlatformsM3.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>4</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269-VB v2</string>
+				<key>Path</key>
+				<string>PlatformsM4.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>5</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269-VB v3</string>
+				<key>Path</key>
+				<string>PlatformsM5.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>6</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269-VC v1</string>
+				<key>Path</key>
+				<string>PlatformsM6.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>7</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269-VC v2</string>
+				<key>Path</key>
+				<string>PlatformsM7.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>8</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269-VC v3</string>
+				<key>Path</key>
+				<string>PlatformsM8.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>9</integer>
+				<key>Comment</key>
+				<string>Mirone Laptop patch ALC269-VB v4</string>
+				<key>Path</key>
+				<string>PlatformsM9.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>11</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VB for Dell Precision Workstation T1600 - Mosser</string>
+				<key>Path</key>
+				<string>Platforms11.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>13</integer>
+				<key>Comment</key>
+				<string>InsanelyDeepak - Realtek ALC269VC for Samsung NP350V5C-S08IT</string>
+				<key>Path</key>
+				<string>PlatformsID.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>14</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VC for Samsung NT550P7C-S65 with subwoofer 2.1ch by Rockjesus</string>
+				<key>Path</key>
+				<string>Platforms14.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>MacPeet - ALC269VB for Dell Optiplex 790</string>
+				<key>Id</key>
+				<integer>15</integer>
+				<key>Path</key>
+				<string>Platforms15.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>19</integer>
+				<key>Comment</key>
+				<string>Asus Vivobook S300CA by chunnann</string>
+				<key>Path</key>
+				<string>Platforms19.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>20</integer>
+				<key>Comment</key>
+				<string>Custom ALC269 Sony Vaio VPCEB3M1R by Rodion</string>
+				<key>Path</key>
+				<string>Platforms20.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>27</integer>
+				<key>Comment</key>
+				<string>Custom ALC269 Acer Aspire by Andrey1970</string>
+				<key>Path</key>
+				<string>Platforms27.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>28</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VC Lenovo Z580 by John</string>
+				<key>Path</key>
+				<string>Platforms28.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>29</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VC Lenovo V580 by ar4er</string>
+				<key>Path</key>
+				<string>Platforms29.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>31</integer>
+				<key>Comment</key>
+				<string>Custom ALC271x Acer Aspire s3-951</string>
+				<key>Path</key>
+				<string>PlatformsM9.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>32</integer>
+				<key>Comment</key>
+				<string>Custom ALC269 Samsung np880z5e-x01ru by Constanta</string>
+				<key>Path</key>
+				<string>Platforms32.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>33</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VC for Samsung NP530U3C-A0F by BblDE3HAP</string>
+				<key>Path</key>
+				<string>Platforms28.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>35</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VC for Samsung NP350V5C-S0URU by Mirone</string>
+				<key>Path</key>
+				<string>PlatformsM35.xml.zlib</string>
+			</dict>
+			<dict>
+				<key>Id</key>
+				<integer>76</integer>
+				<key>Comment</key>
+				<string>Custom ALC269VB ENZ C16B by jimmy19990</string>
+				<key>Path</key>
+				<string>Platforms76.xml.zlib</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Patches</key>
+	<array>
+		<dict>
+			<key>Count</key>
+			<integer>1</integer>
+			<key>Find</key>
+			<data>QcYGAEmLvCQ=</data>
+			<key>MaxKernel</key>
+			<integer>13</integer>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>QcYGAUmLvCQ=</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>1</integer>
+			<key>Find</key>
+			<data>QcYGAEiLu2g=</data>
+			<key>MinKernel</key>
+			<integer>14</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>QcYGAUiLu2g=</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>1</integer>
+			<key>Find</key>
+			<data>QcaGQwEAAAA=</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>QcaGQwEAAAE=</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>hBnUEQ==</data>
+			<key>MinKernel</key>
+			<integer>12</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>aQLsEA==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>hQjsEA==</data>
+			<key>MinKernel</key>
+			<integer>13</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>AAAAAA==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>gxnUEQ==</data>
+			<key>MinKernel</key>
+			<integer>15</integer>
+			<key>MaxKernel</key>
+			<integer>15</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>AAAAAA==</data>
+		</dict>
+		<dict>
+			<key>Count</key>
+			<integer>2</integer>
+			<key>Find</key>
+			<data>hAjsEA==</data>
+			<key>MinKernel</key>
+			<integer>12</integer>
+			<key>MaxKernel</key>
+			<integer>14</integer>
+			<key>Name</key>
+			<string>AppleHDA</string>
+			<key>Replace</key>
+			<data>AAAAAA==</data>
+		</dict>
+	</array>
+	<key>Revisions</key>
+	<array>
+		<integer>1049091</integer>
+		<integer>1048580</integer>
+		<integer>1049090</integer>
+		<integer>1048832</integer>
+	</array>
+</dict>
+</plist>
