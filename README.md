@@ -2,7 +2,6 @@
 
 
 # Hackintosh-Installer-University
-[![Platform](https://img.shields.io/badge/platform-markdown-red.svg)](https://shields.io/)
 [![License](https://img.shields.io/badge/license-CC%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 ![progress](https://img.shields.io/badge/progress-developing-yellow.svg)
 [![contributions](https://img.shields.io/badge/contributions-welcome-green.svg)](https://github.com/huangyz0918/Hackintosh-Installer-University) 
