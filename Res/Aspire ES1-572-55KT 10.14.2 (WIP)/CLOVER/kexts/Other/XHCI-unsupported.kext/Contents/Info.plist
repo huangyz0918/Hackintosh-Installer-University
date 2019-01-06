@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleGetInfoString</key>
+	<string>Version 0.9.2, Copyright 2018, RehabMan (GPLv2)</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.rehabman.injector.XHCI.unsupported</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>XHCI-unsupported</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.9.2</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.9.2</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>AppleUSBXHCILPTH 9-series</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
+			<key>IOClass</key>
+			<string>AppleUSBXHCILPTH</string>
+			<key>IOPCIPauseCompatible</key>
+			<true/>
+			<key>IOPCIPrimaryMatch</key>
+			<string>0x8cb18086</string>
+			<key>IOPCITunnelCompatible</key>
+			<true/>
+			<key>IOProbeScore</key>
+			<integer>900</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+		</dict>
+		<key>AppleUSBXHCILPTH X99</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
+			<key>alternate:IOClass</key>
+			<string>AppleUSBXHCILPTHB</string>
+			<key>IOClass</key>
+			<string>AppleUSBXHCILPTH</string>
+			<key>IOPCIPauseCompatible</key>
+			<true/>
+			<key>IOPCIPrimaryMatch</key>
+			<string>0x8d318086</string>
+			<key>IOPCITunnelCompatible</key>
+			<true/>
+			<key>IOProbeScore</key>
+			<integer>900</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+		</dict>
+		<key>AppleUSBXHCISPT 200-X299</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
+			<key>IOClass</key>
+			<string>AppleUSBXHCISPT</string>
+			<key>IOPCIPauseCompatible</key>
+			<true/>
+			<key>IOPCIPrimaryMatch</key>
+			<string>0xa2af8086</string>
+			<key>IOPCITunnelCompatible</key>
+			<true/>
+			<key>IOProbeScore</key>
+			<integer>900</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+		</dict>
+		<key>AppleUSBXHCISPT 300</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
+			<key>IOClass</key>
+			<string>AppleUSBXHCISPT</string>
+			<key>IOPCIPauseCompatible</key>
+			<true/>
+			<key>IOPCIPrimaryMatch</key>
+			<string>0x9ded8086 0xa36d8086</string>
+			<key>IOPCITunnelCompatible</key>
+			<true/>
+			<key>IOProbeScore</key>
+			<integer>900</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+		</dict>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+</dict>
+</plist>
