@@ -106,6 +106,7 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 - [Samsung 450r5j](https://github.com/LER0ever/Hackintosh)
 - [Samsung nt550p7c-IVY](https://github.com/RockJesus/samsung-nt550p7c-sierra)
 - [XiaoMi NoteBook Pro](https://github.com/daliansky/XiaoMi-Pro)
+- [Xiaomi Mi Air 13.3 Skylake-U 2016 (1rst Gen)](https://github.com/sakoula/XiaoMi-Air-6200U)
 
 
 ## * CLOVER Collections
