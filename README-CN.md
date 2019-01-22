@@ -86,7 +86,7 @@
 - [HP Elitebook 8470p](https://github.com/dreadkopp/8470p_10.13.x)
 - [HP Elitebook 840 G1/G2](https://github.com/loicpirez/HackintoshConfig)
 - [HP Elitebook Folio 9480m](https://github.com/obviouslyerratic/clover_9480m)
-- [HP EliteDesk 800 G2 TWR](https://github.com/sakoula/hackintosh.hp.800.g2)
+- [HP EliteDesk 800 G2 TWR](https://github.com/sakoula/HP-EliteDesk-800-G2-6700)
 - [HP Envy J-series](https://github.com/RehabMan/HP-Envy-DSDT-Patch)
 - [HP Envy K-series](https://github.com/RehabMan/HP-Envy-K-DSDT-Patch)
 - [HP Envy Q-series](https://github.com/RehabMan/HP-Envy-Q-DSDT-Patch)
