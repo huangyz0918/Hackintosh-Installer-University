@@ -85,6 +85,7 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 - [Lenovo Z50-70](https://github.com/Maxvien/hackintosh-lenovo-z5070)
 - [Lenovo B470](https://github.com/0xE8551CCB/hackintosh)
 - [Lenovo G470](https://github.com/hunterMG/DSDT-Lenovo-G470)
+- [Lenovo T470 (i5-6300U)](https://github.com/okay/t470)
 - [Lenovo x230 ](https://github.com/edu-rinaldi/Lenovo-x230-High-Sierra)
 - [Lenovo Yoga 3 Pro](https://github.com/zohaad/hackintosh-Yoga-3-Pro)
 - [Lenovo-v3000-ISE](https://github.com/Xc2333/Hackintosh-Lenovo-v3000-ISE)
