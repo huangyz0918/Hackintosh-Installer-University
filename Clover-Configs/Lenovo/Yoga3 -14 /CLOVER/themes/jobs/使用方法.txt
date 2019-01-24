@@ -1,6 +1,0 @@
-修改四叶草配置文件
-将主题字段修改为以下
-<key>Theme</key>
-
-<string>MAC_OS_BOOT1</string>
-保存即可
