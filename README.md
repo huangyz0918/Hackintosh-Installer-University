@@ -72,6 +72,7 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 - [Gigabyte Aero15-W](https://github.com/Errrneist/Hackintosh-Aero-15W)
 - [Gigabyte z170x ud3 ultra](https://github.com/RoJoHub/Hackintosh)
 - [Gigabyte Sabre15K](https://github.com/gnehs/Sabre15KClover)
+- [Lenovo chao 5000](https://github.com/Xc2333/Hackintosh-Lenovo-chao5000)
 - [Lenovo G50-70M](https://github.com/LEXUGE/macOS-Lenovo_G50-70M)
 - [Lenovo Thinkpad P50](https://github.com/Errrneist/Hackintosh-Thinkpad-P50)
 - [Lenove Thinkpad T450](https://github.com/shmilee/T450-Hackintosh)
