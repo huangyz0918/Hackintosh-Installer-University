@@ -34,14 +34,14 @@ For our hackintosh installation, we recommend using a GPT instead of using a MBR
 ## 2. Something about your ESP partition
 
 ### 2.1 What is EFI partition?
-Nearly all computers made after 2012 boot UEFI as opposed to the older standard known as "Legacy". These computers require an ESP partition to boot. ESP stands for EFI System Partition and is formatted with the FAT32 file system. The ESP is responsible for storing EFI bootloaders and other utilities used by the firmware at startup. If you were to accidentally delete this partition, your system will no longer be able to boot. For security, the ESP is hidden since it has no drive letter.
+Nearly all computers made after 2012 boot UEFI as opposed to the older standard known as "Legacy". These computers require an ESP partition to boot. ESP stands for EFI System Partition and is formatted with the FAT32/FAT16 file system. The ESP is responsible for storing EFI bootloaders and other utilities used by the firmware at startup. If you were to accidentally delete this partition, your system will no longer be able to boot. For security, the ESP is hidden since it has no drive letter.
 
-If you are installing Windows, your ESP is 100MB by default. If your hard drive was initialized as GUID Partition table (GPT) partition style, it will generate an EFI system partition automatically after installing Windows or Mac operating system (OS).
+If you have Pre-installed Windows, your ESP is 100MB by default. If your hard drive was initialized as GUID Partition table (GPT) partition style, it will generate an EFI system partition automatically after installing Windows or Mac operating system (OS).
 
 The definition of ESP in Wikipedia is:
 > The EFI system partition (ESP) is a partition on a data storage device (usually a hard disk drive or solid-state drive) that is used by computers adhering to the Unified Extensible Firmware Interface (UEFI). When a computer is booted, UEFI firmware loads files stored on the ESP to start installed operating systems and various utilities. An ESP needs to be formatted with a file system whose specification is based on the FAT file system and maintained as part of the UEFI specification; therefore, the file system specification is independent from the original FAT specification.
 
-Remember, for Hackintosh installations, a 100M ESP partition will not work. Your ESP partition must be __at least 200M__ to boot into macOS.
+Remember, for Hackintosh installations, a 100MB ESP partition will not work. Your ESP partition must be __at least 200MB__ to boot into macOS to use gdisk to create Apple patition styles. You can combine the ESP partition with the MSR partition to get a larger ESP paratition if you have Pre-installed Windows
 
 ### 2.2 How to create EFI partition?
 To create an EFI partition, you can use a WinPE (booted from a usb bootable media). You can find more information here: [how to build a winPE in your usb devices](https://recoverit.wondershare.com/windows-pe/how-to-create-a-windows-pe-bootable-usb-drive.html).
@@ -53,7 +53,7 @@ Assuming that we have a clean disk to install macOS on, the first thing you need
 - Enter: `list disk` to list all the disks in your computer.
 - Enter: `select disk x` to select the disk you want to rebuild. (`x` is the number of your disk)
 - Enter: `clean` to clean all the disk.
-- Enter: `convert gpt` to convert this partition to a GPT form (if you are already a GPT form, you can skip this step).
+- Enter: `convert gpt` to convert this disk to a GPT form (if you are already a GPT form, you can skip this step).
 - Enter: `create partition EFI size=200` to build a 200M ESP partition.
 - Enter: `format quick fs=fat32 label="System"` to form this partition.
 - Optional: `create partition msr size = 128` you can use this to create a MSR (Microsoft Reserved Partition) partition.
@@ -70,5 +70,4 @@ An ESP can also be created through Disk Utility on macOS if you don't want to in
 - Enter: `diskutil partitionDisk /dev/diskX 2 MBR FAT32 "EFI" 200Mi HFS+J "macOS" R` replace diskX with the disk you want to partition.
 
 Note: The ESP partition can be created anywhere on a disk (as the computer can find the bootloaders). You can ultimately create these partitions in any order you'd like.
-
 
