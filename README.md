@@ -59,6 +59,7 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 - [Asus H81M-K](https://github.com/Slbomber/AsusH81MK-macos)
 - [Asus Zenbook](https://github.com/hieplpvip/ASUS-ZENBOOK-HACKINTOSH)
 - [Asus Vivobook S510UA](https://github.com/tctien342/Asus-Vivobook-S510UA-High-Sierra-10.13-Hackintosh)
+- [Asus ROG Zephyrus S GX531](https://github.com/williambj1/Hackintosh-EFI-Asus-Zephyrus-S-GX531)
 - [Dell 7559 4K SKL](https://github.com/RockJesus/Dell-7559-I7-6700HQ-4K-touch-MacOS-High-Sierra)
 - [Dell XPS13-9350-Skylake](https://github.com/syscl/XPS9350-macOS)
 - [Dell XPS15-9550](https://github.com/corenel/XPS9550-macOS)
