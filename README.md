@@ -75,6 +75,7 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 - [Gigabyte Sabre15K](https://github.com/gnehs/Sabre15KClover)
 - [Lenovo chao 5000](https://github.com/Xc2333/Hackintosh-Lenovo-chao5000)
 - [Lenovo G50-70M](https://github.com/LEXUGE/macOS-Lenovo_G50-70M)
+- [Lenovo G50-80](https://github.com/upupming/Lenovo-G50-80-Clover)
 - [Lenovo Thinkpad P50](https://github.com/Errrneist/Hackintosh-Thinkpad-P50)
 - [Lenove Thinkpad T450](https://github.com/shmilee/T450-Hackintosh)
 - [Lenovo Thinkpad T460P](https://github.com/LER0ever/Hackintosh)
