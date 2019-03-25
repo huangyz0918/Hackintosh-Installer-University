@@ -78,6 +78,7 @@
 - [Lenovo G470](https://github.com/hunterMG/DSDT-Lenovo-G470)
 - [Lenovo T470 (i5-6300U)](https://github.com/okay/t470)
 - [Lenovo x230 ](https://github.com/edu-rinaldi/Lenovo-x230-High-Sierra)
+- [Lenovo Yoga 710](https://github.com/xiaoxx970/Hackintosh-Mojave-for-Lenovo-Yoga710)
 - [Lenovo Yoga 3 Pro](https://github.com/zohaad/hackintosh-Yoga-3-Pro)
 - [Lenovo-v3000-ISE](https://github.com/Xc2333/Hackintosh-Lenovo-v3000-ISE)
 - [Lenovo-rescuer-15-isk](https://github.com/oneplusdash/lenovo-rescuer-15-isk-hackintosh)
