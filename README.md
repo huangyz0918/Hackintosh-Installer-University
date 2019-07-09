@@ -49,6 +49,7 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 ### Devices avaliable in Github
 
 - [Acer Aspire E1-471G](https://github.com/matthew728960/Clover-ACER-E1-471G)
+- [Acer A515-51G](https://github.com/SiddheshNan/Acer-A515-51G-Hackintosh)
 - [Acer V5-573G](https://github.com/Kaijun/Acer-V5-573G-Hackintosh)
 - [Acer Aspire E5-571-376T](https://github.com/GalaticStryder/Acer-E5-571-Hackintosh)
 - [Acer Aspire V3-371-52FF](https://github.com/Ty3uK/52ff-elcapitan-toolbox)
