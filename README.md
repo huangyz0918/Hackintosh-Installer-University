@@ -9,9 +9,9 @@
 
 :loudspeaker: This is an open source tutorial & information collector for Hackintosh installations that does not charge readers any fee. 
 
-:loudspeaker: We don't want to build a universal installation tutorial and, it's also impossible since every devices are different. We are here because we want to gather information and experiences, we want to build an index for most successful builds in github and make them be discovered more easily. When I was just a newbie, I didn't know how to get start building a hackintosh since I didn't know what's a bootloader and an EFI partition. It took me a really long time to find a helpful build in Github due to the deep location of that repo. So this is the purpose why we created this index.
+:loudspeaker: We don't want to build a universal installation tutorial and, it's also impossible since every device is different. We are here because we want to gather information and experiences, we want to build an index for most successful builds in GitHub and make them be discovered more easily. When I was just a newbie, I didn't know how to get started building a Hackintosh since I didn't know what's a bootloader and an EFI partition. It took me a long time to find a helpful build in Github due to the deep location of that repo. So this is the purpose why we created this index.
 
-:loudspeaker: As we know, Hackintosh is potentially illegal because doing this is in violation of the end-user license agreement [(EULA)](http://images.apple.com/legal/sla/docs/macosx107.pdf) from Apple for macOS. Therefore, we just focus on the technologies related to Hackintosh and do not use it commercially. If you want to get started, please first read this license in detail and remember that you are a geek, not a criminal.
+:loudspeaker: As we know, Hackintosh is potentially illegal because doing this violates the end-user license agreement [(EULA)](http://images.apple.com/legal/sla/docs/macosx107.pdf) from Apple for macOS. Therefore, we just focus on the technologies related to Hackintosh and do not use it commercially. If you want to get started, please first read this license in detail and remember that you are a geek, not a criminal.
 
 Here are some other language versions:
 - [中文版本](README-CN.md)
@@ -21,11 +21,11 @@ Here are some other language versions:
 
 When Apple announced their switch away from the PowerPC architecture to Intel's processors and chipsets, many were looking forward to having the ability to run Windows software on Apple hardware and Apple's operating systems on their non-Apple hardware. Apple was able to eventually build their Boot Camp feature in Mac OS X 10.5, later allowing Windows to run on Apple hardware. Those hoping to easily run Mac OS X on a standard PC didn't have it so easy.
 
-Even though running Mac OS X on a generic PC is not supported by Apple, it is possible to accomplish given the right hardware and determination by users. Any system that is not made to run the Apple operating system is referred to as Hackintosh. This term comes from the fact that the software needs to be hacked in order to properly run on Non-Apple hardware. Of course some of the hardware needs to be tweaked in a few cases as well.
+Even though running Mac OS X on a generic PC is not supported by Apple, it is possible to accomplish given the right hardware and determination by users. Any system that is not made to run the Apple operating system is referred to as Hackintosh. This term comes from the fact that the software needs to be hacked to properly run on Non-Apple hardware. Of course, some of the hardware needs to be tweaked in a few cases as well.
 
 ## How to learn Hackintosh ?
 
-:bell:There's a lot to learn if you want to figure out the secrects behind Hackintosh, please go this door ---> [:door:](slow/slow.md)
+:bell:There's a lot to learn if you want to figure out the secrets behind Hackintosh, please go this door ---> [:door:](slow/slow.md)
 
 :bell:If you have no interest in those theories, and just want a quick installation, please go through this door ---> [:door:](quick/quick.md)
 
