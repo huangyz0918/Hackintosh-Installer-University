@@ -39,6 +39,7 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 - [Rehabman Bitbucket](https://bitbucket.org/RehabMan/)
 - [PCbeta](http://mac.pcbeta.com/)
 - [iMacHK](https://imac.hk/)
+- [Lifewire] (https://www.lifewire.com/what-is-hackintosh-832719)
 
 ### Devices available in Res
 
