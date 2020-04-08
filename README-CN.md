@@ -51,7 +51,7 @@
 - [Asus Vivobook S510UA](https://github.com/tctien342/Asus-Vivobook-S510UA-High-Sierra-10.13-Hackintosh)
 - [Asus ROG Zephyrus S GX531](https://github.com/williambj1/Hackintosh-EFI-Asus-Zephyrus-S-GX531)
 - [Dell 7559 4K SKL](https://github.com/RockJesus/Dell-7559-I7-6700HQ-4K-touch-MacOS-High-Sierra)
-- [Dell G7 7588](https://github.com/Juan-VC/Hackintosh-macOS-Catalina-on-Dell-G7-7588)
+- [Dell G7 7588 OpenCore and Clover](https://github.com/Juan-VC/Hackintosh-macOS-Catalina-on-Dell-G7-7588)
 - [Dell XPS13-9350-Skylake](https://github.com/syscl/XPS9350-macOS)
 - [Dell XPS15-9550](https://github.com/corenel/XPS9550-macOS)
 - [Dell XPS15-9550](https://github.com/PromiseYo/XPS15-9550-macOS)
