@@ -81,6 +81,7 @@ Even though running Mac OS X on a generic PC is not supported by Apple, it is po
 - [Lenovo Thinkpad P50](https://github.com/Errrneist/Hackintosh-Thinkpad-P50)
 - [Lenove Thinkpad T450](https://github.com/shmilee/T450-Hackintosh)
 - [Lenovo Thinkpad T460P](https://github.com/LER0ever/Hackintosh)
+- [Lenovo Thinkpad X1 Extreme Gen I](https://github.com/Errrneist/Hackintosh-Thinkpad-X1-Extreme)
 - [Lenovo T430s](https://github.com/dmitriypavlov/T430s-macOS)
 - [Lenovo T430-NVS5400M](https://github.com/david-cako/T430-Hackintosh)
 - [Lenovo T450s](https://github.com/stevenmirabito/T450s-Hackintosh)
