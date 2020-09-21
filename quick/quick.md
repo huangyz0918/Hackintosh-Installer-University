@@ -6,11 +6,18 @@
 This is a quick start with hackintosh installation.
 
 ## 1. Download macOS and create a bootable USB drive
-### 1.1 Build in Windows
+### 1.1 Building in Windows
 
+### 1.2 Building in MacOS
 
-### 1.2 Build in macOS
+- Download macOS Developer Beta Access Utility tool
+- Format your USB drive using Disk Utility
+  - For Formating, select MacOS Extended (Journaled)
+  - For Scheme select GUID Partition Map
+- Type in terminal (for MacOS Mojave): 
+
+`sudo /Applications/Install\ macOS\ Mojave\ Beta.app/Contents/Resources/createinstallmedia –volume /Volumes/Untitled —applicationpath/Applications/Install\macOS\ 10.14\ Beta.app —nointeraction`
 
 ## 2. Setting up your BIOS
-## 3. Install macOS (current version is macOS High Sierra)
+## 3. Install macOS (current version is macOS Mojave)
 ## 4. Post Installation
